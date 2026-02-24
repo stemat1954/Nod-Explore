@@ -1,0 +1,25 @@
+
+NDK_ROOT = *
+
+ndk = ^NDK_ROOT
+
+app =
+{
+	books = 1
+
+	book[1] =
+	{
+		name			= ExamplesByNod
+		source_dir		= ".\source"
+		product_dir		= ".\product"
+		major_version	= 1
+		minor_version	= 0
+		build_number	= 1
+	}
+
+}
+
+option =
+{
+	generate_proof = on
+}

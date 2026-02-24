@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Examples\make.ddl.txt = Examples\make.ddl.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{92E78F3C-1703-419E-A041-E108791588F4}"
+	ProjectSection(SolutionItems) = preProject
+		misc\crude_type.nod = misc\crude_type.nod
+		misc\enum_type.nod = misc\enum_type.nod
+		misc\Nod.g4 = misc\Nod.g4
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "source", "source", "{95AE5391-87B5-4ADE-A829-356B2FD6E854}"
+	ProjectSection(SolutionItems) = preProject
+		Examples\source\codechef_reverse.nod = Examples\source\codechef_reverse.nod
+		Examples\source\hello.nod = Examples\source\hello.nod
+		Examples\source\is_as.nod = Examples\source\is_as.nod
+		Examples\source\leetcode_health.nod = Examples\source\leetcode_health.nod
+		Examples\source\leetcode_index.nod = Examples\source\leetcode_index.nod
+		Examples\source\leetcode_median.nod = Examples\source\leetcode_median.nod
+		Examples\source\leetcode_reverse.nod = Examples\source\leetcode_reverse.nod
+		Examples\source\portability.nod = Examples\source\portability.nod
+		Examples\source\public_const.nod = Examples\source\public_const.nod
+		Examples\source\stack&queue.nod = Examples\source\stack&queue.nod
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "product", "product", "{F9C35AAA-794E-46C0-9830-3D87E2479F85}"
+	ProjectSection(SolutionItems) = preProject
+		Examples\product\appendix.proof.txt = Examples\product\appendix.proof.txt
+		Examples\product\codechef_reverse.proof.txt = Examples\product\codechef_reverse.proof.txt
+		Examples\product\ExamplesByNod.book = Examples\product\ExamplesByNod.book
+		Examples\product\hello.proof.txt = Examples\product\hello.proof.txt
+		Examples\product\is_as.proof.txt = Examples\product\is_as.proof.txt
+		Examples\product\leetcode_health.proof.txt = Examples\product\leetcode_health.proof.txt
+		Examples\product\leetcode_index.proof.txt = Examples\product\leetcode_index.proof.txt
+		Examples\product\leetcode_median.proof.txt = Examples\product\leetcode_median.proof.txt
+		Examples\product\leetcode_reverse.proof.txt = Examples\product\leetcode_reverse.proof.txt
+		Examples\product\portability.proof.txt = Examples\product\portability.proof.txt
+		Examples\product\public_const.proof.txt = Examples\product\public_const.proof.txt
+		Examples\product\stack&queue.proof.txt = Examples\product\stack&queue.proof.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{95AE5391-87B5-4ADE-A829-356B2FD6E854} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{F9C35AAA-794E-46C0-9830-3D87E2479F85} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69B50C77-8B2E-4004-BDD6-BBE646A61046}
+	EndGlobalSection
+EndGlobal

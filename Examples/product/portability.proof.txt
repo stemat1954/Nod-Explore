@@ -1,0 +1,395 @@
+page portability
+{
+	type foo  @55104|portability(3,13) --internal
+	 viable = yes
+	{
+		method begin  @40592|portability(12,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @50688|portability(12,3) --internal
+				 type: (direct)-> type foo  @55104|portability(3,13)
+			}
+
+			BLOCK --domain
+			{
+				CALL --initial, fundamental
+				 lead: ("io.x")-> object x  @57984|portability(40,3)
+				 method: ("begin")-> method begin  @02608|int(54,3)
+				 input: ("one")-> object one  @50448|dialect(32,2)
+				MAKE
+				 literal: (direct)-> literal (anon)  @39424|portability(,) --'1.99'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				CALL --initial, fundamental
+				 lead: ("io.y")-> object y  @45440|portability(41,3)
+				 method: ("begin")-> method begin  @17008|float(163,3)
+				 input: (direct)-> literal (anon)  @39424|portability(,)
+				MAKE
+				 literal: (direct)-> literal (anon)  @43520|portability(,) --'cartesian'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				MAKE
+				 object: (direct)-> object (anon)  @37376|portability(16,8)
+				 type: ("coord2_tag")-> enum type coord2_tag  @00896|math(11,11)
+				CALL --initial
+				 lead: (direct)-> object (anon)  @37376|portability(16,8)
+				 method: ("begin")-> method begin  @18240|math(11,11)
+				 input: (direct)-> literal (anon)  @43520|portability(,)
+				MAKE
+				 object: (direct)-> object (anon)  @45824|portability(16,8)
+				 type: ("fp2")-> type fp2  @55920|float(38,6)
+				CALL --initial, fundamental
+				 lead: (direct)-> object (anon)  @45824|portability(16,8)
+				 method: ("begin")-> method begin  @47136|float(56,3)
+				 input: ("one")-> object one  @50448|dialect(32,2)
+				MAKE
+				 object: (direct)-> object (anon)  @38144|portability(16,8)
+				 type: ("fp2")-> type fp2  @55920|float(38,6)
+				CALL --initial, fundamental
+				 lead: (direct)-> object (anon)  @38144|portability(16,8)
+				 method: ("begin")-> method begin  @47136|float(56,3)
+				 input: ("zero")-> object zero  @60352|dialect(31,2)
+				CALL --initial, fundamental
+				 lead: ("io.z")-> object z  @59776|portability(42,3)
+				 method: ("begin")-> method begin  @17600|complex(15,3)
+				 input: (direct)-> object (anon)  @37376|portability(16,8)
+				 input: (direct)-> object (anon)  @45824|portability(16,8)
+				 input: (direct)-> object (anon)  @38144|portability(16,8)
+			}
+		}
+
+		method begin  @50192|portability(19,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object fex  @38656|portability(19,3) --internal
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+
+				object io  @50944|portability(19,3) --internal
+				 type: (direct)-> type foo  @55104|portability(3,13)
+
+				object m  @46080|portability(19,3) --internal
+				 type: ("mediator")-> type mediator  @60000|mediator(21,6)
+			}
+
+			BLOCK --domain
+			{
+				MAKE
+				 literal: (direct)-> literal (anon)  @51968|portability(,) --'b:1'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				MAKE
+				 object: (direct)-> object (anon)  @43776|portability(21,10)
+				 type: ("bool")-> type bool  @56736|bool(5,6)
+				CALL --fundamental
+				 lead: ("fex")-> object fex  @38656|portability(19,3)
+				 method: ("equal?")-> method equal?  @37680|expr(99,3)
+				 input: (direct)-> literal (anon)  @51968|portability(,)
+				 input: (pending)->
+				 output: (direct)-> object (anon)  @43776|portability(21,10)
+				IF
+				 condition: (direct)-> object (anon)  @43776|portability(21,10)
+				{
+					true branch: BLOCK --domain
+					{
+						MAKE
+						 literal: (direct)-> literal (anon)  @44032|portability(,) --'b'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						MAKE
+						 object: (direct)-> object flag  @42240|portability(23,27)
+						 type: ("bool")-> type bool  @56736|bool(5,6)
+						CALL --fundamental
+						 lead: ("m")-> object m  @46080|portability(19,3)
+						 method: (direct)-> method $11<25>( fread<bool> )  @26400|$appendix(,)
+						 input: (direct)-> literal (anon)  @44032|portability(,)
+						 output: (direct)-> object flag  @42240|portability(23,27)
+						IF
+						 condition: ("flag")-> object flag  @42240|portability(23,27)
+						{
+							true branch: BLOCK --domain
+							{
+								MAKE
+								 literal: (direct)-> literal (anon)  @37888|portability(,) --'b:ieee'
+								 type: ("expr")-> type expr  @57008|expr(5,6)
+								CALL --initial, fundamental
+								 lead: ("io.z")-> object z  @59776|portability(42,3)
+								 method: ("begin")-> method begin  @26416|complex(28,3)
+								 input: ("m")-> object m  @46080|portability(19,3)
+								 input: (direct)-> literal (anon)  @37888|portability(,)
+							}
+						}
+						MAKE
+						 literal: (direct)-> literal (anon)  @40192|portability(,) --'b:ieee'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						CALL --initial, fundamental
+						 lead: ("io.y")-> object y  @45440|portability(41,3)
+						 method: ("begin")-> method begin  @09504|float(174,3)
+						 input: ("m")-> object m  @46080|portability(19,3)
+						 input: (direct)-> literal (anon)  @40192|portability(,)
+						MAKE
+						 literal: (direct)-> literal (anon)  @38400|portability(,) --'b:ones'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						CALL --initial, fundamental
+						 lead: ("io.x")-> object x  @57984|portability(40,3)
+						 method: ("begin")-> method begin  @01008|int(59,3)
+						 input: ("m")-> object m  @46080|portability(19,3)
+						 input: (direct)-> literal (anon)  @38400|portability(,)
+					}
+					false branch: RETURN --to isolate (quit)
+					 trace: (direct)-> object (anon)  @40704|portability(,)
+						trace branch: BLOCK --domain
+						{
+							MAKE
+							 object: (direct)-> object (anon)  @40704|portability(,)
+							 type: (direct)-> type $5<26>( alpha\op<fault> )  @58288|$appendix(,)
+							MAKE
+							 proxy: (direct)-> proxy (anon)  @06128|portability(,)
+							 type: ("fault")-> type fault  @11216|fault(49,6)
+							 permission: [init]
+							CALL --initial, fundamental
+							 lead: (direct)-> object (anon)  @40704|portability(,)
+							 method: ("begin")-> method begin  @37600|$appendix(,)
+							 result: (direct)-> proxy (anon)  @06128|portability(,)
+							MAKE
+							 literal: (direct)-> literal (anon)  @46336|portability(,) --'format'
+							 type: ("expr")-> type expr  @57008|expr(5,6)
+							MAKE
+							 literal: (direct)-> literal (anon)  @49408|portability(,) --'reading foo format'
+							 type: ("expr")-> type expr  @57008|expr(5,6)
+							MAKE
+							 object: (direct)-> object (anon)  @56064|portability(29,20)
+							 type: ("fault_category")-> enum type fault_category  @01744|fault(5,11)
+							CALL --initial
+							 lead: (direct)-> object (anon)  @56064|portability(29,20)
+							 method: ("begin")-> method begin  @02368|fault(5,11)
+							 input: (direct)-> literal (anon)  @46336|portability(,)
+							CALL --initial, fundamental
+							 lead: (direct)-> proxy (anon)  @06128|portability(,)
+							 method: ("begin")-> method begin  @09408|fault(97,3)
+							 input: (direct)-> object (anon)  @56064|portability(29,20)
+							 input: (direct)-> literal (anon)  @49408|portability(,)
+						}
+				}
+			}
+		}
+
+		format format  @24864|portability(45,9) --internal
+		{
+			("z")-> object z  @59776|portability(42,3)
+			("y")-> object y  @45440|portability(41,3)
+			("x")-> object x  @57984|portability(40,3)
+		}
+
+		method fread_format  @50832|portability(45,9) --internal
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @40960|portability(45,9) --internal
+				 type: (direct)-> type foo  @55104|portability(3,13)
+
+				object mediator  @45312|portability(45,9) --internal
+				 type: ("mediator")-> type mediator  @60000|mediator(21,6)
+			}
+
+			BLOCK --domain
+			{
+				MAKE
+				 object: (direct)-> object (anon)  @46848|portability(,)
+				 type: ("bool")-> type bool  @56736|bool(5,6)
+				MAKE
+				 literal: (direct)-> literal (anon)  @40448|portability(,) --'b'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				CALL --initial, fundamental
+				 lead: (direct)-> object (anon)  @46848|portability(,)
+				 method: ("begin")-> method begin  @00608|bool(29,3)
+				 input: (direct)-> object mediator  @45312|portability(45,9)
+				 input: (direct)-> literal (anon)  @40448|portability(,)
+				IF
+				 condition: (direct)-> object (anon)  @46848|portability(,)
+				{
+					true branch: BLOCK --domain
+					{
+						MAKE
+						 literal: (direct)-> literal (anon)  @46592|portability(,) --'b:ieee'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						CALL --initial, fundamental
+						 lead: ("z")-> object z  @59776|portability(42,3)
+						 method: ("begin")-> method begin  @26416|complex(28,3)
+						 input: (direct)-> object mediator  @45312|portability(45,9)
+						 input: (direct)-> literal (anon)  @46592|portability(,)
+					}
+				}
+				CALL --initial, fundamental
+				 lead: ("y")-> object y  @45440|portability(41,3)
+				 method: ("begin")-> method begin  @09504|float(174,3)
+				 input: (direct)-> object mediator  @45312|portability(45,9)
+				 input: (direct)-> literal (anon)  @46592|portability(,)
+				MAKE
+				 literal: (direct)-> literal (anon)  @48640|portability(,) --'b:ones'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				CALL --initial, fundamental
+				 lead: ("x")-> object x  @57984|portability(40,3)
+				 method: ("begin")-> method begin  @01008|int(59,3)
+				 input: (direct)-> object mediator  @45312|portability(45,9)
+				 input: (direct)-> literal (anon)  @48640|portability(,)
+			}
+		}
+
+		method fwrite_format  @45712|portability(45,9) --internal
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @41216|portability(45,9) --internal
+				 type: (direct)-> type foo  @55104|portability(3,13)
+
+				object mediator  @44800|portability(45,9) --internal
+				 type: ("mediator")-> type mediator  @60000|mediator(21,6)
+			}
+
+			BLOCK --domain
+			{
+				MAKE
+				 object: (direct)-> object (anon)  @51456|portability(,)
+				 type: ("bool")-> type bool  @56736|bool(5,6)
+				CALL --essential, fundamental
+				 lead: ("z")-> object z  @59776|portability(42,3)
+				 method: ("not_null?")-> method not_null?  @25792|object(37,3)
+				 output: (direct)-> object (anon)  @51456|portability(,)
+				MAKE
+				 literal: (direct)-> literal (anon)  @41728|portability(,) --'b'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				CALL --fundamental
+				 lead: (direct)-> object (anon)  @51456|portability(,)
+				 method: ("store")-> method store  @05728|bool(30,3)
+				 input: (direct)-> object mediator  @44800|portability(45,9)
+				 input: (direct)-> literal (anon)  @41728|portability(,)
+				IF
+				 condition: (direct)-> object (anon)  @51456|portability(,)
+				{
+					true branch: BLOCK --domain
+					{
+						MAKE
+						 literal: (direct)-> literal (anon)  @45568|portability(,) --'b:ieee'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						CALL --fundamental
+						 lead: ("z")-> object z  @59776|portability(42,3)
+						 method: ("store")-> method store  @18736|complex(30,3)
+						 input: (direct)-> object mediator  @44800|portability(45,9)
+						 input: (direct)-> literal (anon)  @45568|portability(,)
+					}
+				}
+				CALL --fundamental
+				 lead: ("y")-> object y  @45440|portability(41,3)
+				 method: ("store")-> method store  @53856|float(176,3)
+				 input: (direct)-> object mediator  @44800|portability(45,9)
+				 input: (direct)-> literal (anon)  @45568|portability(,)
+				MAKE
+				 literal: (direct)-> literal (anon)  @39936|portability(,) --'b:ones'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				CALL --fundamental
+				 lead: ("x")-> object x  @57984|portability(40,3)
+				 method: ("store")-> method store  @38528|int(61,3)
+				 input: (direct)-> object mediator  @44800|portability(45,9)
+				 input: (direct)-> literal (anon)  @39936|portability(,)
+			}
+		}
+
+		method store  @50512|portability(32,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object fex  @44544|portability(32,3) --internal
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+
+				object io  @39168|portability(32,3) --internal
+				 type: (direct)-> type foo  @55104|portability(3,13)
+
+				object mediator  @49664|portability(32,3) --internal
+				 type: ("mediator")-> type mediator  @60000|mediator(21,6)
+			}
+
+			BLOCK --domain
+			{
+				MAKE
+				 literal: (direct)-> literal (anon)  @39680|portability(,) --'b:1'
+				 type: ("expr")-> type expr  @57008|expr(5,6)
+				MAKE
+				 object: (direct)-> object (anon)  @49920|portability(,)
+				 type: ("bool")-> type bool  @56736|bool(5,6)
+				CALL --fundamental
+				 lead: (direct)-> object fex  @44544|portability(32,3)
+				 method: ("equal?")-> method equal?  @37680|expr(99,3)
+				 input: (direct)-> literal (anon)  @39680|portability(,)
+				 input: (pending)->
+				 output: (direct)-> object (anon)  @49920|portability(,)
+				IF
+				 condition: (direct)-> object fex  @44544|portability(32,3)
+				{
+					true branch: CALL
+					 lead: (direct)-> object io  @39168|portability(32,3)
+					 method: ("fwrite_format")-> method fwrite_format  @45712|portability(45,9)
+					 input: (direct)-> object mediator  @49664|portability(32,3)
+					false branch: BLOCK --domain
+					{
+						MAKE
+						 literal: (direct)-> literal (anon)  @52736|portability(,) --'format'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						MAKE
+						 literal: (direct)-> literal (anon)  @51200|portability(,) --'unknown format'
+						 type: ("expr")-> type expr  @57008|expr(5,6)
+						RETURN --to isolate (quit)
+						 trace: (direct)-> object (anon)  @44288|portability(,)
+							trace branch: BLOCK --domain
+							{
+								MAKE
+								 object: (direct)-> object (anon)  @44288|portability(,)
+								 type: (direct)-> type $5<26>( alpha\op<fault> )  @58288|$appendix(,)
+								MAKE
+								 proxy: (direct)-> proxy (anon)  @06368|portability(,)
+								 type: ("fault")-> type fault  @11216|fault(49,6)
+								 permission: [init]
+								CALL --initial, fundamental
+								 lead: (direct)-> object (anon)  @44288|portability(,)
+								 method: ("begin")-> method begin  @37600|$appendix(,)
+								 result: (direct)-> proxy (anon)  @06368|portability(,)
+								MAKE
+								 object: (direct)-> object (anon)  @56320|portability(,)
+								 type: ("fault_category")-> enum type fault_category  @01744|fault(5,11)
+								CALL --initial
+								 lead: (direct)-> object (anon)  @56320|portability(,)
+								 method: ("begin")-> method begin  @02368|fault(5,11)
+								 input: (direct)-> literal (anon)  @52736|portability(,)
+								CALL --initial, fundamental
+								 lead: (direct)-> proxy (anon)  @06368|portability(,)
+								 method: ("begin")-> method begin  @09408|fault(97,3)
+								 input: (direct)-> object (anon)  @56320|portability(,)
+								 input: (direct)-> literal (anon)  @51200|portability(,)
+							}
+					}
+				}
+			}
+		}
+
+		instance
+		{
+			object x  @57984|portability(40,3) --internal
+			 type: ("int")-> type int  @60272|int(6,6)
+
+			object y  @45440|portability(41,3) --internal
+			 type: ("fp10")-> type fp10  @62448|float(151,6)
+
+			object z  @59776|portability(42,3) --internal
+			 type: ("cplx")-> type cplx  @57552|complex(4,6)
+		}
+
+	}
+}
+

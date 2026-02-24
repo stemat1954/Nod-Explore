@@ -1,0 +1,286 @@
+page is_as
+{
+	subroutine demo  @01504|is_as(62,19) --internal
+	 viable = no
+	{
+
+		given
+		{
+			object t  @11776|is_as(62,19) --internal
+			 type: ("thing")-> type thing  @61088|is_as(3,13)
+
+			object w  @18688|is_as(62,19) --internal
+			 type: ("widget")-> type widget  @61632|is_as(25,13)
+		}
+
+		BLOCK* --domain
+		{
+			MAKE
+			 object: (direct)-> object (anon)  @06912|is_as(64,20)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("t")-> object t  @11776|is_as(62,19)
+			 method: (direct)-> method $16<6>( is<object>? )  @28960|$appendix(,)
+			 output: (direct)-> object (anon)  @06912|is_as(64,20)
+			MAKE
+			 object: (direct)-> object (anon)  @12288|is_as(65,26)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("t")-> object t  @11776|is_as(62,19)
+			 method: (direct)-> method $17<18>( is_actual<thing>? )  @24480|$appendix(,)
+			 output: (direct)-> object (anon)  @12288|is_as(65,26)
+			MAKE
+			 object: (direct)-> object (anon)  @19200|is_as(66,20)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("t")-> object t  @11776|is_as(62,19)
+			 method: (direct)-> method $16<19>( is<widget>? )  @26080|$appendix(,)
+			 output: (direct)-> object (anon)  @19200|is_as(66,20)
+			MAKE
+			 object: (direct)-> object (anon)  @20224|is_as(67,26)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("w")-> object w  @18688|is_as(62,19)
+			 method: (direct)-> method $17<18>( is_actual<thing>? )  @24480|$appendix(,)
+			 output: (direct)-> object (anon)  @20224|is_as(67,26)
+			MAKE
+			 object: (direct)-> object (anon)  @05120|is_as(68,19)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("w")-> object w  @18688|is_as(62,19)
+			 method: (direct)-> method $16<18>( is<thing>? )  @32160|$appendix(,)
+			 output: (direct)-> object (anon)  @05120|is_as(68,19)
+			MAKE
+			 object: (direct)-> object (anon)  @19968|is_as(69,17)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("w")-> object w  @18688|is_as(62,19)
+			 method: (direct)-> method $16<2>( is<int>? )  @29280|$appendix(,)
+			 output: (direct)-> object (anon)  @19968|is_as(69,17)
+			TRANSLATE* --provisional --base
+			 lead: ("t")-> object t  @11776|is_as(62,19)
+			 method: ("as_base<t>")-> method as_base<t>  @32512|object(49,3)
+			MAKE
+			 proxy: (direct)-> proxy (anon)  @04928|is_as(80,3)
+			 type: ("thing")-> type thing  @61088|is_as(3,13)
+			 permission: [eval]
+			TRANSLATE --base
+			 lead: ("w")-> object w  @18688|is_as(62,19)
+			 method: (direct)-> method $14<18>( as_base<thing> )  @22240|$appendix(,)
+			 result: (direct)-> proxy (anon)  @04928|is_as(80,3)
+			MAKE
+			 proxy: (direct)-> proxy ~t  @34128|is_as(82,2)
+			 type: ("thing")-> type thing  @61088|is_as(3,13)
+			 permission: [eval]
+			JOIN
+			 left: (direct)-> proxy ~t  @34128|is_as(82,2)
+			 right: ("w")-> object w  @18688|is_as(62,19)
+			MAKE
+			 object: (direct)-> object (anon)  @12544|is_as(84,21)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $16<6>( is<object>? )  @28960|$appendix(,)
+			 output: (direct)-> object (anon)  @12544|is_as(84,21)
+			MAKE
+			 object: (direct)-> object (anon)  @18944|is_as(85,21)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $16<19>( is<widget>? )  @26080|$appendix(,)
+			 output: (direct)-> object (anon)  @18944|is_as(85,21)
+			MAKE
+			 object: (direct)-> object (anon)  @16384|is_as(86,28)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $17<6>( is_actual<object>? )  @22880|$appendix(,)
+			 output: (direct)-> object (anon)  @16384|is_as(86,28)
+			MAKE
+			 object: (direct)-> object (anon)  @12800|is_as(87,18)
+			 type: ("bool")-> type bool  @56736|bool(5,6)
+			CALL --essential, fundamental
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $16<2>( is<int>? )  @29280|$appendix(,)
+			 output: (direct)-> object (anon)  @12800|is_as(87,18)
+			MAKE
+			 proxy: (direct)-> proxy (anon)  @13808|is_as(93,4)
+			 type: ("widget")-> type widget  @61632|is_as(25,13)
+			 permission: [eval]
+			TRANSLATE --random
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $20<19>( as<widget> )  @37280|$appendix(,)
+			 result: (direct)-> proxy (anon)  @13808|is_as(93,4)
+			MAKE
+			 proxy: (direct)-> proxy (anon)  @18368|is_as(94,4)
+			 type: ("widget")-> type widget  @61632|is_as(25,13)
+			 permission: [eval]
+			TRANSLATE --actual
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $21<19>( as_actual<widget> )  @23200|$appendix(,)
+			 result: (direct)-> proxy (anon)  @18368|is_as(94,4)
+			MAKE
+			 proxy: (direct)-> proxy (anon)  @15008|is_as(95,4)
+			 type: ("gadget")-> type gadget  @62176|is_as(48,13)
+			 permission: [eval]
+			TRANSLATE --random
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $20<22>( as<gadget> )  @36000|$appendix(,)
+			 result: (direct)-> proxy (anon)  @15008|is_as(95,4)
+			MAKE
+			 proxy: (direct)-> proxy (anon)  @12608|is_as(96,4)
+			 type: ("gadget")-> type gadget  @62176|is_as(48,13)
+			 permission: [eval]
+			TRANSLATE --actual
+			 lead: ("~t")-> proxy ~t  @34128|is_as(82,2)
+			 method: (direct)-> method $21<22>( as_actual<gadget> )  @23520|$appendix(,)
+			 result: (direct)-> proxy (anon)  @12608|is_as(96,4)
+		}
+	}
+
+	type gadget  @62176|is_as(48,13) --internal
+	 from ("widget")-> type widget  @61632|is_as(25,13)
+	 viable = yes
+	{
+		method begin  @41872|is_as(50,17) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @15104|is_as(50,17) --internal
+				 type: (direct)-> type gadget  @62176|is_as(48,13)
+			}
+
+			BLOCK --domain
+			{
+				CALL --initial, fundamental
+				 lead: ("io.z")-> object z  @57728|is_as(57,3)
+				 method: ("begin")-> method begin  @03568|int(52,3)
+				 input: (pending)->
+			}
+		}
+
+		instance
+		{
+			object z  @57728|is_as(57,3) --internal
+			 type: ("int")-> type int  @60272|int(6,6)
+		}
+
+	}
+
+	type thing  @61088|is_as(3,13) --internal
+	 viable = yes
+	{
+		method begin  @38672|is_as(7,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @11520|is_as(7,3) --internal
+				 type: (direct)-> type thing  @61088|is_as(3,13)
+			}
+
+			BLOCK --domain
+			{
+				CALL --initial, fundamental
+				 lead: ("io.x")-> object x  @59520|is_as(20,3)
+				 method: ("begin")-> method begin  @03568|int(52,3)
+				 input: (pending)->
+			}
+		}
+
+		method use_x  @38992|is_as(12,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @10752|is_as(12,3) --internal
+				 type: (direct)-> type thing  @61088|is_as(3,13)
+
+				proxy ~x  @41328|is_as(12,3) --internal
+				 type: ("int")-> type int  @60272|int(6,6)
+			}
+
+			BLOCK --domain
+			{
+				JOIN
+				 left: ("~x")-> proxy ~x  @41328|is_as(12,3)
+				 right: ("io.x")-> object x  @59520|is_as(20,3)
+			}
+		}
+
+		instance
+		{
+			object x  @59520|is_as(20,3) --internal
+			 type: ("int")-> type int  @60272|int(6,6)
+		}
+
+	}
+
+	type widget  @61632|is_as(25,13) --internal
+	 from ("thing")-> type thing  @61088|is_as(3,13)
+	 viable = yes
+	{
+		method begin  @44112|is_as(29,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @15616|is_as(29,3) --internal
+				 type: (direct)-> type widget  @61632|is_as(25,13)
+			}
+
+			BLOCK --domain
+			{
+				MAKE
+				 proxy: (direct)-> proxy (anon)  @10688|is_as(31,6)
+				 type: ("thing")-> type thing  @61088|is_as(3,13)
+				 permission: [init]
+				TRANSLATE --base
+				 lead: ("io")-> object io  @15616|is_as(29,3)
+				 method: (direct)-> method $14<18>( as_base<thing> )  @22240|$appendix(,)
+				 result: (direct)-> proxy (anon)  @10688|is_as(31,6)
+				CALL --initial
+				 lead: (direct)-> proxy (anon)  @10688|is_as(31,6)
+				 method: ("begin")-> method begin  @38672|is_as(7,3)
+				CALL --initial, fundamental
+				 lead: ("io.y")-> object y  @60544|is_as(43,3)
+				 method: ("begin")-> method begin  @03568|int(52,3)
+				 input: (pending)->
+			}
+		}
+
+		method use_y  @44752|is_as(35,3) --external
+		 viable = yes
+		{
+
+			given
+			{
+				object io  @12032|is_as(35,3) --internal
+				 type: (direct)-> type widget  @61632|is_as(25,13)
+
+				proxy ~y  @32928|is_as(35,3) --internal
+				 type: ("int")-> type int  @60272|int(6,6)
+			}
+
+			BLOCK --domain
+			{
+				JOIN
+				 left: ("~y")-> proxy ~y  @32928|is_as(35,3)
+				 right: ("io.y")-> object y  @60544|is_as(43,3)
+			}
+		}
+
+		instance
+		{
+			object y  @60544|is_as(43,3) --internal
+			 type: ("int")-> type int  @60272|int(6,6)
+		}
+
+	}
+}
+
