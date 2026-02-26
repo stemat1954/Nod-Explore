@@ -34,8 +34,8 @@ type thing  -- fabricated from crude type def
 
 	instance
 	{
-		gadget;
-		int		width;
-		int		height;
+		gadget			[opt];
+		int		width	[opt];
+		int		height	[opt];
 	}
 }
