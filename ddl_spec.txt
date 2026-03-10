@@ -1,0 +1,123 @@
+
+Data Definition Language:
+
+data_set: 
+
+	item, item, ...
+
+item:
+
+	name = value
+
+name:
+
+	token
+
+value:
+
+	*
+	token
+	string
+	ref
+	concat
+	subset
+	
+subset:
+	
+	{ data_set }
+
+concat:
+
+	substr & substr & substr ...
+
+substr:
+
+	ref
+	string
+
+ref: 
+
+	^token
+
+token: 
+
+	sequence of ascii characters delimited by white-
+	space:
+
+	alpha-numeric characters plus  - _ . ' $ [] ()
+
+string:
+
+	sequence of printable characters delimited by "" 
+	(quote)
+
+comment:
+
+	any string of characters starting with -- and
+	ending with nl
+
+white-space:
+
+	any char classified by std::isspace()
+		
+
+Escape sequences are not supported in strings.
+
+Comments can be inserted anywhere non-string white-space
+is allowed. Comment characters are skipped as white-space 
+until end of line.
+
+Numeric value tokens are automatically saved as numbers.
+Otherwise they are saved as strings.  To prevent conver-
+sion of numeric tokens, enclose them in quotes.
+
+Note that file paths generally have to be defined as 
+strings.
+
+If a token starts with ^, it's a reference. The named 
+item must already be defined and its value is copied to
+the new item.
+
+Note: The item must be in scope, i.e. in the current
+subset, or in an enclosing set.  The nearest item is
+used to resolve the reference. Thus, references are
+resolved like C references. Subsets can't be copied.
+
+A concatenation is a string value formed by concatenating
+substring values expressed by literals and/or references.
+If a substring is defined by reference, the named item
+value must be textual.
+
+A value denoted by * (asterisk) indicates the value is
+defined in the environment. Environment vars are saved 
+as strings.
+
+
+Example source:
+
+	ROOT = *
+	threads = 10
+	processor =
+	{
+		mode = active
+		level = "99"
+	}
+	expr = "my dog has fleas"
+	app = ^ROOT & "myapp.exe"
+	
+
+This source has five items at level zero named ROOT,
+threads, processor, expr, and app.
+
+The item named ROOT is an environment variable.
+
+The item named threads is saved as an integer. 
+	
+The item named processor is saved as a subset at level 1.  
+It contains two items named mode and level.  mode and 
+level are both saved as strings.
+
+The item named expr is saved as a string.	
+
+The item named app is saved as a concatenated string
+using the value of ROOT plus a string

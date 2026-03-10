@@ -1,0 +1,101 @@
+
+I.  Command Line
+
+		> compiler.exe makefile options
+
+	If makefile isn't given, "./make.ddl.txt" is default
+
+	Available options:
+
+		-rebuild 
+			compile all books without regard to timestamps 
+
+
+II.  Make File 
+
+	To build the standard Nod library, write a ddl make file
+	with nsl = {} and option = {}.
+
+	To build an application, write a make file without 
+	nsl = {}.
+
+
+	nsl = -- nod standard lib (precludes app build)
+	{
+		alpha = <build>
+
+		kernel = <build>
+
+		stock = <build>
+	}
+
+
+	ndk = ""   -- ndk install root, required for app build
+
+	scan =		-- book scan list 
+	{
+		paths = n
+		path[i] = ""	-- i = 1 ... n; dir path, no filename
+	}
+
+	app =  -- required for app build
+	{
+		books			= n	-- n > 0
+
+		book[i]			= <build>	-- i = 1 ... n in build order
+
+		load			= <load>	-- common pre-load (optional)
+	}
+
+	option =	-- optional
+	{
+		-- default off (turn on)
+
+		show_diagnostics = sv
+
+		generate_proof = sv
+
+
+		-- default on (turn off)
+	}
+
+	
+	<build>
+	{
+		name			= fid	-- skip if nsl, else required
+		file			= ""	-- optional; no path, no extension
+		source_dir		= ""	-- dir path, no filename
+		product_dir		= ""	-- dir path, no filename
+		major_version	= n
+		minor_version	= n
+		build_number	= n
+		load			= <load> -- book pre-load, optional
+	}
+
+
+	<load>
+	{
+		books			= n		-- n > 0
+		
+		book[i]			=		-- i = 1 ... n
+		{
+			name			= fid	
+			alias			= fid	-- optional
+		}
+	}
+
+
+	value tokens
+
+		""		file system path string
+				paths can be relative
+
+		n		ordinary integer (not negative)
+
+		fid		Nod formal id
+
+		sv		switch value:
+				on/off
+				true/false
+				yes/no
+				enable/disable

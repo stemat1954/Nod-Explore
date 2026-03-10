@@ -1,3 +1,4 @@
+-- assumes this make file is in current directory
 
 NDK_ROOT = *
 

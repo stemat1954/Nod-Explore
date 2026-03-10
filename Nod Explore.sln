@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,6 +11,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{92E78F3C-1703-419E-A041-E108791588F4}"
 	ProjectSection(SolutionItems) = preProject
 		misc\crude_type.nod = misc\crude_type.nod
+		compile_spec.txt = compile_spec.txt
+		ddl_spec.txt = ddl_spec.txt
 		misc\enum_type.nod = misc\enum_type.nod
 		misc\Nod.g4 = misc\Nod.g4
 	EndProjectSection
