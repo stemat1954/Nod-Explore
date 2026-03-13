@@ -1,141 +1,141 @@
 page leetcode_reverse
 {
-	subroutine reverse_nodes  @16416|leetcode_reverse(3,12) --external
+	subroutine reverse_nodes  @57664|leetcode_reverse(3,12) --external
 	 viable = no
 	{
 
 		given
 		{
-			object k  @55968|leetcode_reverse(3,12) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object k  @57248|leetcode_reverse(3,12) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object list  @46240|leetcode_reverse(3,12) --internal
-			 type: (direct)-> type $8<2>( <int>list )  @44032|$appendix(,)
+			object list  @52128|leetcode_reverse(3,12) --internal
+			 type: (direct)-> type $8<2>( <int>list )  @24672|$appendix(,)
 		}
 
 		BLOCK* --domain
 		{
 			MAKE
-			 object: (direct)-> object (anon)  @50592|leetcode_reverse(12,8)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @55968|leetcode_reverse(12,8)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: ("one")-> object one  @35152|dialect(32,2)
-			 method: ("less?")-> method less?  @53888|int(68,3)
-			 input: ("k")-> object k  @55968|leetcode_reverse(3,12)
-			 output: (direct)-> object (anon)  @50592|leetcode_reverse(12,8)
+			 lead: ("one")-> object one  @23728|dialect(32,2)
+			 method: ("less?")-> method less?  @61760|int(68,3)
+			 input: ("k")-> object k  @57248|leetcode_reverse(3,12)
+			 output: (direct)-> object (anon)  @55968|leetcode_reverse(12,8)
 			MAKE
-			 object: (direct)-> object (anon)  @51616|leetcode_reverse(12,8)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @46240|leetcode_reverse(12,8)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: (direct)-> object (anon)  @50592|leetcode_reverse(12,8)
+			 lead: (direct)-> object (anon)  @55968|leetcode_reverse(12,8)
 			 method: ("not")-> method not  @49344|bool(44,3)
-			 output: (direct)-> object (anon)  @51616|leetcode_reverse(12,8)
+			 output: (direct)-> object (anon)  @46240|leetcode_reverse(12,8)
 			IF
-			 condition: (direct)-> object (anon)  @51616|leetcode_reverse(12,8)
+			 condition: (direct)-> object (anon)  @46240|leetcode_reverse(12,8)
 			{
 				true branch: RETURN --to caller
 			}
 			MAKE
-			 object: (direct)-> object before  @61088|leetcode_reverse(16,2)
-			 type: (direct)-> type $6<7>( op<node1> )  @55728|$appendix(,)
+			 object: (direct)-> object before  @45728|leetcode_reverse(16,2)
+			 type: (direct)-> type $6<7>( op<node1> )  @58992|$appendix(,)
 			LOOP* --unconditional
 			{
 				iteration branch: BLOCK* --domain
 				{
 					CALL
-					 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-					 method: ("go_here")-> method go_here  @24080|list1(249,3)
-					 input: ("before")-> object before  @61088|leetcode_reverse(16,2)
+					 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+					 method: ("go_here")-> method go_here  @23024|list1(249,3)
+					 input: ("before")-> object before  @45728|leetcode_reverse(16,2)
 					MAKE
-					 object: (direct)-> object k2  @49568|leetcode_reverse(20,40)
-					 type: ("int")-> type int  @13200|int(6,6)
+					 object: (direct)-> object k2  @46496|leetcode_reverse(20,40)
+					 type: ("int")-> type int  @12384|int(6,6)
 					CALL
-					 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-					 method: ("go_more")-> method go_more  @21840|list1(254,3)
-					 input: ("k")-> object k  @55968|leetcode_reverse(3,12)
-					 output: (direct)-> object k2  @49568|leetcode_reverse(20,40)
+					 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+					 method: ("go_more")-> method go_more  @20144|list1(254,3)
+					 input: ("k")-> object k  @57248|leetcode_reverse(3,12)
+					 output: (direct)-> object k2  @46496|leetcode_reverse(20,40)
 					MAKE
-					 object: (direct)-> object (anon)  @54688|leetcode_reverse(21,9)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
+					 object: (direct)-> object (anon)  @51616|leetcode_reverse(21,9)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
 					CALL --fundamental
-					 lead: ("k2")-> object k2  @49568|leetcode_reverse(20,40)
-					 method: ("less?")-> method less?  @53888|int(68,3)
-					 input: ("k")-> object k  @55968|leetcode_reverse(3,12)
-					 output: (direct)-> object (anon)  @54688|leetcode_reverse(21,9)
+					 lead: ("k2")-> object k2  @46496|leetcode_reverse(20,40)
+					 method: ("less?")-> method less?  @61760|int(68,3)
+					 input: ("k")-> object k  @57248|leetcode_reverse(3,12)
+					 output: (direct)-> object (anon)  @51616|leetcode_reverse(21,9)
 					IF
-					 condition: (direct)-> object (anon)  @54688|leetcode_reverse(21,9)
+					 condition: (direct)-> object (anon)  @51616|leetcode_reverse(21,9)
 					{
 						true branch: RETURN --to loop (escape)
 					}
 					MAKE
-					 object: (direct)-> object last  @57248|leetcode_reverse(23,23)
-					 type: (direct)-> type $6<7>( op<node1> )  @55728|$appendix(,)
+					 object: (direct)-> object last  @46752|leetcode_reverse(23,23)
+					 type: (direct)-> type $6<7>( op<node1> )  @58992|$appendix(,)
 					CALL
-					 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-					 method: ("get_current")-> method get_current  @21520|list1(210,3)
-					 output: (direct)-> object last  @57248|leetcode_reverse(23,23)
+					 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+					 method: ("get_current")-> method get_current  @26544|list1(210,3)
+					 output: (direct)-> object last  @46752|leetcode_reverse(23,23)
 					MAKE
-					 object: (direct)-> object q  @46496|leetcode_reverse(25,3)
-					 type: ("int")-> type int  @13200|int(6,6)
+					 object: (direct)-> object q  @42656|leetcode_reverse(25,3)
+					 type: ("int")-> type int  @12384|int(6,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object q  @46496|leetcode_reverse(25,3)
-					 method: ("begin")-> method begin  @44224|int(54,3)
-					 input: ("k")-> object k  @55968|leetcode_reverse(3,12)
+					 lead: (direct)-> object q  @42656|leetcode_reverse(25,3)
+					 method: ("begin")-> method begin  @43136|int(54,3)
+					 input: ("k")-> object k  @57248|leetcode_reverse(3,12)
 					CALL --fundamental
-					 lead: (direct)-> object q  @46496|leetcode_reverse(25,3)
-					 method: ("sub")-> method sub  @28112|int(79,3)
-					 input: ("one")-> object one  @35152|dialect(32,2)
+					 lead: (direct)-> object q  @42656|leetcode_reverse(25,3)
+					 method: ("sub")-> method sub  @22544|int(79,3)
+					 input: ("one")-> object one  @23728|dialect(32,2)
 					LOOP --unconditional
 					{
 						iteration branch: BLOCK --domain
 						{
 							CALL
-							 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-							 method: ("go_here")-> method go_here  @24080|list1(249,3)
-							 input: ("before")-> object before  @61088|leetcode_reverse(16,2)
+							 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+							 method: ("go_here")-> method go_here  @23024|list1(249,3)
+							 input: ("before")-> object before  @45728|leetcode_reverse(16,2)
 							MAKE
-							 object: (direct)-> object nl  @53664|leetcode_reverse(28,39)
-							 type: (direct)-> type $6<7>( op<node1> )  @55728|$appendix(,)
+							 object: (direct)-> object nl  @49312|leetcode_reverse(28,39)
+							 type: (direct)-> type $6<7>( op<node1> )  @58992|$appendix(,)
 							CALL
-							 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-							 method: ("get_next")-> method get_next  @16080|list1(215,3)
-							 output: (direct)-> object nl  @53664|leetcode_reverse(28,39)
+							 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+							 method: ("get_next")-> method get_next  @27824|list1(215,3)
+							 output: (direct)-> object nl  @49312|leetcode_reverse(28,39)
 							CALL
-							 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-							 method: ("remove_next")-> method remove_next  @22160|list1(292,3)
+							 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+							 method: ("remove_next")-> method remove_next  @23664|list1(292,3)
 							CALL
-							 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-							 method: ("go_here")-> method go_here  @24080|list1(249,3)
-							 input: ("last")-> object last  @57248|leetcode_reverse(23,23)
+							 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+							 method: ("go_here")-> method go_here  @23024|list1(249,3)
+							 input: ("last")-> object last  @46752|leetcode_reverse(23,23)
 							CALL
-							 lead: ("list")-> object list  @46240|leetcode_reverse(3,12)
-							 method: ("insert")-> method insert  @15760|list1(266,3)
-							 input: ("nl")-> object nl  @53664|leetcode_reverse(28,39)
+							 lead: ("list")-> object list  @52128|leetcode_reverse(3,12)
+							 method: ("insert")-> method insert  @27184|list1(266,3)
+							 input: ("nl")-> object nl  @49312|leetcode_reverse(28,39)
 							CALL --fundamental
-							 lead: ("q")-> object q  @46496|leetcode_reverse(25,3)
-							 method: ("dec")-> method dec  @38944|int(119,3)
+							 lead: ("q")-> object q  @42656|leetcode_reverse(25,3)
+							 method: ("dec")-> method dec  @42976|int(119,3)
 							MAKE
-							 object: (direct)-> object (anon)  @47776|leetcode_reverse(29,32)
-							 type: ("bool")-> type bool  @16736|bool(5,6)
+							 object: (direct)-> object (anon)  @51872|leetcode_reverse(29,32)
+							 type: ("bool")-> type bool  @15648|bool(5,6)
 							CALL --fundamental
-							 lead: ("q")-> object q  @46496|leetcode_reverse(25,3)
-							 method: ("equal?")-> method equal?  @56448|int(64,3)
-							 input: ("zero")-> object zero  @42976|dialect(31,2)
-							 output: (direct)-> object (anon)  @47776|leetcode_reverse(29,32)
+							 lead: ("q")-> object q  @42656|leetcode_reverse(25,3)
+							 method: ("equal?")-> method equal?  @59840|int(64,3)
+							 input: ("zero")-> object zero  @39312|dialect(31,2)
+							 output: (direct)-> object (anon)  @51872|leetcode_reverse(29,32)
 							IF
-							 condition: (direct)-> object (anon)  @47776|leetcode_reverse(29,32)
+							 condition: (direct)-> object (anon)  @51872|leetcode_reverse(29,32)
 							{
 								true branch: RETURN --to loop (escape)
 							}
 						}
 					}
 					CALL --terminal, essential, fundamental
-					 lead: ("before")-> object before  @61088|leetcode_reverse(16,2)
-					 method: ("recycle")-> method recycle  @07696|object(39,3)
+					 lead: ("before")-> object before  @45728|leetcode_reverse(16,2)
+					 method: ("recycle")-> method recycle  @12688|object(39,3)
 					CALL* --initial, fundamental
-					 lead: ("before")-> object before  @61088|leetcode_reverse(16,2)
-					 method: ("begin")-> method begin<xt>  @03664|$appendix(,)
-					 input: ("last")-> object last  @57248|leetcode_reverse(23,23)
+					 lead: ("before")-> object before  @45728|leetcode_reverse(16,2)
+					 method: ("begin")-> method begin<xt>  @07408|$appendix(,)
+					 input: ("last")-> object last  @46752|leetcode_reverse(23,23)
 				}
 			}
 		}

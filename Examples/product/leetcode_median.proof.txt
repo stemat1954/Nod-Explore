@@ -1,369 +1,369 @@
 page leetcode_median
 {
-	subroutine find_median  @14896|leetcode_median(4,12) --external
+	subroutine find_median  @60096|leetcode_median(4,12) --external
 	 viable = yes
 	{
 
 		given
 		{
-			object a  @28832|leetcode_median(4,12) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @03056|$appendix(,)
+			object a  @26784|leetcode_median(4,12) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @01920|$appendix(,)
 
-			object b  @30368|leetcode_median(4,12) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @03056|$appendix(,)
+			object b  @26272|leetcode_median(4,12) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @01920|$appendix(,)
 
-			object m  @40864|leetcode_median(4,12) --internal
-			 type: ("fp2")-> type fp2  @17008|float(38,6)
+			object m  @29344|leetcode_median(4,12) --internal
+			 type: ("fp2")-> type fp2  @15104|float(38,6)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 object: (direct)-> object qa  @31136|leetcode_median(23,13)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object qa  @27552|leetcode_median(23,13)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --fundamental
-			 lead: ("a")-> object a  @28832|leetcode_median(4,12)
-			 method: ("count")-> method count  @15344|$appendix(,)
-			 output: (direct)-> object qa  @31136|leetcode_median(23,13)
+			 lead: ("a")-> object a  @26784|leetcode_median(4,12)
+			 method: ("count")-> method count  @40224|$appendix(,)
+			 output: (direct)-> object qa  @27552|leetcode_median(23,13)
 			MAKE
-			 object: (direct)-> object qb  @31904|leetcode_median(24,13)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object qb  @39328|leetcode_median(24,13)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --fundamental
-			 lead: ("b")-> object b  @30368|leetcode_median(4,12)
-			 method: ("count")-> method count  @15344|$appendix(,)
-			 output: (direct)-> object qb  @31904|leetcode_median(24,13)
+			 lead: ("b")-> object b  @26272|leetcode_median(4,12)
+			 method: ("count")-> method count  @40224|$appendix(,)
+			 output: (direct)-> object qb  @39328|leetcode_median(24,13)
 			MAKE
-			 object: (direct)-> object qab  @41632|leetcode_median(25,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object qab  @32160|leetcode_median(25,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object qab  @41632|leetcode_median(25,2)
-			 method: ("begin")-> method begin  @44224|int(54,3)
-			 input: ("qa")-> object qa  @31136|leetcode_median(23,13)
+			 lead: (direct)-> object qab  @32160|leetcode_median(25,2)
+			 method: ("begin")-> method begin  @43136|int(54,3)
+			 input: ("qa")-> object qa  @27552|leetcode_median(23,13)
 			CALL --fundamental
-			 lead: (direct)-> object qab  @41632|leetcode_median(25,2)
-			 method: ("add")-> method add  @33008|int(76,3)
-			 input: ("qb")-> object qb  @31904|leetcode_median(24,13)
+			 lead: (direct)-> object qab  @32160|leetcode_median(25,2)
+			 method: ("add")-> method add  @33200|int(76,3)
+			 input: ("qb")-> object qb  @39328|leetcode_median(24,13)
 			MAKE
-			 object: (direct)-> object imax  @35232|leetcode_median(27,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object imax  @24736|leetcode_median(27,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object imax  @35232|leetcode_median(27,2)
-			 method: ("begin")-> method begin  @44224|int(54,3)
-			 input: ("qa")-> object qa  @31136|leetcode_median(23,13)
+			 lead: (direct)-> object imax  @24736|leetcode_median(27,2)
+			 method: ("begin")-> method begin  @43136|int(54,3)
+			 input: ("qa")-> object qa  @27552|leetcode_median(23,13)
 			CALL --fundamental
-			 lead: (direct)-> object imax  @35232|leetcode_median(27,2)
-			 method: ("sub")-> method sub  @28112|int(79,3)
-			 input: ("one")-> object one  @35152|dialect(32,2)
+			 lead: (direct)-> object imax  @24736|leetcode_median(27,2)
+			 method: ("sub")-> method sub  @22544|int(79,3)
+			 input: ("one")-> object one  @23728|dialect(32,2)
 			MAKE
-			 object: (direct)-> object jmax  @36000|leetcode_median(28,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object jmax  @36512|leetcode_median(28,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object jmax  @36000|leetcode_median(28,2)
-			 method: ("begin")-> method begin  @44224|int(54,3)
-			 input: ("qb")-> object qb  @31904|leetcode_median(24,13)
+			 lead: (direct)-> object jmax  @36512|leetcode_median(28,2)
+			 method: ("begin")-> method begin  @43136|int(54,3)
+			 input: ("qb")-> object qb  @39328|leetcode_median(24,13)
 			CALL --fundamental
-			 lead: (direct)-> object jmax  @36000|leetcode_median(28,2)
-			 method: ("sub")-> method sub  @28112|int(79,3)
-			 input: ("one")-> object one  @35152|dialect(32,2)
+			 lead: (direct)-> object jmax  @36512|leetcode_median(28,2)
+			 method: ("sub")-> method sub  @22544|int(79,3)
+			 input: ("one")-> object one  @23728|dialect(32,2)
 			MAKE
-			 object: (direct)-> object kmax  @29088|leetcode_median(29,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object kmax  @25760|leetcode_median(29,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object kmax  @29088|leetcode_median(29,2)
-			 method: ("begin")-> method begin  @44224|int(54,3)
-			 input: ("qab")-> object qab  @41632|leetcode_median(25,2)
+			 lead: (direct)-> object kmax  @25760|leetcode_median(29,2)
+			 method: ("begin")-> method begin  @43136|int(54,3)
+			 input: ("qab")-> object qab  @32160|leetcode_median(25,2)
 			CALL --fundamental
-			 lead: (direct)-> object kmax  @29088|leetcode_median(29,2)
-			 method: ("sub")-> method sub  @28112|int(79,3)
-			 input: ("one")-> object one  @35152|dialect(32,2)
+			 lead: (direct)-> object kmax  @25760|leetcode_median(29,2)
+			 method: ("sub")-> method sub  @22544|int(79,3)
+			 input: ("one")-> object one  @23728|dialect(32,2)
 			CALL --fundamental
-			 lead: (direct)-> object kmax  @29088|leetcode_median(29,2)
-			 method: ("div")-> method div  @54848|int(85,3)
-			 input: ("two")-> object two  @02128|dialect(33,2)
+			 lead: (direct)-> object kmax  @25760|leetcode_median(29,2)
+			 method: ("div")-> method div  @57600|int(85,3)
+			 input: ("two")-> object two  @03552|dialect(33,2)
 			MAKE
-			 object: (direct)-> object i  @29344|leetcode_median(31,35)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object i  @39584|leetcode_median(31,35)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object i  @29344|leetcode_median(31,35)
-			 method: ("begin")-> method begin  @42624|int(52,3)
+			 lead: (direct)-> object i  @39584|leetcode_median(31,35)
+			 method: ("begin")-> method begin  @44736|int(52,3)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object j  @32672|leetcode_median(31,49)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object j  @34976|leetcode_median(31,49)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object j  @32672|leetcode_median(31,49)
-			 method: ("begin")-> method begin  @42624|int(52,3)
+			 lead: (direct)-> object j  @34976|leetcode_median(31,49)
+			 method: ("begin")-> method begin  @44736|int(52,3)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object k  @38560|leetcode_median(31,63)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object k  @27040|leetcode_median(31,63)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object k  @38560|leetcode_median(31,63)
-			 method: ("begin")-> method begin  @42624|int(52,3)
+			 lead: (direct)-> object k  @27040|leetcode_median(31,63)
+			 method: ("begin")-> method begin  @44736|int(52,3)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object n  @36512|leetcode_median(31,78)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object n  @35232|leetcode_median(31,78)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL
-			 subroutine: ("merge")-> subroutine merge  @16112|leetcode_median(41,19)
-			 input: ("a")-> object a  @28832|leetcode_median(4,12)
-			 input: ("b")-> object b  @30368|leetcode_median(4,12)
-			 input: ("imax")-> object imax  @35232|leetcode_median(27,2)
-			 input: ("jmax")-> object jmax  @36000|leetcode_median(28,2)
-			 input: ("kmax")-> object kmax  @29088|leetcode_median(29,2)
-			 input: (direct)-> object i  @29344|leetcode_median(31,35)
-			 input: (direct)-> object j  @32672|leetcode_median(31,49)
-			 input: (direct)-> object k  @38560|leetcode_median(31,63)
-			 output: (direct)-> object n  @36512|leetcode_median(31,78)
+			 subroutine: ("merge")-> subroutine merge  @08848|leetcode_median(41,19)
+			 input: ("a")-> object a  @26784|leetcode_median(4,12)
+			 input: ("b")-> object b  @26272|leetcode_median(4,12)
+			 input: ("imax")-> object imax  @24736|leetcode_median(27,2)
+			 input: ("jmax")-> object jmax  @36512|leetcode_median(28,2)
+			 input: ("kmax")-> object kmax  @25760|leetcode_median(29,2)
+			 input: (direct)-> object i  @39584|leetcode_median(31,35)
+			 input: (direct)-> object j  @34976|leetcode_median(31,49)
+			 input: (direct)-> object k  @27040|leetcode_median(31,63)
+			 output: (direct)-> object n  @35232|leetcode_median(31,78)
 			CALL --initial, fundamental
-			 lead: ("m")-> object m  @40864|leetcode_median(4,12)
-			 method: ("begin")-> method begin  @34480|float(56,3)
-			 input: ("n")-> object n  @36512|leetcode_median(31,78)
+			 lead: ("m")-> object m  @29344|leetcode_median(4,12)
+			 method: ("begin")-> method begin  @42352|float(56,3)
+			 input: ("n")-> object n  @35232|leetcode_median(31,78)
 			CALL --fundamental
-			 lead: ("qab")-> object qab  @41632|leetcode_median(25,2)
-			 method: ("mod")-> method mod  @57088|int(128,3)
-			 input: ("two")-> object two  @02128|dialect(33,2)
+			 lead: ("qab")-> object qab  @32160|leetcode_median(25,2)
+			 method: ("mod")-> method mod  @60160|int(128,3)
+			 input: ("two")-> object two  @03552|dialect(33,2)
 			MAKE
-			 object: (direct)-> object (anon)  @36768|leetcode_median(33,39)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @33440|leetcode_median(33,39)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: ("qab")-> object qab  @41632|leetcode_median(25,2)
-			 method: ("equal?")-> method equal?  @56448|int(64,3)
-			 input: ("zero")-> object zero  @42976|dialect(31,2)
-			 output: (direct)-> object (anon)  @36768|leetcode_median(33,39)
+			 lead: ("qab")-> object qab  @32160|leetcode_median(25,2)
+			 method: ("equal?")-> method equal?  @59840|int(64,3)
+			 input: ("zero")-> object zero  @39312|dialect(31,2)
+			 output: (direct)-> object (anon)  @33440|leetcode_median(33,39)
 			IF
-			 condition: (direct)-> object (anon)  @36768|leetcode_median(33,39)
+			 condition: (direct)-> object (anon)  @33440|leetcode_median(33,39)
 			{
 				true branch: BLOCK --domain
 				{
 					CALL --fundamental
-					 lead: ("kmax")-> object kmax  @29088|leetcode_median(29,2)
-					 method: ("inc")-> method inc  @57728|int(116,3)
+					 lead: ("kmax")-> object kmax  @25760|leetcode_median(29,2)
+					 method: ("inc")-> method inc  @56960|int(116,3)
 					CALL --fundamental
-					 lead: ("k")-> object k  @38560|leetcode_median(31,63)
-					 method: ("inc")-> method inc  @57728|int(116,3)
+					 lead: ("k")-> object k  @27040|leetcode_median(31,63)
+					 method: ("inc")-> method inc  @56960|int(116,3)
 					CALL --terminal, essential, fundamental
-					 lead: ("n")-> object n  @36512|leetcode_median(31,78)
-					 method: ("recycle")-> method recycle  @07696|object(39,3)
+					 lead: ("n")-> object n  @35232|leetcode_median(31,78)
+					 method: ("recycle")-> method recycle  @12688|object(39,3)
 					CALL
-					 subroutine: ("merge")-> subroutine merge  @16112|leetcode_median(41,19)
-					 input: ("a")-> object a  @28832|leetcode_median(4,12)
-					 input: ("b")-> object b  @30368|leetcode_median(4,12)
-					 input: ("imax")-> object imax  @35232|leetcode_median(27,2)
-					 input: ("jmax")-> object jmax  @36000|leetcode_median(28,2)
-					 input: ("kmax")-> object kmax  @29088|leetcode_median(29,2)
-					 input: ("i")-> object i  @29344|leetcode_median(31,35)
-					 input: ("j")-> object j  @32672|leetcode_median(31,49)
-					 input: ("k")-> object k  @38560|leetcode_median(31,63)
-					 output: ("n")-> object n  @36512|leetcode_median(31,78)
+					 subroutine: ("merge")-> subroutine merge  @08848|leetcode_median(41,19)
+					 input: ("a")-> object a  @26784|leetcode_median(4,12)
+					 input: ("b")-> object b  @26272|leetcode_median(4,12)
+					 input: ("imax")-> object imax  @24736|leetcode_median(27,2)
+					 input: ("jmax")-> object jmax  @36512|leetcode_median(28,2)
+					 input: ("kmax")-> object kmax  @25760|leetcode_median(29,2)
+					 input: ("i")-> object i  @39584|leetcode_median(31,35)
+					 input: ("j")-> object j  @34976|leetcode_median(31,49)
+					 input: ("k")-> object k  @27040|leetcode_median(31,63)
+					 output: ("n")-> object n  @35232|leetcode_median(31,78)
 					MAKE
-					 object: (direct)-> object (anon)  @37280|leetcode_median(36,4)
-					 type: ("fp2")-> type fp2  @17008|float(38,6)
+					 object: (direct)-> object (anon)  @35744|leetcode_median(36,4)
+					 type: ("fp2")-> type fp2  @15104|float(38,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object (anon)  @37280|leetcode_median(36,4)
-					 method: ("begin")-> method begin  @34480|float(56,3)
-					 input: ("n")-> object n  @36512|leetcode_median(31,78)
+					 lead: (direct)-> object (anon)  @35744|leetcode_median(36,4)
+					 method: ("begin")-> method begin  @42352|float(56,3)
+					 input: ("n")-> object n  @35232|leetcode_median(31,78)
 					CALL --fundamental
-					 lead: ("m")-> object m  @40864|leetcode_median(4,12)
-					 method: ("add")-> method add  @05984|float(78,3)
-					 input: (direct)-> object (anon)  @37280|leetcode_median(36,4)
+					 lead: ("m")-> object m  @29344|leetcode_median(4,12)
+					 method: ("add")-> method add  @01376|float(78,3)
+					 input: (direct)-> object (anon)  @35744|leetcode_median(36,4)
 					MAKE
-					 object: (direct)-> object (anon)  @30624|leetcode_median(36,13)
-					 type: ("fp2")-> type fp2  @17008|float(38,6)
+					 object: (direct)-> object (anon)  @36768|leetcode_median(36,13)
+					 type: ("fp2")-> type fp2  @15104|float(38,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object (anon)  @30624|leetcode_median(36,13)
-					 method: ("begin")-> method begin  @34480|float(56,3)
-					 input: ("two")-> object two  @02128|dialect(33,2)
+					 lead: (direct)-> object (anon)  @36768|leetcode_median(36,13)
+					 method: ("begin")-> method begin  @42352|float(56,3)
+					 input: ("two")-> object two  @03552|dialect(33,2)
 					CALL --fundamental
-					 lead: ("m")-> object m  @40864|leetcode_median(4,12)
-					 method: ("div")-> method div  @25520|float(87,3)
-					 input: (direct)-> object (anon)  @30624|leetcode_median(36,13)
+					 lead: ("m")-> object m  @29344|leetcode_median(4,12)
+					 method: ("div")-> method div  @23792|float(87,3)
+					 input: (direct)-> object (anon)  @36768|leetcode_median(36,13)
 				}
 			}
 		}
 	}
 
-	subroutine merge  @16112|leetcode_median(41,19) --internal
+	subroutine merge  @08848|leetcode_median(41,19) --internal
 	 viable = yes
 	{
 
 		given
 		{
-			object a  @43936|leetcode_median(41,19) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @03056|$appendix(,)
+			object a  @40096|leetcode_median(41,19) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @01920|$appendix(,)
 
-			object b  @31648|leetcode_median(41,19) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @03056|$appendix(,)
+			object b  @40352|leetcode_median(41,19) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @01920|$appendix(,)
 
-			object i  @42912|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object i  @30112|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object imax  @33184|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object imax  @33696|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object j  @37536|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object j  @30624|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object jmax  @33440|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object jmax  @26528|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object k  @43168|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object k  @28576|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object kmax  @42144|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object kmax  @27296|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object n  @44448|leetcode_median(41,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object n  @28832|leetcode_median(41,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 		}
 
 		BLOCK --domain
 		{
 			LOOP
-			 condition: (direct)-> object (anon)  @56224|leetcode_median(43,10)
+			 condition: (direct)-> object (anon)  @45472|leetcode_median(43,10)
 			{
 				condition branch: BLOCK --macro
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @44704|leetcode_median(43,10)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
+					 object: (direct)-> object (anon)  @48032|leetcode_median(43,10)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
 					CALL --fundamental
-					 lead: ("kmax")-> object kmax  @42144|leetcode_median(41,19)
-					 method: ("less?")-> method less?  @53888|int(68,3)
-					 input: ("k")-> object k  @43168|leetcode_median(41,19)
-					 output: (direct)-> object (anon)  @44704|leetcode_median(43,10)
+					 lead: ("kmax")-> object kmax  @27296|leetcode_median(41,19)
+					 method: ("less?")-> method less?  @61760|int(68,3)
+					 input: ("k")-> object k  @28576|leetcode_median(41,19)
+					 output: (direct)-> object (anon)  @48032|leetcode_median(43,10)
 					MAKE
-					 object: (direct)-> object (anon)  @56224|leetcode_median(43,10)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
+					 object: (direct)-> object (anon)  @45472|leetcode_median(43,10)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
 					CALL --fundamental
-					 lead: (direct)-> object (anon)  @44704|leetcode_median(43,10)
+					 lead: (direct)-> object (anon)  @48032|leetcode_median(43,10)
 					 method: ("not")-> method not  @49344|bool(44,3)
-					 output: (direct)-> object (anon)  @56224|leetcode_median(43,10)
+					 output: (direct)-> object (anon)  @45472|leetcode_median(43,10)
 				}
 				iteration branch: BLOCK --domain
 				{
 					CALL --terminal, essential, fundamental
-					 lead: ("n")-> object n  @44448|leetcode_median(41,19)
-					 method: ("recycle")-> method recycle  @07696|object(39,3)
+					 lead: ("n")-> object n  @28832|leetcode_median(41,19)
+					 method: ("recycle")-> method recycle  @12688|object(39,3)
 					MAKE
-					 object: (direct)-> object (anon)  @53408|leetcode_median(46,9)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
+					 object: (direct)-> object (anon)  @49056|leetcode_median(46,9)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
 					CALL --fundamental
-					 lead: ("imax")-> object imax  @33184|leetcode_median(41,19)
-					 method: ("less?")-> method less?  @53888|int(68,3)
-					 input: ("i")-> object i  @42912|leetcode_median(41,19)
-					 output: (direct)-> object (anon)  @53408|leetcode_median(46,9)
+					 lead: ("imax")-> object imax  @33696|leetcode_median(41,19)
+					 method: ("less?")-> method less?  @61760|int(68,3)
+					 input: ("i")-> object i  @30112|leetcode_median(41,19)
+					 output: (direct)-> object (anon)  @49056|leetcode_median(46,9)
 					IF
-					 condition: (direct)-> object (anon)  @53408|leetcode_median(46,9)
+					 condition: (direct)-> object (anon)  @49056|leetcode_median(46,9)
 					{
 						true branch: BLOCK --domain
 						{
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @09488|leetcode_median(48,14)
-							 type: ("int")-> type int  @13200|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @62528|leetcode_median(48,14)
+							 type: ("int")-> type int  @12384|int(6,6)
 							 permission: [eval]
 							CALL --fundamental
-							 lead: ("b")-> object b  @31648|leetcode_median(41,19)
-							 method: ("use")-> method use  @40000|$appendix(,)
-							 input: ("j")-> object j  @37536|leetcode_median(41,19)
-							 result: (direct)-> proxy (anon)  @09488|leetcode_median(48,14)
+							 lead: ("b")-> object b  @40352|leetcode_median(41,19)
+							 method: ("use")-> method use  @54832|$appendix(,)
+							 input: ("j")-> object j  @30624|leetcode_median(41,19)
+							 result: (direct)-> proxy (anon)  @62528|leetcode_median(48,14)
 							CALL --initial, fundamental
-							 lead: ("n")-> object n  @44448|leetcode_median(41,19)
-							 method: ("begin")-> method begin  @44224|int(54,3)
-							 input: (direct)-> proxy (anon)  @09488|leetcode_median(48,14)
+							 lead: ("n")-> object n  @28832|leetcode_median(41,19)
+							 method: ("begin")-> method begin  @43136|int(54,3)
+							 input: (direct)-> proxy (anon)  @62528|leetcode_median(48,14)
 							CALL --fundamental
-							 lead: ("j")-> object j  @37536|leetcode_median(41,19)
-							 method: ("inc")-> method inc  @57728|int(116,3)
+							 lead: ("j")-> object j  @30624|leetcode_median(41,19)
+							 method: ("inc")-> method inc  @56960|int(116,3)
 						}
 						false branch: BLOCK --domain
 						{
 							MAKE
-							 object: (direct)-> object (anon)  @60832|leetcode_median(51,14)
-							 type: ("bool")-> type bool  @16736|bool(5,6)
+							 object: (direct)-> object (anon)  @45984|leetcode_median(51,14)
+							 type: ("bool")-> type bool  @15648|bool(5,6)
 							CALL --fundamental
-							 lead: ("jmax")-> object jmax  @33440|leetcode_median(41,19)
-							 method: ("less?")-> method less?  @53888|int(68,3)
-							 input: ("j")-> object j  @37536|leetcode_median(41,19)
-							 output: (direct)-> object (anon)  @60832|leetcode_median(51,14)
+							 lead: ("jmax")-> object jmax  @26528|leetcode_median(41,19)
+							 method: ("less?")-> method less?  @61760|int(68,3)
+							 input: ("j")-> object j  @30624|leetcode_median(41,19)
+							 output: (direct)-> object (anon)  @45984|leetcode_median(51,14)
 							IF
-							 condition: (direct)-> object (anon)  @60832|leetcode_median(51,14)
+							 condition: (direct)-> object (anon)  @45984|leetcode_median(51,14)
 							{
 								true branch: BLOCK --domain
 								{
 									MAKE
-									 proxy: (direct)-> proxy (anon)  @08048|leetcode_median(53,14)
-									 type: ("int")-> type int  @13200|int(6,6)
+									 proxy: (direct)-> proxy (anon)  @64448|leetcode_median(53,14)
+									 type: ("int")-> type int  @12384|int(6,6)
 									 permission: [eval]
 									CALL --fundamental
-									 lead: ("a")-> object a  @43936|leetcode_median(41,19)
-									 method: ("use")-> method use  @40000|$appendix(,)
-									 input: ("i")-> object i  @42912|leetcode_median(41,19)
-									 result: (direct)-> proxy (anon)  @08048|leetcode_median(53,14)
+									 lead: ("a")-> object a  @40096|leetcode_median(41,19)
+									 method: ("use")-> method use  @54832|$appendix(,)
+									 input: ("i")-> object i  @30112|leetcode_median(41,19)
+									 result: (direct)-> proxy (anon)  @64448|leetcode_median(53,14)
 									CALL --initial, fundamental
-									 lead: ("n")-> object n  @44448|leetcode_median(41,19)
-									 method: ("begin")-> method begin  @44224|int(54,3)
-									 input: (direct)-> proxy (anon)  @08048|leetcode_median(53,14)
+									 lead: ("n")-> object n  @28832|leetcode_median(41,19)
+									 method: ("begin")-> method begin  @43136|int(54,3)
+									 input: (direct)-> proxy (anon)  @64448|leetcode_median(53,14)
 									CALL --fundamental
-									 lead: ("i")-> object i  @42912|leetcode_median(41,19)
-									 method: ("inc")-> method inc  @57728|int(116,3)
+									 lead: ("i")-> object i  @30112|leetcode_median(41,19)
+									 method: ("inc")-> method inc  @56960|int(116,3)
 								}
 								false branch: BLOCK --domain
 								{
 									MAKE
-									 proxy: (direct)-> proxy ~an  @18848|leetcode_median(58,5)
-									 type: ("int")-> type int  @13200|int(6,6)
+									 proxy: (direct)-> proxy ~an  @60368|leetcode_median(58,5)
+									 type: ("int")-> type int  @12384|int(6,6)
 									 permission: [eval]
 									CALL --fundamental
-									 lead: ("a")-> object a  @43936|leetcode_median(41,19)
-									 method: ("use")-> method use  @40000|$appendix(,)
-									 input: ("i")-> object i  @42912|leetcode_median(41,19)
-									 result: (direct)-> proxy ~an  @18848|leetcode_median(58,5)
+									 lead: ("a")-> object a  @40096|leetcode_median(41,19)
+									 method: ("use")-> method use  @54832|$appendix(,)
+									 input: ("i")-> object i  @30112|leetcode_median(41,19)
+									 result: (direct)-> proxy ~an  @60368|leetcode_median(58,5)
 									MAKE
-									 proxy: (direct)-> proxy ~bn  @05408|leetcode_median(59,5)
-									 type: ("int")-> type int  @13200|int(6,6)
+									 proxy: (direct)-> proxy ~bn  @63248|leetcode_median(59,5)
+									 type: ("int")-> type int  @12384|int(6,6)
 									 permission: [eval]
 									CALL --fundamental
-									 lead: ("b")-> object b  @31648|leetcode_median(41,19)
-									 method: ("use")-> method use  @40000|$appendix(,)
-									 input: ("j")-> object j  @37536|leetcode_median(41,19)
-									 result: (direct)-> proxy ~bn  @05408|leetcode_median(59,5)
+									 lead: ("b")-> object b  @40352|leetcode_median(41,19)
+									 method: ("use")-> method use  @54832|$appendix(,)
+									 input: ("j")-> object j  @30624|leetcode_median(41,19)
+									 result: (direct)-> proxy ~bn  @63248|leetcode_median(59,5)
 									MAKE
-									 object: (direct)-> object (anon)  @04256|leetcode_median(60,10)
-									 type: ("bool")-> type bool  @16736|bool(5,6)
+									 object: (direct)-> object (anon)  @59808|leetcode_median(60,10)
+									 type: ("bool")-> type bool  @15648|bool(5,6)
 									CALL --fundamental
-									 lead: ("~bn")-> proxy ~bn  @05408|leetcode_median(59,5)
-									 method: ("less?")-> method less?  @53888|int(68,3)
-									 input: ("~an")-> proxy ~an  @18848|leetcode_median(58,5)
-									 output: (direct)-> object (anon)  @04256|leetcode_median(60,10)
+									 lead: ("~bn")-> proxy ~bn  @63248|leetcode_median(59,5)
+									 method: ("less?")-> method less?  @61760|int(68,3)
+									 input: ("~an")-> proxy ~an  @60368|leetcode_median(58,5)
+									 output: (direct)-> object (anon)  @59808|leetcode_median(60,10)
 									MAKE
-									 object: (direct)-> object (anon)  @06560|leetcode_median(60,10)
-									 type: ("bool")-> type bool  @16736|bool(5,6)
+									 object: (direct)-> object (anon)  @01184|leetcode_median(60,10)
+									 type: ("bool")-> type bool  @15648|bool(5,6)
 									CALL --fundamental
-									 lead: (direct)-> object (anon)  @04256|leetcode_median(60,10)
+									 lead: (direct)-> object (anon)  @59808|leetcode_median(60,10)
 									 method: ("not")-> method not  @49344|bool(44,3)
-									 output: (direct)-> object (anon)  @06560|leetcode_median(60,10)
+									 output: (direct)-> object (anon)  @01184|leetcode_median(60,10)
 									IF
-									 condition: (direct)-> object (anon)  @06560|leetcode_median(60,10)
+									 condition: (direct)-> object (anon)  @01184|leetcode_median(60,10)
 									{
 										true branch: BLOCK --domain
 										{
 											CALL --initial, fundamental
-											 lead: ("n")-> object n  @44448|leetcode_median(41,19)
-											 method: ("begin")-> method begin  @44224|int(54,3)
-											 input: ("~an")-> proxy ~an  @18848|leetcode_median(58,5)
+											 lead: ("n")-> object n  @28832|leetcode_median(41,19)
+											 method: ("begin")-> method begin  @43136|int(54,3)
+											 input: ("~an")-> proxy ~an  @60368|leetcode_median(58,5)
 											CALL --fundamental
-											 lead: ("i")-> object i  @42912|leetcode_median(41,19)
-											 method: ("inc")-> method inc  @57728|int(116,3)
+											 lead: ("i")-> object i  @30112|leetcode_median(41,19)
+											 method: ("inc")-> method inc  @56960|int(116,3)
 										}
 										false branch: BLOCK --domain
 										{
 											CALL --initial, fundamental
-											 lead: ("n")-> object n  @44448|leetcode_median(41,19)
-											 method: ("begin")-> method begin  @44224|int(54,3)
-											 input: ("~bn")-> proxy ~bn  @05408|leetcode_median(59,5)
+											 lead: ("n")-> object n  @28832|leetcode_median(41,19)
+											 method: ("begin")-> method begin  @43136|int(54,3)
+											 input: ("~bn")-> proxy ~bn  @63248|leetcode_median(59,5)
 											CALL --fundamental
-											 lead: ("j")-> object j  @37536|leetcode_median(41,19)
-											 method: ("inc")-> method inc  @57728|int(116,3)
+											 lead: ("j")-> object j  @30624|leetcode_median(41,19)
+											 method: ("inc")-> method inc  @56960|int(116,3)
 										}
 									}
 								}
@@ -371,8 +371,8 @@ page leetcode_median
 						}
 					}
 					CALL --fundamental
-					 lead: ("k")-> object k  @43168|leetcode_median(41,19)
-					 method: ("inc")-> method inc  @57728|int(116,3)
+					 lead: ("k")-> object k  @28576|leetcode_median(41,19)
+					 method: ("inc")-> method inc  @56960|int(116,3)
 				}
 			}
 		}

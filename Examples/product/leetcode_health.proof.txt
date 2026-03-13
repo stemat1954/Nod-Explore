@@ -1,302 +1,302 @@
 page leetcode_health
 {
-	subroutine determine_health_needed  @17024|leetcode_health(5,12) --external
+	subroutine determine_health_needed  @56752|leetcode_health(5,12) --external
 	 viable = yes
 	{
 
 		given
 		{
-			object f  @15264|leetcode_health(5,12) --internal
-			 type: (direct)-> type $1<$1<2>>( array<array<int>> )  @59808|$appendix(,)
+			object f  @19360|leetcode_health(5,12) --internal
+			 type: (direct)-> type $1<$1<2>>( array<array<int>> )  @60352|$appendix(,)
 
-			object need  @28576|leetcode_health(5,12) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object need  @19616|leetcode_health(5,12) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 object: (direct)-> object drawdown  @12448|leetcode_health(30,43)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object drawdown  @19872|leetcode_health(30,43)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL
-			 subroutine: ("walk_field")-> subroutine walk_field  @24016|leetcode_health(35,19)
-			 input: ("f")-> object f  @15264|leetcode_health(5,12)
-			 input: ("zero")-> object zero  @42976|dialect(31,2)
-			 input: ("zero")-> object zero  @42976|dialect(31,2)
-			 input: ("zero")-> object zero  @42976|dialect(31,2)
-			 input: ("zero")-> object zero  @42976|dialect(31,2)
-			 output: (direct)-> object drawdown  @12448|leetcode_health(30,43)
+			 subroutine: ("walk_field")-> subroutine walk_field  @63440|leetcode_health(35,19)
+			 input: ("f")-> object f  @19360|leetcode_health(5,12)
+			 input: ("zero")-> object zero  @39312|dialect(31,2)
+			 input: ("zero")-> object zero  @39312|dialect(31,2)
+			 input: ("zero")-> object zero  @39312|dialect(31,2)
+			 input: ("zero")-> object zero  @39312|dialect(31,2)
+			 output: (direct)-> object drawdown  @19872|leetcode_health(30,43)
 			CALL --initial, fundamental
-			 lead: ("need")-> object need  @28576|leetcode_health(5,12)
-			 method: ("begin")-> method begin  @44224|int(54,3)
-			 input: ("one")-> object one  @35152|dialect(32,2)
+			 lead: ("need")-> object need  @19616|leetcode_health(5,12)
+			 method: ("begin")-> method begin  @43136|int(54,3)
+			 input: ("one")-> object one  @23728|dialect(32,2)
 			CALL --fundamental
-			 lead: ("need")-> object need  @28576|leetcode_health(5,12)
-			 method: ("sub")-> method sub  @28112|int(79,3)
-			 input: ("drawdown")-> object drawdown  @12448|leetcode_health(30,43)
+			 lead: ("need")-> object need  @19616|leetcode_health(5,12)
+			 method: ("sub")-> method sub  @22544|int(79,3)
+			 input: ("drawdown")-> object drawdown  @19872|leetcode_health(30,43)
 		}
 	}
 
-	nom type field  @58720|leetcode_health(3,10) --external
+	nom type field  @61792|leetcode_health(3,10) --external
 	 viable = yes
-	 equivalent: (direct)-> type $1<$1<2>>( array<array<int>> )  @59808|$appendix(,)
+	 equivalent: (direct)-> type $1<$1<2>>( array<array<int>> )  @60352|$appendix(,)
 
-	subroutine walk_field  @24016|leetcode_health(35,19) --internal
+	subroutine walk_field  @63440|leetcode_health(35,19) --internal
 	 viable = yes
 	{
 
 		given
 		{
-			object drawdown  @18336|leetcode_health(35,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object drawdown  @21152|leetcode_health(35,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object f  @17056|leetcode_health(35,19) --internal
-			 type: (direct)-> type $1<$1<2>>( array<array<int>> )  @59808|$appendix(,)
+			object f  @12448|leetcode_health(35,19) --internal
+			 type: (direct)-> type $1<$1<2>>( array<array<int>> )  @60352|$appendix(,)
 
-			object i  @13472|leetcode_health(35,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object i  @23968|leetcode_health(35,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object j  @13728|leetcode_health(35,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object j  @22432|leetcode_health(35,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object sub_drawdown  @14752|leetcode_health(35,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object sub_drawdown  @22688|leetcode_health(35,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 
-			object sum  @14496|leetcode_health(35,19) --internal
-			 type: ("int")-> type int  @13200|int(6,6)
+			object sum  @20640|leetcode_health(35,19) --internal
+			 type: ("int")-> type int  @12384|int(6,6)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 proxy: (direct)-> proxy ~row  @18368|leetcode_health(49,3)
-			 type: (direct)-> type $1<2>( array<int> )  @03056|$appendix(,)
+			 proxy: (direct)-> proxy ~row  @03472|leetcode_health(49,3)
+			 type: (direct)-> type $1<2>( array<int> )  @01920|$appendix(,)
 			 permission: [eval]
 			CALL --fundamental
-			 lead: ("f")-> object f  @17056|leetcode_health(35,19)
-			 method: ("use")-> method use  @47040|$appendix(,)
-			 input: ("i")-> object i  @13472|leetcode_health(35,19)
-			 result: (direct)-> proxy ~row  @18368|leetcode_health(49,3)
+			 lead: ("f")-> object f  @12448|leetcode_health(35,19)
+			 method: ("use")-> method use  @60912|$appendix(,)
+			 input: ("i")-> object i  @23968|leetcode_health(35,19)
+			 result: (direct)-> proxy ~row  @03472|leetcode_health(49,3)
 			MAKE
-			 proxy: (direct)-> proxy ~cell  @07808|leetcode_health(50,6)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 proxy: (direct)-> proxy ~cell  @59888|leetcode_health(50,6)
+			 type: ("int")-> type int  @12384|int(6,6)
 			 permission: [eval]
 			CALL --fundamental
-			 lead: ("~row")-> proxy ~row  @18368|leetcode_health(49,3)
-			 method: ("use")-> method use  @40000|$appendix(,)
-			 input: ("j")-> object j  @13728|leetcode_health(35,19)
-			 result: (direct)-> proxy ~cell  @07808|leetcode_health(50,6)
+			 lead: ("~row")-> proxy ~row  @03472|leetcode_health(49,3)
+			 method: ("use")-> method use  @54832|$appendix(,)
+			 input: ("j")-> object j  @22432|leetcode_health(35,19)
+			 result: (direct)-> proxy ~cell  @59888|leetcode_health(50,6)
 			MAKE
-			 object: (direct)-> object new_sum  @19104|leetcode_health(52,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object new_sum  @10400|leetcode_health(52,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object new_sum  @19104|leetcode_health(52,2)
-			 method: ("begin")-> method begin  @44224|int(54,3)
-			 input: ("sum")-> object sum  @14496|leetcode_health(35,19)
+			 lead: (direct)-> object new_sum  @10400|leetcode_health(52,2)
+			 method: ("begin")-> method begin  @43136|int(54,3)
+			 input: ("sum")-> object sum  @20640|leetcode_health(35,19)
 			CALL --fundamental
-			 lead: (direct)-> object new_sum  @19104|leetcode_health(52,2)
-			 method: ("add")-> method add  @33008|int(76,3)
-			 input: ("~cell")-> proxy ~cell  @07808|leetcode_health(50,6)
+			 lead: (direct)-> object new_sum  @10400|leetcode_health(52,2)
+			 method: ("add")-> method add  @33200|int(76,3)
+			 input: ("~cell")-> proxy ~cell  @59888|leetcode_health(50,6)
 			MAKE
-			 object: (direct)-> object (anon)  @16800|leetcode_health(53,16)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @22944|leetcode_health(53,16)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: ("new_sum")-> object new_sum  @19104|leetcode_health(52,2)
-			 method: ("less?")-> method less?  @53888|int(68,3)
-			 input: ("drawdown")-> object drawdown  @18336|leetcode_health(35,19)
-			 output: (direct)-> object (anon)  @16800|leetcode_health(53,16)
+			 lead: ("new_sum")-> object new_sum  @10400|leetcode_health(52,2)
+			 method: ("less?")-> method less?  @61760|int(68,3)
+			 input: ("drawdown")-> object drawdown  @21152|leetcode_health(35,19)
+			 output: (direct)-> object (anon)  @22944|leetcode_health(53,16)
 			MAKE
-			 proxy: (direct)-> proxy ~new_drawdown  @18608|leetcode_health(53,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 proxy: (direct)-> proxy ~new_drawdown  @64688|leetcode_health(53,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			 permission: [eval]
 			CALL
-			 subroutine: (direct)-> subroutine $23<2>( choose<int> )  @18880|$appendix(,)
-			 input: (direct)-> object (anon)  @16800|leetcode_health(53,16)
-			 input: ("new_sum")-> object new_sum  @19104|leetcode_health(52,2)
-			 input: ("drawdown")-> object drawdown  @18336|leetcode_health(35,19)
-			 result: (direct)-> proxy ~new_drawdown  @18608|leetcode_health(53,2)
+			 subroutine: (direct)-> subroutine $23<2>( choose<int> )  @28416|$appendix(,)
+			 input: (direct)-> object (anon)  @22944|leetcode_health(53,16)
+			 input: ("new_sum")-> object new_sum  @10400|leetcode_health(52,2)
+			 input: ("drawdown")-> object drawdown  @21152|leetcode_health(35,19)
+			 result: (direct)-> proxy ~new_drawdown  @64688|leetcode_health(53,2)
 			MAKE
-			 object: (direct)-> object imax  @17312|leetcode_health(55,14)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object imax  @23200|leetcode_health(55,14)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --fundamental
-			 lead: ("f")-> object f  @17056|leetcode_health(35,19)
-			 method: ("count")-> method count  @36800|$appendix(,)
-			 output: (direct)-> object imax  @17312|leetcode_health(55,14)
+			 lead: ("f")-> object f  @12448|leetcode_health(35,19)
+			 method: ("count")-> method count  @45872|$appendix(,)
+			 output: (direct)-> object imax  @23200|leetcode_health(55,14)
 			CALL --fundamental
-			 lead: (direct)-> object imax  @17312|leetcode_health(55,14)
-			 method: ("sub")-> method sub  @28112|int(79,3)
-			 input: ("one")-> object one  @35152|dialect(32,2)
+			 lead: (direct)-> object imax  @23200|leetcode_health(55,14)
+			 method: ("sub")-> method sub  @22544|int(79,3)
+			 input: ("one")-> object one  @23728|dialect(32,2)
 			MAKE
-			 object: (direct)-> object jmax  @20384|leetcode_health(56,17)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object jmax  @23456|leetcode_health(56,17)
+			 type: ("int")-> type int  @12384|int(6,6)
 			CALL --fundamental
-			 lead: ("~row")-> proxy ~row  @18368|leetcode_health(49,3)
-			 method: ("count")-> method count  @15344|$appendix(,)
-			 output: (direct)-> object jmax  @20384|leetcode_health(56,17)
+			 lead: ("~row")-> proxy ~row  @03472|leetcode_health(49,3)
+			 method: ("count")-> method count  @40224|$appendix(,)
+			 output: (direct)-> object jmax  @23456|leetcode_health(56,17)
 			CALL --fundamental
-			 lead: (direct)-> object jmax  @20384|leetcode_health(56,17)
-			 method: ("sub")-> method sub  @28112|int(79,3)
-			 input: ("one")-> object one  @35152|dialect(32,2)
+			 lead: (direct)-> object jmax  @23456|leetcode_health(56,17)
+			 method: ("sub")-> method sub  @22544|int(79,3)
+			 input: ("one")-> object one  @23728|dialect(32,2)
 			MAKE
-			 object: (direct)-> object drawdown_i  @17568|leetcode_health(58,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object drawdown_i  @08352|leetcode_health(58,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			MAKE
-			 object: (direct)-> object drawdown_j  @22688|leetcode_health(59,2)
-			 type: ("int")-> type int  @13200|int(6,6)
+			 object: (direct)-> object drawdown_j  @08608|leetcode_health(59,2)
+			 type: ("int")-> type int  @12384|int(6,6)
 			MAKE
-			 object: (direct)-> object (anon)  @17824|leetcode_health(61,8)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @09632|leetcode_health(61,8)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: ("i")-> object i  @13472|leetcode_health(35,19)
-			 method: ("less?")-> method less?  @53888|int(68,3)
-			 input: ("imax")-> object imax  @17312|leetcode_health(55,14)
-			 output: (direct)-> object (anon)  @17824|leetcode_health(61,8)
+			 lead: ("i")-> object i  @23968|leetcode_health(35,19)
+			 method: ("less?")-> method less?  @61760|int(68,3)
+			 input: ("imax")-> object imax  @23200|leetcode_health(55,14)
+			 output: (direct)-> object (anon)  @09632|leetcode_health(61,8)
 			IF
-			 condition: (direct)-> object (anon)  @17824|leetcode_health(61,8)
+			 condition: (direct)-> object (anon)  @09632|leetcode_health(61,8)
 			{
 				true branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @18592|leetcode_health(61,38)
-					 type: ("int")-> type int  @13200|int(6,6)
+					 object: (direct)-> object (anon)  @09888|leetcode_health(61,38)
+					 type: ("int")-> type int  @12384|int(6,6)
 					CALL --fundamental
-					 lead: ("i")-> object i  @13472|leetcode_health(35,19)
-					 method: ("add")-> method add  @33456|int(77,3)
-					 input: ("one")-> object one  @35152|dialect(32,2)
-					 output: (direct)-> object (anon)  @18592|leetcode_health(61,38)
+					 lead: ("i")-> object i  @23968|leetcode_health(35,19)
+					 method: ("add")-> method add  @33648|int(77,3)
+					 input: ("one")-> object one  @23728|dialect(32,2)
+					 output: (direct)-> object (anon)  @09888|leetcode_health(61,38)
 					CALL
-					 subroutine: ("walk_field")-> subroutine walk_field  @24016|leetcode_health(35,19)
-					 input: ("f")-> object f  @17056|leetcode_health(35,19)
-					 input: (direct)-> object (anon)  @18592|leetcode_health(61,38)
-					 input: ("j")-> object j  @13728|leetcode_health(35,19)
-					 input: ("new_sum")-> object new_sum  @19104|leetcode_health(52,2)
-					 input: ("~new_drawdown")-> proxy ~new_drawdown  @18608|leetcode_health(53,2)
-					 output: ("drawdown_i")-> object drawdown_i  @17568|leetcode_health(58,2)
+					 subroutine: ("walk_field")-> subroutine walk_field  @63440|leetcode_health(35,19)
+					 input: ("f")-> object f  @12448|leetcode_health(35,19)
+					 input: (direct)-> object (anon)  @09888|leetcode_health(61,38)
+					 input: ("j")-> object j  @22432|leetcode_health(35,19)
+					 input: ("new_sum")-> object new_sum  @10400|leetcode_health(52,2)
+					 input: ("~new_drawdown")-> proxy ~new_drawdown  @64688|leetcode_health(53,2)
+					 output: ("drawdown_i")-> object drawdown_i  @08352|leetcode_health(58,2)
 				}
 			}
 			MAKE
-			 object: (direct)-> object (anon)  @18848|leetcode_health(62,8)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @10656|leetcode_health(62,8)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: ("j")-> object j  @13728|leetcode_health(35,19)
-			 method: ("less?")-> method less?  @53888|int(68,3)
-			 input: ("jmax")-> object jmax  @20384|leetcode_health(56,17)
-			 output: (direct)-> object (anon)  @18848|leetcode_health(62,8)
+			 lead: ("j")-> object j  @22432|leetcode_health(35,19)
+			 method: ("less?")-> method less?  @61760|int(68,3)
+			 input: ("jmax")-> object jmax  @23456|leetcode_health(56,17)
+			 output: (direct)-> object (anon)  @10656|leetcode_health(62,8)
 			IF
-			 condition: (direct)-> object (anon)  @18848|leetcode_health(62,8)
+			 condition: (direct)-> object (anon)  @10656|leetcode_health(62,8)
 			{
 				true branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @20640|leetcode_health(62,41)
-					 type: ("int")-> type int  @13200|int(6,6)
+					 object: (direct)-> object (anon)  @11168|leetcode_health(62,41)
+					 type: ("int")-> type int  @12384|int(6,6)
 					CALL --fundamental
-					 lead: ("j")-> object j  @13728|leetcode_health(35,19)
-					 method: ("add")-> method add  @33456|int(77,3)
-					 input: ("one")-> object one  @35152|dialect(32,2)
-					 output: (direct)-> object (anon)  @20640|leetcode_health(62,41)
+					 lead: ("j")-> object j  @22432|leetcode_health(35,19)
+					 method: ("add")-> method add  @33648|int(77,3)
+					 input: ("one")-> object one  @23728|dialect(32,2)
+					 output: (direct)-> object (anon)  @11168|leetcode_health(62,41)
 					CALL
-					 subroutine: ("walk_field")-> subroutine walk_field  @24016|leetcode_health(35,19)
-					 input: ("f")-> object f  @17056|leetcode_health(35,19)
-					 input: ("i")-> object i  @13472|leetcode_health(35,19)
-					 input: (direct)-> object (anon)  @20640|leetcode_health(62,41)
-					 input: ("new_sum")-> object new_sum  @19104|leetcode_health(52,2)
-					 input: ("~new_drawdown")-> proxy ~new_drawdown  @18608|leetcode_health(53,2)
-					 output: ("drawdown_j")-> object drawdown_j  @22688|leetcode_health(59,2)
+					 subroutine: ("walk_field")-> subroutine walk_field  @63440|leetcode_health(35,19)
+					 input: ("f")-> object f  @12448|leetcode_health(35,19)
+					 input: ("i")-> object i  @23968|leetcode_health(35,19)
+					 input: (direct)-> object (anon)  @11168|leetcode_health(62,41)
+					 input: ("new_sum")-> object new_sum  @10400|leetcode_health(52,2)
+					 input: ("~new_drawdown")-> proxy ~new_drawdown  @64688|leetcode_health(53,2)
+					 output: ("drawdown_j")-> object drawdown_j  @08608|leetcode_health(59,2)
 				}
 			}
 			MAKE
-			 object: (direct)-> object use_i  @41888|leetcode_health(64,26)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object use_i  @27808|leetcode_health(64,26)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --essential, fundamental
-			 lead: ("drawdown_i")-> object drawdown_i  @17568|leetcode_health(58,2)
-			 method: ("not_null?")-> method not_null?  @15696|object(37,3)
-			 output: (direct)-> object use_i  @41888|leetcode_health(64,26)
+			 lead: ("drawdown_i")-> object drawdown_i  @08352|leetcode_health(58,2)
+			 method: ("not_null?")-> method not_null?  @21008|object(37,3)
+			 output: (direct)-> object use_i  @27808|leetcode_health(64,26)
 			MAKE
-			 object: (direct)-> object use_j  @34464|leetcode_health(65,26)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object use_j  @29088|leetcode_health(65,26)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --essential, fundamental
-			 lead: ("drawdown_j")-> object drawdown_j  @22688|leetcode_health(59,2)
-			 method: ("not_null?")-> method not_null?  @15696|object(37,3)
-			 output: (direct)-> object use_j  @34464|leetcode_health(65,26)
+			 lead: ("drawdown_j")-> object drawdown_j  @08608|leetcode_health(59,2)
+			 method: ("not_null?")-> method not_null?  @21008|object(37,3)
+			 output: (direct)-> object use_j  @29088|leetcode_health(65,26)
 			MAKE
-			 object: (direct)-> object (anon)  @33696|leetcode_health(67,8)
-			 type: ("bool")-> type bool  @16736|bool(5,6)
+			 object: (direct)-> object (anon)  @31136|leetcode_health(67,8)
+			 type: ("bool")-> type bool  @15648|bool(5,6)
 			CALL --fundamental
-			 lead: ("use_i")-> object use_i  @41888|leetcode_health(64,26)
-			 method: ("and")-> method and  @25008|bool(35,3)
-			 input: ("use_j")-> object use_j  @34464|leetcode_health(65,26)
-			 output: (direct)-> object (anon)  @33696|leetcode_health(67,8)
+			 lead: ("use_i")-> object use_i  @27808|leetcode_health(64,26)
+			 method: ("and")-> method and  @18784|bool(35,3)
+			 input: ("use_j")-> object use_j  @29088|leetcode_health(65,26)
+			 output: (direct)-> object (anon)  @31136|leetcode_health(67,8)
 			IF
-			 condition: (direct)-> object (anon)  @33696|leetcode_health(67,8)
+			 condition: (direct)-> object (anon)  @31136|leetcode_health(67,8)
 			{
 				true branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @35488|leetcode_health(68,37)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
+					 object: (direct)-> object (anon)  @24992|leetcode_health(68,37)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
 					CALL --fundamental
-					 lead: ("drawdown_j")-> object drawdown_j  @22688|leetcode_health(59,2)
-					 method: ("less?")-> method less?  @53888|int(68,3)
-					 input: ("drawdown_i")-> object drawdown_i  @17568|leetcode_health(58,2)
-					 output: (direct)-> object (anon)  @35488|leetcode_health(68,37)
+					 lead: ("drawdown_j")-> object drawdown_j  @08608|leetcode_health(59,2)
+					 method: ("less?")-> method less?  @61760|int(68,3)
+					 input: ("drawdown_i")-> object drawdown_i  @08352|leetcode_health(58,2)
+					 output: (direct)-> object (anon)  @24992|leetcode_health(68,37)
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @05888|leetcode_health(68,23)
-					 type: ("int")-> type int  @13200|int(6,6)
+					 proxy: (direct)-> proxy (anon)  @06112|leetcode_health(68,23)
+					 type: ("int")-> type int  @12384|int(6,6)
 					 permission: [eval]
 					CALL
-					 subroutine: (direct)-> subroutine $23<2>( choose<int> )  @18880|$appendix(,)
-					 input: (direct)-> object (anon)  @35488|leetcode_health(68,37)
-					 input: ("drawdown_i")-> object drawdown_i  @17568|leetcode_health(58,2)
-					 input: ("drawdown_j")-> object drawdown_j  @22688|leetcode_health(59,2)
-					 result: (direct)-> proxy (anon)  @05888|leetcode_health(68,23)
+					 subroutine: (direct)-> subroutine $23<2>( choose<int> )  @28416|$appendix(,)
+					 input: (direct)-> object (anon)  @24992|leetcode_health(68,37)
+					 input: ("drawdown_i")-> object drawdown_i  @08352|leetcode_health(58,2)
+					 input: ("drawdown_j")-> object drawdown_j  @08608|leetcode_health(59,2)
+					 result: (direct)-> proxy (anon)  @06112|leetcode_health(68,23)
 					CALL --initial, fundamental
-					 lead: ("sub_drawdown")-> object sub_drawdown  @14752|leetcode_health(35,19)
-					 method: ("begin")-> method begin  @44224|int(54,3)
-					 input: (direct)-> proxy (anon)  @05888|leetcode_health(68,23)
+					 lead: ("sub_drawdown")-> object sub_drawdown  @22688|leetcode_health(35,19)
+					 method: ("begin")-> method begin  @43136|int(54,3)
+					 input: (direct)-> proxy (anon)  @06112|leetcode_health(68,23)
 				}
 				false branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @38304|leetcode_health(69,13)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
-					CALL --fundamental
-					 lead: ("use_i")-> object use_i  @41888|leetcode_health(64,26)
-					 method: ("not")-> method not  @49344|bool(44,3)
-					 output: (direct)-> object (anon)  @38304|leetcode_health(69,13)
-					MAKE
-					 object: (direct)-> object (anon)  @41120|leetcode_health(69,32)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
-					CALL --fundamental
-					 lead: ("use_j")-> object use_j  @34464|leetcode_health(65,26)
-					 method: ("not")-> method not  @49344|bool(44,3)
-					 output: (direct)-> object (anon)  @41120|leetcode_health(69,32)
-					MAKE
 					 object: (direct)-> object (anon)  @37024|leetcode_health(69,13)
-					 type: ("bool")-> type bool  @16736|bool(5,6)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
 					CALL --fundamental
-					 lead: (direct)-> object (anon)  @38304|leetcode_health(69,13)
-					 method: ("and")-> method and  @25008|bool(35,3)
-					 input: (direct)-> object (anon)  @41120|leetcode_health(69,32)
+					 lead: ("use_i")-> object use_i  @27808|leetcode_health(64,26)
+					 method: ("not")-> method not  @49344|bool(44,3)
 					 output: (direct)-> object (anon)  @37024|leetcode_health(69,13)
+					MAKE
+					 object: (direct)-> object (anon)  @37792|leetcode_health(69,32)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
+					CALL --fundamental
+					 lead: ("use_j")-> object use_j  @29088|leetcode_health(65,26)
+					 method: ("not")-> method not  @49344|bool(44,3)
+					 output: (direct)-> object (anon)  @37792|leetcode_health(69,32)
+					MAKE
+					 object: (direct)-> object (anon)  @36000|leetcode_health(69,13)
+					 type: ("bool")-> type bool  @15648|bool(5,6)
+					CALL --fundamental
+					 lead: (direct)-> object (anon)  @37024|leetcode_health(69,13)
+					 method: ("and")-> method and  @18784|bool(35,3)
+					 input: (direct)-> object (anon)  @37792|leetcode_health(69,32)
+					 output: (direct)-> object (anon)  @36000|leetcode_health(69,13)
 					IF
-					 condition: (direct)-> object (anon)  @37024|leetcode_health(69,13)
+					 condition: (direct)-> object (anon)  @36000|leetcode_health(69,13)
 					{
 						true branch: CALL --initial, fundamental
-						 lead: ("sub_drawdown")-> object sub_drawdown  @14752|leetcode_health(35,19)
-						 method: ("begin")-> method begin  @44224|int(54,3)
-						 input: ("~new_drawdown")-> proxy ~new_drawdown  @18608|leetcode_health(53,2)
+						 lead: ("sub_drawdown")-> object sub_drawdown  @22688|leetcode_health(35,19)
+						 method: ("begin")-> method begin  @43136|int(54,3)
+						 input: ("~new_drawdown")-> proxy ~new_drawdown  @64688|leetcode_health(53,2)
 						false branch: IF
-						 condition: ("use_i")-> object use_i  @41888|leetcode_health(64,26)
+						 condition: ("use_i")-> object use_i  @27808|leetcode_health(64,26)
 						{
 							true branch: CALL --initial, fundamental
-							 lead: ("sub_drawdown")-> object sub_drawdown  @14752|leetcode_health(35,19)
-							 method: ("begin")-> method begin  @44224|int(54,3)
-							 input: ("drawdown_i")-> object drawdown_i  @17568|leetcode_health(58,2)
+							 lead: ("sub_drawdown")-> object sub_drawdown  @22688|leetcode_health(35,19)
+							 method: ("begin")-> method begin  @43136|int(54,3)
+							 input: ("drawdown_i")-> object drawdown_i  @08352|leetcode_health(58,2)
 							false branch: CALL --initial, fundamental
-							 lead: ("sub_drawdown")-> object sub_drawdown  @14752|leetcode_health(35,19)
-							 method: ("begin")-> method begin  @44224|int(54,3)
-							 input: ("drawdown_j")-> object drawdown_j  @22688|leetcode_health(59,2)
+							 lead: ("sub_drawdown")-> object sub_drawdown  @22688|leetcode_health(35,19)
+							 method: ("begin")-> method begin  @43136|int(54,3)
+							 input: ("drawdown_j")-> object drawdown_j  @08608|leetcode_health(59,2)
 						}
 					}
 				}

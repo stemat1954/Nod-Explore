@@ -74,8 +74,7 @@ subroutine index_substrings ( string s, array<string> match )( array<int> map )
 
 [page] subroutine match? ( string token, array<string> match )( bool yes )
 {
-	yes:begin( 'true' ); 
-	for each ( ~s in match ) if ( "token |=| ~s" ) return; -- yes is true
+	for each ( ~s in match ) if ( "~s |=| token" ) return after yes:begin( 'true' ); 
 	yes := false; 
 }
 

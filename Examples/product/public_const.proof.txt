@@ -3,7 +3,7 @@ page public_const
 
 	common
 	{
-		subroutine $start1  @58336|public_const(,) --internal
+		subroutine $start1  @13536|public_const(,) --internal
 		 viable = yes
 		{
 
@@ -14,12 +14,12 @@ page public_const
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object tan_pi_over_two  @00384|public_const(5,2)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object tan_pi_over_two  @64896|public_const(5,2)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 			}
 		}
 
-		subroutine $start2  @20672|public_const(7,2) --internal
+		subroutine $start2  @09152|public_const(7,2) --internal
 		 viable = yes
 		{
 
@@ -30,61 +30,61 @@ page public_const
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object n  @54176|public_const(9,3)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object n  @41376|public_const(9,3)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 				MAKE
-				 literal: (direct)-> literal (anon)  @54432|public_const(,) --'2.0'
-				 type: ("expr")-> type expr  @15648|expr(5,6)
+				 literal: (direct)-> literal (anon)  @56480|public_const(,) --'2.0'
+				 type: ("expr")-> type expr  @14560|expr(5,6)
 				MAKE
-				 object: (direct)-> object (anon)  @59296|public_const(9,33)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object (anon)  @44192|public_const(9,33)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 				CALL --initial, fundamental
-				 lead: (direct)-> object (anon)  @59296|public_const(9,33)
-				 method: ("begin")-> method begin  @06944|float(50,3)
-				 input: (direct)-> literal (anon)  @54432|public_const(,)
+				 lead: (direct)-> object (anon)  @44192|public_const(9,33)
+				 method: ("begin")-> method begin  @03616|float(50,3)
+				 input: (direct)-> literal (anon)  @56480|public_const(,)
 				MAKE
-				 object: (direct)-> object (anon)  @59552|public_const(9,17)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object (anon)  @56992|public_const(9,17)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 				CALL --fundamental
-				 lead: ("pi")-> object pi  @37760|math(19,2)
-				 method: ("div")-> method div  @24240|float(88,3)
-				 input: (direct)-> object (anon)  @59296|public_const(9,33)
-				 output: (direct)-> object (anon)  @59552|public_const(9,17)
+				 lead: ("pi")-> object pi  @37984|math(19,2)
+				 method: ("div")-> method div  @22832|float(88,3)
+				 input: (direct)-> object (anon)  @44192|public_const(9,33)
+				 output: (direct)-> object (anon)  @56992|public_const(9,17)
 				CALL --initial, fundamental
-				 lead: (direct)-> object n  @54176|public_const(9,3)
-				 method: ("begin")-> method begin  @07584|float(52,3)
-				 input: (direct)-> object (anon)  @59552|public_const(9,17)
+				 lead: (direct)-> object n  @41376|public_const(9,3)
+				 method: ("begin")-> method begin  @04256|float(52,3)
+				 input: (direct)-> object (anon)  @56992|public_const(9,17)
 				MAKE
-				 object: (direct)-> object (anon)  @48288|public_const(11,27)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object (anon)  @42144|public_const(11,27)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 				CALL --fundamental
-				 subroutine: (direct)-> subroutine $27<28>( sin<fp2> )  @04592|$appendix(,)
-				 input: ("n")-> object n  @54176|public_const(9,3)
-				 output: (direct)-> object (anon)  @48288|public_const(11,27)
+				 subroutine: (direct)-> subroutine $27<28>( sin<fp2> )  @14432|$appendix(,)
+				 input: ("n")-> object n  @41376|public_const(9,3)
+				 output: (direct)-> object (anon)  @42144|public_const(11,27)
 				MAKE
-				 object: (direct)-> object (anon)  @59808|public_const(11,38)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object (anon)  @42400|public_const(11,38)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 				CALL --fundamental
-				 subroutine: (direct)-> subroutine $29<28>( cos<fp2> )  @04896|$appendix(,)
-				 input: ("n")-> object n  @54176|public_const(9,3)
-				 output: (direct)-> object (anon)  @59808|public_const(11,38)
+				 subroutine: (direct)-> subroutine $29<28>( cos<fp2> )  @11696|$appendix(,)
+				 input: ("n")-> object n  @41376|public_const(9,3)
+				 output: (direct)-> object (anon)  @42400|public_const(11,38)
 				MAKE
-				 object: (direct)-> object (anon)  @45472|public_const(11,27)
-				 type: ("fp2")-> type fp2  @17008|float(38,6)
+				 object: (direct)-> object (anon)  @44448|public_const(11,27)
+				 type: ("fp2")-> type fp2  @15104|float(38,6)
 				CALL --fundamental
-				 lead: (direct)-> object (anon)  @48288|public_const(11,27)
-				 method: ("div")-> method div  @24240|float(88,3)
-				 input: (direct)-> object (anon)  @59808|public_const(11,38)
-				 output: (direct)-> object (anon)  @45472|public_const(11,27)
+				 lead: (direct)-> object (anon)  @42144|public_const(11,27)
+				 method: ("div")-> method div  @22832|float(88,3)
+				 input: (direct)-> object (anon)  @42400|public_const(11,38)
+				 output: (direct)-> object (anon)  @44448|public_const(11,27)
 				CALL --initial, fundamental
-				 lead: ("tan_pi_over_two")-> object tan_pi_over_two  @00384|public_const(5,2)
-				 method: ("begin")-> method begin  @07584|float(52,3)
-				 input: (direct)-> object (anon)  @45472|public_const(11,27)
+				 lead: ("tan_pi_over_two")-> object tan_pi_over_two  @64896|public_const(5,2)
+				 method: ("begin")-> method begin  @04256|float(52,3)
+				 input: (direct)-> object (anon)  @44448|public_const(11,27)
 			}
 		}
 
-		object tan_pi_over_two  @00384|public_const(5,2) --external
-		 type: ("fp2")-> type fp2  @17008|float(38,6)
+		object tan_pi_over_two  @64896|public_const(5,2) --external
+		 type: ("fp2")-> type fp2  @15104|float(38,6)
 	}
 
 }
