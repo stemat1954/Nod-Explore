@@ -63,9 +63,8 @@ white-space:
 
 Escape sequences are not supported in strings.
 
-Comments can be inserted anywhere non-string white-space
-is allowed. Comment characters are skipped as white-space 
-until end of line.
+Comment characters are skipped as white-space until end
+of line.
 
 Numeric value tokens are automatically saved as numbers.
 Otherwise they are saved as strings.  To prevent conver-
@@ -93,7 +92,7 @@ defined in the environment. Environment vars are saved
 as strings.
 
 
-Example source:
+Example DDL source:
 
 	ROOT = *
 	threads = 10
@@ -113,9 +112,9 @@ The item named ROOT is an environment variable.
 
 The item named threads is saved as an integer. 
 	
-The item named processor is saved as a subset at level 1.  
-It contains two items named mode and level.  mode and 
-level are both saved as strings.
+The item named processor is saved as a subset.  It 
+contains two items at level 1 named mode and level.
+mode and level are both saved as strings.
 
 The item named expr is saved as a string.	
 

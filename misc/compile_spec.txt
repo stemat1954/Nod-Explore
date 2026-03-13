@@ -8,16 +8,11 @@ I.  Command Line
 	Available options:
 
 		-rebuild 
+
 			compile all books without regard to timestamps 
 
 
 II.  Make File 
-
-	To build the standard Nod library, write a ddl make file
-	with nsl = {} and option = {}.
-
-	To build an application, write a make file without 
-	nsl = {}.
 
 
 	nsl = -- nod standard lib (precludes app build)
@@ -32,7 +27,7 @@ II.  Make File
 
 	ndk = ""   -- ndk install root, required for app build
 
-	scan =		-- book scan list 
+	scan =		-- book scan list (optional)
 	{
 		paths = n
 		path[i] = ""	-- i = 1 ... n; dir path, no filename
@@ -47,7 +42,7 @@ II.  Make File
 		load			= <load>	-- common pre-load (optional)
 	}
 
-	option =	-- optional
+	option =	-- (optional)
 	{
 		-- default off (turn on)
 
@@ -60,7 +55,8 @@ II.  Make File
 	}
 
 	
-	<build>
+	<build> subset:
+
 	{
 		name			= fid	-- skip if nsl, else required
 		file			= ""	-- optional; no path, no extension
@@ -69,23 +65,24 @@ II.  Make File
 		major_version	= n
 		minor_version	= n
 		build_number	= n
-		load			= <load> -- book pre-load, optional
+		load			= <load> -- book pre-load (optional)
 	}
 
 
-	<load>
+	<load> subset:
+
 	{
 		books			= n		-- n > 0
 		
 		book[i]			=		-- i = 1 ... n
 		{
 			name			= fid	
-			alias			= fid	-- optional
+			alias			= fid	-- (optional)
 		}
 	}
 
 
-	value tokens
+	value key:
 
 		""		file system path string
 				paths can be relative
@@ -99,3 +96,10 @@ II.  Make File
 				true/false
 				yes/no
 				enable/disable
+
+				
+	To build the standard Nod library, write a ddl make file
+	with nsl = {} and option = {}.
+
+	To build an application, write a make file without 
+	nsl = {}.
