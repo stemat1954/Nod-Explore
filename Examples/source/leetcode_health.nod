@@ -2,7 +2,7 @@ page leetcode_health in ExamplesByNod
 
 nom type field =  array< array<int> >;  -- not a good public name
 
-subroutine determine_health_needed ( field f )( int need )
+routine determine_health_needed ( field f )( int need )
 {{
 	https://leetcode.com/problems/dungeon-game/
 
@@ -32,7 +32,7 @@ subroutine determine_health_needed ( field f )( int need )
 }
 
 
-[page] subroutine walk_field ( field f, int i, int j, int sum, int drawdown )( int sub_drawdown ) -- recursive
+[page] routine walk_field ( field f, int i, int j, int sum, int drawdown )( int sub_drawdown ) -- recursive
 {{
 	This routine recursively walks given field f starting
 	at cell (i,j).  i and j are valid indices in f.

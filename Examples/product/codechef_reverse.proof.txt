@@ -1,6 +1,6 @@
 page codechef_reverse
 {
-	subroutine demo1  @25728|codechef_reverse(9,19) --internal
+	routine demo1  @38480|codechef_reverse(9,16) --internal
 	 viable = yes
 	{
 
@@ -11,125 +11,125 @@ page codechef_reverse
 		BLOCK --domain
 		{
 			MAKE
-			 proxy: (direct)-> proxy ~console  @13856|codechef_reverse(15,5)
-			 type: ("console")-> type console  @00480|console(5,6)
+			 proxy: (direct)-> proxy ~console  @02880|codechef_reverse(15,5)
+			 type: ("console")-> type console  @44592|console(5,6)
 			 permission: [upd]
 			CALL
-			 lead: ("sys")-> object sys  @37760|system(29,8)
-			 method: ("use_console")-> method use_console  @51568|system(16,3)
-			 result: (direct)-> proxy ~console  @13856|codechef_reverse(15,5)
+			 lead: ("sys")-> object sys  @24720|system(29,8)
+			 method: ("use_console")-> method use_console  @19840|system(16,3)
+			 result: (direct)-> proxy ~console  @02880|codechef_reverse(15,5)
 			MAKE
-			 object: (direct)-> object input  @59776|codechef_reverse(17,2)
-			 type: ("text_mediator")-> type text_mediator  @64928|text_mediator(43,6)
+			 object: (direct)-> object input  @50576|codechef_reverse(17,2)
+			 type: ("editor")-> type editor  @39152|editor(43,6)
 			CALL --initial
-			 lead: (direct)-> object input  @59776|codechef_reverse(17,2)
-			 method: ("begin")-> method begin  @41376|text_mediator(106,3)
+			 lead: (direct)-> object input  @50576|codechef_reverse(17,2)
+			 method: ("begin")-> method begin  @50768|editor(106,3)
 			 input: (pending)->
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object (anon)  @62336|codechef_reverse(19,10)
-			 type: ("string")-> type string  @05152|string(4,6)
+			 object: (direct)-> object (anon)  @50832|codechef_reverse(19,10)
+			 type: ("string")-> type string  @04000|string(4,6)
 			CALL
-			 lead: ("~console")-> proxy ~console  @13856|codechef_reverse(15,5)
-			 method: ("read")-> method read  @45712|console(71,3)
-			 input: ("input")-> object input  @59776|codechef_reverse(17,2)
+			 lead: ("~console")-> proxy ~console  @02880|codechef_reverse(15,5)
+			 method: ("read")-> method read  @62960|console(71,3)
+			 input: ("input")-> object input  @50576|codechef_reverse(17,2)
 			 input: (pending)->
-			 output: (direct)-> object (anon)  @62336|codechef_reverse(19,10)
+			 output: (direct)-> object (anon)  @50832|codechef_reverse(19,10)
 			MAKE
-			 object: (direct)-> object n  @62592|codechef_reverse(20,22)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object n  @53648|codechef_reverse(20,22)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL
-			 lead: ("input")-> object input  @59776|codechef_reverse(17,2)
-			 method: (direct)-> method $10<2>( fread<int> )  @56784|$appendix(,)
+			 lead: ("input")-> object input  @50576|codechef_reverse(17,2)
+			 method: (direct)-> method $10<2>( fread<int> )  @50816|$appendix(,)
 			 input: (pending)->
-			 output: (direct)-> object n  @62592|codechef_reverse(20,22)
+			 output: (direct)-> object n  @53648|codechef_reverse(20,22)
 			MAKE
-			 object: (direct)-> object (anon)  @64128|codechef_reverse(22,8)
-			 type: ("bool")-> type bool  @23440|bool(5,6)
+			 object: (direct)-> object (anon)  @51088|codechef_reverse(22,8)
+			 type: ("bool")-> type bool  @18560|bool(5,6)
 			CALL --fundamental
-			 lead: ("zero")-> object zero  @41888|dialect(31,2)
-			 method: ("less?")-> method less?  @59088|int(68,3)
-			 input: ("n")-> object n  @62592|codechef_reverse(20,22)
-			 output: (direct)-> object (anon)  @64128|codechef_reverse(22,8)
+			 lead: ("zero")-> object zero  @49312|dialect(31,2)
+			 method: ("less?")-> method less?  @59184|int(68,3)
+			 input: ("n")-> object n  @53648|codechef_reverse(20,22)
+			 output: (direct)-> object (anon)  @51088|codechef_reverse(22,8)
 			IF
-			 condition: (direct)-> object (anon)  @64128|codechef_reverse(22,8)
+			 condition: (direct)-> object (anon)  @51088|codechef_reverse(22,8)
 			{
 				true branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object values  @56960|codechef_reverse(24,3)
-					 type: (direct)-> type $1<2>( array<int> )  @02112|$appendix(,)
+					 object: (direct)-> object values  @53392|codechef_reverse(24,3)
+					 type: (direct)-> type $1<2>( array<int> )  @19024|$appendix(,)
 					CALL --initial, fundamental
-					 lead: (direct)-> object values  @56960|codechef_reverse(24,3)
-					 method: ("begin")-> method begin  @00784|$appendix(,)
-					 input: ("n")-> object n  @62592|codechef_reverse(20,22)
+					 lead: (direct)-> object values  @53392|codechef_reverse(24,3)
+					 method: ("begin")-> method begin  @63456|$appendix(,)
+					 input: ("n")-> object n  @53648|codechef_reverse(20,22)
 					MAKE
-					 object: (direct)-> object (anon)  @55936|codechef_reverse(26,11)
-					 type: ("string")-> type string  @05152|string(4,6)
+					 object: (direct)-> object (anon)  @49808|codechef_reverse(26,11)
+					 type: ("string")-> type string  @04000|string(4,6)
 					CALL
-					 lead: ("~console")-> proxy ~console  @13856|codechef_reverse(15,5)
-					 method: ("read")-> method read  @45712|console(71,3)
-					 input: ("input")-> object input  @59776|codechef_reverse(17,2)
+					 lead: ("~console")-> proxy ~console  @02880|codechef_reverse(15,5)
+					 method: ("read")-> method read  @62960|console(71,3)
+					 input: ("input")-> object input  @50576|codechef_reverse(17,2)
 					 input: (pending)->
-					 output: (direct)-> object (anon)  @55936|codechef_reverse(26,11)
+					 output: (direct)-> object (anon)  @49808|codechef_reverse(26,11)
 					MAKE
-					 object: (direct)-> object i  @59264|codechef_reverse(30,3)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 object: (direct)-> object i  @44688|codechef_reverse(30,3)
+					 type: ("int")-> type int  @18832|int(6,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object i  @59264|codechef_reverse(30,3)
-					 method: ("begin")-> method begin  @47200|int(52,3)
+					 lead: (direct)-> object i  @44688|codechef_reverse(30,3)
+					 method: ("begin")-> method begin  @45984|int(52,3)
 					 input: (pending)->
 					LOOP
-					 condition: (direct)-> object (anon)  @56448|codechef_reverse(31,11)
+					 condition: (direct)-> object (anon)  @44944|codechef_reverse(31,11)
 					{
 						condition branch: BLOCK --macro
 						{
 							MAKE
-							 object: (direct)-> object (anon)  @56448|codechef_reverse(31,11)
-							 type: ("bool")-> type bool  @23440|bool(5,6)
+							 object: (direct)-> object (anon)  @44944|codechef_reverse(31,11)
+							 type: ("bool")-> type bool  @18560|bool(5,6)
 							CALL --fundamental
-							 lead: ("i")-> object i  @59264|codechef_reverse(30,3)
-							 method: ("less?")-> method less?  @59088|int(68,3)
-							 input: ("n")-> object n  @62592|codechef_reverse(20,22)
-							 output: (direct)-> object (anon)  @56448|codechef_reverse(31,11)
+							 lead: ("i")-> object i  @44688|codechef_reverse(30,3)
+							 method: ("less?")-> method less?  @59184|int(68,3)
+							 input: ("n")-> object n  @53648|codechef_reverse(20,22)
+							 output: (direct)-> object (anon)  @44944|codechef_reverse(31,11)
 						}
 						iteration branch: BLOCK --domain
 						{
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @03408|codechef_reverse(33,30)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @27600|codechef_reverse(33,30)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [init]
 							CALL --fundamental
-							 lead: ("values")-> object values  @56960|codechef_reverse(24,3)
-							 method: ("use")-> method use  @17808|$appendix(,)
-							 input: ("i")-> object i  @59264|codechef_reverse(30,3)
-							 result: (direct)-> proxy (anon)  @03408|codechef_reverse(33,30)
+							 lead: ("values")-> object values  @53392|codechef_reverse(24,3)
+							 method: ("use")-> method use  @27136|$appendix(,)
+							 input: ("i")-> object i  @44688|codechef_reverse(30,3)
+							 result: (direct)-> proxy (anon)  @27600|codechef_reverse(33,30)
 							CALL
-							 lead: ("input")-> object input  @59776|codechef_reverse(17,2)
-							 method: (direct)-> method $10<2>( fread<int> )  @56784|$appendix(,)
+							 lead: ("input")-> object input  @50576|codechef_reverse(17,2)
+							 method: (direct)-> method $10<2>( fread<int> )  @50816|$appendix(,)
 							 input: (pending)->
-							 output: (direct)-> proxy (anon)  @03408|codechef_reverse(33,30)
+							 output: (direct)-> proxy (anon)  @27600|codechef_reverse(33,30)
 							CALL --fundamental
-							 lead: ("i")-> object i  @59264|codechef_reverse(30,3)
-							 method: ("inc")-> method inc  @61968|int(116,3)
+							 lead: ("i")-> object i  @44688|codechef_reverse(30,3)
+							 method: ("inc")-> method inc  @58544|int(116,3)
 						}
 					}
 					MAKE
-					 object: (direct)-> object space  @60800|codechef_reverse(39,3)
-					 type: ("unicode")-> type unicode  @10320|unicode(4,6)
+					 object: (direct)-> object space  @52112|codechef_reverse(39,3)
+					 type: ("unicode")-> type unicode  @08624|unicode(4,6)
 					MAKE
-					 literal: (direct)-> literal (anon)  @52864|codechef_reverse(,) --'U+0020'
-					 type: ("expr")-> type expr  @22352|expr(5,6)
+					 literal: (direct)-> literal (anon)  @52368|codechef_reverse(,) --'U+0020'
+					 type: ("expr")-> type expr  @19920|expr(5,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object space  @60800|codechef_reverse(39,3)
-					 method: ("begin")-> method begin  @27040|unicode(28,3)
-					 input: (direct)-> literal (anon)  @52864|codechef_reverse(,)
+					 lead: (direct)-> object space  @52112|codechef_reverse(39,3)
+					 method: ("begin")-> method begin  @39568|unicode(28,3)
+					 input: (direct)-> literal (anon)  @52368|codechef_reverse(,)
 					MAKE
-					 object: (direct)-> object output  @64384|codechef_reverse(41,3)
-					 type: ("text_mediator")-> type text_mediator  @64928|text_mediator(43,6)
+					 object: (direct)-> object output  @45456|codechef_reverse(41,3)
+					 type: ("editor")-> type editor  @39152|editor(43,6)
 					CALL --initial
-					 lead: (direct)-> object output  @64384|codechef_reverse(41,3)
-					 method: ("begin")-> method begin  @41376|text_mediator(106,3)
+					 lead: (direct)-> object output  @45456|codechef_reverse(41,3)
+					 method: ("begin")-> method begin  @50768|editor(106,3)
 					 input: (pending)->
 					 input: (pending)->
 					LOOP --unconditional
@@ -137,55 +137,55 @@ page codechef_reverse
 						iteration branch: BLOCK --domain
 						{
 							CALL --fundamental
-							 lead: ("n")-> object n  @62592|codechef_reverse(20,22)
-							 method: ("dec")-> method dec  @41264|int(119,3)
+							 lead: ("n")-> object n  @53648|codechef_reverse(20,22)
+							 method: ("dec")-> method dec  @40720|int(119,3)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @04848|codechef_reverse(44,30)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @27840|codechef_reverse(44,30)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [init]
 							CALL --fundamental
-							 lead: ("values")-> object values  @56960|codechef_reverse(24,3)
-							 method: ("use")-> method use  @17808|$appendix(,)
-							 input: ("n")-> object n  @62592|codechef_reverse(20,22)
-							 result: (direct)-> proxy (anon)  @04848|codechef_reverse(44,30)
+							 lead: ("values")-> object values  @53392|codechef_reverse(24,3)
+							 method: ("use")-> method use  @27136|$appendix(,)
+							 input: ("n")-> object n  @53648|codechef_reverse(20,22)
+							 result: (direct)-> proxy (anon)  @27840|codechef_reverse(44,30)
 							CALL
-							 lead: ("output")-> object output  @64384|codechef_reverse(41,3)
-							 method: (direct)-> method $12<2>( fwrite<int> )  @56464|$appendix(,)
-							 input: (direct)-> proxy (anon)  @04848|codechef_reverse(44,30)
+							 lead: ("output")-> object output  @45456|codechef_reverse(41,3)
+							 method: (direct)-> method $12<2>( fwrite<int> )  @51136|$appendix(,)
+							 input: (direct)-> proxy (anon)  @27840|codechef_reverse(44,30)
 							 input: (pending)->
 							MAKE
-							 object: (direct)-> object (anon)  @54400|codechef_reverse(45,10)
-							 type: ("bool")-> type bool  @23440|bool(5,6)
+							 object: (direct)-> object (anon)  @41872|codechef_reverse(45,10)
+							 type: ("bool")-> type bool  @18560|bool(5,6)
 							CALL --fundamental
-							 lead: ("n")-> object n  @62592|codechef_reverse(20,22)
-							 method: ("equal?")-> method equal?  @56848|int(64,3)
-							 input: ("zero")-> object zero  @41888|dialect(31,2)
-							 output: (direct)-> object (anon)  @54400|codechef_reverse(45,10)
+							 lead: ("n")-> object n  @53648|codechef_reverse(20,22)
+							 method: ("equal?")-> method equal?  @61424|int(64,3)
+							 input: ("zero")-> object zero  @49312|dialect(31,2)
+							 output: (direct)-> object (anon)  @41872|codechef_reverse(45,10)
 							IF
-							 condition: (direct)-> object (anon)  @54400|codechef_reverse(45,10)
+							 condition: (direct)-> object (anon)  @41872|codechef_reverse(45,10)
 							{
 								true branch: RETURN --to loop (escape)
 							}
 							CALL
-							 lead: ("output")-> object output  @64384|codechef_reverse(41,3)
-							 method: ("write")-> method write  @58016|text_mediator(241,3)
-							 input: ("space")-> object space  @60800|codechef_reverse(39,3)
+							 lead: ("output")-> object output  @45456|codechef_reverse(41,3)
+							 method: ("write")-> method write  @58128|editor(241,3)
+							 input: ("space")-> object space  @52112|codechef_reverse(39,3)
 						}
 					}
 					MAKE
-					 object: (direct)-> object (anon)  @51072|codechef_reverse(49,11)
-					 type: ("string")-> type string  @05152|string(4,6)
+					 object: (direct)-> object (anon)  @47504|codechef_reverse(49,11)
+					 type: ("string")-> type string  @04000|string(4,6)
 					CALL
-					 lead: ("~console")-> proxy ~console  @13856|codechef_reverse(15,5)
-					 method: ("write")-> method write  @55312|console(107,3)
-					 input: ("output")-> object output  @64384|codechef_reverse(41,3)
-					 output: (direct)-> object (anon)  @51072|codechef_reverse(49,11)
+					 lead: ("~console")-> proxy ~console  @02880|codechef_reverse(15,5)
+					 method: ("write")-> method write  @63280|console(107,3)
+					 input: ("output")-> object output  @45456|codechef_reverse(41,3)
+					 output: (direct)-> object (anon)  @47504|codechef_reverse(49,11)
 				}
 			}
 		}
 	}
 
-	subroutine demo2  @29984|codechef_reverse(54,19) --internal
+	routine demo2  @44560|codechef_reverse(54,16) --internal
 	 viable = yes
 	{
 
@@ -196,422 +196,422 @@ page codechef_reverse
 		BLOCK --domain
 		{
 			MAKE
-			 proxy: (direct)-> proxy ~console  @13136|codechef_reverse(59,5)
-			 type: ("console")-> type console  @00480|console(5,6)
+			 proxy: (direct)-> proxy ~console  @07200|codechef_reverse(59,5)
+			 type: ("console")-> type console  @44592|console(5,6)
 			 permission: [upd]
 			CALL
-			 lead: ("sys")-> object sys  @37760|system(29,8)
-			 method: ("use_console")-> method use_console  @51568|system(16,3)
-			 result: (direct)-> proxy ~console  @13136|codechef_reverse(59,5)
+			 lead: ("sys")-> object sys  @24720|system(29,8)
+			 method: ("use_console")-> method use_console  @19840|system(16,3)
+			 result: (direct)-> proxy ~console  @07200|codechef_reverse(59,5)
 			MAKE
-			 object: (direct)-> object input  @64640|codechef_reverse(61,2)
-			 type: ("text_mediator")-> type text_mediator  @64928|text_mediator(43,6)
+			 object: (direct)-> object input  @53136|codechef_reverse(61,2)
+			 type: ("editor")-> type editor  @39152|editor(43,6)
 			CALL --initial
-			 lead: (direct)-> object input  @64640|codechef_reverse(61,2)
-			 method: ("begin")-> method begin  @41376|text_mediator(106,3)
+			 lead: (direct)-> object input  @53136|codechef_reverse(61,2)
+			 method: ("begin")-> method begin  @50768|editor(106,3)
 			 input: (pending)->
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object (anon)  @61312|codechef_reverse(63,10)
-			 type: ("string")-> type string  @05152|string(4,6)
+			 object: (direct)-> object (anon)  @51344|codechef_reverse(63,10)
+			 type: ("string")-> type string  @04000|string(4,6)
 			CALL
-			 lead: ("~console")-> proxy ~console  @13136|codechef_reverse(59,5)
-			 method: ("read")-> method read  @45712|console(71,3)
-			 input: ("input")-> object input  @64640|codechef_reverse(61,2)
+			 lead: ("~console")-> proxy ~console  @07200|codechef_reverse(59,5)
+			 method: ("read")-> method read  @62960|console(71,3)
+			 input: ("input")-> object input  @53136|codechef_reverse(61,2)
 			 input: (pending)->
-			 output: (direct)-> object (anon)  @61312|codechef_reverse(63,10)
+			 output: (direct)-> object (anon)  @51344|codechef_reverse(63,10)
 			MAKE
-			 object: (direct)-> object n  @64896|codechef_reverse(64,22)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object n  @53904|codechef_reverse(64,22)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL
-			 lead: ("input")-> object input  @64640|codechef_reverse(61,2)
-			 method: (direct)-> method $10<2>( fread<int> )  @56784|$appendix(,)
+			 lead: ("input")-> object input  @53136|codechef_reverse(61,2)
+			 method: (direct)-> method $10<2>( fread<int> )  @50816|$appendix(,)
 			 input: (pending)->
-			 output: (direct)-> object n  @64896|codechef_reverse(64,22)
+			 output: (direct)-> object n  @53904|codechef_reverse(64,22)
 			MAKE
-			 object: (direct)-> object (anon)  @56192|codechef_reverse(66,8)
-			 type: ("bool")-> type bool  @23440|bool(5,6)
+			 object: (direct)-> object (anon)  @52624|codechef_reverse(66,8)
+			 type: ("bool")-> type bool  @18560|bool(5,6)
 			CALL --fundamental
-			 lead: ("zero")-> object zero  @41888|dialect(31,2)
-			 method: ("less?")-> method less?  @59088|int(68,3)
-			 input: ("n")-> object n  @64896|codechef_reverse(64,22)
-			 output: (direct)-> object (anon)  @56192|codechef_reverse(66,8)
+			 lead: ("zero")-> object zero  @49312|dialect(31,2)
+			 method: ("less?")-> method less?  @59184|int(68,3)
+			 input: ("n")-> object n  @53904|codechef_reverse(64,22)
+			 output: (direct)-> object (anon)  @52624|codechef_reverse(66,8)
 			IF
-			 condition: (direct)-> object (anon)  @56192|codechef_reverse(66,8)
+			 condition: (direct)-> object (anon)  @52624|codechef_reverse(66,8)
 			{
 				true branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object values  @63104|codechef_reverse(68,3)
-					 type: (direct)-> type $1<2>( array<int> )  @02112|$appendix(,)
+					 object: (direct)-> object values  @54160|codechef_reverse(68,3)
+					 type: (direct)-> type $1<2>( array<int> )  @19024|$appendix(,)
 					CALL --initial, fundamental
-					 lead: (direct)-> object values  @63104|codechef_reverse(68,3)
-					 method: ("begin")-> method begin  @00784|$appendix(,)
-					 input: ("n")-> object n  @64896|codechef_reverse(64,22)
+					 lead: (direct)-> object values  @54160|codechef_reverse(68,3)
+					 method: ("begin")-> method begin  @63456|$appendix(,)
+					 input: ("n")-> object n  @53904|codechef_reverse(64,22)
 					MAKE
-					 object: (direct)-> object (anon)  @59520|codechef_reverse(70,11)
-					 type: ("string")-> type string  @05152|string(4,6)
+					 object: (direct)-> object (anon)  @54672|codechef_reverse(70,11)
+					 type: ("string")-> type string  @04000|string(4,6)
 					CALL
-					 lead: ("~console")-> proxy ~console  @13136|codechef_reverse(59,5)
-					 method: ("read")-> method read  @45712|console(71,3)
-					 input: ("input")-> object input  @64640|codechef_reverse(61,2)
+					 lead: ("~console")-> proxy ~console  @07200|codechef_reverse(59,5)
+					 method: ("read")-> method read  @62960|console(71,3)
+					 input: ("input")-> object input  @53136|codechef_reverse(61,2)
 					 input: (pending)->
-					 output: (direct)-> object (anon)  @59520|codechef_reverse(70,11)
+					 output: (direct)-> object (anon)  @54672|codechef_reverse(70,11)
 					MAKE
-					 object: (direct)-> object i  @53120|codechef_reverse(74,3)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 object: (direct)-> object i  @54416|codechef_reverse(74,3)
+					 type: ("int")-> type int  @18832|int(6,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object i  @53120|codechef_reverse(74,3)
-					 method: ("begin")-> method begin  @47200|int(52,3)
+					 lead: (direct)-> object i  @54416|codechef_reverse(74,3)
+					 method: ("begin")-> method begin  @45984|int(52,3)
 					 input: (pending)->
 					LOOP
-					 condition: (direct)-> object (anon)  @49536|codechef_reverse(75,11)
+					 condition: (direct)-> object (anon)  @54928|codechef_reverse(75,11)
 					{
 						condition branch: BLOCK --macro
 						{
 							MAKE
-							 object: (direct)-> object (anon)  @49536|codechef_reverse(75,11)
-							 type: ("bool")-> type bool  @23440|bool(5,6)
+							 object: (direct)-> object (anon)  @54928|codechef_reverse(75,11)
+							 type: ("bool")-> type bool  @18560|bool(5,6)
 							CALL --fundamental
-							 lead: ("i")-> object i  @53120|codechef_reverse(74,3)
-							 method: ("less?")-> method less?  @59088|int(68,3)
-							 input: ("n")-> object n  @64896|codechef_reverse(64,22)
-							 output: (direct)-> object (anon)  @49536|codechef_reverse(75,11)
+							 lead: ("i")-> object i  @54416|codechef_reverse(74,3)
+							 method: ("less?")-> method less?  @59184|int(68,3)
+							 input: ("n")-> object n  @53904|codechef_reverse(64,22)
+							 output: (direct)-> object (anon)  @54928|codechef_reverse(75,11)
 						}
 						iteration branch: BLOCK --domain
 						{
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @14688|codechef_reverse(77,30)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @52560|codechef_reverse(77,30)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [init]
 							CALL --fundamental
-							 lead: ("values")-> object values  @63104|codechef_reverse(68,3)
-							 method: ("use")-> method use  @17808|$appendix(,)
-							 input: ("i")-> object i  @53120|codechef_reverse(74,3)
-							 result: (direct)-> proxy (anon)  @14688|codechef_reverse(77,30)
+							 lead: ("values")-> object values  @54160|codechef_reverse(68,3)
+							 method: ("use")-> method use  @27136|$appendix(,)
+							 input: ("i")-> object i  @54416|codechef_reverse(74,3)
+							 result: (direct)-> proxy (anon)  @52560|codechef_reverse(77,30)
 							CALL
-							 lead: ("input")-> object input  @64640|codechef_reverse(61,2)
-							 method: (direct)-> method $10<2>( fread<int> )  @56784|$appendix(,)
+							 lead: ("input")-> object input  @53136|codechef_reverse(61,2)
+							 method: (direct)-> method $10<2>( fread<int> )  @50816|$appendix(,)
 							 input: (pending)->
-							 output: (direct)-> proxy (anon)  @14688|codechef_reverse(77,30)
+							 output: (direct)-> proxy (anon)  @52560|codechef_reverse(77,30)
 							CALL --fundamental
-							 lead: ("i")-> object i  @53120|codechef_reverse(74,3)
-							 method: ("inc")-> method inc  @61968|int(116,3)
+							 lead: ("i")-> object i  @54416|codechef_reverse(74,3)
+							 method: ("inc")-> method inc  @58544|int(116,3)
 						}
 					}
 					CALL
-					 subroutine: ("reverse_array_1")-> subroutine reverse_array_1  @30896|codechef_reverse(100,12)
-					 input: ("values")-> object values  @63104|codechef_reverse(68,3)
+					 routine: ("reverse_array_1")-> routine reverse_array_1  @45168|codechef_reverse(100,9)
+					 input: ("values")-> object values  @54160|codechef_reverse(68,3)
 					MAKE
-					 object: (direct)-> object output  @60032|codechef_reverse(85,3)
-					 type: ("text_mediator")-> type text_mediator  @64928|text_mediator(43,6)
+					 object: (direct)-> object output  @46992|codechef_reverse(85,3)
+					 type: ("editor")-> type editor  @39152|editor(43,6)
 					CALL --initial
-					 lead: (direct)-> object output  @60032|codechef_reverse(85,3)
-					 method: ("begin")-> method begin  @41376|text_mediator(106,3)
+					 lead: (direct)-> object output  @46992|codechef_reverse(85,3)
+					 method: ("begin")-> method begin  @50768|editor(106,3)
 					 input: (pending)->
 					 input: (pending)->
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @15888|codechef_reverse(85,49)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy (anon)  @46080|codechef_reverse(85,42)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("values")-> object values  @63104|codechef_reverse(68,3)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("zero")-> object zero  @41888|dialect(31,2)
-					 result: (direct)-> proxy (anon)  @15888|codechef_reverse(85,49)
+					 lead: ("values")-> object values  @54160|codechef_reverse(68,3)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("zero")-> object zero  @49312|dialect(31,2)
+					 result: (direct)-> proxy (anon)  @46080|codechef_reverse(85,42)
 					CALL
-					 lead: (direct)-> object output  @60032|codechef_reverse(85,3)
-					 method: (direct)-> method $12<2>( fwrite<int> )  @56464|$appendix(,)
-					 input: (direct)-> proxy (anon)  @15888|codechef_reverse(85,49)
+					 lead: (direct)-> object output  @46992|codechef_reverse(85,3)
+					 method: (direct)-> method $12<2>( fwrite<int> )  @51136|$appendix(,)
+					 input: (direct)-> proxy (anon)  @46080|codechef_reverse(85,42)
 					 input: (pending)->
 					CALL --terminal, essential, fundamental
-					 lead: ("i")-> object i  @53120|codechef_reverse(74,3)
-					 method: ("recycle")-> method recycle  @22176|object(39,3)
+					 lead: ("i")-> object i  @54416|codechef_reverse(74,3)
+					 method: ("recycle")-> method recycle  @12992|object(39,3)
 					CALL --initial, fundamental
-					 lead: ("i")-> object i  @53120|codechef_reverse(74,3)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: ("one")-> object one  @25312|dialect(32,2)
+					 lead: ("i")-> object i  @54416|codechef_reverse(74,3)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: ("one")-> object one  @38224|dialect(32,2)
 					LOOP
-					 condition: (direct)-> object (anon)  @54656|codechef_reverse(88,11)
+					 condition: (direct)-> object (anon)  @48784|codechef_reverse(88,11)
 					{
 						condition branch: BLOCK --macro
 						{
 							MAKE
-							 object: (direct)-> object (anon)  @54656|codechef_reverse(88,11)
-							 type: ("bool")-> type bool  @23440|bool(5,6)
+							 object: (direct)-> object (anon)  @48784|codechef_reverse(88,11)
+							 type: ("bool")-> type bool  @18560|bool(5,6)
 							CALL --fundamental
-							 lead: ("i")-> object i  @53120|codechef_reverse(74,3)
-							 method: ("less?")-> method less?  @59088|int(68,3)
-							 input: ("n")-> object n  @64896|codechef_reverse(64,22)
-							 output: (direct)-> object (anon)  @54656|codechef_reverse(88,11)
+							 lead: ("i")-> object i  @54416|codechef_reverse(74,3)
+							 method: ("less?")-> method less?  @59184|int(68,3)
+							 input: ("n")-> object n  @53904|codechef_reverse(64,22)
+							 output: (direct)-> object (anon)  @48784|codechef_reverse(88,11)
 						}
 						iteration branch: BLOCK --domain
 						{
 							MAKE
-							 literal: (direct)-> literal (anon)  @65152|codechef_reverse(,) --'U+0020'
-							 type: ("expr")-> type expr  @22352|expr(5,6)
+							 literal: (direct)-> literal (anon)  @55184|codechef_reverse(,) --'U+0020'
+							 type: ("expr")-> type expr  @19920|expr(5,6)
 							MAKE
-							 object: (direct)-> object (anon)  @56704|codechef_reverse(90,30)
-							 type: ("unicode")-> type unicode  @10320|unicode(4,6)
+							 object: (direct)-> object (anon)  @45712|codechef_reverse(90,30)
+							 type: ("unicode")-> type unicode  @08624|unicode(4,6)
 							CALL --initial, fundamental
-							 lead: (direct)-> object (anon)  @56704|codechef_reverse(90,30)
-							 method: ("begin")-> method begin  @27040|unicode(28,3)
-							 input: (direct)-> literal (anon)  @65152|codechef_reverse(,)
+							 lead: (direct)-> object (anon)  @45712|codechef_reverse(90,30)
+							 method: ("begin")-> method begin  @39568|unicode(28,3)
+							 input: (direct)-> literal (anon)  @55184|codechef_reverse(,)
 							CALL
-							 lead: ("output")-> object output  @60032|codechef_reverse(85,3)
-							 method: ("write")-> method write  @58016|text_mediator(241,3)
-							 input: (direct)-> object (anon)  @56704|codechef_reverse(90,30)
+							 lead: ("output")-> object output  @46992|codechef_reverse(85,3)
+							 method: ("write")-> method write  @58128|editor(241,3)
+							 input: (direct)-> object (anon)  @45712|codechef_reverse(90,30)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @16128|codechef_reverse(90,59)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @55200|codechef_reverse(90,59)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [init]
 							CALL --fundamental
-							 lead: ("values")-> object values  @63104|codechef_reverse(68,3)
-							 method: ("use")-> method use  @17808|$appendix(,)
-							 input: ("i")-> object i  @53120|codechef_reverse(74,3)
-							 result: (direct)-> proxy (anon)  @16128|codechef_reverse(90,59)
+							 lead: ("values")-> object values  @54160|codechef_reverse(68,3)
+							 method: ("use")-> method use  @27136|$appendix(,)
+							 input: ("i")-> object i  @54416|codechef_reverse(74,3)
+							 result: (direct)-> proxy (anon)  @55200|codechef_reverse(90,59)
 							CALL
-							 lead: ("output")-> object output  @60032|codechef_reverse(85,3)
-							 method: (direct)-> method $12<2>( fwrite<int> )  @56464|$appendix(,)
-							 input: (direct)-> proxy (anon)  @16128|codechef_reverse(90,59)
+							 lead: ("output")-> object output  @46992|codechef_reverse(85,3)
+							 method: (direct)-> method $12<2>( fwrite<int> )  @51136|$appendix(,)
+							 input: (direct)-> proxy (anon)  @55200|codechef_reverse(90,59)
 							 input: (pending)->
 							CALL --fundamental
-							 lead: ("i")-> object i  @53120|codechef_reverse(74,3)
-							 method: ("inc")-> method inc  @61968|int(116,3)
+							 lead: ("i")-> object i  @54416|codechef_reverse(74,3)
+							 method: ("inc")-> method inc  @58544|int(116,3)
 						}
 					}
 					MAKE
-					 object: (direct)-> object (anon)  @65408|codechef_reverse(94,11)
-					 type: ("string")-> type string  @05152|string(4,6)
+					 object: (direct)-> object (anon)  @48016|codechef_reverse(94,11)
+					 type: ("string")-> type string  @04000|string(4,6)
 					CALL
-					 lead: ("~console")-> proxy ~console  @13136|codechef_reverse(59,5)
-					 method: ("write")-> method write  @55312|console(107,3)
-					 input: ("output")-> object output  @60032|codechef_reverse(85,3)
-					 output: (direct)-> object (anon)  @65408|codechef_reverse(94,11)
+					 lead: ("~console")-> proxy ~console  @07200|codechef_reverse(59,5)
+					 method: ("write")-> method write  @63280|console(107,3)
+					 input: ("output")-> object output  @46992|codechef_reverse(85,3)
+					 output: (direct)-> object (anon)  @48016|codechef_reverse(94,11)
 				}
 			}
 		}
 	}
 
-	subroutine reverse_array_1  @30896|codechef_reverse(100,12) --external
+	routine reverse_array_1  @45168|codechef_reverse(100,9) --external
 	 viable = yes
 	{
 
 		given
 		{
-			object arr  @49792|codechef_reverse(100,12) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @02112|$appendix(,)
+			object arr  @55440|codechef_reverse(100,9) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @19024|$appendix(,)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 object: (direct)-> object i  @57728|codechef_reverse(102,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object i  @48528|codechef_reverse(102,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object i  @57728|codechef_reverse(102,2)
-			 method: ("begin")-> method begin  @47200|int(52,3)
+			 lead: (direct)-> object i  @48528|codechef_reverse(102,2)
+			 method: ("begin")-> method begin  @45984|int(52,3)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object j  @53376|codechef_reverse(103,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object j  @55696|codechef_reverse(103,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			MAKE
-			 object: (direct)-> object (anon)  @59008|codechef_reverse(103,29)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object (anon)  @56208|codechef_reverse(103,29)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --fundamental
-			 lead: ("arr")-> object arr  @49792|codechef_reverse(100,12)
-			 method: ("count")-> method count  @03024|$appendix(,)
-			 output: (direct)-> object (anon)  @59008|codechef_reverse(103,29)
+			 lead: ("arr")-> object arr  @55440|codechef_reverse(100,9)
+			 method: ("count")-> method count  @52256|$appendix(,)
+			 output: (direct)-> object (anon)  @56208|codechef_reverse(103,29)
 			CALL --fundamental
-			 lead: (direct)-> object (anon)  @59008|codechef_reverse(103,29)
-			 method: ("sub")-> method sub  @24672|int(79,3)
-			 input: ("one")-> object one  @25312|dialect(32,2)
+			 lead: (direct)-> object (anon)  @56208|codechef_reverse(103,29)
+			 method: ("sub")-> method sub  @28288|int(79,3)
+			 input: ("one")-> object one  @38224|dialect(32,2)
 			CALL --initial, fundamental
-			 lead: (direct)-> object j  @53376|codechef_reverse(103,2)
-			 method: ("begin")-> method begin  @47520|int(54,3)
-			 input: (direct)-> object (anon)  @59008|codechef_reverse(103,29)
+			 lead: (direct)-> object j  @55696|codechef_reverse(103,2)
+			 method: ("begin")-> method begin  @44704|int(54,3)
+			 input: (direct)-> object (anon)  @56208|codechef_reverse(103,29)
 			LOOP
-			 condition: (direct)-> object (anon)  @50304|codechef_reverse(104,10)
+			 condition: (direct)-> object (anon)  @56464|codechef_reverse(104,10)
 			{
 				condition branch: BLOCK --macro
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @50304|codechef_reverse(104,10)
-					 type: ("bool")-> type bool  @23440|bool(5,6)
+					 object: (direct)-> object (anon)  @56464|codechef_reverse(104,10)
+					 type: ("bool")-> type bool  @18560|bool(5,6)
 					CALL --fundamental
-					 lead: ("i")-> object i  @57728|codechef_reverse(102,2)
-					 method: ("less?")-> method less?  @59088|int(68,3)
-					 input: ("j")-> object j  @53376|codechef_reverse(103,2)
-					 output: (direct)-> object (anon)  @50304|codechef_reverse(104,10)
+					 lead: ("i")-> object i  @48528|codechef_reverse(102,2)
+					 method: ("less?")-> method less?  @59184|int(68,3)
+					 input: ("j")-> object j  @55696|codechef_reverse(103,2)
+					 output: (direct)-> object (anon)  @56464|codechef_reverse(104,10)
 				}
 				iteration branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object ni  @50560|codechef_reverse(106,3)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 object: (direct)-> object ni  @48272|codechef_reverse(106,3)
+					 type: ("int")-> type int  @18832|int(6,6)
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @14448|codechef_reverse(106,20)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy (anon)  @41760|codechef_reverse(106,20)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("arr")-> object arr  @49792|codechef_reverse(100,12)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("i")-> object i  @57728|codechef_reverse(102,2)
-					 result: (direct)-> proxy (anon)  @14448|codechef_reverse(106,20)
+					 lead: ("arr")-> object arr  @55440|codechef_reverse(100,9)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("i")-> object i  @48528|codechef_reverse(102,2)
+					 result: (direct)-> proxy (anon)  @41760|codechef_reverse(106,20)
 					CALL --initial, fundamental
-					 lead: (direct)-> object ni  @50560|codechef_reverse(106,3)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: (direct)-> proxy (anon)  @14448|codechef_reverse(106,20)
+					 lead: (direct)-> object ni  @48272|codechef_reverse(106,3)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: (direct)-> proxy (anon)  @41760|codechef_reverse(106,20)
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @14928|codechef_reverse(107,6)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy (anon)  @46560|codechef_reverse(107,6)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("arr")-> object arr  @49792|codechef_reverse(100,12)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("i")-> object i  @57728|codechef_reverse(102,2)
-					 result: (direct)-> proxy (anon)  @14928|codechef_reverse(107,6)
+					 lead: ("arr")-> object arr  @55440|codechef_reverse(100,9)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("i")-> object i  @48528|codechef_reverse(102,2)
+					 result: (direct)-> proxy (anon)  @46560|codechef_reverse(107,6)
 					CALL --terminal, essential, fundamental
-					 lead: (direct)-> proxy (anon)  @14928|codechef_reverse(107,6)
-					 method: ("recycle")-> method recycle  @22176|object(39,3)
+					 lead: (direct)-> proxy (anon)  @46560|codechef_reverse(107,6)
+					 method: ("recycle")-> method recycle  @12992|object(39,3)
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @15168|codechef_reverse(107,34)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy (anon)  @51360|codechef_reverse(107,34)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("arr")-> object arr  @49792|codechef_reverse(100,12)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("j")-> object j  @53376|codechef_reverse(103,2)
-					 result: (direct)-> proxy (anon)  @15168|codechef_reverse(107,34)
+					 lead: ("arr")-> object arr  @55440|codechef_reverse(100,9)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("j")-> object j  @55696|codechef_reverse(103,2)
+					 result: (direct)-> proxy (anon)  @51360|codechef_reverse(107,34)
 					CALL --initial, fundamental
-					 lead: (direct)-> proxy (anon)  @14928|codechef_reverse(107,6)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: (direct)-> proxy (anon)  @15168|codechef_reverse(107,34)
+					 lead: (direct)-> proxy (anon)  @46560|codechef_reverse(107,6)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: (direct)-> proxy (anon)  @51360|codechef_reverse(107,34)
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @64144|codechef_reverse(108,6)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy (anon)  @54960|codechef_reverse(108,6)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("arr")-> object arr  @49792|codechef_reverse(100,12)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("j")-> object j  @53376|codechef_reverse(103,2)
-					 result: (direct)-> proxy (anon)  @64144|codechef_reverse(108,6)
+					 lead: ("arr")-> object arr  @55440|codechef_reverse(100,9)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("j")-> object j  @55696|codechef_reverse(103,2)
+					 result: (direct)-> proxy (anon)  @54960|codechef_reverse(108,6)
 					CALL --terminal, essential, fundamental
-					 lead: (direct)-> proxy (anon)  @64144|codechef_reverse(108,6)
-					 method: ("recycle")-> method recycle  @22176|object(39,3)
+					 lead: (direct)-> proxy (anon)  @54960|codechef_reverse(108,6)
+					 method: ("recycle")-> method recycle  @12992|object(39,3)
 					CALL --initial, fundamental
-					 lead: (direct)-> proxy (anon)  @64144|codechef_reverse(108,6)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: ("ni")-> object ni  @50560|codechef_reverse(106,3)
+					 lead: (direct)-> proxy (anon)  @54960|codechef_reverse(108,6)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: ("ni")-> object ni  @48272|codechef_reverse(106,3)
 					CALL --fundamental
-					 lead: ("i")-> object i  @57728|codechef_reverse(102,2)
-					 method: ("inc")-> method inc  @61968|int(116,3)
+					 lead: ("i")-> object i  @48528|codechef_reverse(102,2)
+					 method: ("inc")-> method inc  @58544|int(116,3)
 					CALL --fundamental
-					 lead: ("j")-> object j  @53376|codechef_reverse(103,2)
-					 method: ("dec")-> method dec  @41264|int(119,3)
+					 lead: ("j")-> object j  @55696|codechef_reverse(103,2)
+					 method: ("dec")-> method dec  @40720|int(119,3)
 				}
 			}
 		}
 	}
 
-	subroutine reverse_array_2  @29376|codechef_reverse(115,12) --external
+	routine reverse_array_2  @45776|codechef_reverse(115,9) --external
 	 viable = yes
 	{
 
 		given
 		{
-			object arr  @60288|codechef_reverse(115,12) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @02112|$appendix(,)
+			object arr  @46224|codechef_reverse(115,9) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @19024|$appendix(,)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 object: (direct)-> object i  @50816|codechef_reverse(117,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object i  @46480|codechef_reverse(117,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object i  @50816|codechef_reverse(117,2)
-			 method: ("begin")-> method begin  @47200|int(52,3)
+			 lead: (direct)-> object i  @46480|codechef_reverse(117,2)
+			 method: ("begin")-> method begin  @45984|int(52,3)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object j  @51328|codechef_reverse(118,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object j  @56720|codechef_reverse(118,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			MAKE
-			 object: (direct)-> object (anon)  @52352|codechef_reverse(118,29)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object (anon)  @56976|codechef_reverse(118,29)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --fundamental
-			 lead: ("arr")-> object arr  @60288|codechef_reverse(115,12)
-			 method: ("count")-> method count  @03024|$appendix(,)
-			 output: (direct)-> object (anon)  @52352|codechef_reverse(118,29)
+			 lead: ("arr")-> object arr  @46224|codechef_reverse(115,9)
+			 method: ("count")-> method count  @52256|$appendix(,)
+			 output: (direct)-> object (anon)  @56976|codechef_reverse(118,29)
 			CALL --fundamental
-			 lead: (direct)-> object (anon)  @52352|codechef_reverse(118,29)
-			 method: ("sub")-> method sub  @24672|int(79,3)
-			 input: ("one")-> object one  @25312|dialect(32,2)
+			 lead: (direct)-> object (anon)  @56976|codechef_reverse(118,29)
+			 method: ("sub")-> method sub  @28288|int(79,3)
+			 input: ("one")-> object one  @38224|dialect(32,2)
 			CALL --initial, fundamental
-			 lead: (direct)-> object j  @51328|codechef_reverse(118,2)
-			 method: ("begin")-> method begin  @47520|int(54,3)
-			 input: (direct)-> object (anon)  @52352|codechef_reverse(118,29)
+			 lead: (direct)-> object j  @56720|codechef_reverse(118,2)
+			 method: ("begin")-> method begin  @44704|int(54,3)
+			 input: (direct)-> object (anon)  @56976|codechef_reverse(118,29)
 			LOOP
-			 condition: (direct)-> object (anon)  @51584|codechef_reverse(119,10)
+			 condition: (direct)-> object (anon)  @41360|codechef_reverse(119,10)
 			{
 				condition branch: BLOCK --macro
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @51584|codechef_reverse(119,10)
-					 type: ("bool")-> type bool  @23440|bool(5,6)
+					 object: (direct)-> object (anon)  @41360|codechef_reverse(119,10)
+					 type: ("bool")-> type bool  @18560|bool(5,6)
 					CALL --fundamental
-					 lead: ("i")-> object i  @50816|codechef_reverse(117,2)
-					 method: ("less?")-> method less?  @59088|int(68,3)
-					 input: ("j")-> object j  @51328|codechef_reverse(118,2)
-					 output: (direct)-> object (anon)  @51584|codechef_reverse(119,10)
+					 lead: ("i")-> object i  @46480|codechef_reverse(117,2)
+					 method: ("less?")-> method less?  @59184|int(68,3)
+					 input: ("j")-> object j  @56720|codechef_reverse(118,2)
+					 output: (direct)-> object (anon)  @41360|codechef_reverse(119,10)
 				}
 				iteration branch: BLOCK --domain
 				{
 					MAKE
-					 proxy: (direct)-> proxy ~ni  @54544|codechef_reverse(121,6)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy ~ni  @42480|codechef_reverse(121,6)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("arr")-> object arr  @60288|codechef_reverse(115,12)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("i")-> object i  @50816|codechef_reverse(117,2)
-					 result: (direct)-> proxy ~ni  @54544|codechef_reverse(121,6)
+					 lead: ("arr")-> object arr  @46224|codechef_reverse(115,9)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("i")-> object i  @46480|codechef_reverse(117,2)
+					 result: (direct)-> proxy ~ni  @42480|codechef_reverse(121,6)
 					MAKE
-					 proxy: (direct)-> proxy ~nj  @60544|codechef_reverse(122,6)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 proxy: (direct)-> proxy ~nj  @43920|codechef_reverse(122,6)
+					 type: ("int")-> type int  @18832|int(6,6)
 					 permission: [init]
 					CALL --fundamental
-					 lead: ("arr")-> object arr  @60288|codechef_reverse(115,12)
-					 method: ("use")-> method use  @17808|$appendix(,)
-					 input: ("j")-> object j  @51328|codechef_reverse(118,2)
-					 result: (direct)-> proxy ~nj  @60544|codechef_reverse(122,6)
+					 lead: ("arr")-> object arr  @46224|codechef_reverse(115,9)
+					 method: ("use")-> method use  @27136|$appendix(,)
+					 input: ("j")-> object j  @56720|codechef_reverse(118,2)
+					 result: (direct)-> proxy ~nj  @43920|codechef_reverse(122,6)
 					MAKE
-					 object: (direct)-> object ni  @51840|codechef_reverse(124,3)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 object: (direct)-> object ni  @42128|codechef_reverse(124,3)
+					 type: ("int")-> type int  @18832|int(6,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object ni  @51840|codechef_reverse(124,3)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: ("~ni")-> proxy ~ni  @54544|codechef_reverse(121,6)
+					 lead: (direct)-> object ni  @42128|codechef_reverse(124,3)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: ("~ni")-> proxy ~ni  @42480|codechef_reverse(121,6)
 					CALL --terminal, essential, fundamental
-					 lead: ("~ni")-> proxy ~ni  @54544|codechef_reverse(121,6)
-					 method: ("recycle")-> method recycle  @22176|object(39,3)
+					 lead: ("~ni")-> proxy ~ni  @42480|codechef_reverse(121,6)
+					 method: ("recycle")-> method recycle  @12992|object(39,3)
 					CALL --initial, fundamental
-					 lead: (direct)-> proxy ~ni  @54544|codechef_reverse(121,6)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: ("~nj")-> proxy ~nj  @60544|codechef_reverse(122,6)
+					 lead: (direct)-> proxy ~ni  @42480|codechef_reverse(121,6)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: ("~nj")-> proxy ~nj  @43920|codechef_reverse(122,6)
 					CALL --terminal, essential, fundamental
-					 lead: ("~nj")-> proxy ~nj  @60544|codechef_reverse(122,6)
-					 method: ("recycle")-> method recycle  @22176|object(39,3)
+					 lead: ("~nj")-> proxy ~nj  @43920|codechef_reverse(122,6)
+					 method: ("recycle")-> method recycle  @12992|object(39,3)
 					CALL --initial, fundamental
-					 lead: (direct)-> proxy ~nj  @60544|codechef_reverse(122,6)
-					 method: ("begin")-> method begin  @47520|int(54,3)
-					 input: ("ni")-> object ni  @51840|codechef_reverse(124,3)
+					 lead: (direct)-> proxy ~nj  @43920|codechef_reverse(122,6)
+					 method: ("begin")-> method begin  @44704|int(54,3)
+					 input: ("ni")-> object ni  @42128|codechef_reverse(124,3)
 					CALL --fundamental
-					 lead: ("i")-> object i  @50816|codechef_reverse(117,2)
-					 method: ("inc")-> method inc  @61968|int(116,3)
+					 lead: ("i")-> object i  @46480|codechef_reverse(117,2)
+					 method: ("inc")-> method inc  @58544|int(116,3)
 					CALL --fundamental
-					 lead: ("j")-> object j  @51328|codechef_reverse(118,2)
-					 method: ("dec")-> method dec  @41264|int(119,3)
+					 lead: ("j")-> object j  @56720|codechef_reverse(118,2)
+					 method: ("dec")-> method dec  @40720|int(119,3)
 				}
 			}
 		}

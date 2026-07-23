@@ -2,9 +2,9 @@ page hello in ExamplesByNod
 
 
 
-subroutine hello 
+routine hello 
 {{
-	This is an example of a minimal subroutine entry point.
+	This is an example of a minimal entry point routine.
 	It displays 'Hello World!" on the system console and returns.
 }}
 {
@@ -13,9 +13,9 @@ subroutine hello
 
 
 
-subroutine run ( signal active [upd], signal stop )()( extra )
+routine run ( signal active [upd], signal stop )()( extra )
 {{
-	This is an example of a general subroutine entry point. 
+	This is an example of a general entry point	routine. 
 	
 	"n - Hello World!" is displayed on the system console 
 	every second (where	n is the tick count) until the run-
@@ -48,7 +48,7 @@ subroutine run ( signal active [upd], signal stop )()( extra )
 
 		-- timer tick
 
-		text_mediator:begin:fwrite( tick:inc ):write( ' - Hello World!' ):detach()( string greeting );
+		editor:begin:fwrite( tick:inc ):write( ' - Hello World!' ):detach()( string greeting );
 		sys:use_console:write( greeting );  
 	}
 }
@@ -63,12 +63,12 @@ type main_thread from entry
 	The internal application startup routine creates an 
 	instance of this type, then calls ~run. 
 
-	Simple applications can choose to write a subroutine
-	entry point in lieu of an entry subtype (examples above).
+	Simple applications can choose to write an entry 
+	routine in lieu of an entry subtype (examples above).
 	
-	If a subroutine	entry is preferred, the startup routine
+	If an entry routine is preferred, the startup routine
 	uses an internal entry type definition similar to this
-	example	to host the subroutine.
+	example	to host the application routine.
 }}
 {
 	general method
@@ -97,7 +97,7 @@ type main_thread from entry
 			trap
 			{
 				~disruption:use_trace( zero ):use_location is ~loc;
-				text_mediator tm:begin( 'abnormal exit, quit location = ' ):write( ~loc );
+				editor tm:begin( 'abnormal exit, quit location = ' ):write( ~loc );
 				tm:detach()( report );
 			}
 			sys:use_console:write( report ); 

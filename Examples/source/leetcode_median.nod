@@ -1,11 +1,11 @@
 page leetcode_median in ExamplesByNod
 
 
-subroutine find_median ( array<int> a, array<int> b )( fp2 m )
+routine find_median ( array<int> a, array<int> b )( fp2 m )
 {{
 	https://leetcode.com/problems/median-of-two-sorted-arrays/
 
-	This subroutine iterates over two sorted input arrays, 
+	This routine iterates over two sorted input arrays, 
 	logically merging them and returning the median value
 	of the merged array as an output. A combined array is 
 	never actually created because only a single value is 
@@ -38,7 +38,7 @@ subroutine find_median ( array<int> a, array<int> b )( fp2 m )
 }
 
 
-[page] subroutine merge ( array<int> a, array<int> b, int imax, int jmax, int kmax, int i [upd], int j [upd], int k [upd] )( int n )
+[page] routine merge ( array<int> a, array<int> b, int imax, int jmax, int kmax, int i [upd], int j [upd], int k [upd] )( int n )
 {
 	loop ( "k |<=| kmax" ) 
 	{

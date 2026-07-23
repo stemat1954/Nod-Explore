@@ -1,6 +1,6 @@
 page leetcode_index in ExamplesByNod
 
-subroutine index_substrings ( string s, array<string> match )( array<int> map )
+routine index_substrings ( string s, array<string> match )( array<int> map )
 {{
 	https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/
 
@@ -37,7 +37,7 @@ subroutine index_substrings ( string s, array<string> match )( array<int> map )
 }
 
 
-[page] subroutine parse ( string s, int q )( array<string> tokens ) 
+[page] routine parse ( string s, int q )( array<string> tokens ) 
 {{ 
 	parse input s into fixed q-length tokens 
 }}
@@ -52,7 +52,7 @@ subroutine index_substrings ( string s, array<string> match )( array<int> map )
 }
 
 
-[page] subroutine compare ( int i, int q, array<string> tokens, array<string> match, array<int> map [upd] )
+[page] routine compare ( int i, int q, array<string> tokens, array<string> match, array<int> map [upd] )
 {{
 	If all q tokens starting at i are in match, add i to map.
 
@@ -72,7 +72,7 @@ subroutine index_substrings ( string s, array<string> match )( array<int> map )
 }
 
 
-[page] subroutine match? ( string token, array<string> match )( bool yes )
+[page] routine match? ( string token, array<string> match )( bool yes )
 {
 	for each ( ~s in match ) if ( "~s |=| token" ) return after yes:begin( 'true' ); 
 	yes:begin( false ); 

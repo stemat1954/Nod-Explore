@@ -1,6 +1,6 @@
 page hello
 {
-	subroutine hello  @27856|hello(5,12) --external
+	routine hello  @46992|hello(5,9) --external
 	 viable = yes
 	{
 
@@ -11,324 +11,324 @@ page hello
 		BLOCK --domain
 		{
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @04256|hello(11,5)
-			 type: ("console")-> type console  @00480|console(5,6)
+			 proxy: (direct)-> proxy (anon)  @07920|hello(11,5)
+			 type: ("console")-> type console  @44592|console(5,6)
 			 permission: [upd]
 			CALL
-			 lead: ("sys")-> object sys  @37760|system(29,8)
-			 method: ("use_console")-> method use_console  @51568|system(16,3)
-			 result: (direct)-> proxy (anon)  @04256|hello(11,5)
+			 lead: ("sys")-> object sys  @24720|system(29,8)
+			 method: ("use_console")-> method use_console  @19840|system(16,3)
+			 result: (direct)-> proxy (anon)  @07920|hello(11,5)
 			MAKE
-			 literal: (direct)-> literal (anon)  @53888|hello(,) --'Hello World!'
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			 literal: (direct)-> literal (anon)  @42384|hello(,) --'Hello World!'
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 			MAKE
-			 object: (direct)-> object (anon)  @32256|hello(11,17)
-			 type: ("string")-> type string  @05152|string(4,6)
+			 object: (direct)-> object (anon)  @11792|hello(11,17)
+			 type: ("string")-> type string  @04000|string(4,6)
 			CALL
-			 lead: (direct)-> proxy (anon)  @04256|hello(11,5)
-			 method: ("write")-> method write  @54032|console(101,3)
-			 input: (direct)-> literal (anon)  @53888|hello(,)
-			 output: (direct)-> object (anon)  @32256|hello(11,17)
+			 lead: (direct)-> proxy (anon)  @07920|hello(11,5)
+			 method: ("write")-> method write  @63600|console(101,3)
+			 input: (direct)-> literal (anon)  @42384|hello(,)
+			 output: (direct)-> object (anon)  @11792|hello(11,17)
 		}
 	}
 
-	type main_thread  @11680|hello(57,6) --external
-	 from ("entry")-> type entry  @06784|entry(4,6)
+	type main_thread  @18208|hello(57,6) --external
+	 from ("entry")-> type entry  @05904|entry(4,6)
 	 viable = yes
 	{
-		method begin  @50320|hello(76,3) --external
+		method begin  @58016|hello(76,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object extra  @34816|hello(76,3) --internal
-				 type: ("extra")-> type extra  @22624|extra(5,6)
+				object extra  @22288|hello(76,3) --internal
+				 type: ("extra")-> type extra  @16656|extra(5,6)
 
-				object io  @28416|hello(76,3) --internal
-				 type: (direct)-> type main_thread  @11680|hello(57,6)
+				object io  @12560|hello(76,3) --internal
+				 type: (direct)-> type main_thread  @18208|hello(57,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @50224|hello(78,6)
-				 type: ("entry")-> type entry  @06784|entry(4,6)
+				 proxy: (direct)-> proxy (anon)  @40080|hello(78,6)
+				 type: ("entry")-> type entry  @05904|entry(4,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @28416|hello(76,3)
-				 method: (direct)-> method $14<15>( as_base<entry> )  @57104|$appendix(,)
-				 result: (direct)-> proxy (anon)  @50224|hello(78,6)
+				 lead: ("io")-> object io  @12560|hello(76,3)
+				 method: (direct)-> method $14<15>( as_base<entry> )  @54656|$appendix(,)
+				 result: (direct)-> proxy (anon)  @40080|hello(78,6)
 				CALL --initial, fundamental
-				 lead: (direct)-> proxy (anon)  @50224|hello(78,6)
-				 method: ("begin")-> method begin  @39840|entry(40,3)
+				 lead: (direct)-> proxy (anon)  @40080|hello(78,6)
+				 method: ("begin")-> method begin  @23888|entry(40,3)
 			}
 		}
 
-		abstract method ~run  @03312|hello(84,3) --fraternal
+		abstract method ~run  @01296|hello(84,3) --fraternal
 		 key = entry-0
 		 viable = yes
 		{
 
 			given
 			{
-				object active  @39424|hello(84,3) --internal
-				 type: ("signal")-> type signal  @06512|signal(5,6)
+				object active  @24336|hello(84,3) --internal
+				 type: ("signal")-> type signal  @07536|signal(5,6)
 
-				object io  @28672|hello(84,3) --internal
-				 type: (direct)-> type main_thread  @11680|hello(57,6)
+				object io  @14608|hello(84,3) --internal
+				 type: (direct)-> type main_thread  @18208|hello(57,6)
 
-				object pobj  @33792|hello(84,3) --internal
-				 type: (direct)-> type $5<6>( op<object> )  @59792|$appendix(,)
+				object pobj  @11024|hello(84,3) --internal
+				 type: (direct)-> type $5<6>( op<object> )  @09440|$appendix(,)
 
-				object stop  @27392|hello(84,3) --internal
-				 type: ("signal")-> type signal  @06512|signal(5,6)
+				object stop  @13328|hello(84,3) --internal
+				 type: ("signal")-> type signal  @07536|signal(5,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL --fundamental
-				 lead: ("active")-> object active  @39424|hello(84,3)
-				 method: ("indicate")-> method indicate  @44640|signal(33,3)
+				 lead: ("active")-> object active  @24336|hello(84,3)
+				 method: ("indicate")-> method indicate  @31568|signal(33,3)
 				MAKE
-				 object: (direct)-> object report  @28928|hello(87,4)
-				 type: ("string")-> type string  @05152|string(4,6)
+				 object: (direct)-> object report  @20752|hello(87,4)
+				 type: ("string")-> type string  @04000|string(4,6)
 				ISOLATE
 				{
 					main branch: BLOCK --domain
 					{
 						MAKE
-						 literal: (direct)-> literal (anon)  @33024|hello(,) --'normal exit'
-						 type: ("expr")-> type expr  @22352|expr(5,6)
+						 literal: (direct)-> literal (anon)  @23824|hello(,) --'normal exit'
+						 type: ("expr")-> type expr  @19920|expr(5,6)
 						CALL --initial, fundamental
-						 lead: ("report")-> object report  @28928|hello(87,4)
-						 method: ("begin")-> method begin  @20000|string(61,3)
-						 input: (direct)-> literal (anon)  @33024|hello(,)
+						 lead: ("report")-> object report  @20752|hello(87,4)
+						 method: ("begin")-> method begin  @48848|string(61,3)
+						 input: (direct)-> literal (anon)  @23824|hello(,)
 						 input: (pending)->
 						 input: (pending)->
 					}
 					trap branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy ~disruption  @10496|hello(98,4)
-						 type: ("disruption")-> type disruption  @08144|disruption(5,6)
+						 proxy: (direct)-> proxy ~disruption  @10320|hello(98,4)
+						 type: ("disruption")-> type disruption  @08080|disruption(5,6)
 						 permission: [eval]
 						JOIN
-						 left: (direct)-> proxy ~disruption  @10496|hello(98,4)
+						 left: (direct)-> proxy ~disruption  @10320|hello(98,4)
 						 right: (pending)->
 						BLOCK --domain
 						{
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @05936|hello(99,16)
-							 type: ("trace")-> type trace  @05968|trace(5,6)
+							 proxy: (direct)-> proxy (anon)  @08640|hello(99,16)
+							 type: ("trace")-> type trace  @02640|trace(5,6)
 							 permission: [eval]
 							CALL --fundamental
-							 lead: ("~disruption")-> proxy ~disruption  @10496|hello(98,4)
-							 method: ("use_trace")-> method use_trace  @38560|disruption(42,3)
-							 input: ("zero")-> object zero  @41888|dialect(31,2)
-							 result: (direct)-> proxy (anon)  @05936|hello(99,16)
+							 lead: ("~disruption")-> proxy ~disruption  @10320|hello(98,4)
+							 method: ("use_trace")-> method use_trace  @23248|disruption(42,3)
+							 input: ("zero")-> object zero  @49312|dialect(31,2)
+							 result: (direct)-> proxy (anon)  @08640|hello(99,16)
 							MAKE
-							 proxy: (direct)-> proxy ~loc  @02096|hello(99,34)
-							 type: ("expr")-> type expr  @22352|expr(5,6)
+							 proxy: (direct)-> proxy ~loc  @03120|hello(99,34)
+							 type: ("expr")-> type expr  @19920|expr(5,6)
 							 permission: [eval]
 							CALL --fundamental
-							 lead: (direct)-> proxy (anon)  @05936|hello(99,16)
-							 method: ("use_location")-> method use_location  @42080|trace(32,3)
-							 result: (direct)-> proxy ~loc  @02096|hello(99,34)
+							 lead: (direct)-> proxy (anon)  @08640|hello(99,16)
+							 method: ("use_location")-> method use_location  @22928|trace(32,3)
+							 result: (direct)-> proxy ~loc  @03120|hello(99,34)
 							MAKE
-							 object: (direct)-> object tm  @29184|hello(100,5)
-							 type: ("text_mediator")-> type text_mediator  @64928|text_mediator(43,6)
+							 object: (direct)-> object tm  @23056|hello(100,5)
+							 type: ("editor")-> type editor  @39152|editor(43,6)
 							MAKE
-							 literal: (direct)-> literal (anon)  @36608|hello(,) --'abnormal exit, quit location = '
-							 type: ("expr")-> type expr  @22352|expr(5,6)
+							 literal: (direct)-> literal (anon)  @17680|hello(,) --'abnormal exit, quit location = '
+							 type: ("expr")-> type expr  @19920|expr(5,6)
 							CALL --initial
-							 lead: (direct)-> object tm  @29184|hello(100,5)
-							 method: ("begin")-> method begin  @38176|text_mediator(120,3)
-							 input: (direct)-> literal (anon)  @36608|hello(,)
+							 lead: (direct)-> object tm  @23056|hello(100,5)
+							 method: ("begin")-> method begin  @45008|editor(120,3)
+							 input: (direct)-> literal (anon)  @17680|hello(,)
 							CALL
-							 lead: (direct)-> object tm  @29184|hello(100,5)
-							 method: ("write")-> method write  @31136|text_mediator(266,3)
-							 input: ("~loc")-> proxy ~loc  @02096|hello(99,34)
+							 lead: (direct)-> object tm  @23056|hello(100,5)
+							 method: ("write")-> method write  @39248|editor(266,3)
+							 input: ("~loc")-> proxy ~loc  @03120|hello(99,34)
 							CALL
-							 lead: ("tm")-> object tm  @29184|hello(100,5)
-							 method: ("detach")-> method detach  @01552|text_mediator(127,3)
-							 output: ("report")-> object report  @28928|hello(87,4)
+							 lead: ("tm")-> object tm  @23056|hello(100,5)
+							 method: ("detach")-> method detach  @38000|editor(127,3)
+							 output: ("report")-> object report  @20752|hello(87,4)
 						}
 					}
 				}
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @11936|hello(103,7)
-				 type: ("console")-> type console  @00480|console(5,6)
+				 proxy: (direct)-> proxy (anon)  @04080|hello(103,7)
+				 type: ("console")-> type console  @44592|console(5,6)
 				 permission: [upd]
 				CALL
-				 lead: ("sys")-> object sys  @37760|system(29,8)
-				 method: ("use_console")-> method use_console  @51568|system(16,3)
-				 result: (direct)-> proxy (anon)  @11936|hello(103,7)
+				 lead: ("sys")-> object sys  @24720|system(29,8)
+				 method: ("use_console")-> method use_console  @19840|system(16,3)
+				 result: (direct)-> proxy (anon)  @04080|hello(103,7)
 				MAKE
-				 object: (direct)-> object (anon)  @37632|hello(103,19)
-				 type: ("string")-> type string  @05152|string(4,6)
+				 object: (direct)-> object (anon)  @17936|hello(103,19)
+				 type: ("string")-> type string  @04000|string(4,6)
 				CALL
-				 lead: (direct)-> proxy (anon)  @11936|hello(103,7)
-				 method: ("write")-> method write  @42512|console(95,3)
-				 input: ("report")-> object report  @28928|hello(87,4)
-				 output: (direct)-> object (anon)  @37632|hello(103,19)
+				 lead: (direct)-> proxy (anon)  @04080|hello(103,7)
+				 method: ("write")-> method write  @61680|console(95,3)
+				 input: ("report")-> object report  @20752|hello(87,4)
+				 output: (direct)-> object (anon)  @17936|hello(103,19)
 			}
 		}
 	}
 
-	subroutine run  @27552|hello(16,12) --external
+	routine run  @38784|hello(16,9) --external
 	 viable = yes
 	{
 
 		given
 		{
-			object active  @25088|hello(16,12) --internal
-			 type: ("signal")-> type signal  @06512|signal(5,6)
+			object active  @09744|hello(16,9) --internal
+			 type: ("signal")-> type signal  @07536|signal(5,6)
 
-			object extra  @40704|hello(16,12) --internal
-			 type: ("extra")-> type extra  @22624|extra(5,6)
+			object extra  @15888|hello(16,9) --internal
+			 type: ("extra")-> type extra  @16656|extra(5,6)
 
-			object stop  @28160|hello(16,12) --internal
-			 type: ("signal")-> type signal  @06512|signal(5,6)
+			object stop  @22032|hello(16,9) --internal
+			 type: ("signal")-> type signal  @07536|signal(5,6)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 object: (direct)-> object stop_id  @36864|hello(30,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object stop_id  @19984|hello(30,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object stop_id  @36864|hello(30,2)
-			 method: ("begin")-> method begin  @47520|int(54,3)
-			 input: ("zero")-> object zero  @41888|dialect(31,2)
+			 lead: (direct)-> object stop_id  @19984|hello(30,2)
+			 method: ("begin")-> method begin  @44704|int(54,3)
+			 input: ("zero")-> object zero  @49312|dialect(31,2)
 			MAKE
-			 object: (direct)-> object timer_id  @39168|hello(31,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object timer_id  @16656|hello(31,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object timer_id  @39168|hello(31,2)
-			 method: ("begin")-> method begin  @47520|int(54,3)
-			 input: ("one")-> object one  @25312|dialect(32,2)
+			 lead: (direct)-> object timer_id  @16656|hello(31,2)
+			 method: ("begin")-> method begin  @44704|int(54,3)
+			 input: ("one")-> object one  @38224|dialect(32,2)
 			MAKE
-			 object: (direct)-> object rhythm  @32000|hello(34,2)
-			 type: ("timer")-> type timer  @12768|timer(5,6)
+			 object: (direct)-> object rhythm  @18704|hello(34,2)
+			 type: ("timer")-> type timer  @08896|timer(5,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object rhythm  @32000|hello(34,2)
-			 method: ("begin")-> method begin  @51872|timer(74,3)
+			 lead: (direct)-> object rhythm  @18704|hello(34,2)
+			 method: ("begin")-> method begin  @11024|timer(74,3)
 			 input: (pending)->
 			MAKE
-			 literal: (direct)-> literal (anon)  @27648|hello(,) --'1 sec'
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			 literal: (direct)-> literal (anon)  @16144|hello(,) --'1 sec'
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 			MAKE
-			 object: (direct)-> object (anon)  @35584|hello(34,44)
-			 type: ("etm")-> type etm  @09504|etm(5,6)
+			 object: (direct)-> object (anon)  @21264|hello(34,44)
+			 type: ("etm")-> type etm  @05632|etm(5,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object (anon)  @35584|hello(34,44)
-			 method: ("begin")-> method begin  @18816|etm(69,3)
-			 input: (direct)-> literal (anon)  @27648|hello(,)
+			 lead: (direct)-> object (anon)  @21264|hello(34,44)
+			 method: ("begin")-> method begin  @30384|etm(69,3)
+			 input: (direct)-> literal (anon)  @16144|hello(,)
 			CALL --fundamental
-			 lead: (direct)-> object rhythm  @32000|hello(34,2)
-			 method: ("set_repeat")-> method set_repeat  @50272|timer(80,3)
-			 input: (direct)-> object (anon)  @35584|hello(34,44)
+			 lead: (direct)-> object rhythm  @18704|hello(34,2)
+			 method: ("set_repeat")-> method set_repeat  @12944|timer(80,3)
+			 input: (direct)-> object (anon)  @21264|hello(34,44)
 			MAKE
-			 object: (direct)-> object tick  @31488|hello(35,2)
-			 type: ("int")-> type int  @24800|int(6,6)
+			 object: (direct)-> object tick  @11536|hello(35,2)
+			 type: ("int")-> type int  @18832|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object tick  @31488|hello(35,2)
-			 method: ("begin")-> method begin  @47200|int(52,3)
+			 lead: (direct)-> object tick  @11536|hello(35,2)
+			 method: ("begin")-> method begin  @45984|int(52,3)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object events  @38912|hello(38,2)
-			 type: ("monitor")-> type monitor  @11136|monitor(3,6)
+			 object: (direct)-> object events  @12048|hello(38,2)
+			 type: ("monitor")-> type monitor  @06720|monitor(3,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object events  @38912|hello(38,2)
-			 method: ("begin")-> method begin  @23840|monitor(30,3)
+			 lead: (direct)-> object events  @12048|hello(38,2)
+			 method: ("begin")-> method begin  @21328|monitor(30,3)
 			CALL --fundamental
-			 lead: (direct)-> object events  @38912|hello(38,2)
-			 method: ("add")-> method add  @29280|monitor(32,3)
-			 input: ("stop")-> object stop  @28160|hello(16,12)
-			 input: ("stop_id")-> object stop_id  @36864|hello(30,2)
+			 lead: (direct)-> object events  @12048|hello(38,2)
+			 method: ("add")-> method add  @37968|monitor(32,3)
+			 input: ("stop")-> object stop  @22032|hello(16,9)
+			 input: ("stop_id")-> object stop_id  @19984|hello(30,2)
 			CALL --fundamental
-			 lead: (direct)-> object events  @38912|hello(38,2)
-			 method: ("add")-> method add  @29280|monitor(32,3)
-			 input: ("rhythm")-> object rhythm  @32000|hello(34,2)
-			 input: ("timer_id")-> object timer_id  @39168|hello(31,2)
+			 lead: (direct)-> object events  @12048|hello(38,2)
+			 method: ("add")-> method add  @37968|monitor(32,3)
+			 input: ("rhythm")-> object rhythm  @18704|hello(34,2)
+			 input: ("timer_id")-> object timer_id  @16656|hello(31,2)
 			CALL --fundamental
-			 lead: ("active")-> object active  @25088|hello(16,12)
-			 method: ("indicate")-> method indicate  @44640|signal(33,3)
+			 lead: ("active")-> object active  @09744|hello(16,9)
+			 method: ("indicate")-> method indicate  @31568|signal(33,3)
 			CALL --fundamental
-			 lead: ("rhythm")-> object rhythm  @32000|hello(34,2)
-			 method: ("start")-> method start  @60512|timer(82,3)
+			 lead: ("rhythm")-> object rhythm  @18704|hello(34,2)
+			 method: ("start")-> method start  @13264|timer(82,3)
 			LOOP --unconditional
 			{
 				iteration branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object id  @37120|hello(45,18)
-					 type: ("int")-> type int  @24800|int(6,6)
+					 object: (direct)-> object id  @13072|hello(45,18)
+					 type: ("int")-> type int  @18832|int(6,6)
 					CALL --fundamental
-					 lead: ("events")-> object events  @38912|hello(38,2)
-					 method: ("wait")-> method wait  @18080|monitor(38,3)
+					 lead: ("events")-> object events  @12048|hello(38,2)
+					 method: ("wait")-> method wait  @43728|monitor(38,3)
 					 input: (pending)->
-					 output: (direct)-> object id  @37120|hello(45,18)
+					 output: (direct)-> object id  @13072|hello(45,18)
 					MAKE
-					 object: (direct)-> object (anon)  @37376|hello(47,9)
-					 type: ("bool")-> type bool  @23440|bool(5,6)
+					 object: (direct)-> object (anon)  @11280|hello(47,9)
+					 type: ("bool")-> type bool  @18560|bool(5,6)
 					CALL --fundamental
-					 lead: ("id")-> object id  @37120|hello(45,18)
-					 method: ("equal?")-> method equal?  @56848|int(64,3)
-					 input: ("stop_id")-> object stop_id  @36864|hello(30,2)
-					 output: (direct)-> object (anon)  @37376|hello(47,9)
+					 lead: ("id")-> object id  @13072|hello(45,18)
+					 method: ("equal?")-> method equal?  @61424|int(64,3)
+					 input: ("stop_id")-> object stop_id  @19984|hello(30,2)
+					 output: (direct)-> object (anon)  @11280|hello(47,9)
 					IF
-					 condition: (direct)-> object (anon)  @37376|hello(47,9)
+					 condition: (direct)-> object (anon)  @11280|hello(47,9)
 					{
 						true branch: RETURN --to caller
 					}
 					MAKE
-					 object: (direct)-> object (anon)  @39680|hello(51,3)
-					 type: ("text_mediator")-> type text_mediator  @64928|text_mediator(43,6)
+					 object: (direct)-> object (anon)  @20496|hello(51,3)
+					 type: ("editor")-> type editor  @39152|editor(43,6)
 					CALL --initial
-					 lead: (direct)-> object (anon)  @39680|hello(51,3)
-					 method: ("begin")-> method begin  @41376|text_mediator(106,3)
+					 lead: (direct)-> object (anon)  @20496|hello(51,3)
+					 method: ("begin")-> method begin  @50768|editor(106,3)
 					 input: (pending)->
 					 input: (pending)->
 					CALL --fundamental
-					 lead: ("tick")-> object tick  @31488|hello(35,2)
-					 method: ("inc")-> method inc  @61968|int(116,3)
+					 lead: ("tick")-> object tick  @11536|hello(35,2)
+					 method: ("inc")-> method inc  @58544|int(116,3)
 					CALL
-					 lead: (direct)-> object (anon)  @39680|hello(51,3)
-					 method: (direct)-> method $12<2>( fwrite<int> )  @56464|$appendix(,)
-					 input: ("tick")-> object tick  @31488|hello(35,2)
+					 lead: (direct)-> object (anon)  @20496|hello(51,3)
+					 method: (direct)-> method $12<2>( fwrite<int> )  @51136|$appendix(,)
+					 input: ("tick")-> object tick  @11536|hello(35,2)
 					 input: (pending)->
 					MAKE
-					 literal: (direct)-> literal (anon)  @34048|hello(,) --' - Hello World!'
-					 type: ("expr")-> type expr  @22352|expr(5,6)
+					 literal: (direct)-> literal (anon)  @12304|hello(,) --' - Hello World!'
+					 type: ("expr")-> type expr  @19920|expr(5,6)
 					CALL
-					 lead: (direct)-> object (anon)  @39680|hello(51,3)
-					 method: ("write")-> method write  @31136|text_mediator(266,3)
-					 input: (direct)-> literal (anon)  @34048|hello(,)
+					 lead: (direct)-> object (anon)  @20496|hello(51,3)
+					 method: ("write")-> method write  @39248|editor(266,3)
+					 input: (direct)-> literal (anon)  @12304|hello(,)
 					MAKE
-					 object: (direct)-> object greeting  @27136|hello(51,79)
-					 type: ("string")-> type string  @05152|string(4,6)
+					 object: (direct)-> object greeting  @14352|hello(51,72)
+					 type: ("string")-> type string  @04000|string(4,6)
 					CALL
-					 lead: (direct)-> object (anon)  @39680|hello(51,3)
-					 method: ("detach")-> method detach  @01552|text_mediator(127,3)
-					 output: (direct)-> object greeting  @27136|hello(51,79)
+					 lead: (direct)-> object (anon)  @20496|hello(51,3)
+					 method: ("detach")-> method detach  @38000|editor(127,3)
+					 output: (direct)-> object greeting  @14352|hello(51,72)
 					MAKE
-					 proxy: (direct)-> proxy (anon)  @01856|hello(52,6)
-					 type: ("console")-> type console  @00480|console(5,6)
+					 proxy: (direct)-> proxy (anon)  @13200|hello(52,6)
+					 type: ("console")-> type console  @44592|console(5,6)
 					 permission: [upd]
 					CALL
-					 lead: ("sys")-> object sys  @37760|system(29,8)
-					 method: ("use_console")-> method use_console  @51568|system(16,3)
-					 result: (direct)-> proxy (anon)  @01856|hello(52,6)
+					 lead: ("sys")-> object sys  @24720|system(29,8)
+					 method: ("use_console")-> method use_console  @19840|system(16,3)
+					 result: (direct)-> proxy (anon)  @13200|hello(52,6)
 					MAKE
-					 object: (direct)-> object (anon)  @29440|hello(52,18)
-					 type: ("string")-> type string  @05152|string(4,6)
+					 object: (direct)-> object (anon)  @16912|hello(52,18)
+					 type: ("string")-> type string  @04000|string(4,6)
 					CALL
-					 lead: (direct)-> proxy (anon)  @01856|hello(52,6)
-					 method: ("write")-> method write  @42512|console(95,3)
-					 input: ("greeting")-> object greeting  @27136|hello(51,79)
-					 output: (direct)-> object (anon)  @29440|hello(52,18)
+					 lead: (direct)-> proxy (anon)  @13200|hello(52,6)
+					 method: ("write")-> method write  @61680|console(95,3)
+					 input: ("greeting")-> object greeting  @14352|hello(51,72)
+					 output: (direct)-> object (anon)  @16912|hello(52,18)
 				}
 			}
 		}

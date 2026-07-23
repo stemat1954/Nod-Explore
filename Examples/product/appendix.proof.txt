@@ -1,2178 +1,2178 @@
 adhoc appendix
 {
-	method $10<2>( fread<int> )  @56784|$appendix(,) --internal
-	 enclosing type = text_mediator
+	method $10<2>( fread<int> )  @50816|$appendix(,) --internal
+	 enclosing type = editor
 	 viable = yes
 	{
 
 		given
 		{
-			object fex  @15616|$appendix(,) --internal
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			object fex  @60432|$appendix(,) --internal
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 
-			object io  @14080|$appendix(,) --internal
-			 type: (direct)-> type text_mediator  @64928|text_mediator(43,6)
+			object io  @65296|$appendix(,) --internal
+			 type: (direct)-> type editor  @39152|editor(43,6)
 
-			object x  @20992|$appendix(,) --internal
-			 type: ("int")-> type int  @24800|int(6,6)
+			object x  @63248|$appendix(,) --internal
+			 type: ("int")-> type int  @18832|int(6,6)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 literal: (direct)-> literal (anon)  @13312|$appendix(,)
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			 literal: (direct)-> literal (anon)  @05648|$appendix(,)
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 			MAKE
-			 proxy: (direct)-> proxy ~fex  @64864|$appendix(,)
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			 proxy: (direct)-> proxy ~fex  @38640|$appendix(,)
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 			 permission: [eval]
 			CALL
-			 subroutine: (direct)-> subroutine $22<2>( fix<expr> )  @13840|$appendix(,)
-			 input: ("fex")-> object fex  @15616|$appendix(,)
-			 input: (direct)-> literal (anon)  @13312|$appendix(,)
-			 result: (direct)-> proxy ~fex  @64864|$appendix(,)
+			 routine: (direct)-> routine $22<2>( fix<expr> )  @21056|$appendix(,)
+			 input: ("fex")-> object fex  @60432|$appendix(,)
+			 input: (direct)-> literal (anon)  @05648|$appendix(,)
+			 result: (direct)-> proxy ~fex  @38640|$appendix(,)
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @01968|$appendix(,)
-			 type: ("mediator")-> type mediator  @19904|mediator(21,6)
+			 proxy: (direct)-> proxy (anon)  @39360|$appendix(,)
+			 type: ("mediator")-> type mediator  @21008|mediator(21,6)
 			 permission: [init]
 			TRANSLATE --base
-			 lead: ("io")-> object io  @22384|text_mediator(344,3)
-			 method: (direct)-> method $18<34>( as_base<mediator> )  @39776|$appendix(,)
-			 result: (direct)-> proxy (anon)  @62832|text_mediator(347,6)
+			 lead: ("io")-> object io  @63360|editor(344,3)
+			 method: (direct)-> method $18<30>( as_base<mediator> )  @43408|$appendix(,)
+			 result: (direct)-> proxy (anon)  @47824|editor(347,6)
 			CALL --fundamental
-			 lead: (direct)-> proxy (anon)  @01968|$appendix(,)
-			 method: (direct)-> method $11<2>( fread<int> )  @48464|$appendix(,)
-			 input: ("~fex")-> proxy ~fex  @64864|$appendix(,)
-			 output: ("x")-> object x  @20992|$appendix(,)
+			 lead: (direct)-> proxy (anon)  @39360|$appendix(,)
+			 method: (direct)-> method $11<2>( fread<int> )  @49216|$appendix(,)
+			 input: ("~fex")-> proxy ~fex  @38640|$appendix(,)
+			 output: ("x")-> object x  @63248|$appendix(,)
 		}
 	}
 
-	method $11<25>( fread<bool> )  @46864|$appendix(,) --internal
+	method $11<25>( fread<bool> )  @02880|$appendix(,) --internal
 	 enclosing type = mediator
 	 viable = yes
 
-	method $11<2>( fread<int> )  @48464|$appendix(,) --internal
+	method $11<2>( fread<int> )  @49216|$appendix(,) --internal
 	 enclosing type = mediator
 	 viable = yes
 
-	method $12<2>( fwrite<int> )  @56464|$appendix(,) --internal
-	 enclosing type = text_mediator
+	method $12<2>( fwrite<int> )  @51136|$appendix(,) --internal
+	 enclosing type = editor
 	 viable = yes
 	{
 
 		given
 		{
-			object fex  @14336|$appendix(,) --internal
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			object fex  @60944|$appendix(,) --internal
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 
-			object io  @08704|$appendix(,) --internal
-			 type: (direct)-> type text_mediator  @64928|text_mediator(43,6)
+			object io  @58128|$appendix(,) --internal
+			 type: (direct)-> type editor  @39152|editor(43,6)
 
-			object obj  @24064|$appendix(,) --internal
-			 type: ("int")-> type int  @24800|int(6,6)
+			object obj  @57872|$appendix(,) --internal
+			 type: ("int")-> type int  @18832|int(6,6)
 		}
 
 		BLOCK --domain
 		{
 			MAKE
-			 literal: (direct)-> literal (anon)  @17408|$appendix(,)
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			 literal: (direct)-> literal (anon)  @01296|$appendix(,)
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 			MAKE
-			 proxy: (direct)-> proxy ~fex  @05568|$appendix(,)
-			 type: ("expr")-> type expr  @22352|expr(5,6)
+			 proxy: (direct)-> proxy ~fex  @29280|$appendix(,)
+			 type: ("expr")-> type expr  @19920|expr(5,6)
 			 permission: [eval]
 			CALL
-			 subroutine: (direct)-> subroutine $22<2>( fix<expr> )  @13840|$appendix(,)
-			 input: ("fex")-> object fex  @14336|$appendix(,)
-			 input: (direct)-> literal (anon)  @17408|$appendix(,)
-			 result: (direct)-> proxy ~fex  @05568|$appendix(,)
+			 routine: (direct)-> routine $22<2>( fix<expr> )  @21056|$appendix(,)
+			 input: ("fex")-> object fex  @60944|$appendix(,)
+			 input: (direct)-> literal (anon)  @01296|$appendix(,)
+			 result: (direct)-> proxy ~fex  @29280|$appendix(,)
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @06048|$appendix(,)
-			 type: ("mediator")-> type mediator  @19904|mediator(21,6)
+			 proxy: (direct)-> proxy (anon)  @29760|$appendix(,)
+			 type: ("mediator")-> type mediator  @21008|mediator(21,6)
 			 permission: [init]
 			TRANSLATE --base
-			 lead: ("io")-> object io  @26736|text_mediator(272,3)
-			 method: (direct)-> method $18<34>( as_base<mediator> )  @39776|$appendix(,)
-			 result: (direct)-> proxy (anon)  @02816|text_mediator(275,6)
+			 lead: ("io")-> object io  @62848|editor(272,3)
+			 method: (direct)-> method $18<30>( as_base<mediator> )  @43408|$appendix(,)
+			 result: (direct)-> proxy (anon)  @41584|editor(275,6)
 			CALL --fundamental
-			 lead: (direct)-> proxy (anon)  @06048|$appendix(,)
-			 method: (direct)-> method $13<2>( fwrite<int> )  @58704|$appendix(,)
-			 input: ("obj")-> object obj  @24064|$appendix(,)
-			 input: ("~fex")-> proxy ~fex  @05568|$appendix(,)
+			 lead: (direct)-> proxy (anon)  @29760|$appendix(,)
+			 method: (direct)-> method $13<2>( fwrite<int> )  @54336|$appendix(,)
+			 input: ("obj")-> object obj  @57872|$appendix(,)
+			 input: ("~fex")-> proxy ~fex  @29280|$appendix(,)
 		}
 	}
 
-	method $13<2>( fwrite<int> )  @58704|$appendix(,) --internal
+	method $13<2>( fwrite<int> )  @54336|$appendix(,) --internal
 	 enclosing type = mediator
 	 viable = yes
 
-	method $14<15>( as_base<entry> )  @57104|$appendix(,) --internal
+	method $14<15>( as_base<entry> )  @54656|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $14<18>( as_base<thing> )  @44624|$appendix(,) --internal
+	method $14<18>( as_base<thing> )  @55936|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $14<19>( as_base<widget> )  @00208|$appendix(,) --internal
+	method $14<19>( as_base<widget> )  @06720|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $14<2>( as_base<int> )  @60944|$appendix(,) --internal
+	method $14<2>( as_base<int> )  @00960|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $16<18>( is<thing>? )  @59664|$appendix(,) --internal
+	method $16<18>( is<thing>? )  @55296|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $16<19>( is<widget>? )  @59344|$appendix(,) --internal
+	method $16<19>( is<widget>? )  @54976|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $16<2>( is<int>? )  @43024|$appendix(,) --internal
+	method $16<2>( is<int>? )  @55616|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $16<6>( is<object>? )  @59024|$appendix(,) --internal
+	method $16<6>( is<object>? )  @38016|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $17<18>( is_actual<thing>? )  @42384|$appendix(,) --internal
+	method $17<18>( is_actual<thing>? )  @56576|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $17<6>( is_actual<object>? )  @49424|$appendix(,) --internal
+	method $17<6>( is_actual<object>? )  @56256|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	type $1<$1<2>>( array<array<int>> )  @60336|$appendix(,) --internal
-	 from (direct)-> type $3<$1<2>>( contiguous<array<int>> )  @11584|$appendix(,)
+	type $1<$1<2>>( array<array<int>> )  @09712|$appendix(,) --internal
+	 from (direct)-> type $3<$1<2>>( positional<array<int>> )  @47040|$appendix(,)
 	 viable = yes
 	{
-		method begin  @26768|$appendix(,) --external
+		method begin  @22336|$appendix(,) --external
 		 viable = yes
 
-		method begin  @34128|$appendix(,) --external
+		method begin  @18816|$appendix(,) --external
 		 viable = yes
 
-		method begin  @30288|$appendix(,) --external
+		method begin  @29056|$appendix(,) --external
 		 viable = yes
 
-		method begin<c>  @27088|$appendix(,) --external
+		method begin<c>  @27776|$appendix(,) --external
 		 viable = no
 
-		method begin<c>  @30608|$appendix(,) --external
+		method begin<c>  @25216|$appendix(,) --external
 		 viable = no
 
-		nom type contig  @17824|$appendix(,) --internal
-		 viable = yes
-		 equivalent: (direct)-> type $3<$1<2>>( contiguous<array<int>> )  @11584|$appendix(,)
-
-		method copy  @27408|$appendix(,) --external
+		method copy  @31616|$appendix(,) --external
 		 viable = yes
 
-		method copy  @32528|$appendix(,) --external
+		method copy  @20096|$appendix(,) --external
 		 viable = yes
 
-		method count  @21328|$appendix(,) --external
+		method count  @29696|$appendix(,) --external
 		 viable = yes
 
-		method delete  @28368|$appendix(,) --external
+		method delete  @33856|$appendix(,) --external
 		 viable = yes
 
-		method insert  @31248|$appendix(,) --external
+		method insert  @21056|$appendix(,) --external
 		 viable = yes
 
-		method insert  @17488|$appendix(,) --external
+		method insert  @28416|$appendix(,) --external
 		 viable = yes
 
-		method insert  @31568|$appendix(,) --external
+		method insert  @23936|$appendix(,) --external
 		 viable = yes
 
-		method insert  @21648|$appendix(,) --external
+		method insert  @29376|$appendix(,) --external
 		 viable = yes
 
-		method insert  @23248|$appendix(,) --external
+		method insert  @30336|$appendix(,) --external
 		 viable = yes
 
-		method insert  @29008|$appendix(,) --external
+		method insert  @30656|$appendix(,) --external
 		 viable = yes
 
-		method insert<c>  @31888|$appendix(,) --external
+		method insert<c>  @32256|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @32848|$appendix(,) --external
+		method insert<c>  @34176|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @34448|$appendix(,) --external
+		method insert<c>  @34496|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @23568|$appendix(,) --external
+		method insert<c>  @17856|$appendix(,) --external
 		 viable = no
 
-		method rank  @18448|$appendix(,) --external
+		nom type positional  @44928|$appendix(,) --internal
+		 viable = yes
+		 equivalent: (direct)-> type $3<$1<2>>( positional<array<int>> )  @47040|$appendix(,)
+
+		method rank  @34816|$appendix(,) --external
 		 viable = yes
 
-		method resize  @33168|$appendix(,) --external
+		method resize  @35136|$appendix(,) --external
 		 viable = yes
 
-		nom type same_type  @18208|$appendix(,) --internal
+		nom type same_type  @48576|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $1<$1<2>>( array<array<int>> )  @60336|$appendix(,)
+		 equivalent: (direct)-> type $1<$1<2>>( array<array<int>> )  @09712|$appendix(,)
 
-		nom type sequent<c>  @18400|$appendix(,) --internal
+		nom type serial<c>  @42432|$appendix(,) --internal
 		 viable = no
-		 equivalent: ("sequential<array<int>><c>")-> type sequential<t><c>  @23984|sequential(5,6)
+		 equivalent: ("serial<array<int>><c>")-> type serial<t><c>  @22640|serial(5,6)
 
-		method shrink  @33488|$appendix(,) --external
+		method shrink  @35456|$appendix(,) --external
 		 viable = yes
 
-		method store  @34768|$appendix(,) --external
+		method store  @35776|$appendix(,) --external
 		 viable = yes
 
-		method take  @21968|$appendix(,) --external
+		method take  @19136|$appendix(,) --external
 		 viable = yes
 
-		method take  @35088|$appendix(,) --external
+		method take  @36096|$appendix(,) --external
 		 viable = yes
 
-		method use  @35408|$appendix(,) --external
+		method use  @19456|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~count  @22304|$appendix(,) --fraternal
-		 key = contiguous<t>-0
+		abstract method ~count  @21232|$appendix(,) --fraternal
+		 key = positional<t>-0
 		 viable = yes
 
-		abstract method ~use  @22704|$appendix(,) --fraternal
-		 key = contiguous<t>-1
+		abstract method ~use  @24032|$appendix(,) --fraternal
+		 key = positional<t>-1
 		 viable = yes
 	}
 
-	type $1<2>( array<int> )  @02112|$appendix(,) --internal
-	 from (direct)-> type $3<2>( contiguous<int> )  @01568|$appendix(,)
+	type $1<2>( array<int> )  @19024|$appendix(,) --internal
+	 from (direct)-> type $3<2>( positional<int> )  @07808|$appendix(,)
 	 viable = yes
 	{
-		method begin  @00784|$appendix(,) --external
+		method begin  @63456|$appendix(,) --external
 		 viable = yes
 
-		method begin  @01424|$appendix(,) --external
+		method begin  @03040|$appendix(,) --external
 		 viable = yes
 
-		method begin  @01744|$appendix(,) --external
+		method begin  @57696|$appendix(,) --external
 		 viable = yes
 
-		method begin<c>  @57040|$appendix(,) --external
+		method begin<c>  @01760|$appendix(,) --external
 		 viable = no
 
-		method begin<c>  @02064|$appendix(,) --external
+		method begin<c>  @02400|$appendix(,) --external
 		 viable = no
 
-		nom type contig  @16480|$appendix(,) --internal
-		 viable = yes
-		 equivalent: (direct)-> type $3<2>( contiguous<int> )  @01568|$appendix(,)
-
-		method copy  @02384|$appendix(,) --external
+		method copy  @54496|$appendix(,) --external
 		 viable = yes
 
-		method copy  @02704|$appendix(,) --external
+		method copy  @02720|$appendix(,) --external
 		 viable = yes
 
-		method count  @03024|$appendix(,) --external
+		method count  @52256|$appendix(,) --external
 		 viable = yes
 
-		method delete  @03344|$appendix(,) --external
+		method delete  @03680|$appendix(,) --external
 		 viable = yes
 
-		method insert  @03664|$appendix(,) --external
+		method insert  @04000|$appendix(,) --external
 		 viable = yes
 
-		method insert  @03984|$appendix(,) --external
+		method insert  @57376|$appendix(,) --external
 		 viable = yes
 
-		method insert  @24528|$appendix(,) --external
+		method insert  @18176|$appendix(,) --external
 		 viable = yes
 
-		method insert  @20368|$appendix(,) --external
+		method insert  @32896|$appendix(,) --external
 		 viable = yes
 
-		method insert  @24848|$appendix(,) --external
+		method insert  @30016|$appendix(,) --external
 		 viable = yes
 
-		method insert  @20688|$appendix(,) --external
+		method insert  @19776|$appendix(,) --external
 		 viable = yes
 
-		method insert<c>  @26128|$appendix(,) --external
+		method insert<c>  @31936|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @29328|$appendix(,) --external
+		method insert<c>  @24256|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @30928|$appendix(,) --external
+		method insert<c>  @23296|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @18128|$appendix(,) --external
+		method insert<c>  @33216|$appendix(,) --external
 		 viable = no
 
-		method rank  @21008|$appendix(,) --external
+		nom type positional  @44544|$appendix(,) --internal
+		 viable = yes
+		 equivalent: (direct)-> type $3<2>( positional<int> )  @07808|$appendix(,)
+
+		method rank  @26496|$appendix(,) --external
 		 viable = yes
 
-		method resize  @25168|$appendix(,) --external
+		method resize  @17216|$appendix(,) --external
 		 viable = yes
 
-		nom type same_type  @17440|$appendix(,) --internal
+		nom type same_type  @41664|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $1<2>( array<int> )  @02112|$appendix(,)
+		 equivalent: (direct)-> type $1<2>( array<int> )  @19024|$appendix(,)
 
-		nom type sequent<c>  @17632|$appendix(,) --internal
+		nom type serial<c>  @45888|$appendix(,) --internal
 		 viable = no
-		 equivalent: ("sequential<int><c>")-> type sequential<t><c>  @23984|sequential(5,6)
+		 equivalent: ("serial<int><c>")-> type serial<t><c>  @22640|serial(5,6)
 
-		method shrink  @19088|$appendix(,) --external
+		method shrink  @30976|$appendix(,) --external
 		 viable = yes
 
-		method store  @16528|$appendix(,) --external
+		method store  @25536|$appendix(,) --external
 		 viable = yes
 
-		method take  @19728|$appendix(,) --external
+		method take  @28096|$appendix(,) --external
 		 viable = yes
 
-		method take  @24208|$appendix(,) --external
+		method take  @28736|$appendix(,) --external
 		 viable = yes
 
-		method use  @17808|$appendix(,) --external
+		method use  @27136|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~count  @07712|$appendix(,) --fraternal
-		 key = contiguous<t>-0
+		abstract method ~count  @04096|$appendix(,) --fraternal
+		 key = positional<t>-0
 		 viable = yes
 
-		abstract method ~use  @06912|$appendix(,) --fraternal
-		 key = contiguous<t>-1
+		abstract method ~use  @02496|$appendix(,) --fraternal
+		 key = positional<t>-1
 		 viable = yes
 	}
 
-	type $1<7>( array<string> )  @11312|$appendix(,) --internal
-	 from (direct)-> type $3<7>( contiguous<string> )  @13488|$appendix(,)
+	type $1<7>( array<string> )  @42144|$appendix(,) --internal
+	 from (direct)-> type $3<7>( positional<string> )  @42688|$appendix(,)
 	 viable = yes
 	{
-		method begin  @39888|$appendix(,) --external
+		method begin  @48576|$appendix(,) --external
 		 viable = yes
 
-		method begin  @40528|$appendix(,) --external
+		method begin  @40896|$appendix(,) --external
 		 viable = yes
 
-		method begin  @39248|$appendix(,) --external
+		method begin  @42496|$appendix(,) --external
 		 viable = yes
 
-		method begin<c>  @37328|$appendix(,) --external
+		method begin<c>  @52736|$appendix(,) --external
 		 viable = no
 
-		method begin<c>  @39568|$appendix(,) --external
+		method begin<c>  @43456|$appendix(,) --external
 		 viable = no
 
-		nom type contig  @18592|$appendix(,) --internal
-		 viable = yes
-		 equivalent: (direct)-> type $3<7>( contiguous<string> )  @13488|$appendix(,)
-
-		method copy  @37648|$appendix(,) --external
+		method copy  @42816|$appendix(,) --external
 		 viable = yes
 
-		method copy  @37968|$appendix(,) --external
+		method copy  @48896|$appendix(,) --external
 		 viable = yes
 
-		method count  @38288|$appendix(,) --external
+		method count  @41216|$appendix(,) --external
 		 viable = yes
 
-		method delete  @38608|$appendix(,) --external
+		method delete  @49856|$appendix(,) --external
 		 viable = yes
 
-		method insert  @38928|$appendix(,) --external
+		method insert  @39616|$appendix(,) --external
 		 viable = yes
 
-		method insert  @41104|$appendix(,) --external
+		method insert  @41536|$appendix(,) --external
 		 viable = yes
 
-		method insert  @53584|$appendix(,) --external
+		method insert  @52096|$appendix(,) --external
 		 viable = yes
 
-		method insert  @54544|$appendix(,) --external
+		method insert  @46976|$appendix(,) --external
 		 viable = yes
 
-		method insert  @45584|$appendix(,) --external
+		method insert  @37696|$appendix(,) --external
 		 viable = yes
 
-		method insert  @41424|$appendix(,) --external
+		method insert  @47296|$appendix(,) --external
 		 viable = yes
 
-		method insert<c>  @51984|$appendix(,) --external
+		method insert<c>  @53056|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @55184|$appendix(,) --external
+		method insert<c>  @41856|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @52304|$appendix(,) --external
+		method insert<c>  @43136|$appendix(,) --external
 		 viable = no
 
-		method insert<c>  @53904|$appendix(,) --external
+		method insert<c>  @53376|$appendix(,) --external
 		 viable = no
 
-		method rank  @51024|$appendix(,) --external
+		nom type positional  @48384|$appendix(,) --internal
+		 viable = yes
+		 equivalent: (direct)-> type $3<7>( positional<string> )  @42688|$appendix(,)
+
+		method rank  @44736|$appendix(,) --external
 		 viable = yes
 
-		method resize  @57424|$appendix(,) --external
+		method resize  @46656|$appendix(,) --external
 		 viable = yes
 
-		nom type same_type  @18784|$appendix(,) --internal
+		nom type same_type  @45120|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $1<7>( array<string> )  @11312|$appendix(,)
+		 equivalent: (direct)-> type $1<7>( array<string> )  @42144|$appendix(,)
 
-		nom type sequent<c>  @18976|$appendix(,) --internal
+		nom type serial<c>  @46080|$appendix(,) --internal
 		 viable = no
-		 equivalent: ("sequential<string><c>")-> type sequential<t><c>  @23984|sequential(5,6)
+		 equivalent: ("serial<string><c>")-> type serial<t><c>  @22640|serial(5,6)
 
-		method shrink  @51344|$appendix(,) --external
+		method shrink  @45696|$appendix(,) --external
 		 viable = yes
 
-		method store  @57744|$appendix(,) --external
+		method store  @43776|$appendix(,) --external
 		 viable = yes
 
-		method take  @51664|$appendix(,) --external
+		method take  @49536|$appendix(,) --external
 		 viable = yes
 
-		method take  @45904|$appendix(,) --external
+		method take  @38336|$appendix(,) --external
 		 viable = yes
 
-		method use  @54224|$appendix(,) --external
+		method use  @37376|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~count  @25072|$appendix(,) --fraternal
-		 key = contiguous<t>-0
+		abstract method ~count  @12288|$appendix(,) --fraternal
+		 key = positional<t>-0
 		 viable = yes
 
-		abstract method ~use  @28672|$appendix(,) --fraternal
-		 key = contiguous<t>-1
+		abstract method ~use  @09888|$appendix(,) --fraternal
+		 key = positional<t>-1
 		 viable = yes
 	}
 
-	method $20<19>( as<widget> )  @59984|$appendix(,) --internal
+	method $20<19>( as<widget> )  @56896|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $20<22>( as<gadget> )  @43664|$appendix(,) --internal
+	method $20<22>( as<gadget> )  @04160|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $20<2>( as<int> )  @43984|$appendix(,) --internal
+	method $20<2>( as<int> )  @60416|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $21<19>( as_actual<widget> )  @60304|$appendix(,) --internal
+	method $21<19>( as_actual<widget> )  @57216|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	method $21<22>( as_actual<gadget> )  @60624|$appendix(,) --internal
+	method $21<22>( as_actual<gadget> )  @65216|$appendix(,) --internal
 	 enclosing type = object
 	 viable = yes
 
-	subroutine $23<2>( choose<int> )  @55984|$appendix(,) --internal
+	routine $23<2>( choose<int> )  @12736|$appendix(,) --internal
 	 viable = yes
 	{
 
 		given
 		{
-			object a  @17920|$appendix(,) --internal
-			 type: ("int")-> type int  @24800|int(6,6)
+			object a  @63760|$appendix(,) --internal
+			 type: ("int")-> type int  @18832|int(6,6)
 
-			object a?  @10496|$appendix(,) --internal
-			 type: ("bool")-> type bool  @23440|bool(5,6)
+			object a?  @64784|$appendix(,) --internal
+			 type: ("bool")-> type bool  @18560|bool(5,6)
 
-			object b  @24576|$appendix(,) --internal
-			 type: ("int")-> type int  @24800|int(6,6)
+			object b  @01552|$appendix(,) --internal
+			 type: ("int")-> type int  @18832|int(6,6)
 
-			proxy ~o  @61744|$appendix(,) --internal
-			 type: ("int")-> type int  @24800|int(6,6)
+			proxy ~o  @42240|$appendix(,) --internal
+			 type: ("int")-> type int  @18832|int(6,6)
 		}
 
 		BLOCK --domain
 		{
 			IF
-			 condition: ("a?")-> object a?  @10496|$appendix(,)
+			 condition: ("a?")-> object a?  @64784|$appendix(,)
 			{
 				true branch: JOIN
-				 left: ("~o")-> proxy ~o  @61744|$appendix(,)
-				 right: ("a")-> object a  @17920|$appendix(,)
+				 left: ("~o")-> proxy ~o  @42240|$appendix(,)
+				 right: ("a")-> object a  @63760|$appendix(,)
 				false branch: JOIN
-				 left: ("~o")-> proxy ~o  @61744|$appendix(,)
-				 right: ("b")-> object b  @24576|$appendix(,)
+				 left: ("~o")-> proxy ~o  @42240|$appendix(,)
+				 right: ("b")-> object b  @01552|$appendix(,)
 			}
 		}
 	}
 
-	method $24<$9<2>>( begin<<int>node1> )  @46544|$appendix(,) --internal
-	 enclosing type = $6<7> (op<node1>)
+	method $24<$9<2>>( begin<<int>node1> )  @05760|$appendix(,) --internal
+	 enclosing type = $11<13> (op<node1>)
 	 viable = yes
 
-	subroutine $27<28>( sin<fp2> )  @43520|$appendix(,) --internal
+	routine $27<28>( sin<fp2> )  @10608|$appendix(,) --internal
 	 viable = yes
 
-	subroutine $29<28>( cos<fp2> )  @57200|$appendix(,) --internal
+	routine $29<28>( cos<fp2> )  @09696|$appendix(,) --internal
 	 viable = yes
 
-	type $30<2>( <int>queue )  @09136|$appendix(,) --internal
+	type $30<2>( <int>queue )  @45408|$appendix(,) --internal
 	 viable = yes
 	{
-		method begin  @63504|$appendix(,) --external
+		method begin  @64896|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @09984|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @04880|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("begin")-> method begin  @52624|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("begin")-> method begin  @39936|$appendix(,)
 			}
 		}
 
-		method begin  @00848|$appendix(,) --external
+		method begin  @59136|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @10240|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @58384|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-				object other  @16384|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object other  @06672|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("begin")-> method begin  @44304|$appendix(,)
-				 input: ("other.list")-> object list  @35968|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("begin")-> method begin  @45376|$appendix(,)
+				 input: ("other.list")-> object list  @64640|$appendix(,)
 			}
 		}
 
-		method begin  @61904|$appendix(,) --external
+		method begin  @62656|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				subroutine copier  @59024|$appendix(,) --internal
+				routine copier  @15472|$appendix(,) --internal
 				 viable = yes
 
-				object io  @18176|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @06928|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-				object other  @18432|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object other  @07184|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("begin")-> method begin  @50064|$appendix(,)
-				 input: ("other.list")-> object list  @35968|$appendix(,)
-				 co-routine: ("copier")-> subroutine copier  @59024|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("begin")-> method begin  @44096|$appendix(,)
+				 input: ("other.list")-> object list  @64640|$appendix(,)
+				 co-routine: ("copier")-> routine copier  @15472|$appendix(,)
 			}
 		}
 
-		method is_empty?  @11728|$appendix(,) --external
+		method is_empty?  @05440|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @19200|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @07696|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-				object yes  @19456|$appendix(,) --internal
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				object yes  @07952|$appendix(,) --internal
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("is_empty?")-> method is_empty?  @00112|list1(195,3)
-				 output: ("yes")-> object yes  @19456|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("is_empty?")-> method is_empty?  @24000|list1(195,3)
+				 output: ("yes")-> object yes  @07952|$appendix(,)
 			}
 		}
 
-		method pull  @01488|$appendix(,) --external
+		method pull  @04800|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object first  @55168|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				object first  @47248|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 
-				object io  @55424|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @43152|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @19712|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @57616|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("is_empty?")-> method is_empty?  @00112|list1(195,3)
-				 output: (direct)-> object (anon)  @19712|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("is_empty?")-> method is_empty?  @24000|list1(195,3)
+				 output: (direct)-> object (anon)  @57616|$appendix(,)
 				CALL --fundamental
-				 lead: (direct)-> object (anon)  @19712|$appendix(,)
-				 method: ("not")-> method not  @58304|bool(43,3)
+				 lead: (direct)-> object (anon)  @57616|$appendix(,)
+				 method: ("not")-> method not  @64976|bool(43,3)
 				IF
-				 condition: (direct)-> object (anon)  @19712|$appendix(,)
+				 condition: (direct)-> object (anon)  @57616|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						CALL
-						 lead: ("io.list")-> object list  @35968|$appendix(,)
-						 method: ("go_front")-> method go_front  @63728|list1(221,3)
+						 lead: ("io.list")-> object list  @64640|$appendix(,)
+						 method: ("go_front")-> method go_front  @20800|list1(221,3)
 						CALL
-						 lead: ("io.list")-> object list  @35968|$appendix(,)
-						 method: ("remove_next")-> method remove_next  @50704|$appendix(,)
-						 output: ("first")-> object first  @55168|$appendix(,)
+						 lead: ("io.list")-> object list  @64640|$appendix(,)
+						 method: ("remove_next")-> method remove_next  @39296|$appendix(,)
+						 output: ("first")-> object first  @47248|$appendix(,)
 					}
 				}
 			}
 		}
 
-		method pull  @12368|$appendix(,) --external
+		method pull  @60736|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				subroutine copier  @06560|$appendix(,) --internal
+				routine copier  @17776|$appendix(,) --internal
 				 viable = yes
 
-				object first  @31872|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				object first  @60032|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 
-				object io  @25216|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @60800|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @38016|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @07808|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("is_empty?")-> method is_empty?  @00112|list1(195,3)
-				 output: (direct)-> object (anon)  @38016|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("is_empty?")-> method is_empty?  @24000|list1(195,3)
+				 output: (direct)-> object (anon)  @07808|$appendix(,)
 				CALL --fundamental
-				 lead: (direct)-> object (anon)  @38016|$appendix(,)
-				 method: ("not")-> method not  @58304|bool(43,3)
+				 lead: (direct)-> object (anon)  @07808|$appendix(,)
+				 method: ("not")-> method not  @64976|bool(43,3)
 				IF
-				 condition: (direct)-> object (anon)  @38016|$appendix(,)
+				 condition: (direct)-> object (anon)  @07808|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						CALL
-						 lead: ("io.list")-> object list  @35968|$appendix(,)
-						 method: ("go_front")-> method go_front  @63728|list1(221,3)
+						 lead: ("io.list")-> object list  @64640|$appendix(,)
+						 method: ("go_front")-> method go_front  @20800|list1(221,3)
 						CALL
-						 lead: ("io.list")-> object list  @35968|$appendix(,)
-						 method: ("remove_next")-> method remove_next  @48784|$appendix(,)
-						 output: ("first")-> object first  @31872|$appendix(,)
-						 co-routine: ("copier")-> subroutine copier  @06560|$appendix(,)
+						 lead: ("io.list")-> object list  @64640|$appendix(,)
+						 method: ("remove_next")-> method remove_next  @40256|$appendix(,)
+						 output: ("first")-> object first  @60032|$appendix(,)
+						 co-routine: ("copier")-> routine copier  @17776|$appendix(,)
 					}
 				}
 			}
 		}
 
-		method pull  @06608|$appendix(,) --external
+		method pull  @62976|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object first  @37760|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				object first  @64896|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 
-				object io  @33152|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @60288|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-				subroutine taker  @08384|$appendix(,) --internal
+				routine taker  @22944|$appendix(,) --internal
 				 viable = yes
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @36480|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @05248|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("is_empty?")-> method is_empty?  @00112|list1(195,3)
-				 output: (direct)-> object (anon)  @36480|$appendix(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("is_empty?")-> method is_empty?  @24000|list1(195,3)
+				 output: (direct)-> object (anon)  @05248|$appendix(,)
 				CALL --fundamental
-				 lead: (direct)-> object (anon)  @36480|$appendix(,)
-				 method: ("not")-> method not  @58304|bool(43,3)
+				 lead: (direct)-> object (anon)  @05248|$appendix(,)
+				 method: ("not")-> method not  @64976|bool(43,3)
 				IF
-				 condition: (direct)-> object (anon)  @36480|$appendix(,)
+				 condition: (direct)-> object (anon)  @05248|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						CALL
-						 lead: ("io.list")-> object list  @35968|$appendix(,)
-						 method: ("go_front")-> method go_front  @63728|list1(221,3)
+						 lead: ("io.list")-> object list  @64640|$appendix(,)
+						 method: ("go_front")-> method go_front  @20800|list1(221,3)
 						CALL
-						 lead: ("io.list")-> object list  @35968|$appendix(,)
-						 method: ("remove_next")-> method remove_next  @55824|$appendix(,)
-						 output: ("first")-> object first  @37760|$appendix(,)
-						 co-routine: ("taker")-> subroutine taker  @08384|$appendix(,)
+						 lead: ("io.list")-> object list  @64640|$appendix(,)
+						 method: ("remove_next")-> method remove_next  @52416|$appendix(,)
+						 output: ("first")-> object first  @64896|$appendix(,)
+						 co-routine: ("taker")-> routine taker  @22944|$appendix(,)
 					}
 				}
 			}
 		}
 
-		method push  @05648|$appendix(,) --external
+		method push  @05120|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @34944|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @05760|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-				proxy ~t  @52864|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @53280|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("go_last")-> method go_last  @00432|list1(231,3)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("go_last")-> method go_last  @21760|list1(231,3)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @49504|stack&queue(,)
-				 type: ("int")-> type int  @24800|int(6,6)
+				 proxy: (direct)-> proxy (anon)  @53520|stack&queue(,)
+				 type: ("int")-> type int  @18832|int(6,6)
 				 permission: [init]
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("insert")-> method insert  @55504|$appendix(,)
-				 result: (direct)-> proxy (anon)  @49504|stack&queue(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("insert")-> method insert  @46336|$appendix(,)
+				 result: (direct)-> proxy (anon)  @53520|stack&queue(,)
 				JOIN
-				 left: ("~t")-> proxy ~t  @52864|$appendix(,)
-				 right: (direct)-> proxy (anon)  @49504|stack&queue(,)
+				 left: ("~t")-> proxy ~t  @53280|$appendix(,)
+				 right: (direct)-> proxy (anon)  @53520|stack&queue(,)
 			}
 		}
 
-		nom type t_queue  @23408|$appendix(,) --internal
+		nom type t_queue  @57488|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+		 equivalent: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-		method use_first  @01808|$appendix(,) --external
+		method use_first  @06080|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @35712|$appendix(,) --internal
-				 type: (direct)-> type $30<2>( <int>queue )  @09136|$appendix(,)
+				object io  @02944|$appendix(,) --internal
+				 type: (direct)-> type $30<2>( <int>queue )  @45408|$appendix(,)
 
-				proxy ~t  @59104|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @49680|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @49264|stack&queue(,)
-				 type: ("int")-> type int  @24800|int(6,6)
+				 proxy: (direct)-> proxy (anon)  @49920|stack&queue(,)
+				 type: ("int")-> type int  @18832|int(6,6)
 				 permission: [eval]
 				CALL
-				 lead: ("io.list")-> object list  @35968|$appendix(,)
-				 method: ("use_first")-> method use_first  @47504|$appendix(,)
-				 result: (direct)-> proxy (anon)  @49264|stack&queue(,)
+				 lead: ("io.list")-> object list  @64640|$appendix(,)
+				 method: ("use_first")-> method use_first  @50496|$appendix(,)
+				 result: (direct)-> proxy (anon)  @49920|stack&queue(,)
 				JOIN
-				 left: ("~t")-> proxy ~t  @59104|$appendix(,)
-				 right: (direct)-> proxy (anon)  @49264|stack&queue(,)
+				 left: ("~t")-> proxy ~t  @49680|$appendix(,)
+				 right: (direct)-> proxy (anon)  @49920|stack&queue(,)
 			}
 		}
 
 		instance
 		{
-			object list  @35968|$appendix(,) --internal
-			 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+			object list  @64640|$appendix(,) --internal
+			 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 		}
 
 	}
 
-	type $31<2>( <int>stack )  @14032|$appendix(,) --internal
+	type $31<2>( <int>stack )  @47856|$appendix(,) --internal
 	 viable = yes
 	{
-		method begin  @07568|$appendix(,) --external
+		method begin  @63936|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @40064|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @02176|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("begin")-> method begin  @52624|$appendix(,)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("begin")-> method begin  @39936|$appendix(,)
 			}
 		}
 
-		method begin  @64784|$appendix(,) --external
+		method begin  @06400|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @32128|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @00128|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 
-				object other  @37504|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object other  @58240|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("begin")-> method begin  @44304|$appendix(,)
-				 input: ("other.list")-> object list  @24704|$appendix(,)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("begin")-> method begin  @45376|$appendix(,)
+				 input: ("other.list")-> object list  @58752|$appendix(,)
 			}
 		}
 
-		method begin  @03728|$appendix(,) --external
+		method begin  @60096|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				subroutine copier  @09904|$appendix(,) --internal
+				routine copier  @27808|$appendix(,) --internal
 				 viable = yes
 
-				object io  @32384|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @61824|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 
-				object other  @25472|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object other  @03200|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("begin")-> method begin  @50064|$appendix(,)
-				 input: ("other.list")-> object list  @24704|$appendix(,)
-				 co-routine: ("copier")-> subroutine copier  @09904|$appendix(,)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("begin")-> method begin  @44096|$appendix(,)
+				 input: ("other.list")-> object list  @58752|$appendix(,)
+				 co-routine: ("copier")-> routine copier  @27808|$appendix(,)
 			}
 		}
 
-		method is_empty?  @06928|$appendix(,) --external
+		method is_empty?  @59456|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @28800|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @01920|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 
-				object yes  @36736|$appendix(,) --internal
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				object yes  @65152|$appendix(,) --internal
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("is_empty?")-> method is_empty?  @00112|list1(195,3)
-				 output: ("yes")-> object yes  @36736|$appendix(,)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("is_empty?")-> method is_empty?  @24000|list1(195,3)
+				 output: ("yes")-> object yes  @65152|$appendix(,)
 			}
 		}
 
-		method pop  @65104|$appendix(,) --external
+		method pop  @02560|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @40320|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @06528|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("remove_next")-> method remove_next  @57008|list1(292,3)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("remove_next")-> method remove_next  @17280|list1(292,3)
 			}
 		}
 
-		method push  @65424|$appendix(,) --external
+		method push  @07680|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @33408|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @65408|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 
-				proxy ~t  @59344|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @51120|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @55264|stack&queue(,)
-				 type: ("int")-> type int  @24800|int(6,6)
+				 proxy: (direct)-> proxy (anon)  @54000|stack&queue(,)
+				 type: ("int")-> type int  @18832|int(6,6)
 				 permission: [init]
 				CALL
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("insert")-> method insert  @55504|$appendix(,)
-				 result: (direct)-> proxy (anon)  @55264|stack&queue(,)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("insert")-> method insert  @46336|$appendix(,)
+				 result: (direct)-> proxy (anon)  @54000|stack&queue(,)
 				JOIN
-				 left: ("~t")-> proxy ~t  @59344|$appendix(,)
-				 right: (direct)-> proxy (anon)  @55264|stack&queue(,)
+				 left: ("~t")-> proxy ~t  @51120|$appendix(,)
+				 right: (direct)-> proxy (anon)  @54000|stack&queue(,)
 			}
 		}
 
-		nom type t_stack  @21104|$appendix(,) --internal
+		nom type t_stack  @58448|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+		 equivalent: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 
-		method use_top  @07888|$appendix(,) --external
+		method use_top  @64256|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @26752|$appendix(,) --internal
-				 type: (direct)-> type $31<2>( <int>stack )  @14032|$appendix(,)
+				object io  @61056|$appendix(,) --internal
+				 type: (direct)-> type $31<2>( <int>stack )  @47856|$appendix(,)
 
-				proxy ~t  @63904|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @53760|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @53104|stack&queue(,)
-				 type: ("int")-> type int  @24800|int(6,6)
+				 proxy: (direct)-> proxy (anon)  @54240|stack&queue(,)
+				 type: ("int")-> type int  @18832|int(6,6)
 				 permission: [eval]
 				CALL
-				 lead: ("io.list")-> object list  @24704|$appendix(,)
-				 method: ("use_first")-> method use_first  @47504|$appendix(,)
-				 result: (direct)-> proxy (anon)  @53104|stack&queue(,)
+				 lead: ("io.list")-> object list  @58752|$appendix(,)
+				 method: ("use_first")-> method use_first  @50496|$appendix(,)
+				 result: (direct)-> proxy (anon)  @54240|stack&queue(,)
 				JOIN
-				 left: ("~t")-> proxy ~t  @63904|$appendix(,)
-				 right: (direct)-> proxy (anon)  @53104|stack&queue(,)
+				 left: ("~t")-> proxy ~t  @53760|$appendix(,)
+				 right: (direct)-> proxy (anon)  @54240|stack&queue(,)
 			}
 		}
 
 		instance
 		{
-			object list  @24704|$appendix(,) --internal
-			 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+			object list  @58752|$appendix(,) --internal
+			 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 		}
 
 	}
 
-	type $3<$1<2>>( contiguous<array<int>> )  @11584|$appendix(,) --internal
-	 from (direct)-> type $4<$1<2>><2>( sequential<array<int>><int> )  @10768|$appendix(,)
+	type $3<$1<2>>( positional<array<int>> )  @47040|$appendix(,) --internal
+	 from (direct)-> type $4<$1<2>><2>( serial<array<int>><int> )  @45952|$appendix(,)
 	 viable = yes
 	{
-		method begin  @18768|$appendix(,) --external
+		method begin  @36416|$appendix(,) --external
 		 viable = yes
 
-		method count  @35728|$appendix(,) --external
+		method count  @20416|$appendix(,) --external
 		 viable = yes
 
-		method use  @36048|$appendix(,) --external
+		method use  @36736|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~count  @23104|$appendix(,) --fraternal
-		 key = contiguous<t>-0
+		abstract method ~count  @22432|$appendix(,) --fraternal
+		 key = positional<t>-0
 		 viable = yes
 
-		abstract method ~flip_cursor  @46352|$appendix(,) --fraternal
-		 key = sequential<t><c>-2
+		abstract method ~flip_cursor  @24432|$appendix(,) --fraternal
+		 key = serial<t><c>-2
 		 viable = yes
 
-		abstract method ~move_cursor  @46752|$appendix(,) --fraternal
-		 key = sequential<t><c>-1
+		abstract method ~move_cursor  @24832|$appendix(,) --fraternal
+		 key = serial<t><c>-1
 		 viable = yes
 
-		abstract method ~open_cursor  @47552|$appendix(,) --fraternal
-		 key = sequential<t><c>-0
+		abstract method ~open_cursor  @56416|$appendix(,) --fraternal
+		 key = serial<t><c>-0
 		 viable = yes
 
-		abstract method ~use  @49952|$appendix(,) --fraternal
-		 key = contiguous<t>-1
+		abstract method ~use  @56016|$appendix(,) --fraternal
+		 key = positional<t>-1
 		 viable = yes
 
-		abstract method ~use  @50352|$appendix(,) --fraternal
-		 key = sequential<t><c>-3
+		abstract method ~use  @56816|$appendix(,) --fraternal
+		 key = serial<t><c>-3
 		 viable = yes
 	}
 
-	type $3<2>( contiguous<int> )  @01568|$appendix(,) --internal
-	 from (direct)-> type $4<2><2>( sequential<int><int> )  @03744|$appendix(,)
+	type $3<2>( positional<int> )  @07808|$appendix(,) --internal
+	 from (direct)-> type $4<2><2>( serial<int><int> )  @09168|$appendix(,)
 	 viable = yes
 	{
-		method begin  @29648|$appendix(,) --external
+		method begin  @24576|$appendix(,) --external
 		 viable = yes
 
-		method count  @22288|$appendix(,) --external
+		method count  @17536|$appendix(,) --external
 		 viable = yes
 
-		method use  @28688|$appendix(,) --external
+		method use  @18496|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~count  @00512|$appendix(,) --fraternal
-		 key = contiguous<t>-0
+		abstract method ~count  @04496|$appendix(,) --fraternal
+		 key = positional<t>-0
 		 viable = yes
 
-		abstract method ~flip_cursor  @06112|$appendix(,) --fraternal
-		 key = sequential<t><c>-2
+		abstract method ~flip_cursor  @02096|$appendix(,) --fraternal
+		 key = serial<t><c>-2
 		 viable = yes
 
-		abstract method ~move_cursor  @00912|$appendix(,) --fraternal
-		 key = sequential<t><c>-1
+		abstract method ~move_cursor  @00096|$appendix(,) --fraternal
+		 key = serial<t><c>-1
 		 viable = yes
 
-		abstract method ~open_cursor  @06512|$appendix(,) --fraternal
-		 key = sequential<t><c>-0
+		abstract method ~open_cursor  @06896|$appendix(,) --fraternal
+		 key = serial<t><c>-0
 		 viable = yes
 
-		abstract method ~use  @01312|$appendix(,) --fraternal
-		 key = contiguous<t>-1
+		abstract method ~use  @02896|$appendix(,) --fraternal
+		 key = positional<t>-1
 		 viable = yes
 
-		abstract method ~use  @02912|$appendix(,) --fraternal
-		 key = sequential<t><c>-3
+		abstract method ~use  @05296|$appendix(,) --fraternal
+		 key = serial<t><c>-3
 		 viable = yes
 	}
 
-	type $3<7>( contiguous<string> )  @13488|$appendix(,) --internal
-	 from (direct)-> type $4<7><2>( sequential<string><int> )  @12672|$appendix(,)
+	type $3<7>( positional<string> )  @42688|$appendix(,) --internal
+	 from (direct)-> type $4<7><2>( serial<string><int> )  @44864|$appendix(,)
 	 viable = yes
 	{
-		method begin  @41744|$appendix(,) --external
+		method begin  @42176|$appendix(,) --external
 		 viable = yes
 
-		method count  @42064|$appendix(,) --external
+		method count  @38976|$appendix(,) --external
 		 viable = yes
 
-		method use  @43344|$appendix(,) --external
+		method use  @37056|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~count  @25472|$appendix(,) --fraternal
-		 key = contiguous<t>-0
+		abstract method ~count  @14688|$appendix(,) --fraternal
+		 key = positional<t>-0
 		 viable = yes
 
-		abstract method ~flip_cursor  @29072|$appendix(,) --fraternal
-		 key = sequential<t><c>-2
+		abstract method ~flip_cursor  @14288|$appendix(,) --fraternal
+		 key = serial<t><c>-2
 		 viable = yes
 
-		abstract method ~move_cursor  @31472|$appendix(,) --fraternal
-		 key = sequential<t><c>-1
+		abstract method ~move_cursor  @10688|$appendix(,) --fraternal
+		 key = serial<t><c>-1
 		 viable = yes
 
-		abstract method ~open_cursor  @25872|$appendix(,) --fraternal
-		 key = sequential<t><c>-0
+		abstract method ~open_cursor  @15088|$appendix(,) --fraternal
+		 key = serial<t><c>-0
 		 viable = yes
 
-		abstract method ~use  @24672|$appendix(,) --fraternal
-		 key = contiguous<t>-1
+		abstract method ~use  @13088|$appendix(,) --fraternal
+		 key = positional<t>-1
 		 viable = yes
 
-		abstract method ~use  @31872|$appendix(,) --fraternal
-		 key = sequential<t><c>-3
+		abstract method ~use  @13488|$appendix(,) --fraternal
+		 key = serial<t><c>-3
 		 viable = yes
 	}
 
-	type $4<$1<2>><2>( sequential<array<int>><int> )  @10768|$appendix(,) --internal
+	type $4<$1<2>><2>( serial<array<int>><int> )  @45952|$appendix(,) --internal
 	 viable = yes
 	{
-		method begin  @23888|$appendix(,) --external
+		method begin  @21376|$appendix(,) --external
 		 viable = yes
 
-		method flip_cursor  @36368|$appendix(,) --external
+		method flip_cursor  @21696|$appendix(,) --external
 		 viable = yes
 
-		method move_cursor  @36688|$appendix(,) --external
+		method move_cursor  @22656|$appendix(,) --external
 		 viable = yes
 
-		method open_cursor  @37008|$appendix(,) --external
+		method open_cursor  @38656|$appendix(,) --external
 		 viable = yes
 
-		method use  @40208|$appendix(,) --external
+		method use  @45056|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~flip_cursor  @30272|$appendix(,) --fraternal
-		 key = sequential<t><c>-2
+		abstract method ~flip_cursor  @09488|$appendix(,) --fraternal
+		 key = serial<t><c>-2
 		 viable = yes
 
-		abstract method ~move_cursor  @28272|$appendix(,) --fraternal
-		 key = sequential<t><c>-1
+		abstract method ~move_cursor  @11488|$appendix(,) --fraternal
+		 key = serial<t><c>-1
 		 viable = yes
 
-		abstract method ~open_cursor  @31072|$appendix(,) --fraternal
-		 key = sequential<t><c>-0
+		abstract method ~open_cursor  @11888|$appendix(,) --fraternal
+		 key = serial<t><c>-0
 		 viable = yes
 
-		abstract method ~use  @30672|$appendix(,) --fraternal
-		 key = sequential<t><c>-3
+		abstract method ~use  @15888|$appendix(,) --fraternal
+		 key = serial<t><c>-3
 		 viable = yes
 	}
 
-	type $4<2><2>( sequential<int><int> )  @03744|$appendix(,) --internal
+	type $4<2><2>( serial<int><int> )  @09168|$appendix(,) --internal
 	 viable = yes
 	{
-		method begin  @19408|$appendix(,) --external
+		method begin  @27456|$appendix(,) --external
 		 viable = yes
 
-		method flip_cursor  @16848|$appendix(,) --external
+		method flip_cursor  @24896|$appendix(,) --external
 		 viable = yes
 
-		method move_cursor  @25488|$appendix(,) --external
+		method move_cursor  @32576|$appendix(,) --external
 		 viable = yes
 
-		method open_cursor  @28048|$appendix(,) --external
+		method open_cursor  @16576|$appendix(,) --external
 		 viable = yes
 
-		method use  @25808|$appendix(,) --external
+		method use  @23616|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~flip_cursor  @21904|$appendix(,) --fraternal
-		 key = sequential<t><c>-2
+		abstract method ~flip_cursor  @00496|$appendix(,) --fraternal
+		 key = serial<t><c>-2
 		 viable = yes
 
-		abstract method ~move_cursor  @18304|$appendix(,) --fraternal
-		 key = sequential<t><c>-1
+		abstract method ~move_cursor  @00896|$appendix(,) --fraternal
+		 key = serial<t><c>-1
 		 viable = yes
 
-		abstract method ~open_cursor  @19104|$appendix(,) --fraternal
-		 key = sequential<t><c>-0
+		abstract method ~open_cursor  @18832|$appendix(,) --fraternal
+		 key = serial<t><c>-0
 		 viable = yes
 
-		abstract method ~use  @19504|$appendix(,) --fraternal
-		 key = sequential<t><c>-3
+		abstract method ~use  @19632|$appendix(,) --fraternal
+		 key = serial<t><c>-3
 		 viable = yes
 	}
 
-	type $4<7><2>( sequential<string><int> )  @12672|$appendix(,) --internal
+	type $4<7><2>( serial<string><int> )  @44864|$appendix(,) --internal
 	 viable = yes
 	{
-		method begin  @54864|$appendix(,) --external
+		method begin  @46016|$appendix(,) --external
 		 viable = yes
 
-		method flip_cursor  @58064|$appendix(,) --external
+		method flip_cursor  @47616|$appendix(,) --external
 		 viable = yes
 
-		method move_cursor  @50384|$appendix(,) --external
+		method move_cursor  @40576|$appendix(,) --external
 		 viable = yes
 
-		method open_cursor  @42704|$appendix(,) --external
+		method open_cursor  @53696|$appendix(,) --external
 		 viable = yes
 
-		method use  @58384|$appendix(,) --external
+		method use  @44416|$appendix(,) --external
 		 viable = yes
 
-		abstract method ~flip_cursor  @32272|$appendix(,) --fraternal
-		 key = sequential<t><c>-2
+		abstract method ~flip_cursor  @10288|$appendix(,) --fraternal
+		 key = serial<t><c>-2
 		 viable = yes
 
-		abstract method ~move_cursor  @27072|$appendix(,) --fraternal
-		 key = sequential<t><c>-1
+		abstract method ~move_cursor  @15488|$appendix(,) --fraternal
+		 key = serial<t><c>-1
 		 viable = yes
 
-		abstract method ~open_cursor  @29472|$appendix(,) --fraternal
-		 key = sequential<t><c>-0
+		abstract method ~open_cursor  @11088|$appendix(,) --fraternal
+		 key = serial<t><c>-0
 		 viable = yes
 
-		abstract method ~use  @26672|$appendix(,) --fraternal
-		 key = sequential<t><c>-3
+		abstract method ~use  @13888|$appendix(,) --fraternal
+		 key = serial<t><c>-3
 		 viable = yes
 	}
 
-	type $5<26>( alpha\op<fault> )  @13760|$appendix(,) --internal
+	type $5<26>( alpha\op<fault> )  @43232|$appendix(,) --internal
 	 viable = yes
 	{
-		method before<xt>?  @61264|$appendix(,) --external
+		method before<xt>?  @01600|$appendix(,) --external
 		 viable = no
 
-		method begin  @44944|$appendix(,) --external
+		method begin  @61696|$appendix(,) --external
 		 viable = yes
 
-		method begin  @47184|$appendix(,) --external
+		method begin  @61376|$appendix(,) --external
 		 viable = yes
 
-		method begin<xt>  @47824|$appendix(,) --external
+		method begin<xt>  @04480|$appendix(,) --external
 		 viable = no
 
-		method begin<xt>  @48144|$appendix(,) --external
+		method begin<xt>  @58816|$appendix(,) --external
 		 viable = no
 
-		method begin<xt>  @49104|$appendix(,) --external
+		method begin<xt>  @57856|$appendix(,) --external
 		 viable = no
 
-		method deref  @07248|$appendix(,) --external
+		method deref  @01280|$appendix(,) --external
 		 viable = yes
 
-		method equal<xt>?  @10768|$appendix(,) --external
+		method equal<xt>?  @61056|$appendix(,) --external
 		 viable = no
 
-		method store  @05328|$appendix(,) --external
+		method store  @62016|$appendix(,) --external
 		 viable = yes
 	}
 
-	type $5<6>( op<object> )  @59792|$appendix(,) --internal
+	type $5<6>( op<object> )  @09440|$appendix(,) --internal
 	 viable = yes
 	{
-		method before<xt>?  @26448|$appendix(,) --external
+		method before<xt>?  @22016|$appendix(,) --external
 		 viable = no
 
-		method begin  @29968|$appendix(,) --external
+		method begin  @16896|$appendix(,) --external
 		 viable = yes
 
-		method begin  @32208|$appendix(,) --external
+		method begin  @31296|$appendix(,) --external
 		 viable = yes
 
-		method begin<xt>  @17168|$appendix(,) --external
+		method begin<xt>  @26816|$appendix(,) --external
 		 viable = no
 
-		method begin<xt>  @20048|$appendix(,) --external
+		method begin<xt>  @22976|$appendix(,) --external
 		 viable = no
 
-		method begin<xt>  @27728|$appendix(,) --external
+		method begin<xt>  @25856|$appendix(,) --external
 		 viable = no
 
-		method deref  @22608|$appendix(,) --external
+		method deref  @20736|$appendix(,) --external
 		 viable = yes
 
-		method equal<xt>?  @22928|$appendix(,) --external
+		method equal<xt>?  @26176|$appendix(,) --external
 		 viable = no
 
-		method store  @33808|$appendix(,) --external
+		method store  @33536|$appendix(,) --external
 		 viable = yes
 	}
 
-	type $8<2>( <int>list )  @11856|$appendix(,) --internal
-	 from ("list1")-> type list1  @61152|list1(100,6)
+	type $8<2>( <int>list )  @42960|$appendix(,) --internal
+	 from ("list1")-> type list1  @16576|list1(100,6)
 	 viable = yes
 	{
-		method begin  @52624|$appendix(,) --external
+		method begin  @39936|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @11264|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @06416|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @15776|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @16560|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @15744|list1(383,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @49280|list1(385,6)
+				 lead: ("io")-> object io  @02448|list1(383,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @52640|list1(385,6)
 				CALL --initial
-				 lead: (direct)-> proxy (anon)  @15776|$appendix(,)
-				 method: ("begin")-> method begin  @48688|list1(179,3)
+				 lead: (direct)-> proxy (anon)  @16560|$appendix(,)
+				 method: ("begin")-> method begin  @63360|list1(179,3)
 			}
 		}
 
-		method begin  @44304|$appendix(,) --external
+		method begin  @45376|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @11520|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @58640|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				object other  @22272|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object other  @01808|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @15536|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @16800|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @23936|list1(388,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @17200|list1(390,6)
+				 lead: ("io")-> object io  @18576|list1(388,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @25840|list1(390,6)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @12528|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @34800|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("other")-> object other  @18560|list1(388,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
+				 lead: ("other")-> object other  @18832|list1(388,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
 				 result: (direct)-> proxy (anon)  @27520|list1(390,35)
 				CALL --initial
-				 lead: (direct)-> proxy (anon)  @15536|$appendix(,)
-				 method: ("begin")-> method begin  @60528|list1(184,3)
-				 input: (direct)-> proxy (anon)  @12528|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @16800|$appendix(,)
+				 method: ("begin")-> method begin  @14400|list1(184,3)
+				 input: (direct)-> proxy (anon)  @34800|$appendix(,)
 			}
 		}
 
-		method begin  @49744|$appendix(,) --external
+		method begin  @51456|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @11008|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @00272|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				object other  @16128|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object other  @60688|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @22528|$appendix(,)
-				 type: ("cursor1")-> type cursor1  @55712|list1(58,13)
+				 object: (direct)-> object (anon)  @62736|$appendix(,)
+				 type: ("cursor1")-> type cursor1  @22016|list1(58,13)
 				CALL --fundamental
-				 lead: ("other")-> object other  @16128|$appendix(,)
-				 method: ("open_cursor")-> method open_cursor  @56368|$appendix(,)
+				 lead: ("other")-> object other  @60688|$appendix(,)
+				 method: ("open_cursor")-> method open_cursor  @07744|$appendix(,)
 				 input: (pending)->
-				 output: (direct)-> object (anon)  @22528|$appendix(,)
+				 output: (direct)-> object (anon)  @62736|$appendix(,)
 				LOOP --unconditional
 				{
 					iteration branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy ~n  @03888|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy ~n  @36240|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [eval]
 						CALL --fundamental
-						 lead: ("other")-> object other  @16128|$appendix(,)
-						 method: ("use")-> method use  @61168|$appendix(,)
-						 input: (direct)-> object (anon)  @22528|$appendix(,)
-						 result: (direct)-> proxy ~n  @03888|$appendix(,)
+						 lead: ("other")-> object other  @60688|$appendix(,)
+						 method: ("use")-> method use  @07104|$appendix(,)
+						 input: (direct)-> object (anon)  @62736|$appendix(,)
+						 result: (direct)-> proxy ~n  @36240|$appendix(,)
 						MAKE
-						 analog: (direct)-> analog (anon)  @35136|$appendix(,)
-						 type: ("analog")-> type analog  @26160|analog(5,6)
+						 analog: (direct)-> analog (anon)  @01488|$appendix(,)
+						 type: ("analog")-> type analog  @23456|analog(5,6)
 						MAKE
-						 object: (direct)-> object (anon)  @18688|$appendix(,)
-						 type: ("bool")-> type bool  @23440|bool(5,6)
+						 object: (direct)-> object (anon)  @63504|$appendix(,)
+						 type: ("bool")-> type bool  @18560|bool(5,6)
 						CALL --fundamental
-						 lead: (direct)-> analog (anon)  @35136|$appendix(,)
-						 method: ("is_void?")-> method is_void?  @43696|analog(23,3)
-						 output: (direct)-> object (anon)  @18688|$appendix(,)
+						 lead: (direct)-> analog (anon)  @01488|$appendix(,)
+						 method: ("is_void?")-> method is_void?  @51424|analog(23,3)
+						 output: (direct)-> object (anon)  @63504|$appendix(,)
 						IF
-						 condition: (direct)-> object (anon)  @18688|$appendix(,)
+						 condition: (direct)-> object (anon)  @63504|$appendix(,)
 						{
 							true branch: RETURN --to loop (escape)
 						}
 						BLOCK --domain
 						{
 							MAKE
-							 object: (direct)-> object nl  @14848|$appendix(,)
-							 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+							 object: (direct)-> object nl  @07440|$appendix(,)
+							 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @50944|leetcode_reverse(,)
-							 type: (direct)-> type $9<2>( <int>node1 )  @14304|$appendix(,)
+							 proxy: (direct)-> proxy (anon)  @48720|leetcode_reverse(,)
+							 type: (direct)-> type $9<2>( <int>node1 )  @46768|$appendix(,)
 							 permission: [init]
 							CALL --fundamental
-							 lead: (direct)-> object nl  @14848|$appendix(,)
-							 method: (direct)-> method $24<$9<2>>( begin<<int>node1> )  @46544|$appendix(,)
-							 result: (direct)-> proxy (anon)  @50944|leetcode_reverse(,)
+							 lead: (direct)-> object nl  @07440|$appendix(,)
+							 method: (direct)-> method $24<$9<2>>( begin<<int>node1> )  @05760|$appendix(,)
+							 result: (direct)-> proxy (anon)  @48720|leetcode_reverse(,)
 							MAKE
-							 proxy: (direct)-> proxy ~new_t  @56704|leetcode_reverse(,)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy ~new_t  @40800|leetcode_reverse(,)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [init]
 							CALL --initial
-							 lead: (direct)-> proxy (anon)  @50944|leetcode_reverse(,)
-							 method: ("begin")-> method begin  @53264|$appendix(,)
-							 result: (direct)-> proxy ~new_t  @56704|leetcode_reverse(,)
+							 lead: (direct)-> proxy (anon)  @48720|leetcode_reverse(,)
+							 method: ("begin")-> method begin  @48256|$appendix(,)
+							 result: (direct)-> proxy ~new_t  @40800|leetcode_reverse(,)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @63664|leetcode_reverse(,)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @46800|leetcode_reverse(,)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [eval]
 							TRANSLATE --random
-							 lead: ("~n")-> proxy ~n  @03888|$appendix(,)
-							 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-							 result: (direct)-> proxy (anon)  @63664|leetcode_reverse(,)
+							 lead: ("~n")-> proxy ~n  @36240|$appendix(,)
+							 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+							 result: (direct)-> proxy (anon)  @46800|leetcode_reverse(,)
 							CALL --initial, fundamental
-							 lead: ("~new_t")-> proxy ~new_t  @56704|leetcode_reverse(,)
-							 method: ("begin")-> method begin  @47520|int(54,3)
-							 input: (direct)-> proxy (anon)  @63664|leetcode_reverse(,)
+							 lead: ("~new_t")-> proxy ~new_t  @40800|leetcode_reverse(,)
+							 method: ("begin")-> method begin  @44704|int(54,3)
+							 input: (direct)-> proxy (anon)  @46800|leetcode_reverse(,)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @03168|$appendix(,)
-							 type: ("list1")-> type list1  @61152|list1(100,6)
+							 proxy: (direct)-> proxy (anon)  @26160|$appendix(,)
+							 type: ("list1")-> type list1  @16576|list1(100,6)
 							 permission: [init]
 							TRANSLATE --base
-							 lead: ("io")-> object io  @28032|list1(394,3)
-							 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-							 result: (direct)-> proxy (anon)  @19120|list1(400,7)
+							 lead: ("io")-> object io  @13456|list1(394,3)
+							 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+							 result: (direct)-> proxy (anon)  @18880|list1(400,7)
 							CALL
-							 lead: (direct)-> proxy (anon)  @03168|$appendix(,)
-							 method: ("insert")-> method insert  @49648|list1(266,3)
-							 input: ("nl")-> object nl  @14848|$appendix(,)
+							 lead: (direct)-> proxy (anon)  @26160|$appendix(,)
+							 method: ("insert")-> method insert  @16000|list1(266,3)
+							 input: ("nl")-> object nl  @07440|$appendix(,)
 							CALL
-							 lead: (direct)-> proxy (anon)  @03168|$appendix(,)
-							 method: ("go_next")-> method go_next  @52208|list1(236,3)
+							 lead: (direct)-> proxy (anon)  @26160|$appendix(,)
+							 method: ("go_next")-> method go_next  @14720|list1(236,3)
 						}
 						CALL --fundamental
-						 lead: ("other")-> object other  @16128|$appendix(,)
-						 method: ("move_cursor")-> method move_cursor  @57328|$appendix(,)
-						 input: (direct)-> object (anon)  @22528|$appendix(,)
+						 lead: ("other")-> object other  @60688|$appendix(,)
+						 method: ("move_cursor")-> method move_cursor  @06464|$appendix(,)
+						 input: (direct)-> object (anon)  @62736|$appendix(,)
 					}
 				}
 			}
 		}
 
-		method begin  @50064|$appendix(,) --external
+		method begin  @44096|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				subroutine copier  @41088|$appendix(,) --internal
+				routine copier  @03312|$appendix(,) --internal
 				 viable = yes
 
-				object io  @24320|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @61456|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				object other  @17664|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object other  @00784|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @09472|$appendix(,)
-				 type: ("cursor1")-> type cursor1  @55712|list1(58,13)
+				 object: (direct)-> object (anon)  @59152|$appendix(,)
+				 type: ("cursor1")-> type cursor1  @22016|list1(58,13)
 				CALL --fundamental
-				 lead: ("other")-> object other  @17664|$appendix(,)
-				 method: ("open_cursor")-> method open_cursor  @56368|$appendix(,)
+				 lead: ("other")-> object other  @00784|$appendix(,)
+				 method: ("open_cursor")-> method open_cursor  @07744|$appendix(,)
 				 input: (pending)->
-				 output: (direct)-> object (anon)  @09472|$appendix(,)
+				 output: (direct)-> object (anon)  @59152|$appendix(,)
 				LOOP --unconditional
 				{
 					iteration branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy ~n  @10848|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy ~n  @30960|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [eval]
 						CALL --fundamental
-						 lead: ("other")-> object other  @17664|$appendix(,)
-						 method: ("use")-> method use  @61168|$appendix(,)
-						 input: (direct)-> object (anon)  @09472|$appendix(,)
-						 result: (direct)-> proxy ~n  @10848|$appendix(,)
+						 lead: ("other")-> object other  @00784|$appendix(,)
+						 method: ("use")-> method use  @07104|$appendix(,)
+						 input: (direct)-> object (anon)  @59152|$appendix(,)
+						 result: (direct)-> proxy ~n  @30960|$appendix(,)
 						MAKE
-						 analog: (direct)-> analog (anon)  @44128|$appendix(,)
-						 type: ("analog")-> type analog  @26160|analog(5,6)
+						 analog: (direct)-> analog (anon)  @04832|$appendix(,)
+						 type: ("analog")-> type analog  @23456|analog(5,6)
 						MAKE
-						 object: (direct)-> object (anon)  @23040|$appendix(,)
-						 type: ("bool")-> type bool  @23440|bool(5,6)
+						 object: (direct)-> object (anon)  @62224|$appendix(,)
+						 type: ("bool")-> type bool  @18560|bool(5,6)
 						CALL --fundamental
-						 lead: (direct)-> analog (anon)  @44128|$appendix(,)
-						 method: ("is_void?")-> method is_void?  @43696|analog(23,3)
-						 output: (direct)-> object (anon)  @23040|$appendix(,)
+						 lead: (direct)-> analog (anon)  @04832|$appendix(,)
+						 method: ("is_void?")-> method is_void?  @51424|analog(23,3)
+						 output: (direct)-> object (anon)  @62224|$appendix(,)
 						IF
-						 condition: (direct)-> object (anon)  @23040|$appendix(,)
+						 condition: (direct)-> object (anon)  @62224|$appendix(,)
 						{
 							true branch: RETURN --to loop (escape)
 						}
 						BLOCK --domain
 						{
 							MAKE
-							 object: (direct)-> object nl  @19968|$appendix(,)
-							 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+							 object: (direct)-> object nl  @00016|$appendix(,)
+							 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @56944|leetcode_reverse(,)
-							 type: (direct)-> type $9<2>( <int>node1 )  @14304|$appendix(,)
+							 proxy: (direct)-> proxy (anon)  @49200|leetcode_reverse(,)
+							 type: (direct)-> type $9<2>( <int>node1 )  @46768|$appendix(,)
 							 permission: [init]
 							CALL --fundamental
-							 lead: (direct)-> object nl  @19968|$appendix(,)
-							 method: (direct)-> method $24<$9<2>>( begin<<int>node1> )  @46544|$appendix(,)
-							 result: (direct)-> proxy (anon)  @56944|leetcode_reverse(,)
+							 lead: (direct)-> object nl  @00016|$appendix(,)
+							 method: (direct)-> method $24<$9<2>>( begin<<int>node1> )  @05760|$appendix(,)
+							 result: (direct)-> proxy (anon)  @49200|leetcode_reverse(,)
 							MAKE
-							 proxy: (direct)-> proxy ~new_t  @51664|leetcode_reverse(,)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy ~new_t  @52080|leetcode_reverse(,)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [init]
 							CALL --initial
-							 lead: (direct)-> proxy (anon)  @56944|leetcode_reverse(,)
-							 method: ("begin")-> method begin  @53264|$appendix(,)
-							 result: (direct)-> proxy ~new_t  @51664|leetcode_reverse(,)
+							 lead: (direct)-> proxy (anon)  @49200|leetcode_reverse(,)
+							 method: ("begin")-> method begin  @48256|$appendix(,)
+							 result: (direct)-> proxy ~new_t  @52080|leetcode_reverse(,)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @54784|leetcode_reverse(,)
-							 type: ("int")-> type int  @24800|int(6,6)
+							 proxy: (direct)-> proxy (anon)  @44400|leetcode_reverse(,)
+							 type: ("int")-> type int  @18832|int(6,6)
 							 permission: [eval]
 							TRANSLATE --random
-							 lead: ("~n")-> proxy ~n  @10848|$appendix(,)
-							 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-							 result: (direct)-> proxy (anon)  @54784|leetcode_reverse(,)
+							 lead: ("~n")-> proxy ~n  @30960|$appendix(,)
+							 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+							 result: (direct)-> proxy (anon)  @44400|leetcode_reverse(,)
 							CALL
-							 subroutine: ("copier")-> subroutine copier  @41088|$appendix(,)
-							 input: (direct)-> proxy (anon)  @54784|leetcode_reverse(,)
-							 output: ("~new_t")-> proxy ~new_t  @51664|leetcode_reverse(,)
+							 routine: ("copier")-> routine copier  @03312|$appendix(,)
+							 input: (direct)-> proxy (anon)  @44400|leetcode_reverse(,)
+							 output: ("~new_t")-> proxy ~new_t  @52080|leetcode_reverse(,)
 							MAKE
-							 proxy: (direct)-> proxy (anon)  @09648|$appendix(,)
-							 type: ("list1")-> type list1  @61152|list1(100,6)
+							 proxy: (direct)-> proxy (anon)  @33840|$appendix(,)
+							 type: ("list1")-> type list1  @16576|list1(100,6)
 							 permission: [init]
 							TRANSLATE --base
-							 lead: ("io")-> object io  @19584|list1(404,3)
-							 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-							 result: (direct)-> proxy (anon)  @31120|list1(411,7)
+							 lead: ("io")-> object io  @22160|list1(404,3)
+							 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+							 result: (direct)-> proxy (anon)  @24400|list1(411,7)
 							CALL
-							 lead: (direct)-> proxy (anon)  @09648|$appendix(,)
-							 method: ("insert")-> method insert  @49648|list1(266,3)
-							 input: ("nl")-> object nl  @19968|$appendix(,)
+							 lead: (direct)-> proxy (anon)  @33840|$appendix(,)
+							 method: ("insert")-> method insert  @16000|list1(266,3)
+							 input: ("nl")-> object nl  @00016|$appendix(,)
 							CALL
-							 lead: (direct)-> proxy (anon)  @09648|$appendix(,)
-							 method: ("go_next")-> method go_next  @52208|list1(236,3)
+							 lead: (direct)-> proxy (anon)  @33840|$appendix(,)
+							 method: ("go_next")-> method go_next  @14720|list1(236,3)
 						}
 						CALL --fundamental
-						 lead: ("other")-> object other  @17664|$appendix(,)
-						 method: ("move_cursor")-> method move_cursor  @57328|$appendix(,)
-						 input: (direct)-> object (anon)  @09472|$appendix(,)
+						 lead: ("other")-> object other  @00784|$appendix(,)
+						 method: ("move_cursor")-> method move_cursor  @06464|$appendix(,)
+						 input: (direct)-> object (anon)  @59152|$appendix(,)
 					}
 				}
 			}
 		}
 
-		method insert  @55504|$appendix(,) --external
+		method insert  @46336|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @20224|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @02320|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				proxy ~t  @00528|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @30240|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object nl  @09728|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @58896|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @58624|leetcode_reverse(,)
-				 type: (direct)-> type $9<2>( <int>node1 )  @14304|$appendix(,)
+				 proxy: (direct)-> proxy (anon)  @45360|leetcode_reverse(,)
+				 type: (direct)-> type $9<2>( <int>node1 )  @46768|$appendix(,)
 				 permission: [init]
 				CALL --fundamental
-				 lead: (direct)-> object nl  @09728|$appendix(,)
-				 method: (direct)-> method $24<$9<2>>( begin<<int>node1> )  @46544|$appendix(,)
-				 result: (direct)-> proxy (anon)  @58624|leetcode_reverse(,)
+				 lead: (direct)-> object nl  @58896|$appendix(,)
+				 method: (direct)-> method $24<$9<2>>( begin<<int>node1> )  @05760|$appendix(,)
+				 result: (direct)-> proxy (anon)  @45360|leetcode_reverse(,)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @51184|leetcode_reverse(,)
-				 type: ("int")-> type int  @24800|int(6,6)
+				 proxy: (direct)-> proxy (anon)  @45600|leetcode_reverse(,)
+				 type: ("int")-> type int  @18832|int(6,6)
 				 permission: [init]
 				CALL --initial
-				 lead: (direct)-> proxy (anon)  @58624|leetcode_reverse(,)
-				 method: ("begin")-> method begin  @53264|$appendix(,)
-				 result: (direct)-> proxy (anon)  @51184|leetcode_reverse(,)
+				 lead: (direct)-> proxy (anon)  @45360|leetcode_reverse(,)
+				 method: ("begin")-> method begin  @48256|$appendix(,)
+				 result: (direct)-> proxy (anon)  @45600|leetcode_reverse(,)
 				JOIN
-				 left: ("~t")-> proxy ~t  @00528|$appendix(,)
-				 right: (direct)-> proxy (anon)  @51184|leetcode_reverse(,)
+				 left: ("~t")-> proxy ~t  @30240|$appendix(,)
+				 right: (direct)-> proxy (anon)  @45600|leetcode_reverse(,)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @65104|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @29520|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @41600|list1(415,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @28240|list1(418,6)
+				 lead: ("io")-> object io  @35984|list1(415,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @24640|list1(418,6)
 				CALL
-				 lead: (direct)-> proxy (anon)  @65104|$appendix(,)
-				 method: ("insert")-> method insert  @49648|list1(266,3)
-				 input: ("nl")-> object nl  @09728|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @29520|$appendix(,)
+				 method: ("insert")-> method insert  @16000|list1(266,3)
+				 input: ("nl")-> object nl  @58896|$appendix(,)
 			}
 		}
 
-		method remove_next  @50704|$appendix(,) --external
+		method remove_next  @39296|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @18944|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @02832|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				object next  @16896|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				object next  @04368|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @11088|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @35760|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @41344|list1(445,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @22480|list1(447,6)
+				 lead: ("io")-> object io  @31120|list1(445,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @19360|list1(447,6)
 				MAKE
-				 object: (direct)-> object nl  @22784|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @05136|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @11088|$appendix(,)
-				 method: ("get_next")-> method get_next  @55728|list1(215,3)
-				 output: (direct)-> object nl  @22784|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @35760|$appendix(,)
+				 method: ("get_next")-> method get_next  @12160|list1(215,3)
+				 output: (direct)-> object nl  @05136|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @16640|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @64016|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @22784|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @16640|$appendix(,)
+				 lead: ("nl")-> object nl  @05136|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @64016|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @16640|$appendix(,)
+				 condition: (direct)-> object (anon)  @64016|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @01248|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @33360|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @22784|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @01248|$appendix(,)
+						 lead: ("nl")-> object nl  @05136|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @33360|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @62464|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @45840|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @01248|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @62464|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @33360|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @45840|leetcode_reverse(,)
 						CALL --initial, fundamental
-						 lead: ("next")-> object next  @16896|$appendix(,)
-						 method: ("begin")-> method begin  @47520|int(54,3)
-						 input: (direct)-> proxy (anon)  @62464|leetcode_reverse(,)
+						 lead: ("next")-> object next  @04368|$appendix(,)
+						 method: ("begin")-> method begin  @44704|int(54,3)
+						 input: (direct)-> proxy (anon)  @45840|leetcode_reverse(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @13248|$appendix(,)
-						 type: ("list1")-> type list1  @61152|list1(100,6)
+						 proxy: (direct)-> proxy (anon)  @36720|$appendix(,)
+						 type: ("list1")-> type list1  @16576|list1(100,6)
 						 permission: [init]
 						TRANSLATE --base
-						 lead: ("io")-> object io  @41344|list1(445,3)
-						 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-						 result: (direct)-> proxy (anon)  @18160|list1(451,7)
+						 lead: ("io")-> object io  @31120|list1(445,3)
+						 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+						 result: (direct)-> proxy (anon)  @23680|list1(451,7)
 						CALL
-						 lead: (direct)-> proxy (anon)  @13248|$appendix(,)
-						 method: ("remove_next")-> method remove_next  @57008|list1(292,3)
+						 lead: (direct)-> proxy (anon)  @36720|$appendix(,)
+						 method: ("remove_next")-> method remove_next  @17280|list1(292,3)
 					}
 				}
 			}
 		}
 
-		method remove_next  @48784|$appendix(,) --external
+		method remove_next  @40256|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				subroutine copier  @47472|$appendix(,) --internal
+				routine copier  @65504|$appendix(,) --internal
 				 viable = yes
 
-				object io  @13056|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @03088|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				object next  @13824|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				object next  @04624|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @07728|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @36000|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @43648|list1(455,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @19360|list1(457,6)
+				 lead: ("io")-> object io  @29840|list1(455,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @29680|list1(457,6)
 				MAKE
-				 object: (direct)-> object nl  @23296|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @03600|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @07728|$appendix(,)
-				 method: ("get_next")-> method get_next  @55728|list1(215,3)
-				 output: (direct)-> object nl  @23296|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @36000|$appendix(,)
+				 method: ("get_next")-> method get_next  @12160|list1(215,3)
+				 output: (direct)-> object nl  @03600|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @12544|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @01040|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @23296|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @12544|$appendix(,)
+				 lead: ("nl")-> object nl  @03600|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @01040|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @12544|$appendix(,)
+				 condition: (direct)-> object (anon)  @01040|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @12768|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @31440|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @23296|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @12768|$appendix(,)
+						 lead: ("nl")-> object nl  @03600|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @31440|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @51424|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @49440|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @12768|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @51424|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @31440|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @49440|leetcode_reverse(,)
 						CALL
-						 subroutine: ("copier")-> subroutine copier  @47472|$appendix(,)
-						 input: (direct)-> proxy (anon)  @51424|leetcode_reverse(,)
-						 output: ("next")-> object next  @13824|$appendix(,)
+						 routine: ("copier")-> routine copier  @65504|$appendix(,)
+						 input: (direct)-> proxy (anon)  @49440|leetcode_reverse(,)
+						 output: ("next")-> object next  @04624|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @01488|$appendix(,)
-						 type: ("list1")-> type list1  @61152|list1(100,6)
+						 proxy: (direct)-> proxy (anon)  @28320|$appendix(,)
+						 type: ("list1")-> type list1  @16576|list1(100,6)
 						 permission: [init]
 						TRANSLATE --base
-						 lead: ("io")-> object io  @43648|list1(455,3)
-						 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-						 result: (direct)-> proxy (anon)  @22720|list1(461,7)
+						 lead: ("io")-> object io  @29840|list1(455,3)
+						 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+						 result: (direct)-> proxy (anon)  @20800|list1(461,7)
 						CALL
-						 lead: (direct)-> proxy (anon)  @01488|$appendix(,)
-						 method: ("remove_next")-> method remove_next  @57008|list1(292,3)
+						 lead: (direct)-> proxy (anon)  @28320|$appendix(,)
+						 method: ("remove_next")-> method remove_next  @17280|list1(292,3)
 					}
 				}
 			}
 		}
 
-		method remove_next  @55824|$appendix(,) --external
+		method remove_next  @52416|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @20480|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @59408|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				object next  @11776|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				object next  @03344|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 
-				subroutine taker  @51728|$appendix(,) --internal
+				routine taker  @07568|$appendix(,) --internal
 				 viable = yes
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @13008|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @25680|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @40576|list1(465,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @28960|list1(467,6)
+				 lead: ("io")-> object io  @40080|list1(465,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @24160|list1(467,6)
 				MAKE
-				 object: (direct)-> object nl  @17152|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @64272|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @13008|$appendix(,)
-				 method: ("get_next")-> method get_next  @55728|list1(215,3)
-				 output: (direct)-> object nl  @17152|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @25680|$appendix(,)
+				 method: ("get_next")-> method get_next  @12160|list1(215,3)
+				 output: (direct)-> object nl  @64272|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @10752|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @00528|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @17152|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @10752|$appendix(,)
+				 lead: ("nl")-> object nl  @64272|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @00528|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @10752|$appendix(,)
+				 condition: (direct)-> object (anon)  @00528|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @11328|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @34560|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @17152|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @11328|$appendix(,)
+						 lead: ("nl")-> object nl  @64272|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @34560|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @54064|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @47280|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @11328|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @54064|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @34560|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @47280|leetcode_reverse(,)
 						CALL
-						 subroutine: ("taker")-> subroutine taker  @51728|$appendix(,)
-						 input: (direct)-> proxy (anon)  @54064|leetcode_reverse(,)
-						 output: ("next")-> object next  @11776|$appendix(,)
+						 routine: ("taker")-> routine taker  @07568|$appendix(,)
+						 input: (direct)-> proxy (anon)  @47280|leetcode_reverse(,)
+						 output: ("next")-> object next  @03344|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @12288|$appendix(,)
-						 type: ("list1")-> type list1  @61152|list1(100,6)
+						 proxy: (direct)-> proxy (anon)  @31920|$appendix(,)
+						 type: ("list1")-> type list1  @16576|list1(100,6)
 						 permission: [init]
 						TRANSLATE --base
-						 lead: ("io")-> object io  @40576|list1(465,3)
-						 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-						 result: (direct)-> proxy (anon)  @20560|list1(471,7)
+						 lead: ("io")-> object io  @40080|list1(465,3)
+						 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+						 result: (direct)-> proxy (anon)  @17440|list1(471,7)
 						CALL
-						 lead: (direct)-> proxy (anon)  @12288|$appendix(,)
-						 method: ("remove_next")-> method remove_next  @57008|list1(292,3)
+						 lead: (direct)-> proxy (anon)  @31920|$appendix(,)
+						 method: ("remove_next")-> method remove_next  @17280|list1(292,3)
 					}
 				}
 			}
 		}
 
-		nom type t_list  @18416|$appendix(,) --internal
+		nom type t_list  @59984|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+		 equivalent: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-		nom type t_node1  @19952|$appendix(,) --internal
+		nom type t_node1  @64976|$appendix(,) --internal
 		 viable = yes
-		 equivalent: (direct)-> type $9<2>( <int>node1 )  @14304|$appendix(,)
+		 equivalent: (direct)-> type $9<2>( <int>node1 )  @46768|$appendix(,)
 
-		method use_current  @56144|$appendix(,) --external
+		method use_current  @51776|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @22016|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @05904|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				proxy ~t  @09408|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @32640|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @04608|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @33600|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [eval]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @48000|list1(433,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @25840|list1(435,6)
+				 lead: ("io")-> object io  @28048|list1(433,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @21040|list1(435,6)
 				MAKE
-				 object: (direct)-> object nl  @20736|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @61712|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @04608|$appendix(,)
-				 method: ("get_current")-> method get_current  @64688|list1(210,3)
-				 output: (direct)-> object nl  @20736|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @33600|$appendix(,)
+				 method: ("get_current")-> method get_current  @16960|list1(210,3)
+				 output: (direct)-> object nl  @61712|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @12288|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @61200|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @20736|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @12288|$appendix(,)
+				 lead: ("nl")-> object nl  @61712|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @61200|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @12288|$appendix(,)
+				 condition: (direct)-> object (anon)  @61200|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @08688|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @32160|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @20736|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @08688|$appendix(,)
+						 lead: ("nl")-> object nl  @61712|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @32160|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @52144|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @47520|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @08688|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @52144|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @32160|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @47520|leetcode_reverse(,)
 						JOIN
-						 left: ("~t")-> proxy ~t  @09408|$appendix(,)
-						 right: (direct)-> proxy (anon)  @52144|leetcode_reverse(,)
+						 left: ("~t")-> proxy ~t  @32640|$appendix(,)
+						 right: (direct)-> proxy (anon)  @47520|leetcode_reverse(,)
 					}
 				}
 			}
 		}
 
-		method use_first  @47504|$appendix(,) --external
+		method use_first  @50496|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @21504|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @61968|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				proxy ~t  @08448|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @37200|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @08208|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @36960|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [eval]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @43904|list1(421,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @27040|list1(423,6)
+				 lead: ("io")-> object io  @29328|list1(421,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @23920|list1(423,6)
 				MAKE
-				 object: (direct)-> object nl  @12032|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @05392|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @08208|$appendix(,)
-				 method: ("get_first")-> method get_first  @54448|list1(200,3)
-				 output: (direct)-> object nl  @12032|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @36960|$appendix(,)
+				 method: ("get_first")-> method get_first  @23680|list1(200,3)
+				 output: (direct)-> object nl  @05392|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @14592|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @64528|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @12032|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @14592|$appendix(,)
+				 lead: ("nl")-> object nl  @05392|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @64528|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @14592|$appendix(,)
+				 condition: (direct)-> object (anon)  @64528|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @02448|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @35040|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @12032|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @02448|$appendix(,)
+						 lead: ("nl")-> object nl  @05392|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @35040|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @58864|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @48000|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @02448|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @58864|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @35040|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @48000|leetcode_reverse(,)
 						JOIN
-						 left: ("~t")-> proxy ~t  @08448|$appendix(,)
-						 right: (direct)-> proxy (anon)  @58864|leetcode_reverse(,)
+						 left: ("~t")-> proxy ~t  @37200|$appendix(,)
+						 right: (direct)-> proxy (anon)  @48000|leetcode_reverse(,)
 					}
 				}
 			}
 		}
 
-		method use_last  @46224|$appendix(,) --external
+		method use_last  @54016|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @21248|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @59664|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				proxy ~t  @13728|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @24720|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @08928|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @35520|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [eval]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @36224|list1(427,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
-				 result: (direct)-> proxy (anon)  @23920|list1(429,6)
+				 lead: ("io")-> object io  @40336|list1(427,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @31360|list1(429,6)
 				MAKE
-				 object: (direct)-> object nl  @23552|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @65040|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @08928|$appendix(,)
-				 method: ("get_last")-> method get_last  @63088|list1(205,3)
-				 output: (direct)-> object nl  @23552|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @35520|$appendix(,)
+				 method: ("get_last")-> method get_last  @23360|list1(205,3)
+				 output: (direct)-> object nl  @65040|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @13568|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @62480|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @23552|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @13568|$appendix(,)
+				 lead: ("nl")-> object nl  @65040|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @62480|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @13568|$appendix(,)
+				 condition: (direct)-> object (anon)  @62480|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @13488|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @37440|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @23552|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @13488|$appendix(,)
+						 lead: ("nl")-> object nl  @65040|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @37440|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @62944|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @52800|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @13488|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @62944|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @37440|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @52800|leetcode_reverse(,)
 						JOIN
-						 left: ("~t")-> proxy ~t  @13728|$appendix(,)
-						 right: (direct)-> proxy (anon)  @62944|leetcode_reverse(,)
+						 left: ("~t")-> proxy ~t  @24720|$appendix(,)
+						 right: (direct)-> proxy (anon)  @52800|leetcode_reverse(,)
 					}
 				}
 			}
 		}
 
-		method use_next  @52944|$appendix(,) --external
+		method use_next  @47936|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @12800|$appendix(,) --internal
-				 type: (direct)-> type $8<2>( <int>list )  @11856|$appendix(,)
+				object io  @62992|$appendix(,) --internal
+				 type: (direct)-> type $8<2>( <int>list )  @42960|$appendix(,)
 
-				proxy ~t  @13968|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~t  @38400|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @64624|$appendix(,)
-				 type: ("list1")-> type list1  @61152|list1(100,6)
+				 proxy: (direct)-> proxy (anon)  @37680|$appendix(,)
+				 type: ("list1")-> type list1  @16576|list1(100,6)
 				 permission: [eval]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @40832|list1(439,3)
-				 method: (direct)-> method $18<30>( as_base<list1> )  @54768|$appendix(,)
+				 lead: ("io")-> object io  @24976|list1(439,3)
+				 method: (direct)-> method $18<41>( as_base<list1> )  @08640|$appendix(,)
 				 result: (direct)-> proxy (anon)  @32320|list1(441,6)
 				MAKE
-				 object: (direct)-> object nl  @21760|$appendix(,)
-				 type: (direct)-> type $6<7>( op<node1> )  @55168|$appendix(,)
+				 object: (direct)-> object nl  @59920|$appendix(,)
+				 type: (direct)-> type $11<13>( op<node1> )  @17120|$appendix(,)
 				CALL
-				 lead: (direct)-> proxy (anon)  @64624|$appendix(,)
-				 method: ("get_next")-> method get_next  @55728|list1(215,3)
-				 output: (direct)-> object nl  @21760|$appendix(,)
+				 lead: (direct)-> proxy (anon)  @37680|$appendix(,)
+				 method: ("get_next")-> method get_next  @12160|list1(215,3)
+				 output: (direct)-> object nl  @59920|$appendix(,)
 				MAKE
-				 object: (direct)-> object (anon)  @23808|$appendix(,)
-				 type: ("bool")-> type bool  @23440|bool(5,6)
+				 object: (direct)-> object (anon)  @08208|$appendix(,)
+				 type: ("bool")-> type bool  @18560|bool(5,6)
 				CALL --essential, fundamental
-				 lead: ("nl")-> object nl  @21760|$appendix(,)
-				 method: ("not_null?")-> method not_null?  @16736|object(37,3)
-				 output: (direct)-> object (anon)  @23808|$appendix(,)
+				 lead: ("nl")-> object nl  @59920|$appendix(,)
+				 method: ("not_null?")-> method not_null?  @14592|object(37,3)
+				 output: (direct)-> object (anon)  @08208|$appendix(,)
 				IF
-				 condition: (direct)-> object (anon)  @23808|$appendix(,)
+				 condition: (direct)-> object (anon)  @08208|$appendix(,)
 				{
 					true branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @01008|$appendix(,)
-						 type: ("node1")-> type node1  @58704|list1(23,6)
+						 proxy: (direct)-> proxy (anon)  @37920|$appendix(,)
+						 type: ("node1")-> type node1  @21472|list1(23,6)
 						 permission: [upd]
 						CALL --fundamental
-						 lead: ("nl")-> object nl  @21760|$appendix(,)
-						 method: ("deref")-> method deref  @35888|$appendix(,)
-						 result: (direct)-> proxy (anon)  @01008|$appendix(,)
+						 lead: ("nl")-> object nl  @59920|$appendix(,)
+						 method: ("deref")-> method deref  @03264|$appendix(,)
+						 result: (direct)-> proxy (anon)  @37920|$appendix(,)
 						MAKE
-						 proxy: (direct)-> proxy (anon)  @55984|leetcode_reverse(,)
-						 type: ("int")-> type int  @24800|int(6,6)
+						 proxy: (direct)-> proxy (anon)  @50400|leetcode_reverse(,)
+						 type: ("int")-> type int  @18832|int(6,6)
 						 permission: [upd]
 						TRANSLATE --random
-						 lead: (direct)-> proxy (anon)  @01008|$appendix(,)
-						 method: (direct)-> method $20<2>( as<int> )  @43984|$appendix(,)
-						 result: (direct)-> proxy (anon)  @55984|leetcode_reverse(,)
+						 lead: (direct)-> proxy (anon)  @37920|$appendix(,)
+						 method: (direct)-> method $20<2>( as<int> )  @60416|$appendix(,)
+						 result: (direct)-> proxy (anon)  @50400|leetcode_reverse(,)
 						JOIN
-						 left: ("~t")-> proxy ~t  @13968|$appendix(,)
-						 right: (direct)-> proxy (anon)  @55984|leetcode_reverse(,)
+						 left: ("~t")-> proxy ~t  @38400|$appendix(,)
+						 right: (direct)-> proxy (anon)  @50400|leetcode_reverse(,)
 					}
 				}
 			}
 		}
 	}
 
-	type $9<2>( <int>node1 )  @14304|$appendix(,) --internal
-	 from ("int")-> type int  @24800|int(6,6)
-	 from ("node1")-> type node1  @58704|list1(23,6)
+	type $9<2>( <int>node1 )  @46768|$appendix(,) --internal
+	 from ("int")-> type int  @18832|int(6,6)
+	 from ("node1")-> type node1  @21472|list1(23,6)
 	 viable = yes
 	{
-		method begin  @53264|$appendix(,) --external
+		method begin  @48256|$appendix(,) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @08448|$appendix(,) --internal
-				 type: (direct)-> type $9<2>( <int>node1 )  @14304|$appendix(,)
+				object io  @60176|$appendix(,) --internal
+				 type: (direct)-> type $9<2>( <int>node1 )  @46768|$appendix(,)
 
-				proxy ~base  @02688|$appendix(,) --internal
-				 type: ("int")-> type int  @24800|int(6,6)
+				proxy ~base  @27360|$appendix(,) --internal
+				 type: ("int")-> type int  @18832|int(6,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @10608|$appendix(,)
-				 type: ("node1")-> type node1  @58704|list1(23,6)
+				 proxy: (direct)-> proxy (anon)  @26880|$appendix(,)
+				 type: ("node1")-> type node1  @21472|list1(23,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @28544|list1(366,17)
-				 method: (direct)-> method $18<7>( as_base<node1> )  @65008|$appendix(,)
-				 result: (direct)-> proxy (anon)  @25600|list1(368,5)
+				 lead: ("io")-> object io  @21648|list1(366,17)
+				 method: (direct)-> method $18<13>( as_base<node1> )  @16640|$appendix(,)
+				 result: (direct)-> proxy (anon)  @21520|list1(368,5)
 				CALL --initial
-				 lead: (direct)-> proxy (anon)  @10608|$appendix(,)
-				 method: ("begin")-> method begin  @32048|list1(31,3)
+				 lead: (direct)-> proxy (anon)  @26880|$appendix(,)
+				 method: ("begin")-> method begin  @01984|list1(31,3)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @62704|leetcode_reverse(,)
-				 type: ("int")-> type int  @24800|int(6,6)
+				 proxy: (direct)-> proxy (anon)  @50160|leetcode_reverse(,)
+				 type: ("int")-> type int  @18832|int(6,6)
 				 permission: [init]
 				TRANSLATE --base
-				 lead: ("io")-> object io  @08448|$appendix(,)
-				 method: (direct)-> method $14<2>( as_base<int> )  @60944|$appendix(,)
-				 result: (direct)-> proxy (anon)  @62704|leetcode_reverse(,)
+				 lead: ("io")-> object io  @60176|$appendix(,)
+				 method: (direct)-> method $14<2>( as_base<int> )  @00960|$appendix(,)
+				 result: (direct)-> proxy (anon)  @50160|leetcode_reverse(,)
 				JOIN
-				 left: ("~base")-> proxy ~base  @02688|$appendix(,)
-				 right: (direct)-> proxy (anon)  @62704|leetcode_reverse(,)
+				 left: ("~base")-> proxy ~base  @27360|$appendix(,)
+				 right: (direct)-> proxy (anon)  @50160|leetcode_reverse(,)
 			}
 		}
 	}

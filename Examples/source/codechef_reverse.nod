@@ -6,7 +6,7 @@ page codechef_reverse in ExamplesByNod
 
 
 
-[page] subroutine demo1
+[page] routine demo1
 {{
 	read array from console, display in reverse
 }}
@@ -14,7 +14,7 @@ page codechef_reverse in ExamplesByNod
 
 	sys:use_console is ~console;
 
-	text_mediator input:begin;  -- platform encoding
+	editor input:begin;  -- platform encoding
 
 	~console:read( *input ); -- line 1, ignore errors
 	input:fread<int>()( int n );  -- generic text format
@@ -38,7 +38,7 @@ page codechef_reverse in ExamplesByNod
 
 		unicode space:begin( 'U+0020' );
 
-		text_mediator output:begin;
+		editor output:begin;
 		loop
 		{
 			output:fwrite<int>( values:use( n:dec ) );
@@ -51,14 +51,14 @@ page codechef_reverse in ExamplesByNod
 }
 
 
-[page] subroutine demo2
+[page] routine demo2
 {{
 	read array from console, invert array, display array
 }}
 {
 	sys:use_console is ~console;
 
-	text_mediator input:begin;  -- platform encoding
+	editor input:begin;  -- platform encoding
 
 	~console:read( *input ); -- line 1, ignore errors
 	input:fread<int>()( int n );  -- generic text format
@@ -82,7 +82,7 @@ page codechef_reverse in ExamplesByNod
 
 		-- format output 
 
-		text_mediator output:begin:fwrite<int>( values:use( zero ) );
+		editor output:begin:fwrite<int>( values:use( zero ) );
 
 		i:recycle:begin ( one );
 		loop ( "i |<| n" )
@@ -97,7 +97,7 @@ page codechef_reverse in ExamplesByNod
 
 
 
-subroutine reverse_array_1 ( array<int> arr [upd] )
+routine reverse_array_1 ( array<int> arr [upd] )
 {
 	int i:begin;
 	int j:begin( arr:count()( =int ):sub( one ) );
@@ -112,7 +112,7 @@ subroutine reverse_array_1 ( array<int> arr [upd] )
 }
 
 
-subroutine reverse_array_2 ( array<int> arr [upd] )
+routine reverse_array_2 ( array<int> arr [upd] )
 {
 	int i:begin;
 	int j:begin( arr:count()( =int ):sub( one ) );

@@ -46,13 +46,13 @@ NULL_				:	'null'			;
 OPERATION			:	'operation'		;
 OPT					:	'opt'			;		// optional
 PAGE				:	'page'			;
-PROXY				:	'proxy'			;	
+PROX				:	'prox'			;		// proxy
 PWD					:	'pwd'			;		// previously well-defined
 QUIT				:	'quit'			;
 READABLE			:	'readable'		;
 RETURN				:	'return'		;
 SELECT				:	'select'		;	
-SUBROUTINE			:	'subroutine'	;
+ROUTINE				:	'routine'		;
 TBD					:	'tbd'			;		// to-be-defined 
 TERM				:	'term'			;		// terminate
 TRAP				:	'trap'			;
@@ -149,7 +149,7 @@ fragment
 ID3					: '<' ID0* ( ID2 | ID5 ) ID0* '>'	// factor   
 					;
 
-fragment										// with factors (type,method,subroutine)
+fragment										// with factors (type,method,routine)
 ID4					: ID1 ( ID3+ ID1 )* ID3*	
 					| ID3+ ( ID1 ID3+ )* ID1?
 					;
@@ -202,7 +202,7 @@ SPACE				: [ \t\r\n]+			-> skip
 	FID						obj ref:  existing obj, type = per def
 	FID						proxy ref: existing obj, type = per proxy 
 	FID						dimension: new anon initialized obj, type = expr
-	FID						trivial subroutine call: type = per proxy
+	FID						trivial routine call: type = per proxy
 	NULL_					new anon null input/output obj, type = per spec 
 	LITERAL					new anon initialized obj, type = expr 
 	new_obj					new named null obj, type and name specified
@@ -210,7 +210,7 @@ SPACE				: [ \t\r\n]+			-> skip
 	formula					new anon initialized obj, type = contextual 
 	conversion				new anon initialized obj, type = specified
 	method_call_sequence	existing result obj (method obj, result	proxy, designated output)
-	subroutine_call			existing result obj (result proxy, designated output)
+	routine_call			existing result obj (result proxy, designated output)
 */
 
 
@@ -253,7 +253,7 @@ conversion_obj			: LITERAL
 						| FID
 						| formula
 						| method_call_sequence
-						| subroutine_call
+						| routine_call
 						;
 
 conversion				: conversion_obj conversion_chain
@@ -264,13 +264,13 @@ assignment_input		: LITERAL
 						| FID
 						| formula
 						| method_call_sequence
-						| subroutine_call
+						| routine_call
 						| conversion
 						;
 
 assignment_obj			: FID	
 						| method_call_sequence
-						| subroutine_call
+						| routine_call
 						;
 
 assignment				: assignment_obj ASSIGN ASTERISK? assignment_input 
@@ -283,7 +283,7 @@ association_obj			: VOID_
 						| FID
 						| formula
 						| method_call_sequence
-						| subroutine_call
+						| routine_call
 						| conversion
 						;	
 
@@ -333,7 +333,7 @@ input_obj				: NULL_
 						| FID
 						| formula
 						| method_call_sequence
-						| subroutine_call	
+						| routine_call	
 						| conversion
 						;
 
@@ -351,7 +351,7 @@ output_obj				: NULL_
 						| FID
 						| new_obj	
 						| method_call_sequence	   
-						| subroutine_call  
+						| routine_call  
 						;
 
 output_obj_item			: EQUAL? output_obj
@@ -370,7 +370,7 @@ extra_obj				: NULL_
 						| new_obj
 						| formula
 						| method_call_sequence
-						| subroutine_call	
+						| routine_call	
 						| conversion
 						;
 
@@ -418,7 +418,7 @@ method_obj				: LITERAL
 						| new_obj	
 						| new_analog
 						| formula
-						| subroutine_call	
+						| routine_call	
 						;
 
 method_ref				: FID
@@ -432,10 +432,10 @@ method_call_sequence	: method_obj? method_call+
 
 
 
-subroutine_ref			: FID
+routine_ref				: FID
 						;
 
-subroutine_call			: subroutine_ref call_provision
+routine_call			: routine_ref call_provision
 						;
 
 
@@ -451,7 +451,7 @@ quit					: QUIT ( WITH quit_obj )?
 
 
 
-after					: AFTER ( subroutine_call | method_call_sequence | association | assignment )
+after					: AFTER ( routine_call | method_call_sequence | association | assignment )
 						;
 
 
@@ -468,7 +468,7 @@ condition_obj			: LITERAL
 						| FID
 						| formula
 						| method_call_sequence
-						| subroutine_call
+						| routine_call
 						;
 
 condition				: LEFT_PAREN condition_obj RIGHT_PAREN	
@@ -496,7 +496,7 @@ loop_block				: LOOP condition? exec_block
 
 for_each_collection_obj	: FID	
 						| method_call_sequence
-						| subroutine_call
+						| routine_call
 						;
 
 for_each_index_obj		: FID	
@@ -543,7 +543,7 @@ select_branch_label		: VALUE select_value_list
 select_key_obj			: FID
 						| formula
 						| method_call_sequence
-						| subroutine_call	
+						| routine_call	
 						;
 
 select_labeled_branch	: select_branch_label exec_element? SEMI_COLON
@@ -570,7 +570,7 @@ exec_element			: new_obj
 						| association
 						| assignment
 						| method_call_sequence	
-						| subroutine_call
+						| routine_call
 						| if
 						| loop
 						| for_each
@@ -592,7 +592,7 @@ exec_item				: exec_element? SEMI_COLON
 						| exec_block	
 						;
 
-non_exec_item			: subroutine
+non_exec_item			: routine
 						| enum_type
 						| nom_type
 						| crude_type
@@ -627,7 +627,7 @@ proxy_attribution		: LEFT_SQUARE proxy_attribute RIGHT_SQUARE
 proxy_header_type_ref	: FID
 						;
 
-proxy_header			: proxy_header_type_ref PROXY
+proxy_header			: proxy_header_type_ref PROX
 						;
 
 
@@ -708,22 +708,22 @@ proxy_spec				: EQUAL proxy_header proxy_attribution? proxy_spec_name?
 
 
 
-subroutine_name			: FID
+routine_name			: FID
 						;
 
-subroutine_attribution	: LEFT_SQUARE NAF RIGHT_SQUARE
+routine_attribution		: LEFT_SQUARE NAF RIGHT_SQUARE
 						;
 
-subroutine_interface	: subroutine_attribution? aux_obj_spec_list? reg_obj_spec_list? with_spec? proxy_spec?
+routine_interface		: routine_attribution? aux_obj_spec_list? reg_obj_spec_list? with_spec? proxy_spec?
 						;
 
-subroutine_def			: subroutine_name subroutine_interface ( proc_block | SEMI_COLON )
+routine_def				: routine_name routine_interface ( proc_block | SEMI_COLON )
 						;
 
-subroutine				: SUBROUTINE subroutine_def
+routine					: ROUTINE routine_def
 						;
 
-subroutine_group		: SUBROUTINE LEFT_CURLY subroutine_def* RIGHT_CURLY
+routine_group			: ROUTINE LEFT_CURLY routine_def* RIGHT_CURLY
 						;
 
 
@@ -978,8 +978,8 @@ type_item				: common_obj
 						| enum_type
 						| enum_type_group
 						| crude_type
-						| subroutine
-						| subroutine_group
+						| routine
+						| routine_group
 						| method
 						| method_group
 						| recap_method
@@ -1033,8 +1033,8 @@ page_item				: page_internal? common_obj
 						| page_internal? nom_type
 						| page_internal? nom_type_group
 						| page_internal? crude_type
-						| page_internal? subroutine
-						| page_internal? subroutine_group
+						| page_internal? routine
+						| page_internal? routine_group
 						| page_internal? type
 						;
 						

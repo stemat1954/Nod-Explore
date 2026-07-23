@@ -1,6 +1,6 @@
 page leetcode_reverse in ExamplesByNod
 
-subroutine reverse_nodes ( <int>list list [upd], int k )
+routine reverse_nodes ( <int>list list [upd], int k )
 {{
 	https://leetcode.com/problems/reverse-nodes-in-k-group/
 

@@ -1,6 +1,6 @@
 page stack&queue in ExamplesByNod
 
-[page] subroutine demo
+[page] routine demo
 {
 	<int>queue my_queue:begin;
 

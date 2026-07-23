@@ -9,7 +9,7 @@ page is_as in ExamplesByNod
 			io.x:begin;
 		}
 
-		use_x = int proxy [eval,init] ~x
+		use_x = int prox [eval,init] ~x
 		{
 			~x -> io.x;
 		}
@@ -32,7 +32,7 @@ page is_as in ExamplesByNod
 			io.y:begin;
 		}
 
-		use_y = int proxy [eval,init] ~y
+		use_y = int prox [eval,init] ~y
 		{
 			~y -> io.y;
 		}
@@ -59,7 +59,7 @@ page is_as in ExamplesByNod
 }
 
 
-[page] subroutine demo ( thing t, widget w )
+[page] routine demo ( thing t, widget w )
 {
 	t:is<object>?()( =bool );			-- warning: always true
 	t:is_actual<thing>?()( =bool );		-- warning: always true
@@ -79,7 +79,7 @@ page is_as in ExamplesByNod
 	
 	w:as_base<thing>;					-- ok 
 
-	thing proxy ~t -> w;				-- ok (eval permission)
+	thing prox ~t -> w;				-- ok (eval permission)
 
 	~t:is<object>?()( =bool );			-- warning: always true
 	~t:is<widget>?()( =bool );			-- ok, runtime true
