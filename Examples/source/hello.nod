@@ -97,8 +97,7 @@ type main_thread from entry
 			trap
 			{
 				~disruption:use_trace( zero ):use_location is ~loc;
-				editor tm:begin( 'abnormal exit, quit location = ' ):write( ~loc );
-				tm:detach()( report );
+				editor:begin( 'abnormal exit, quit location = ' ):write( ~loc ):detach()( report );
 			}
 			sys:use_console:write( report ); 
 		}

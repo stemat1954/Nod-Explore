@@ -1,80 +1,148 @@
 page leetcode_index in ExamplesByNod
 
-routine index_substrings ( string s, array<string> match )( array<int> map )
+[page] type word_entry
+{
+	general method
+	{
+		begin ( string word )
+		{	
+			io.word:begin( word );
+			io.expected_usage:begin( one );
+			io.actual_usage:begin( zero );
+		}
+		
+		before? ( string )( bool yes )
+		{
+			io.word:before?( given\string )( yes );
+		}
+				
+		reset [upd]  
+		{
+			io.actual_usage := zero;
+		}
+
+		overload [upd]
+		{
+			io.expected_usage:inc;
+		}
+
+		mark [upd] ()( bool ok )
+		{
+			io.actual_usage:inc;
+			ok:begin( "io.actual_usage |<=| io.expected_usage" );
+		}
+
+		verify ()( bool ok ) 
+		{
+			ok:begin( "io.actual_usage |=| io.expected_usage" );
+		}
+	}
+
+	instance
+	{
+		string word;
+		int expected_usage; 
+		int actual_usage;
+	}
+}
+
+
+[page] type word_map
+{
+	general method
+	{
+		begin ( array<string> words )( int word_count, int word_len )
+		{
+			words:count()( word_count );
+			words:use( zero ):count()( word_len );
+			for each ( ~word in words )
+			{
+				io.map:rank( ~word )( int i, bool unique );
+				if ( unique )
+					io.map:insert( i ):begin( ~word )
+				else
+					io.map:use( i ):overload;
+			}
+			io.matched:begin;
+		}
+
+		reset [upd]
+		{
+			for each ( ~entry in io.map ) ~entry:reset;
+			io.matched := zero;
+		}
+
+		find [upd] ( string word )( bool ok )
+		{
+			io.map:rank( word )( int i, bool unique );
+			if ( unique ) return after ok:begin( false );
+			
+			io.map:use( i ):mark()( bool marked );
+			if ( marked:not ) return after ok:begin( false );
+			
+			io.matched:inc;
+			ok:begin( true );
+		}
+
+		verify ( int expected )( bool ok )
+		{
+			ok:begin( "io.matched |=| expected" );
+		}
+	}
+
+	instance
+	{
+		array<word_entry> map;
+		int matched;
+	}
+}
+
+
+routine index_substrings ( string text, array<string> words )( array<int> index )
 {{
 	https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/
 
-	Find substrings in s where substrings are formed by permuting
-	and combining fixed length strings in match. The strings in 
-	match are equal length and every combination is comprised of
-	every match string.
+	Find substrings in text where substrings are formed by 
+	permuting and combining fixed length strings in words. 
 
-	The position index of each substring is added to output map.
+	The strings in words are equal length and every combination
+	is comprised of	every word.
+
+	The position index of each substring is added to an output 
+	index.
 
 	zero length cases are ruled out by problem description.
-
-	The solution parses the input string into a token array and
-	then walks though the token array trying to match the token
-	sequence to match strings.
 }}
 {
-	match:use( zero ):get_length()( int unit ); -- unit length
+	index:begin;
 
-	parse( s, unit )( array<string> tokens );
+	word_map map:begin( words )( int word_count, int word_len );
 
-	match:count()( int extent ); -- number of units to compare
-
-	map:begin;
+	int window_size:begin( "word_count * word_len" );
+	int imax:begin( "count( text ) - window_size" );
 
 	int i:begin;
-	tokens:count()( =int imax ):sub( extent );  -- imax may be negative
-
 	loop ( "i |<=| imax" )
 	{
-		compare ( i, extent, tokens, match, *map );
+		int j:begin( i );
+		int n:begin( word_count );
+		loop ( "n |>| zero" )
+		{
+			text:extract( j, word_len )( string s );
+			map:find( s )( bool ok );
+			if ( ok:not ) escape;
+			j:add( word_len );
+			n:dec;
+		}
+
+		if ( "n |=| zero" )	if ( "verify( map, word_count )" ) index:insert:begin( i );
+
+		map:reset;
 		i:inc;
 	}
 }
 
 
-[page] routine parse ( string s, int q )( array<string> tokens ) 
-{{ 
-	parse input s into fixed q-length tokens 
-}}
-{
-	int i:begin;
-	s:get_length()( int ilim ); 
-	loop
-	{
-		s:extract( i, q )( tokens:insert );
-		if ( i:add( q ):less?( ilim )( =bool ):not ) return;  -- when new i >= lim
-	}
-}
 
 
-[page] routine compare ( int i, int q, array<string> tokens, array<string> match, array<int> map [upd] )
-{{
-	If all q tokens starting at i are in match, add i to map.
-
-	Caller is responsible for valid i and q, such that token 
-	at i + q - 1 exists.
-}}
-{
-	int j:begin( i );
-	int jlim:begin( j ):add( q );
-	loop ( "j |<| jlim" )
-	{
-		match?( tokens:use( j ), match )( bool yes );
-		if ( yes:not ) return;
-		j:inc;
-	}
-	map:insert:begin( i );
-}
-
-
-[page] routine match? ( string token, array<string> match )( bool yes )
-{
-	for each ( ~s in match ) if ( "~s |=| token" ) return after yes:begin( 'true' ); 
-	yes:begin( false ); 
-}
 

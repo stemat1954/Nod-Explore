@@ -1,8 +1,5 @@
 page leetcode_health in ExamplesByNod
 
-nom type field =  array< array<int> >;  -- not a good public name
-
-routine determine_health_needed ( field f )( int need )
 {{
 	https://leetcode.com/problems/dungeon-game/
 
@@ -22,6 +19,72 @@ routine determine_health_needed ( field f )( int need )
 	as the value needed to traverse the field without going
 	below one.
 
+	Two solutions are demonstrated.
+
+	The first uses loops and an intermediate calculation
+	buffer.
+
+	The second uses recursion, mostly as a demonstration
+	of technique.
+
+}}
+
+
+nom type field =  array< array<int> >;  -- not a good public name
+
+
+routine determine_health_needed_1 ( field f )( int need )
+{
+	f:count()( int rows );
+	if ( "rows |=| zero" ) return after need:begin( one );
+
+	f:use( zero ):count()( int cols );
+	if ( "cols |=| zero" ) return after need:begin( one );
+
+	int imax:begin( rows ):sub( one );
+	int jmax:begin( cols ):sub( one );
+
+	array<int> down:begin( cols ):insert( zero, cols );  -- all null
+
+	int i:begin( imax );
+	loop ( "i |>=| zero" )
+	{
+		f:use( i ) is ~row;
+
+		int right; -- null
+
+		int j:begin( jmax );
+		loop ( "j |>=| zero" )
+		{
+			down:use( j ) is ~down;
+
+			int cover;
+			if ( "null?( right ) |and| null?( ~down )" )
+				cover:begin( one )
+			else if ( "null?( right )" )
+				cover:begin( ~down )
+			else if ( "null?( ~down )" )
+				cover:begin( right )
+			else
+				cover:begin( choose<int>( "right |<| ~down", right, ~down ) );
+			
+			cover:sub( ~row:use( j ) );  -- subtract cell (i,j)
+
+			~down := choose<int>( "one |>| cover", one, cover );
+
+			right := ~down;
+			j:dec;
+		}
+
+		i:dec;
+	}
+	need:begin( down:use( zero ) );
+}
+
+
+
+routine determine_health_needed_2 ( field f )( int need )
+{{
 	Solution: Recursively walk every path in the field
 	keeping track of sum and drawdown. The best path is the 
 	path with the least drawdown D, and the result is 1 - D.
@@ -73,3 +136,4 @@ routine determine_health_needed ( field f )( int need )
 	else  -- use_j
 		sub_drawdown:begin( drawdown_j );		-- no i branch
 }
+
