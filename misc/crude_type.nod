@@ -18,17 +18,17 @@ type thing  -- fabricated from crude type def
 
 		use_gadget [eval] = gadget prox [eval,init] ~gadget
 		{
-			~gadget -> io.gadget;
+			~gadget -> imo.gadget;
 		}
 
 		use_width [eval] = int prox [eval,init] ~width
 		{
-			~width -> io.width;
+			~width -> imo.width;
 		}
 
 		use_height [eval] = int prox [eval,init] ~height
 		{
-			~height -> io.height;
+			~height -> imo.height;
 		}
 	}
 

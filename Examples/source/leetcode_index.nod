@@ -6,35 +6,35 @@ page leetcode_index in ExamplesByNod
 	{
 		begin ( string word )
 		{	
-			io.word:begin( word );
-			io.expected_usage:begin( one );
-			io.actual_usage:begin( zero );
+			imo.word:begin( word );
+			imo.expected_usage:begin( one );
+			imo.actual_usage:begin( zero );
 		}
 		
 		before? ( string )( bool yes )
 		{
-			io.word:before?( given\string )( yes );
+			imo.word:before?( given\string )( yes );
 		}
 				
 		reset [upd]  
 		{
-			io.actual_usage := zero;
+			imo.actual_usage := zero;
 		}
 
 		overload [upd]
 		{
-			io.expected_usage:inc;
+			imo.expected_usage:inc;
 		}
 
 		mark [upd] ()( bool ok )
 		{
-			io.actual_usage:inc;
-			ok:begin( "io.actual_usage |<=| io.expected_usage" );
+			imo.actual_usage:inc;
+			ok:begin( "imo.actual_usage |<=| imo.expected_usage" );
 		}
 
 		verify ()( bool ok ) 
 		{
-			ok:begin( "io.actual_usage |=| io.expected_usage" );
+			ok:begin( "imo.actual_usage |=| imo.expected_usage" );
 		}
 	}
 
@@ -57,36 +57,36 @@ page leetcode_index in ExamplesByNod
 			words:use( zero ):count()( word_len );
 			for each ( ~word in words )
 			{
-				io.map:rank( ~word )( int i, bool unique );
+				imo.map:rank( ~word )( int i, bool unique );
 				if ( unique )
-					io.map:insert( i ):begin( ~word )
+					imo.map:insert( i ):begin( ~word )
 				else
-					io.map:use( i ):overload;
+					imo.map:use( i ):overload;
 			}
-			io.matched:begin;
+			imo.matched:begin;
 		}
 
 		reset [upd]
 		{
-			for each ( ~entry in io.map ) ~entry:reset;
-			io.matched := zero;
+			for each ( ~entry in imo.map ) ~entry:reset;
+			imo.matched := zero;
 		}
 
-		find [upd] ( string word )( bool ok )
+		match [upd] ( string word )( bool ok )
 		{
-			io.map:rank( word )( int i, bool unique );
+			imo.map:rank( word )( int i, bool unique );
 			if ( unique ) return after ok:begin( false );
 			
-			io.map:use( i ):mark()( bool marked );
+			imo.map:use( i ):mark()( bool marked );
 			if ( marked:not ) return after ok:begin( false );
 			
-			io.matched:inc;
+			imo.matched:inc;
 			ok:begin( true );
 		}
 
 		verify ( int expected )( bool ok )
 		{
-			ok:begin( "io.matched |=| expected" );
+			ok:begin( "imo.matched |=| expected" );
 		}
 	}
 
@@ -129,7 +129,7 @@ routine index_substrings ( string text, array<string> words )( array<int> index 
 		loop ( "n |>| zero" )
 		{
 			text:extract( j, word_len )( string s );
-			map:find( s )( bool ok );
+			map:match( s )( bool ok );
 			if ( ok:not ) escape;
 			j:add( word_len );
 			n:dec;

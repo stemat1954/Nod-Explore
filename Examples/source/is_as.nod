@@ -6,12 +6,12 @@ page is_as in ExamplesByNod
 	{
 		begin
 		{
-			io.x:begin;
+			imo.x:begin;
 		}
 
 		use_x = int prox [eval,init] ~x
 		{
-			~x -> io.x;
+			~x -> imo.x;
 		}
 	}
 
@@ -28,13 +28,13 @@ page is_as in ExamplesByNod
 	{
 		begin
 		{
-			io:as_base<thing>:begin;
-			io.y:begin;
+			imo:as_base<thing>:begin;
+			imo.y:begin;
 		}
 
 		use_y = int prox [eval,init] ~y
 		{
-			~y -> io.y;
+			~y -> imo.y;
 		}
 	}
 
@@ -49,7 +49,7 @@ page is_as in ExamplesByNod
 {
 	general method begin
 	{
-		io.z:begin;
+		imo.z:begin;
 	}
 
 	instance
@@ -62,34 +62,33 @@ page is_as in ExamplesByNod
 [page] routine demo ( thing t, widget w )
 {
 	t:is<object>?()( =bool );			-- warning: always true
-	t:is_actual<thing>?()( =bool );		-- warning: always true
-	t:is<widget>?()( =bool );			-- warning: always false
+	t:is_actual<thing>?()( =bool );		-- ok
+	t:is<widget>?()( =bool );			-- ok
 	w:is_actual<thing>?()( =bool );		-- warning: always false
 	w:is<thing>?()( =bool );			-- warning: always true
 	w:is<int>?()( =bool );				-- warning: always false
 
 	t:as<object>;						-- warning: replaced with base type
 
-	{{
-		t:as<widget>;					-- error: can't translate direct obj ref to subtype 
-		w:as<widget>;					-- error: extraneous translation to same type
-		w:as_actual<widget>;			-- error: extraneous translation to same type
-		w:as_base<int>;					-- error: adhoc type is not a base of lead
-	}}
+	--	w:as<widget>;					-- error: extraneous translation to same type
+	--	w:as_actual<widget>;			-- error: extraneous translation to same type
+	--	w:as_base<int>;					-- error: adhoc type is not a base of lead
+	--	~t:as_actual<int>;				-- error: lead type not related to adhoc type
+
+	t:is<widget>?()( = bool );			-- ok
+	--t:as_actual<widget>;				-- error: can't given [init] access
 	
+	t:as<widget>;						-- ok
+
 	w:as_base<thing>;					-- ok 
 
-	thing prox ~t -> w;				-- ok (eval permission)
+	thing prox ~t -> w;					-- ok (eval permission)
 
 	~t:is<object>?()( =bool );			-- warning: always true
 	~t:is<widget>?()( =bool );			-- ok, runtime true
 	~t:is_actual<object>?()( =bool );	-- warning: always false
 	~t:is<int>?()( =bool );				-- ok, runtime false
-
-	{{
-		~t:as_actual<int>;				-- error: lead type not related to adhoc type
-	}}
-	
+		
 	~t:as<widget>;						-- ok, runtime good
 	~t:as_actual<widget>;				-- ok, runtime good
 	~t:as<gadget>;						-- ok, runtime void

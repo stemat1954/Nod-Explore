@@ -1,748 +1,748 @@
 page leetcode_index
 {
-	routine index_substrings  @62688|leetcode_index(101,9) --external
+	routine index_substrings  @13248|leetcode_index(101,9) --external
 	 viable = yes
 	{
 
 		given
 		{
-			object index  @20096|leetcode_index(101,9) --internal
-			 type: (direct)-> type $1<2>( array<int> )  @62208|$appendix(,)
+			object index  @64304|leetcode_index(101,9) --internal
+			 type: (direct)-> type $1<2>( array<int> )  @09744|$appendix(,)
 
-			object text  @14208|leetcode_index(101,9) --internal
-			 type: ("string")-> type string  @58672|string(4,6)
+			object text  @63664|leetcode_index(101,9) --internal
+			 type: ("string")-> type string  @08208|string(4,6)
 
-			object words  @16000|leetcode_index(101,9) --internal
-			 type: (direct)-> type $1<7>( array<string> )  @31760|$appendix(,)
+			object words  @63984|leetcode_index(101,9) --internal
+			 type: (direct)-> type $1<7>( array<string> )  @17440|$appendix(,)
 		}
 
 		BLOCK --domain
 		{
 			CALL --initial, fundamental
-			 lead: ("index")-> object index  @20096|leetcode_index(101,9)
-			 method: ("begin")-> method begin  @54000|$appendix(,)
+			 lead: ("index")-> object index  @64304|leetcode_index(101,9)
+			 method: ("begin")-> method begin  @31776|$appendix(,)
 			 input: (pending)->
 			MAKE
-			 object: (direct)-> object map  @13952|leetcode_index(119,2)
-			 type: ("word_map")-> type word_map  @60848|leetcode_index(50,13)
+			 object: (direct)-> object map  @02608|leetcode_index(119,2)
+			 type: ("word_map")-> type word_map  @15120|leetcode_index(50,13)
 			MAKE
-			 object: (direct)-> object word_count  @14464|leetcode_index(119,31)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object word_count  @00048|leetcode_index(119,31)
+			 type: ("int")-> type int  @45632|int(6,6)
 			MAKE
-			 object: (direct)-> object word_len  @26240|leetcode_index(119,47)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object word_len  @03248|leetcode_index(119,47)
+			 type: ("int")-> type int  @45632|int(6,6)
 			CALL --initial
-			 lead: (direct)-> object map  @13952|leetcode_index(119,2)
-			 method: ("begin")-> method begin  @53360|leetcode_index(54,3)
-			 input: ("words")-> object words  @16000|leetcode_index(101,9)
-			 output: (direct)-> object word_count  @14464|leetcode_index(119,31)
-			 output: (direct)-> object word_len  @26240|leetcode_index(119,47)
+			 lead: (direct)-> object map  @02608|leetcode_index(119,2)
+			 method: ("begin")-> method begin  @29696|leetcode_index(54,3)
+			 input: ("words")-> object words  @63984|leetcode_index(101,9)
+			 output: (direct)-> object word_count  @00048|leetcode_index(119,31)
+			 output: (direct)-> object word_len  @03248|leetcode_index(119,47)
 			MAKE
-			 object: (direct)-> object window_size  @24960|leetcode_index(121,2)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object window_size  @06448|leetcode_index(121,2)
+			 type: ("int")-> type int  @45632|int(6,6)
 			MAKE
-			 object: (direct)-> object (anon)  @14720|leetcode_index(121,26)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object (anon)  @05488|leetcode_index(121,26)
+			 type: ("int")-> type int  @45632|int(6,6)
 			CALL --fundamental
-			 lead: ("word_count")-> object word_count  @14464|leetcode_index(119,31)
-			 method: ("mul")-> method mul  @60704|int(83,3)
-			 input: ("word_len")-> object word_len  @26240|leetcode_index(119,47)
-			 output: (direct)-> object (anon)  @14720|leetcode_index(121,26)
+			 lead: ("word_count")-> object word_count  @00048|leetcode_index(119,31)
+			 method: ("mul")-> method mul  @51328|int(83,3)
+			 input: ("word_len")-> object word_len  @03248|leetcode_index(119,47)
+			 output: (direct)-> object (anon)  @05488|leetcode_index(121,26)
 			CALL --initial, fundamental
-			 lead: (direct)-> object window_size  @24960|leetcode_index(121,2)
-			 method: ("begin")-> method begin  @47856|int(54,3)
-			 input: (direct)-> object (anon)  @14720|leetcode_index(121,26)
+			 lead: (direct)-> object window_size  @06448|leetcode_index(121,2)
+			 method: ("begin")-> method begin  @37040|int(54,3)
+			 input: (direct)-> object (anon)  @05488|leetcode_index(121,26)
 			MAKE
-			 object: (direct)-> object imax  @24192|leetcode_index(122,2)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object imax  @05808|leetcode_index(122,2)
+			 type: ("int")-> type int  @45632|int(6,6)
 			MAKE
-			 object: (direct)-> object (anon)  @26752|leetcode_index(122,19)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object (anon)  @06128|leetcode_index(122,19)
+			 type: ("int")-> type int  @45632|int(6,6)
 			CALL --fundamental
-			 lead: ("text")-> object text  @14208|leetcode_index(101,9)
-			 method: ("count")-> method count  @20272|positional(42,3)
-			 output: (direct)-> object (anon)  @26752|leetcode_index(122,19)
+			 lead: ("text")-> object text  @63664|leetcode_index(101,9)
+			 method: ("count")-> method count  @57664|positional(42,3)
+			 output: (direct)-> object (anon)  @06128|leetcode_index(122,19)
 			MAKE
-			 object: (direct)-> object (anon)  @25728|leetcode_index(122,19)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object (anon)  @06768|leetcode_index(122,19)
+			 type: ("int")-> type int  @45632|int(6,6)
 			CALL --fundamental
-			 lead: (direct)-> object (anon)  @26752|leetcode_index(122,19)
-			 method: ("sub")-> method sub  @25328|int(80,3)
-			 input: ("window_size")-> object window_size  @24960|leetcode_index(121,2)
-			 output: (direct)-> object (anon)  @25728|leetcode_index(122,19)
+			 lead: (direct)-> object (anon)  @06128|leetcode_index(122,19)
+			 method: ("sub")-> method sub  @57568|int(80,3)
+			 input: ("window_size")-> object window_size  @06448|leetcode_index(121,2)
+			 output: (direct)-> object (anon)  @06768|leetcode_index(122,19)
 			CALL --initial, fundamental
-			 lead: (direct)-> object imax  @24192|leetcode_index(122,2)
-			 method: ("begin")-> method begin  @47856|int(54,3)
-			 input: (direct)-> object (anon)  @25728|leetcode_index(122,19)
+			 lead: (direct)-> object imax  @05808|leetcode_index(122,2)
+			 method: ("begin")-> method begin  @37040|int(54,3)
+			 input: (direct)-> object (anon)  @06768|leetcode_index(122,19)
 			MAKE
-			 object: (direct)-> object i  @14976|leetcode_index(124,2)
-			 type: ("int")-> type int  @25360|int(6,6)
+			 object: (direct)-> object i  @07408|leetcode_index(124,2)
+			 type: ("int")-> type int  @45632|int(6,6)
 			CALL --initial, fundamental
-			 lead: (direct)-> object i  @14976|leetcode_index(124,2)
-			 method: ("begin")-> method begin  @47536|int(52,3)
+			 lead: (direct)-> object i  @07408|leetcode_index(124,2)
+			 method: ("begin")-> method begin  @36544|int(52,3)
 			 input: (pending)->
 			LOOP
-			 condition: (direct)-> object (anon)  @27008|leetcode_index(125,10)
+			 condition: (direct)-> object (anon)  @08048|leetcode_index(125,10)
 			{
 				condition branch: BLOCK --macro
 				{
 					MAKE
-					 object: (direct)-> object (anon)  @18304|leetcode_index(125,10)
-					 type: ("bool")-> type bool  @19104|bool(5,6)
+					 object: (direct)-> object (anon)  @07728|leetcode_index(125,10)
+					 type: ("bool")-> type bool  @46016|bool(5,6)
 					CALL --fundamental
-					 lead: ("imax")-> object imax  @24192|leetcode_index(122,2)
-					 method: ("less?")-> method less?  @60064|int(68,3)
-					 input: ("i")-> object i  @14976|leetcode_index(124,2)
-					 output: (direct)-> object (anon)  @18304|leetcode_index(125,10)
+					 lead: ("imax")-> object imax  @05808|leetcode_index(122,2)
+					 method: ("less?")-> method less?  @47168|int(68,3)
+					 input: ("i")-> object i  @07408|leetcode_index(124,2)
+					 output: (direct)-> object (anon)  @07728|leetcode_index(125,10)
 					MAKE
-					 object: (direct)-> object (anon)  @27008|leetcode_index(125,10)
-					 type: ("bool")-> type bool  @19104|bool(5,6)
+					 object: (direct)-> object (anon)  @08048|leetcode_index(125,10)
+					 type: ("bool")-> type bool  @46016|bool(5,6)
 					CALL --fundamental
-					 lead: (direct)-> object (anon)  @18304|leetcode_index(125,10)
-					 method: ("not")-> method not  @47424|bool(44,3)
-					 output: (direct)-> object (anon)  @27008|leetcode_index(125,10)
+					 lead: (direct)-> object (anon)  @07728|leetcode_index(125,10)
+					 method: ("not")-> method not  @12320|bool(44,3)
+					 output: (direct)-> object (anon)  @08048|leetcode_index(125,10)
 				}
 				iteration branch: BLOCK --domain
 				{
 					MAKE
-					 object: (direct)-> object j  @18048|leetcode_index(127,3)
-					 type: ("int")-> type int  @25360|int(6,6)
+					 object: (direct)-> object j  @09328|leetcode_index(127,3)
+					 type: ("int")-> type int  @45632|int(6,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object j  @18048|leetcode_index(127,3)
-					 method: ("begin")-> method begin  @47856|int(54,3)
-					 input: ("i")-> object i  @14976|leetcode_index(124,2)
+					 lead: (direct)-> object j  @09328|leetcode_index(127,3)
+					 method: ("begin")-> method begin  @37040|int(54,3)
+					 input: ("i")-> object i  @07408|leetcode_index(124,2)
 					MAKE
-					 object: (direct)-> object n  @19328|leetcode_index(128,3)
-					 type: ("int")-> type int  @25360|int(6,6)
+					 object: (direct)-> object n  @16368|leetcode_index(128,3)
+					 type: ("int")-> type int  @45632|int(6,6)
 					CALL --initial, fundamental
-					 lead: (direct)-> object n  @19328|leetcode_index(128,3)
-					 method: ("begin")-> method begin  @47856|int(54,3)
-					 input: ("word_count")-> object word_count  @14464|leetcode_index(119,31)
+					 lead: (direct)-> object n  @16368|leetcode_index(128,3)
+					 method: ("begin")-> method begin  @37040|int(54,3)
+					 input: ("word_count")-> object word_count  @00048|leetcode_index(119,31)
 					LOOP
-					 condition: (direct)-> object (anon)  @21376|leetcode_index(129,11)
+					 condition: (direct)-> object (anon)  @16688|leetcode_index(129,11)
 					{
 						condition branch: BLOCK --macro
 						{
 							MAKE
-							 object: (direct)-> object (anon)  @21376|leetcode_index(129,11)
-							 type: ("bool")-> type bool  @19104|bool(5,6)
+							 object: (direct)-> object (anon)  @16688|leetcode_index(129,11)
+							 type: ("bool")-> type bool  @46016|bool(5,6)
 							CALL --fundamental
-							 lead: ("zero")-> object zero  @51248|dialect(31,2)
-							 method: ("less?")-> method less?  @60064|int(68,3)
-							 input: ("n")-> object n  @19328|leetcode_index(128,3)
-							 output: (direct)-> object (anon)  @21376|leetcode_index(129,11)
+							 lead: ("zero")-> object zero  @39664|dialect(31,2)
+							 method: ("less?")-> method less?  @47168|int(68,3)
+							 input: ("n")-> object n  @16368|leetcode_index(128,3)
+							 output: (direct)-> object (anon)  @16688|leetcode_index(129,11)
 						}
 						iteration branch: BLOCK --domain
 						{
 							MAKE
-							 object: (direct)-> object s  @16512|leetcode_index(131,33)
-							 type: ("string")-> type string  @58672|string(4,6)
+							 object: (direct)-> object s  @14768|leetcode_index(131,33)
+							 type: ("string")-> type string  @08208|string(4,6)
 							CALL --fundamental
-							 lead: ("text")-> object text  @14208|leetcode_index(101,9)
-							 method: ("extract")-> method extract  @49344|string(80,3)
-							 input: ("j")-> object j  @18048|leetcode_index(127,3)
-							 input: ("word_len")-> object word_len  @26240|leetcode_index(119,47)
-							 output: (direct)-> object s  @16512|leetcode_index(131,33)
+							 lead: ("text")-> object text  @63664|leetcode_index(101,9)
+							 method: ("extract")-> method extract  @27792|string(80,3)
+							 input: ("j")-> object j  @09328|leetcode_index(127,3)
+							 input: ("word_len")-> object word_len  @03248|leetcode_index(119,47)
+							 output: (direct)-> object s  @14768|leetcode_index(131,33)
 							MAKE
-							 object: (direct)-> object ok  @21888|leetcode_index(132,19)
-							 type: ("bool")-> type bool  @19104|bool(5,6)
+							 object: (direct)-> object ok  @12528|leetcode_index(132,20)
+							 type: ("bool")-> type bool  @46016|bool(5,6)
 							CALL
-							 lead: ("map")-> object map  @13952|leetcode_index(119,2)
-							 method: ("find")-> method find  @03824|leetcode_index(75,3)
-							 input: ("s")-> object s  @16512|leetcode_index(131,33)
-							 output: (direct)-> object ok  @21888|leetcode_index(132,19)
+							 lead: ("map")-> object map  @02608|leetcode_index(119,2)
+							 method: ("match")-> method match  @23456|leetcode_index(75,3)
+							 input: ("s")-> object s  @14768|leetcode_index(131,33)
+							 output: (direct)-> object ok  @12528|leetcode_index(132,20)
 							CALL --fundamental
-							 lead: ("ok")-> object ok  @21888|leetcode_index(132,19)
-							 method: ("not")-> method not  @47104|bool(43,3)
+							 lead: ("ok")-> object ok  @12528|leetcode_index(132,20)
+							 method: ("not")-> method not  @13152|bool(43,3)
 							IF
-							 condition: ("ok")-> object ok  @21888|leetcode_index(132,19)
+							 condition: ("ok")-> object ok  @12528|leetcode_index(132,20)
 							{
 								true branch: RETURN --to loop (escape)
 							}
 							CALL --fundamental
-							 lead: ("j")-> object j  @18048|leetcode_index(127,3)
-							 method: ("add")-> method add  @34048|int(76,3)
-							 input: ("word_len")-> object word_len  @26240|leetcode_index(119,47)
+							 lead: ("j")-> object j  @09328|leetcode_index(127,3)
+							 method: ("add")-> method add  @53280|int(76,3)
+							 input: ("word_len")-> object word_len  @03248|leetcode_index(119,47)
 							CALL --fundamental
-							 lead: ("n")-> object n  @19328|leetcode_index(128,3)
-							 method: ("dec")-> method dec  @39360|int(119,3)
+							 lead: ("n")-> object n  @16368|leetcode_index(128,3)
+							 method: ("dec")-> method dec  @15184|int(119,3)
 						}
 					}
 					MAKE
-					 object: (direct)-> object (anon)  @16256|leetcode_index(138,9)
-					 type: ("bool")-> type bool  @19104|bool(5,6)
+					 object: (direct)-> object (anon)  @20528|leetcode_index(138,9)
+					 type: ("bool")-> type bool  @46016|bool(5,6)
 					CALL --fundamental
-					 lead: ("n")-> object n  @19328|leetcode_index(128,3)
-					 method: ("equal?")-> method equal?  @61984|int(64,3)
-					 input: ("zero")-> object zero  @51248|dialect(31,2)
-					 output: (direct)-> object (anon)  @16256|leetcode_index(138,9)
+					 lead: ("n")-> object n  @16368|leetcode_index(128,3)
+					 method: ("equal?")-> method equal?  @55488|int(64,3)
+					 input: ("zero")-> object zero  @39664|dialect(31,2)
+					 output: (direct)-> object (anon)  @20528|leetcode_index(138,9)
 					IF
-					 condition: (direct)-> object (anon)  @16256|leetcode_index(138,9)
+					 condition: (direct)-> object (anon)  @20528|leetcode_index(138,9)
 					{
 						true branch: BLOCK --domain
 						{
 							MAKE
-							 object: (direct)-> object (anon)  @27264|leetcode_index(138,29)
-							 type: ("bool")-> type bool  @19104|bool(5,6)
+							 object: (direct)-> object (anon)  @11568|leetcode_index(138,29)
+							 type: ("bool")-> type bool  @46016|bool(5,6)
 							CALL
-							 lead: ("map")-> object map  @13952|leetcode_index(119,2)
-							 method: ("verify")-> method verify  @00624|leetcode_index(87,3)
-							 input: ("word_count")-> object word_count  @14464|leetcode_index(119,31)
-							 output: (direct)-> object (anon)  @27264|leetcode_index(138,29)
+							 lead: ("map")-> object map  @02608|leetcode_index(119,2)
+							 method: ("verify")-> method verify  @28448|leetcode_index(87,3)
+							 input: ("word_count")-> object word_count  @00048|leetcode_index(119,31)
+							 output: (direct)-> object (anon)  @11568|leetcode_index(138,29)
 							IF
-							 condition: (direct)-> object (anon)  @27264|leetcode_index(138,29)
+							 condition: (direct)-> object (anon)  @11568|leetcode_index(138,29)
 							{
 								true branch: BLOCK --domain
 								{
 									MAKE
-									 proxy: (direct)-> proxy (anon)  @48272|leetcode_index(138,63)
-									 type: ("int")-> type int  @25360|int(6,6)
+									 proxy: (direct)-> proxy (anon)  @44336|leetcode_index(138,63)
+									 type: ("int")-> type int  @45632|int(6,6)
 									 permission: [init]
 									CALL --fundamental
-									 lead: ("index")-> object index  @20096|leetcode_index(101,9)
-									 method: ("insert")-> method insert  @64240|$appendix(,)
+									 lead: ("index")-> object index  @64304|leetcode_index(101,9)
+									 method: ("insert")-> method insert  @30944|$appendix(,)
 									 input: (pending)->
-									 result: (direct)-> proxy (anon)  @48272|leetcode_index(138,63)
+									 result: (direct)-> proxy (anon)  @44336|leetcode_index(138,63)
 									CALL --initial, fundamental
-									 lead: (direct)-> proxy (anon)  @48272|leetcode_index(138,63)
-									 method: ("begin")-> method begin  @47856|int(54,3)
-									 input: ("i")-> object i  @14976|leetcode_index(124,2)
+									 lead: (direct)-> proxy (anon)  @44336|leetcode_index(138,63)
+									 method: ("begin")-> method begin  @37040|int(54,3)
+									 input: ("i")-> object i  @07408|leetcode_index(124,2)
 								}
 							}
 						}
 					}
 					CALL
-					 lead: ("map")-> object map  @13952|leetcode_index(119,2)
-					 method: ("reset")-> method reset  @63600|leetcode_index(69,3)
+					 lead: ("map")-> object map  @02608|leetcode_index(119,2)
+					 method: ("reset")-> method reset  @23040|leetcode_index(69,3)
 					CALL --fundamental
-					 lead: ("i")-> object i  @14976|leetcode_index(124,2)
-					 method: ("inc")-> method inc  @62304|int(116,3)
+					 lead: ("i")-> object i  @07408|leetcode_index(124,2)
+					 method: ("inc")-> method inc  @57984|int(116,3)
 				}
 			}
 		}
 	}
 
-	type word_entry  @24976|leetcode_index(3,13) --internal
+	type word_entry  @08976|leetcode_index(3,13) --internal
 	 viable = yes
 	{
-		method before?  @63008|leetcode_index(14,3) --external
+		method before?  @34272|leetcode_index(14,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @02432|leetcode_index(14,3) --internal
-				 type: (direct)-> type word_entry  @24976|leetcode_index(3,13)
+				object imo  @03888|leetcode_index(14,3) --internal
+				 type: (direct)-> type word_entry  @08976|leetcode_index(3,13)
 
-				object string  @10368|leetcode_index(14,3) --internal
-				 type: ("string")-> type string  @58672|string(4,6)
+				object string  @01008|leetcode_index(14,3) --internal
+				 type: ("string")-> type string  @08208|string(4,6)
 
-				object yes  @65408|leetcode_index(14,3) --internal
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				object yes  @55344|leetcode_index(14,3) --internal
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL --fundamental
-				 lead: ("io.word")-> object word  @43664|leetcode_index(43,3)
-				 method: ("before?")-> method before?  @47104|string(77,3)
-				 input: ("given\string")-> object string  @10368|leetcode_index(14,3)
-				 output: ("yes")-> object yes  @65408|leetcode_index(14,3)
+				 lead: ("imo.word")-> object word  @33264|leetcode_index(43,3)
+				 method: ("before?")-> method before?  @07504|string(77,3)
+				 input: ("given\string")-> object string  @01008|leetcode_index(14,3)
+				 output: ("yes")-> object yes  @55344|leetcode_index(14,3)
 			}
 		}
 
-		method begin  @62688|leetcode_index(7,3) --external
+		method begin  @17632|leetcode_index(7,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @05504|leetcode_index(7,3) --internal
-				 type: (direct)-> type word_entry  @24976|leetcode_index(3,13)
+				object imo  @57264|leetcode_index(7,3) --internal
+				 type: (direct)-> type word_entry  @08976|leetcode_index(3,13)
 
-				object word  @04480|leetcode_index(7,3) --internal
-				 type: ("string")-> type string  @58672|string(4,6)
+				object word  @00688|leetcode_index(7,3) --internal
+				 type: ("string")-> type string  @08208|string(4,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL --initial, fundamental
-				 lead: ("io.word")-> object word  @43664|leetcode_index(43,3)
-				 method: ("begin")-> method begin  @41664|string(63,3)
-				 input: ("word")-> object word  @04480|leetcode_index(7,3)
+				 lead: ("imo.word")-> object word  @33264|leetcode_index(43,3)
+				 method: ("begin")-> method begin  @07920|string(63,3)
+				 input: ("word")-> object word  @00688|leetcode_index(7,3)
 				CALL --initial, fundamental
-				 lead: ("io.expected_usage")-> object expected_usage  @49040|leetcode_index(44,3)
-				 method: ("begin")-> method begin  @47856|int(54,3)
-				 input: ("one")-> object one  @26192|dialect(32,2)
+				 lead: ("imo.expected_usage")-> object expected_usage  @33584|leetcode_index(44,3)
+				 method: ("begin")-> method begin  @37040|int(54,3)
+				 input: ("one")-> object one  @02448|dialect(32,2)
 				CALL --initial, fundamental
-				 lead: ("io.actual_usage")-> object actual_usage  @52368|leetcode_index(45,3)
-				 method: ("begin")-> method begin  @47856|int(54,3)
-				 input: ("zero")-> object zero  @51248|dialect(31,2)
+				 lead: ("imo.actual_usage")-> object actual_usage  @35504|leetcode_index(45,3)
+				 method: ("begin")-> method begin  @37040|int(54,3)
+				 input: ("zero")-> object zero  @39664|dialect(31,2)
 			}
 		}
 
-		method mark  @54960|leetcode_index(29,3) --external
+		method mark  @22208|leetcode_index(29,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @62080|leetcode_index(29,3) --internal
-				 type: (direct)-> type word_entry  @24976|leetcode_index(3,13)
+				object imo  @62064|leetcode_index(29,3) --internal
+				 type: (direct)-> type word_entry  @08976|leetcode_index(3,13)
 
-				object ok  @63360|leetcode_index(29,3) --internal
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				object ok  @55984|leetcode_index(29,3) --internal
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 			}
 
 			BLOCK --domain
 			{
 				CALL --fundamental
-				 lead: ("io.actual_usage")-> object actual_usage  @52368|leetcode_index(45,3)
-				 method: ("inc")-> method inc  @62304|int(116,3)
+				 lead: ("imo.actual_usage")-> object actual_usage  @35504|leetcode_index(45,3)
+				 method: ("inc")-> method inc  @57984|int(116,3)
 				MAKE
-				 object: (direct)-> object (anon)  @63104|leetcode_index(32,15)
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				 object: (direct)-> object (anon)  @01328|leetcode_index(32,15)
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 				CALL --fundamental
-				 lead: ("io.expected_usage")-> object expected_usage  @49040|leetcode_index(44,3)
-				 method: ("less?")-> method less?  @60064|int(68,3)
-				 input: ("io.actual_usage")-> object actual_usage  @52368|leetcode_index(45,3)
-				 output: (direct)-> object (anon)  @63104|leetcode_index(32,15)
+				 lead: ("imo.expected_usage")-> object expected_usage  @33584|leetcode_index(44,3)
+				 method: ("less?")-> method less?  @47168|int(68,3)
+				 input: ("imo.actual_usage")-> object actual_usage  @35504|leetcode_index(45,3)
+				 output: (direct)-> object (anon)  @01328|leetcode_index(32,15)
 				MAKE
-				 object: (direct)-> object (anon)  @09856|leetcode_index(32,15)
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				 object: (direct)-> object (anon)  @02288|leetcode_index(32,15)
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 				CALL --fundamental
-				 lead: (direct)-> object (anon)  @63104|leetcode_index(32,15)
-				 method: ("not")-> method not  @47424|bool(44,3)
-				 output: (direct)-> object (anon)  @09856|leetcode_index(32,15)
+				 lead: (direct)-> object (anon)  @01328|leetcode_index(32,15)
+				 method: ("not")-> method not  @12320|bool(44,3)
+				 output: (direct)-> object (anon)  @02288|leetcode_index(32,15)
 				CALL --initial, fundamental
-				 lead: ("ok")-> object ok  @63360|leetcode_index(29,3)
-				 method: ("begin")-> method begin  @45824|bool(27,3)
-				 input: (direct)-> object (anon)  @09856|leetcode_index(32,15)
+				 lead: ("ok")-> object ok  @55984|leetcode_index(29,3)
+				 method: ("begin")-> method begin  @11904|bool(27,3)
+				 input: (direct)-> object (anon)  @02288|leetcode_index(32,15)
 			}
 		}
 
-		method overload  @63920|leetcode_index(24,3) --external
+		method overload  @24704|leetcode_index(24,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @08064|leetcode_index(24,3) --internal
-				 type: (direct)-> type word_entry  @24976|leetcode_index(3,13)
+				object imo  @64944|leetcode_index(24,3) --internal
+				 type: (direct)-> type word_entry  @08976|leetcode_index(3,13)
 			}
 
 			BLOCK --domain
 			{
 				CALL --fundamental
-				 lead: ("io.expected_usage")-> object expected_usage  @49040|leetcode_index(44,3)
-				 method: ("inc")-> method inc  @62304|int(116,3)
+				 lead: ("imo.expected_usage")-> object expected_usage  @33584|leetcode_index(44,3)
+				 method: ("inc")-> method inc  @57984|int(116,3)
 			}
 		}
 
-		method reset  @63328|leetcode_index(19,3) --external
+		method reset  @21376|leetcode_index(19,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @10880|leetcode_index(19,3) --internal
-				 type: (direct)-> type word_entry  @24976|leetcode_index(3,13)
+				object imo  @57904|leetcode_index(19,3) --internal
+				 type: (direct)-> type word_entry  @08976|leetcode_index(3,13)
 			}
 
 			BLOCK --domain
 			{
 				CALL --terminal, essential, fundamental
-				 lead: ("io.actual_usage")-> object actual_usage  @52368|leetcode_index(45,3)
-				 method: ("recycle")-> method recycle  @10032|object(39,3)
+				 lead: ("imo.actual_usage")-> object actual_usage  @35504|leetcode_index(45,3)
+				 method: ("recycle")-> method recycle  @56416|object(39,3)
 				CALL --initial, fundamental
-				 lead: ("io.actual_usage")-> object actual_usage  @52368|leetcode_index(45,3)
-				 method: ("begin")-> method begin  @47856|int(54,3)
-				 input: ("zero")-> object zero  @51248|dialect(31,2)
+				 lead: ("imo.actual_usage")-> object actual_usage  @35504|leetcode_index(45,3)
+				 method: ("begin")-> method begin  @37040|int(54,3)
+				 input: ("zero")-> object zero  @39664|dialect(31,2)
 			}
 		}
 
-		method verify  @62640|leetcode_index(35,3) --external
+		method verify  @22624|leetcode_index(35,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @11392|leetcode_index(35,3) --internal
-				 type: (direct)-> type word_entry  @24976|leetcode_index(3,13)
+				object imo  @59824|leetcode_index(35,3) --internal
+				 type: (direct)-> type word_entry  @08976|leetcode_index(3,13)
 
-				object ok  @06528|leetcode_index(35,3) --internal
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				object ok  @53744|leetcode_index(35,3) --internal
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @05248|leetcode_index(37,15)
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				 object: (direct)-> object (anon)  @54704|leetcode_index(37,15)
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 				CALL --fundamental
-				 lead: ("io.actual_usage")-> object actual_usage  @52368|leetcode_index(45,3)
-				 method: ("equal?")-> method equal?  @61984|int(64,3)
-				 input: ("io.expected_usage")-> object expected_usage  @49040|leetcode_index(44,3)
-				 output: (direct)-> object (anon)  @05248|leetcode_index(37,15)
+				 lead: ("imo.actual_usage")-> object actual_usage  @35504|leetcode_index(45,3)
+				 method: ("equal?")-> method equal?  @55488|int(64,3)
+				 input: ("imo.expected_usage")-> object expected_usage  @33584|leetcode_index(44,3)
+				 output: (direct)-> object (anon)  @54704|leetcode_index(37,15)
 				CALL --initial, fundamental
-				 lead: ("ok")-> object ok  @06528|leetcode_index(35,3)
-				 method: ("begin")-> method begin  @45824|bool(27,3)
-				 input: (direct)-> object (anon)  @05248|leetcode_index(37,15)
+				 lead: ("ok")-> object ok  @53744|leetcode_index(35,3)
+				 method: ("begin")-> method begin  @11904|bool(27,3)
+				 input: (direct)-> object (anon)  @54704|leetcode_index(37,15)
 			}
 		}
 
 		instance
 		{
-			object actual_usage  @52368|leetcode_index(45,3) --internal
-			 type: ("int")-> type int  @25360|int(6,6)
+			object actual_usage  @35504|leetcode_index(45,3) --internal
+			 type: ("int")-> type int  @45632|int(6,6)
 
-			object expected_usage  @49040|leetcode_index(44,3) --internal
-			 type: ("int")-> type int  @25360|int(6,6)
+			object expected_usage  @33584|leetcode_index(44,3) --internal
+			 type: ("int")-> type int  @45632|int(6,6)
 
-			object word  @43664|leetcode_index(43,3) --internal
-			 type: ("string")-> type string  @58672|string(4,6)
+			object word  @33264|leetcode_index(43,3) --internal
+			 type: ("string")-> type string  @08208|string(4,6)
 		}
 
 	}
 
-	type word_map  @60848|leetcode_index(50,13) --internal
+	type word_map  @15120|leetcode_index(50,13) --internal
 	 viable = yes
 	{
-		method begin  @53360|leetcode_index(54,3) --external
+		method begin  @29696|leetcode_index(54,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @11904|leetcode_index(54,3) --internal
-				 type: (direct)-> type word_map  @60848|leetcode_index(50,13)
+				object imo  @58544|leetcode_index(54,3) --internal
+				 type: (direct)-> type word_map  @15120|leetcode_index(50,13)
 
-				object word_count  @63616|leetcode_index(54,3) --internal
-				 type: ("int")-> type int  @25360|int(6,6)
+				object word_count  @65264|leetcode_index(54,3) --internal
+				 type: ("int")-> type int  @45632|int(6,6)
 
-				object word_len  @08320|leetcode_index(54,3) --internal
-				 type: ("int")-> type int  @25360|int(6,6)
+				object word_len  @04208|leetcode_index(54,3) --internal
+				 type: ("int")-> type int  @45632|int(6,6)
 
-				object words  @07040|leetcode_index(54,3) --internal
-				 type: (direct)-> type $1<7>( array<string> )  @31760|$appendix(,)
+				object words  @60464|leetcode_index(54,3) --internal
+				 type: (direct)-> type $1<7>( array<string> )  @17440|$appendix(,)
 			}
 
 			BLOCK --domain
 			{
 				CALL --fundamental
-				 lead: ("words")-> object words  @07040|leetcode_index(54,3)
-				 method: ("count")-> method count  @20144|$appendix(,)
-				 output: ("word_count")-> object word_count  @63616|leetcode_index(54,3)
+				 lead: ("words")-> object words  @60464|leetcode_index(54,3)
+				 method: ("count")-> method count  @03680|$appendix(,)
+				 output: ("word_count")-> object word_count  @65264|leetcode_index(54,3)
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @42512|leetcode_index(57,9)
-				 type: ("string")-> type string  @58672|string(4,6)
+				 proxy: (direct)-> proxy (anon)  @28832|leetcode_index(57,9)
+				 type: ("string")-> type string  @08208|string(4,6)
 				 permission: [eval]
 				CALL --fundamental
-				 lead: ("words")-> object words  @07040|leetcode_index(54,3)
-				 method: ("use")-> method use  @27824|$appendix(,)
-				 input: ("zero")-> object zero  @51248|dialect(31,2)
-				 result: (direct)-> proxy (anon)  @42512|leetcode_index(57,9)
+				 lead: ("words")-> object words  @60464|leetcode_index(54,3)
+				 method: ("use")-> method use  @07424|$appendix(,)
+				 input: ("zero")-> object zero  @39664|dialect(31,2)
+				 result: (direct)-> proxy (anon)  @28832|leetcode_index(57,9)
 				CALL --fundamental
-				 lead: (direct)-> proxy (anon)  @42512|leetcode_index(57,9)
-				 method: ("count")-> method count  @20272|positional(42,3)
-				 output: ("word_len")-> object word_len  @08320|leetcode_index(54,3)
+				 lead: (direct)-> proxy (anon)  @28832|leetcode_index(57,9)
+				 method: ("count")-> method count  @57664|positional(42,3)
+				 output: ("word_len")-> object word_len  @04208|leetcode_index(54,3)
 				MAKE
-				 object: (direct)-> object (anon)  @00128|leetcode_index(,)
-				 type: ("int")-> type int  @25360|int(6,6)
+				 object: (direct)-> object (anon)  @58224|leetcode_index(,)
+				 type: ("int")-> type int  @45632|int(6,6)
 				CALL --fundamental
-				 lead: ("words")-> object words  @07040|leetcode_index(54,3)
-				 method: ("open_cursor")-> method open_cursor  @39984|$appendix(,)
+				 lead: ("words")-> object words  @60464|leetcode_index(54,3)
+				 method: ("open_cursor")-> method open_cursor  @14496|$appendix(,)
 				 input: (pending)->
-				 output: (direct)-> object (anon)  @00128|leetcode_index(,)
+				 output: (direct)-> object (anon)  @58224|leetcode_index(,)
 				LOOP --unconditional
 				{
 					iteration branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy ~word  @37712|leetcode_index(,)
-						 type: ("string")-> type string  @58672|string(4,6)
+						 proxy: (direct)-> proxy ~word  @36128|leetcode_index(,)
+						 type: ("string")-> type string  @08208|string(4,6)
 						 permission: [eval]
 						CALL --fundamental
-						 lead: ("words")-> object words  @07040|leetcode_index(54,3)
-						 method: ("use")-> method use  @27824|$appendix(,)
-						 input: (direct)-> object (anon)  @00128|leetcode_index(,)
-						 result: (direct)-> proxy ~word  @37712|leetcode_index(,)
+						 lead: ("words")-> object words  @60464|leetcode_index(54,3)
+						 method: ("use")-> method use  @07424|$appendix(,)
+						 input: (direct)-> object (anon)  @58224|leetcode_index(,)
+						 result: (direct)-> proxy ~word  @36128|leetcode_index(,)
 						MAKE
-						 analog: (direct)-> analog (anon)  @59872|leetcode_index(,)
-						 type: ("analog")-> type analog  @64384|analog(5,6)
+						 analog: (direct)-> analog (anon)  @09360|leetcode_index(,)
+						 type: ("analog")-> type analog  @10976|analog(5,6)
 						MAKE
-						 object: (direct)-> object (anon)  @00384|leetcode_index(,)
-						 type: ("bool")-> type bool  @19104|bool(5,6)
+						 object: (direct)-> object (anon)  @62384|leetcode_index(,)
+						 type: ("bool")-> type bool  @46016|bool(5,6)
 						CALL --fundamental
-						 lead: (direct)-> analog (anon)  @59872|leetcode_index(,)
-						 method: ("void?")-> method void?  @41920|analog(23,3)
-						 output: (direct)-> object (anon)  @00384|leetcode_index(,)
+						 lead: (direct)-> analog (anon)  @09360|leetcode_index(,)
+						 method: ("void?")-> method void?  @02432|analog(23,3)
+						 output: (direct)-> object (anon)  @62384|leetcode_index(,)
 						IF
-						 condition: (direct)-> object (anon)  @00384|leetcode_index(,)
+						 condition: (direct)-> object (anon)  @62384|leetcode_index(,)
 						{
 							true branch: RETURN --to loop (escape)
 						}
 						BLOCK --domain
 						{
 							MAKE
-							 object: (direct)-> object i  @01408|leetcode_index(60,27)
-							 type: ("int")-> type int  @25360|int(6,6)
+							 object: (direct)-> object i  @56304|leetcode_index(60,28)
+							 type: ("int")-> type int  @45632|int(6,6)
 							MAKE
-							 object: (direct)-> object unique  @01664|leetcode_index(60,34)
-							 type: ("bool")-> type bool  @19104|bool(5,6)
+							 object: (direct)-> object unique  @60784|leetcode_index(60,35)
+							 type: ("bool")-> type bool  @46016|bool(5,6)
 							MAKE
-							 object: (direct)-> object (anon)  @12192|leetcode_index(60,11)
-							 type: ("word_entry")-> type word_entry  @24976|leetcode_index(3,13)
+							 object: (direct)-> object (anon)  @49408|leetcode_index(60,12)
+							 type: ("word_entry")-> type word_entry  @08976|leetcode_index(3,13)
 							CALL --initial
-							 lead: (direct)-> object (anon)  @12192|leetcode_index(60,11)
-							 method: ("begin")-> method begin  @62688|leetcode_index(7,3)
-							 input: ("~word")-> proxy ~word  @37712|leetcode_index(,)
+							 lead: (direct)-> object (anon)  @49408|leetcode_index(60,12)
+							 method: ("begin")-> method begin  @17632|leetcode_index(7,3)
+							 input: ("~word")-> proxy ~word  @36128|leetcode_index(,)
 							CALL --fundamental
-							 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-							 method: ("rank")-> method rank  @44784|$appendix(,)
-							 input: (direct)-> object (anon)  @12192|leetcode_index(60,11)
-							 output: (direct)-> object i  @01408|leetcode_index(60,27)
-							 output: (direct)-> object unique  @01664|leetcode_index(60,34)
+							 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+							 method: ("rank")-> method rank  @06176|$appendix(,)
+							 input: (direct)-> object (anon)  @49408|leetcode_index(60,12)
+							 output: (direct)-> object i  @56304|leetcode_index(60,28)
+							 output: (direct)-> object unique  @60784|leetcode_index(60,35)
 							IF
-							 condition: ("unique")-> object unique  @01664|leetcode_index(60,34)
+							 condition: ("unique")-> object unique  @60784|leetcode_index(60,35)
 							{
 								true branch: BLOCK --domain
 								{
 									MAKE
-									 proxy: (direct)-> proxy (anon)  @37472|leetcode_index(62,12)
-									 type: ("word_entry")-> type word_entry  @24976|leetcode_index(3,13)
+									 proxy: (direct)-> proxy (anon)  @41600|leetcode_index(62,13)
+									 type: ("word_entry")-> type word_entry  @08976|leetcode_index(3,13)
 									 permission: [init]
 									CALL --fundamental
-									 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-									 method: ("insert")-> method insert  @31024|$appendix(,)
-									 input: ("i")-> object i  @01408|leetcode_index(60,27)
-									 result: (direct)-> proxy (anon)  @37472|leetcode_index(62,12)
+									 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+									 method: ("insert")-> method insert  @13248|$appendix(,)
+									 input: ("i")-> object i  @56304|leetcode_index(60,28)
+									 result: (direct)-> proxy (anon)  @41600|leetcode_index(62,13)
 									CALL --initial
-									 lead: (direct)-> proxy (anon)  @37472|leetcode_index(62,12)
-									 method: ("begin")-> method begin  @62688|leetcode_index(7,3)
-									 input: ("~word")-> proxy ~word  @37712|leetcode_index(,)
+									 lead: (direct)-> proxy (anon)  @41600|leetcode_index(62,13)
+									 method: ("begin")-> method begin  @17632|leetcode_index(7,3)
+									 input: ("~word")-> proxy ~word  @36128|leetcode_index(,)
 								}
 								false branch: BLOCK --domain
 								{
 									MAKE
-									 proxy: (direct)-> proxy (anon)  @45152|leetcode_index(64,12)
-									 type: ("word_entry")-> type word_entry  @24976|leetcode_index(3,13)
+									 proxy: (direct)-> proxy (anon)  @36736|leetcode_index(64,13)
+									 type: ("word_entry")-> type word_entry  @08976|leetcode_index(3,13)
 									 permission: [init]
 									CALL --fundamental
-									 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-									 method: ("use")-> method use  @35504|$appendix(,)
-									 input: ("i")-> object i  @01408|leetcode_index(60,27)
-									 result: (direct)-> proxy (anon)  @45152|leetcode_index(64,12)
+									 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+									 method: ("use")-> method use  @22816|$appendix(,)
+									 input: ("i")-> object i  @56304|leetcode_index(60,28)
+									 result: (direct)-> proxy (anon)  @36736|leetcode_index(64,13)
 									CALL
-									 lead: (direct)-> proxy (anon)  @45152|leetcode_index(64,12)
-									 method: ("overload")-> method overload  @63920|leetcode_index(24,3)
+									 lead: (direct)-> proxy (anon)  @36736|leetcode_index(64,13)
+									 method: ("overload")-> method overload  @24704|leetcode_index(24,3)
 								}
 							}
 						}
 						CALL --fundamental
-						 lead: ("words")-> object words  @07040|leetcode_index(54,3)
-						 method: ("move_cursor")-> method move_cursor  @31984|$appendix(,)
-						 input: (direct)-> object (anon)  @00128|leetcode_index(,)
+						 lead: ("words")-> object words  @60464|leetcode_index(54,3)
+						 method: ("move_cursor")-> method move_cursor  @16160|$appendix(,)
+						 input: (direct)-> object (anon)  @58224|leetcode_index(,)
 					}
 				}
 				CALL --initial, fundamental
-				 lead: ("io.matched")-> object matched  @56976|leetcode_index(96,3)
-				 method: ("begin")-> method begin  @47536|int(52,3)
+				 lead: ("imo.matched")-> object matched  @34224|leetcode_index(96,3)
+				 method: ("begin")-> method begin  @36544|int(52,3)
 				 input: (pending)->
 			}
 		}
 
-		method find  @03824|leetcode_index(75,3) --external
+		method match  @23456|leetcode_index(75,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @02944|leetcode_index(75,3) --internal
-				 type: (direct)-> type word_map  @60848|leetcode_index(50,13)
+				object imo  @53424|leetcode_index(75,3) --internal
+				 type: (direct)-> type word_map  @15120|leetcode_index(50,13)
 
-				object ok  @05760|leetcode_index(75,3) --internal
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				object ok  @59184|leetcode_index(75,3) --internal
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 
-				object word  @04736|leetcode_index(75,3) --internal
-				 type: ("string")-> type string  @58672|string(4,6)
+				object word  @04848|leetcode_index(75,3) --internal
+				 type: ("string")-> type string  @08208|string(4,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object i  @06016|leetcode_index(77,25)
-				 type: ("int")-> type int  @25360|int(6,6)
+				 object: (direct)-> object i  @61104|leetcode_index(77,26)
+				 type: ("int")-> type int  @45632|int(6,6)
 				MAKE
-				 object: (direct)-> object unique  @08576|leetcode_index(77,32)
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				 object: (direct)-> object unique  @61424|leetcode_index(77,33)
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 				MAKE
-				 object: (direct)-> object (anon)  @17056|leetcode_index(77,10)
-				 type: ("word_entry")-> type word_entry  @24976|leetcode_index(3,13)
+				 object: (direct)-> object (anon)  @49728|leetcode_index(77,11)
+				 type: ("word_entry")-> type word_entry  @08976|leetcode_index(3,13)
 				CALL --initial
-				 lead: (direct)-> object (anon)  @17056|leetcode_index(77,10)
-				 method: ("begin")-> method begin  @62688|leetcode_index(7,3)
-				 input: ("word")-> object word  @04736|leetcode_index(75,3)
+				 lead: (direct)-> object (anon)  @49728|leetcode_index(77,11)
+				 method: ("begin")-> method begin  @17632|leetcode_index(7,3)
+				 input: ("word")-> object word  @04848|leetcode_index(75,3)
 				CALL --fundamental
-				 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-				 method: ("rank")-> method rank  @44784|$appendix(,)
-				 input: (direct)-> object (anon)  @17056|leetcode_index(77,10)
-				 output: (direct)-> object i  @06016|leetcode_index(77,25)
-				 output: (direct)-> object unique  @08576|leetcode_index(77,32)
+				 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+				 method: ("rank")-> method rank  @06176|$appendix(,)
+				 input: (direct)-> object (anon)  @49728|leetcode_index(77,11)
+				 output: (direct)-> object i  @61104|leetcode_index(77,26)
+				 output: (direct)-> object unique  @61424|leetcode_index(77,33)
 				IF
-				 condition: ("unique")-> object unique  @08576|leetcode_index(77,32)
+				 condition: ("unique")-> object unique  @61424|leetcode_index(77,33)
 				{
 					true branch: RETURN --to caller
 						after branch: CALL --initial, fundamental
-						 lead: ("ok")-> object ok  @05760|leetcode_index(75,3)
-						 method: ("begin")-> method begin  @45824|bool(27,3)
-						 input: ("false")-> object false  @01936|dialect(22,2)
+						 lead: ("ok")-> object ok  @59184|leetcode_index(75,3)
+						 method: ("begin")-> method begin  @11904|bool(27,3)
+						 input: ("false")-> object false  @00880|dialect(22,2)
 				}
 				MAKE
-				 proxy: (direct)-> proxy (anon)  @46352|leetcode_index(80,10)
-				 type: ("word_entry")-> type word_entry  @24976|leetcode_index(3,13)
+				 proxy: (direct)-> proxy (anon)  @37648|leetcode_index(80,11)
+				 type: ("word_entry")-> type word_entry  @08976|leetcode_index(3,13)
 				 permission: [init]
 				CALL --fundamental
-				 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-				 method: ("use")-> method use  @35504|$appendix(,)
-				 input: ("i")-> object i  @06016|leetcode_index(77,25)
-				 result: (direct)-> proxy (anon)  @46352|leetcode_index(80,10)
+				 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+				 method: ("use")-> method use  @22816|$appendix(,)
+				 input: ("i")-> object i  @61104|leetcode_index(77,26)
+				 result: (direct)-> proxy (anon)  @37648|leetcode_index(80,11)
 				MAKE
-				 object: (direct)-> object marked  @08832|leetcode_index(80,28)
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				 object: (direct)-> object marked  @07088|leetcode_index(80,29)
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 				CALL
-				 lead: (direct)-> proxy (anon)  @46352|leetcode_index(80,10)
-				 method: ("mark")-> method mark  @54960|leetcode_index(29,3)
-				 output: (direct)-> object marked  @08832|leetcode_index(80,28)
+				 lead: (direct)-> proxy (anon)  @37648|leetcode_index(80,11)
+				 method: ("mark")-> method mark  @22208|leetcode_index(29,3)
+				 output: (direct)-> object marked  @07088|leetcode_index(80,29)
 				CALL --fundamental
-				 lead: ("marked")-> object marked  @08832|leetcode_index(80,28)
-				 method: ("not")-> method not  @47104|bool(43,3)
+				 lead: ("marked")-> object marked  @07088|leetcode_index(80,29)
+				 method: ("not")-> method not  @13152|bool(43,3)
 				IF
-				 condition: ("marked")-> object marked  @08832|leetcode_index(80,28)
+				 condition: ("marked")-> object marked  @07088|leetcode_index(80,29)
 				{
 					true branch: RETURN --to caller
 						after branch: CALL --initial, fundamental
-						 lead: ("ok")-> object ok  @05760|leetcode_index(75,3)
-						 method: ("begin")-> method begin  @45824|bool(27,3)
-						 input: ("false")-> object false  @01936|dialect(22,2)
+						 lead: ("ok")-> object ok  @59184|leetcode_index(75,3)
+						 method: ("begin")-> method begin  @11904|bool(27,3)
+						 input: ("false")-> object false  @00880|dialect(22,2)
 				}
 				CALL --fundamental
-				 lead: ("io.matched")-> object matched  @56976|leetcode_index(96,3)
-				 method: ("inc")-> method inc  @62304|int(116,3)
+				 lead: ("imo.matched")-> object matched  @34224|leetcode_index(96,3)
+				 method: ("inc")-> method inc  @57984|int(116,3)
 				CALL --initial, fundamental
-				 lead: ("ok")-> object ok  @05760|leetcode_index(75,3)
-				 method: ("begin")-> method begin  @45824|bool(27,3)
-				 input: ("true")-> object true  @27216|dialect(21,2)
+				 lead: ("ok")-> object ok  @59184|leetcode_index(75,3)
+				 method: ("begin")-> method begin  @11904|bool(27,3)
+				 input: ("true")-> object true  @35872|dialect(21,2)
 			}
 		}
 
-		method reset  @63600|leetcode_index(69,3) --external
+		method reset  @23040|leetcode_index(69,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object io  @06272|leetcode_index(69,3) --internal
-				 type: (direct)-> type word_map  @60848|leetcode_index(50,13)
+				object imo  @01648|leetcode_index(69,3) --internal
+				 type: (direct)-> type word_map  @15120|leetcode_index(50,13)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @01920|leetcode_index(,)
-				 type: ("int")-> type int  @25360|int(6,6)
+				 object: (direct)-> object (anon)  @58864|leetcode_index(,)
+				 type: ("int")-> type int  @45632|int(6,6)
 				CALL --fundamental
-				 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-				 method: ("open_cursor")-> method open_cursor  @38064|$appendix(,)
+				 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+				 method: ("open_cursor")-> method open_cursor  @08256|$appendix(,)
 				 input: (pending)->
-				 output: (direct)-> object (anon)  @01920|leetcode_index(,)
+				 output: (direct)-> object (anon)  @58864|leetcode_index(,)
 				LOOP --unconditional
 				{
 					iteration branch: BLOCK --domain
 					{
 						MAKE
-						 proxy: (direct)-> proxy ~entry  @41312|leetcode_index(,)
-						 type: ("word_entry")-> type word_entry  @24976|leetcode_index(3,13)
+						 proxy: (direct)-> proxy ~entry  @29744|leetcode_index(,)
+						 type: ("word_entry")-> type word_entry  @08976|leetcode_index(3,13)
 						 permission: [init]
 						CALL --fundamental
-						 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-						 method: ("use")-> method use  @35504|$appendix(,)
-						 input: (direct)-> object (anon)  @01920|leetcode_index(,)
-						 result: (direct)-> proxy ~entry  @41312|leetcode_index(,)
+						 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+						 method: ("use")-> method use  @22816|$appendix(,)
+						 input: (direct)-> object (anon)  @58864|leetcode_index(,)
+						 result: (direct)-> proxy ~entry  @29744|leetcode_index(,)
 						MAKE
-						 analog: (direct)-> analog (anon)  @08800|leetcode_index(,)
-						 type: ("analog")-> type analog  @64384|analog(5,6)
+						 analog: (direct)-> analog (anon)  @13968|leetcode_index(,)
+						 type: ("analog")-> type analog  @10976|analog(5,6)
 						MAKE
-						 object: (direct)-> object (anon)  @02688|leetcode_index(,)
-						 type: ("bool")-> type bool  @19104|bool(5,6)
+						 object: (direct)-> object (anon)  @57584|leetcode_index(,)
+						 type: ("bool")-> type bool  @46016|bool(5,6)
 						CALL --fundamental
-						 lead: (direct)-> analog (anon)  @08800|leetcode_index(,)
-						 method: ("void?")-> method void?  @41920|analog(23,3)
-						 output: (direct)-> object (anon)  @02688|leetcode_index(,)
+						 lead: (direct)-> analog (anon)  @13968|leetcode_index(,)
+						 method: ("void?")-> method void?  @02432|analog(23,3)
+						 output: (direct)-> object (anon)  @57584|leetcode_index(,)
 						IF
-						 condition: (direct)-> object (anon)  @02688|leetcode_index(,)
+						 condition: (direct)-> object (anon)  @57584|leetcode_index(,)
 						{
 							true branch: RETURN --to loop (escape)
 						}
 						CALL
-						 lead: ("~entry")-> proxy ~entry  @41312|leetcode_index(,)
-						 method: ("reset")-> method reset  @63328|leetcode_index(19,3)
+						 lead: ("~entry")-> proxy ~entry  @29744|leetcode_index(,)
+						 method: ("reset")-> method reset  @21376|leetcode_index(19,3)
 						CALL --fundamental
-						 lead: ("io.map")-> object map  @48784|leetcode_index(95,3)
-						 method: ("move_cursor")-> method move_cursor  @41904|$appendix(,)
-						 input: (direct)-> object (anon)  @01920|leetcode_index(,)
+						 lead: ("imo.map")-> object map  @33904|leetcode_index(95,3)
+						 method: ("move_cursor")-> method move_cursor  @24480|$appendix(,)
+						 input: (direct)-> object (anon)  @58864|leetcode_index(,)
 					}
 				}
 				CALL --terminal, essential, fundamental
-				 lead: ("io.matched")-> object matched  @56976|leetcode_index(96,3)
-				 method: ("recycle")-> method recycle  @10032|object(39,3)
+				 lead: ("imo.matched")-> object matched  @34224|leetcode_index(96,3)
+				 method: ("recycle")-> method recycle  @56416|object(39,3)
 				CALL --initial, fundamental
-				 lead: ("io.matched")-> object matched  @56976|leetcode_index(96,3)
-				 method: ("begin")-> method begin  @47856|int(54,3)
-				 input: ("zero")-> object zero  @51248|dialect(31,2)
+				 lead: ("imo.matched")-> object matched  @34224|leetcode_index(96,3)
+				 method: ("begin")-> method begin  @37040|int(54,3)
+				 input: ("zero")-> object zero  @39664|dialect(31,2)
 			}
 		}
 
-		method verify  @00624|leetcode_index(87,3) --external
+		method verify  @28448|leetcode_index(87,3) --external
 		 viable = yes
 		{
 
 			given
 			{
-				object expected  @09600|leetcode_index(87,3) --internal
-				 type: ("int")-> type int  @25360|int(6,6)
+				object expected  @05168|leetcode_index(87,3) --internal
+				 type: ("int")-> type int  @45632|int(6,6)
 
-				object io  @09088|leetcode_index(87,3) --internal
-				 type: (direct)-> type word_map  @60848|leetcode_index(50,13)
+				object imo  @62704|leetcode_index(87,3) --internal
+				 type: (direct)-> type word_map  @15120|leetcode_index(50,13)
 
-				object ok  @19072|leetcode_index(87,3) --internal
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				object ok  @63344|leetcode_index(87,3) --internal
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 			}
 
 			BLOCK --domain
 			{
 				MAKE
-				 object: (direct)-> object (anon)  @26496|leetcode_index(89,15)
-				 type: ("bool")-> type bool  @19104|bool(5,6)
+				 object: (direct)-> object (anon)  @01968|leetcode_index(89,15)
+				 type: ("bool")-> type bool  @46016|bool(5,6)
 				CALL --fundamental
-				 lead: ("io.matched")-> object matched  @56976|leetcode_index(96,3)
-				 method: ("equal?")-> method equal?  @61984|int(64,3)
-				 input: ("expected")-> object expected  @09600|leetcode_index(87,3)
-				 output: (direct)-> object (anon)  @26496|leetcode_index(89,15)
+				 lead: ("imo.matched")-> object matched  @34224|leetcode_index(96,3)
+				 method: ("equal?")-> method equal?  @55488|int(64,3)
+				 input: ("expected")-> object expected  @05168|leetcode_index(87,3)
+				 output: (direct)-> object (anon)  @01968|leetcode_index(89,15)
 				CALL --initial, fundamental
-				 lead: ("ok")-> object ok  @19072|leetcode_index(87,3)
-				 method: ("begin")-> method begin  @45824|bool(27,3)
-				 input: (direct)-> object (anon)  @26496|leetcode_index(89,15)
+				 lead: ("ok")-> object ok  @63344|leetcode_index(87,3)
+				 method: ("begin")-> method begin  @11904|bool(27,3)
+				 input: (direct)-> object (anon)  @01968|leetcode_index(89,15)
 			}
 		}
 
 		instance
 		{
-			object map  @48784|leetcode_index(95,3) --internal
-			 type: (direct)-> type $1<8>( array<word_entry> )  @33936|$appendix(,)
+			object map  @33904|leetcode_index(95,3) --internal
+			 type: (direct)-> type $1<8>( array<word_entry> )  @18208|$appendix(,)
 
-			object matched  @56976|leetcode_index(96,3) --internal
-			 type: ("int")-> type int  @25360|int(6,6)
+			object matched  @34224|leetcode_index(96,3) --internal
+			 type: ("int")-> type int  @45632|int(6,6)
 		}
 
 	}

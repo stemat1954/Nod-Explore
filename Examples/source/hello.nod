@@ -75,7 +75,7 @@ type main_thread from entry
 	{
 		begin ()()( extra )
 		{
-			io:as_base<entry>:begin;
+			imo:as_base<entry>:begin;
 		}
 	}
 

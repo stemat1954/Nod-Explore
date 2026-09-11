@@ -11,9 +11,9 @@ page portability in ExamplesByNod
 	{
 		begin
 		{
-			io.x:begin( one );
-			io.y:begin( '1.99' );
-			io.z:begin( 'cartesian', one, zero );
+			imo.x:begin( one );
+			imo.y:begin( '1.99' );
+			imo.z:begin( 'cartesian', one, zero );
 		}
 
 		begin ( mediator m [upd], expr fex )
@@ -21,9 +21,9 @@ page portability in ExamplesByNod
 			if ( "fex |=| 'b:1'" )
 			{
 				m:fread<bool>( 'b' )( bool flag );
-				if ( flag ) io.z:begin( *m, 'b:ieee' );
-				io.y:begin( *m, 'b:ieee' );
-				io.x:begin( *m, 'b:ones' );
+				if ( flag ) imo.z:begin( *m, 'b:ieee' );
+				imo.y:begin( *m, 'b:ieee' );
+				imo.x:begin( *m, 'b:ones' );
 			}
 			else
 				quit with fault:begin( 'format', 'reading foo format' );
