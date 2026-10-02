@@ -23,4 +23,5 @@ app =
 option =
 {
 	generate_proof = on
+	show_diagnostics = on
 }

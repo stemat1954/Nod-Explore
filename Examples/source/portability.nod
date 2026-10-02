@@ -18,7 +18,7 @@ page portability in ExamplesByNod
 
 		begin ( mediator m [upd], expr fex )
 		{
-			if ( "fex |=| 'b:1'" )
+			if ( "fex |=| 'b:1'" )  
 			{
 				m:fread<bool>( 'b' )( bool flag );
 				if ( flag ) imo.z:begin( *m, 'b:ieee' );

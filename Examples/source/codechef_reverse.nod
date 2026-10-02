@@ -84,7 +84,7 @@ page codechef_reverse in ExamplesByNod
 
 		editor output:begin:fwrite<int>( values:use( zero ) );
 
-		i:recycle:begin ( one );
+		i := one;
 		loop ( "i |<| n" )
 		{
 			output:write( 'U+0020' as unicode ):fwrite<int>( values:use( i ) );
@@ -104,8 +104,8 @@ routine reverse_array_1 ( array<int> arr [upd] )
 	loop ( "i |<| j" )
 	{
 		int ni:begin( arr:use( i ) );
-		arr:use( i ):recycle:begin( arr:use( j ) );
-		arr:use( j ):recycle:begin( ni );
+		arr:use( i ) := arr:use( j );
+		arr:use( j ) := ni;
 		i:inc;
 		j:dec;
 	}

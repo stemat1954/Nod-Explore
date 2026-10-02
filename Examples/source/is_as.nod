@@ -63,36 +63,29 @@ page is_as in ExamplesByNod
 {
 	t:is<object>?()( =bool );			-- warning: always true
 	t:is_actual<thing>?()( =bool );		-- ok
-	t:is<widget>?()( =bool );			-- ok
+	t:is<widget>?()( =bool );			-- ok 
+
+	t:as<object>;						-- warning: random translation to base type
+	t:as<widget>[init];					-- ok, verified at runtime
+	
+	t:as<widget>;						-- ok, transient
+
 	w:is_actual<thing>?()( =bool );		-- warning: always false
 	w:is<thing>?()( =bool );			-- warning: always true
-	w:is<int>?()( =bool );				-- warning: always false
-
-	t:as<object>;						-- warning: replaced with base type
-
-	--	w:as<widget>;					-- error: extraneous translation to same type
-	--	w:as_actual<widget>;			-- error: extraneous translation to same type
-	--	w:as_base<int>;					-- error: adhoc type is not a base of lead
-	--	~t:as_actual<int>;				-- error: lead type not related to adhoc type
-
-	t:is<widget>?()( = bool );			-- ok
-	--t:as_actual<widget>;				-- error: can't given [init] access
-	
-	t:as<widget>;						-- ok
-
+	w:is<int>?()( =bool );				-- ok
 	w:as_base<thing>;					-- ok 
+	w:as<widget>;						-- warning: extraneous translation to same type
+	--w:as_base<int>;					-- error: translation type is not a base of lead
 
-	thing prox ~t -> w;					-- ok (eval permission)
+
+	thing prox ~t -> w;					-- warning: local proxy lacks permission
 
 	~t:is<object>?()( =bool );			-- warning: always true
-	~t:is<widget>?()( =bool );			-- ok, runtime true
+	~t:is<widget>?()( =bool );			-- ok
 	~t:is_actual<object>?()( =bool );	-- warning: always false
-	~t:is<int>?()( =bool );				-- ok, runtime false
+	~t:is<int>?()( =bool );				-- ok
 		
-	~t:as<widget>;						-- ok, runtime good
-	~t:as_actual<widget>;				-- ok, runtime good
-	~t:as<gadget>;						-- ok, runtime void
-	~t:as_actual<gadget>;				-- ok, runtime void
-	
+	~t:as<widget>;						-- ok, transient, runtime good
+	~t:as<gadget>;						-- ok, transient, runtime void
 }
 

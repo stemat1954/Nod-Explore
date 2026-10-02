@@ -1,0 +1,537 @@
+
+Code Generation Using Low Level C
+
+I'm exploring some ideas about generating intermediate code
+using low level C.  
+
+There are a lot of advantages.  The ability to write Alpha code
+manually in C, and generate C interfaces automatically for com-
+patible Nod pages is extremely convenient.  Also, the ability 
+to examine ouput, and even debug the final program is a big win.
+
+Most of the features of C (C++) would be eschewed.  Instead,
+structures with static functions, together with raw and generated 
+type pointers would form the basis of translation.
+
+The Nod compiler could incorporate the current Alpha implemen-
+tation, allowing for compile-time initialization and other 
+optimizations in the codegen phase.
+
+An executable program would be created by compiling the inter-
+mediate output using an off-the-shelf C compiler, then linking
+with a provided Alpha library.
+
+There are plenty of good off-the-shelf C compilers that generate
+optimized platform-dependent code. No point in reinventing the
+wheel as they say.
+
+Philosophically, Nod strives to be efficient, reliable, and
+convenient. It's not about creating the fastest compiler, or
+the fastest exectuable code. It's more about getting similar
+execution results compared to manually written code having
+similar reliability.
+
+Nod tries to make real-world production code easier to organize,
+write, read, and maintain.  To that end, the idea is to (conven-
+iently) generate the kind of code that would otherwise have to 
+be written manually to get the same efficiency and reliability.
+
+
+
+BRACKETED TYPE EXPRESSIONS BELOW ARE NOT C++ TEMPLATE EXPRESSIONS!
+
+Use of <t> below (or other bracketed expression) is a symbolic
+reference to some Nod type, indicating that generated code derives
+from a particular Nod type definition. 
+
+=================================================================
+
+
+struct nod_proxy
+/*
+	This is an untyped proxy that is a common base for
+	all typed proxies.
+*/
+{
+	nod_proxy*		p_next;
+	nod_proxy*		p_prev;
+	byte			flags;   // stale, dead
+
+	nod_proxy ()
+	{
+		this->p_next = nullptr;
+		this->p_prev = nullptr;
+		this->flags = 0;
+	}
+}
+
+
+struct alpha_typeid;  // forward
+
+struct alpha_bool;  // forward
+
+struct alpha_addr;  // forward
+
+
+struct nod_type 
+/*
+	Code generator allocates a nod_type object for every Nod 
+	type in the app program.
+*/
+{
+	int				size;			// object size for this type
+	int				base;			// number of base sub-objects
+	char*			p_name;			// zero terminated Nod name
+	void*			p_end;			// end method, if any
+	void**			p_adapter;		// adapter table, if any
+	alpha_typeid*	p_id;			
+}
+
+
+struct nod_object 
+/*
+	This struct is the essential and common base part of 
+	each and every generated Nod object type.  
+
+	prepare() must be called by generated default constructor
+	to create a logically null Nod object.
+
+	Essential method functions are defined here.
+*/
+{
+	enum
+	{
+		begin_mask	= 0x01;
+		eval_mask	= 0x02;
+		upd_mask	= 0x04;
+	}
+
+	nod_type*	p_type;		// type record
+	nod_proxy*	p_proxy;	// linked proxy list
+	byte		flags;		// status flags
+
+
+	nod_object ()
+	{
+	}
+
+	~nod_object ()
+	{
+	}
+
+	void prepare ( nod_type* p_type ) 
+	{
+		this->p_type = p_type;
+		this->p_proxy = nullptr;
+		this->flags = 0;
+	}
+
+	void set_begin () // indicate begin method was called
+	{
+		this->flags |= nod_object::begin_mask;
+	}
+	
+	bool test_null () const
+	{
+		return ( ( this->flags & begin_mask ) == 0 );
+	}
+
+	bool test_not_null () const
+	{
+		return ( ( this->flags & begin_mask ) != 0 );
+	}
+
+
+	void set_eval ()  // indicate [eval] constraint
+	{
+		this->flags |= nod_object::eval_mask;
+	}
+
+	void clear_eval ()  // reset [eval] constraint
+	{
+		this->flags &= !nod_object::eval_mask;
+	}
+
+	bool test_eval () const
+	{
+		return ( ( this->flags & eval_mask ) != 0 );
+	}
+
+
+	void set_upd ()  // indicate [upd] constraint
+	{
+		this->flags |= nod_object::upd_mask;
+	}
+
+	void clear_upd ()  // reset [upd] constraint
+	{
+		this->flags &= !nod_object::upd_mask;
+	}
+
+	bool test_upd () const
+	{
+		return ( ( this->flags & upd_mask ) != 0 );
+	}
+
+
+	void add_dependent_proxy ( nod_proxy* pp )
+	{
+	}
+
+	void mark_all_proxies_stale ()
+	{
+	}
+
+
+	// method analogs (implementation in c file)
+
+
+	static void null? ( nod_object* obj, alpha_bool* out )
+	{
+		out->set( obj->flags.test_null() ); 
+	}
+
+	static void not_null? ( nod_object* obj, alpha_bool* out )
+	{
+		out->set( obj->flags.test_not_null() ); 
+	}
+	
+	static void use_typeid ( nod_object* obj, alpha_typeid_proxy* rp )
+	{
+	}
+
+	static void get_typeid ( nod_object* obj, alpha_typeid* out )
+	{
+	}
+
+	static void get_addr ( nod_object* obj, alpha_addr* out )
+	{
+	}
+
+	static void eval_only? ( nod_object* obj, alpha_bool* out )
+	{
+	}
+
+	static void constrained? ( nod_object* obj, alpha_bool* out )
+	{
+	}
+
+	static void find ( nod_object* obj, nod_type* type, nod_object** out ) // recursive
+	{
+		// if found, assign address, else assign nullptr
+	}
+
+	static void renew ( nod_object* obj )  // recursive
+	{
+	}
+}
+
+
+
+// GENERATED CODE
+
+namespace alpha_object 
+/*
+	Type dependent static translator functions
+
+	A type dependent translator function is generated for 
+	every adhoc Nod translator method in the app program.
+*/
+{
+	void is_<x>? ( <y>_ref* imo, alpha_bool* out )
+	{
+	}
+
+	void is_actual_<x>? ( <y>_ref* imo, alpha_bool* out )
+	{
+	}
+
+	void as_base_<x> ( <y>_ref* imo, <x>_proxy* out )
+	{
+		out->ref.p_known = ( nod_object* )((( byte* )imo.p_known) + [ <x> offset in <y> ] ); // offset known at compile time
+		out->ref.p_actual = imo.p_actual;
+	}
+
+	void as_<x> ( <y>_ref* imo, <x>_proxy* out )
+	{
+		nod_type* p_type = [ <x> type record ]; 
+		nod_object* p_root = ( ( imo.p_actual != nullptr ) ? imo.p_actual : imo.p_known );
+		nod_object::find( p_root, p_type, &out->p_known );
+		if ( out->p_known != nullptr ) out->p_actual = p_root;
+	}
+}
+
+
+struct <t>_ref
+/*
+	Code generator generates one of these typed	object
+	references for every Nod type in the app program.
+
+	Object refs are used wherever an object's actual type
+	may be different from the ref type.  
+
+	p_known addresses the typed object. If it's null, the 
+	ref is void.
+
+	p_actual is non-null if p_known is a base sub-object 
+	of the actual object. If p_known is the actual object,
+	p_actual is null.
+
+	A typed ref doesn't own any memory.
+*/
+{
+	<t>*		p_known;
+	nod_object*	p_actual;
+
+	<t>_ref ()  // void ref
+	{
+		this->p_known = nullptr;
+		this->p_actual = nullptr;
+	}
+
+	<t>_ref ( <t>* pk )  // pk addresses actual object
+	{
+		this->p_known = pk;
+		this->p_actual = nullptr;
+	}
+
+	<t>_ref ( <t>* pk, nod_object* pa )  // pk addresses sub-object
+	{
+		this->p_known = pk;
+		this->p_actual = pa;
+	}
+}
+
+
+struct <t>_proxy : public nod_proxy
+/*
+	Code generator generates one if these typed proxy
+	structs for	every Nod type in the app program.
+*/
+{
+	<t>_ref			ref;
+
+	<t>_proxy ()
+	{
+	}
+
+	<t>_proxy ( <t>* pk )
+	: this->ref ( pk )
+	{
+	}
+
+	<t>_proxy ( <t>* pk, nod_object* pa )
+	: this->ref ( pk, pa )
+	{
+	}
+}
+
+
+struct <t> : public nod_object
+/*
+	This is a typed object pattern. Code generator generates
+	one of these structs for every Nod type in the app program.  
+
+	Every new typed object is a composition of previously
+	generated objects. 
+	
+	The Nod translator ensures type composition is well-
+	defined and free of nested self-references. Thus,
+	in principle there is always a generation order that
+	allows composition.
+	
+	Default construction yields a logically null Nod object.
+
+	Alpha types follow this pattern, but they aren't gen-
+	erated.	Instead they're pre-coded to match the standard 
+	Nod definitions with additional functions to support
+	internal and intrinsic functionality.
+*/
+{
+	union // logical union, generated code is one or the other
+	{
+		struct  // alpha node
+		{
+			// platform dependent value
+		}
+
+		struct  // app node
+		{
+			<x> external [];  // various unique <x>, not <t>
+
+			<x> internal [];  // various <x>, not <t>
+		}
+	}
+
+	<t>()  // yields logically null object
+	{
+		this->nod_object::prepare( pt );  // pt = internal nod_type* for <t>
+	}
+
+	~<t>()  // if Nod type defines end method
+	{
+		// generate :end code per <t>
+	}
+
+	// static method and routine functions here
+
+}
+
+
+Setting constraints and testing for null (or not null) in 
+generated procedural code is done on the call-side.  That is,
+rather than generate brute-force code to test imo state in 
+every method call, the generator tries to minimize safety
+checks and constraints on the call-side.
+
+The generator tracks object state (permission and initial-
+ization) from entry.  Initial local state of all objects is 
+known. 
+
+>>> EXCEPT for optional inputs.
+
+As code is generated, if state changes unconditionally, the
+new state is updated. If it may change (conditionally), the
+known state is reset and it will be verified once by a runtime
+test before use.  Once verified, the state is known again until
+reset (an unverified state will disrupt the app).
+
+Before a call, inputs are constrained if the object's original 
+constraint is too lax.  On return, the generator restores the 
+original constraint.  
+
+Inputs must generally be initialized (not null) before a call,
+and outputs must be uninitialized (null) before a call. The 
+lead object must be null or not, depending on the method's 
+primary intent.  
+
+After a call, the state of outputs is unknown (outputs may or 
+may not be initialized by the procedure).  
+
+Inputs after a call are known to be not-null, because they were
+not-null before the call and that doesn't change. Null input
+plugs are anonymous and not referenced beyond a call.
+
+
+
+
+EXAMPLE
+
+NOD SOURCE
+
+	page sample in my_book;
+
+	type thing
+	{
+		general method
+		{
+			begin
+			{
+				imo.x:begin;
+				imo.y:begin;
+			}
+
+			set_x [upd]( int x )
+			{
+				imo.x := x;
+			}
+		}
+
+		instance
+		{
+			int x;
+			int y;
+		}
+	}
+
+CODEGEN
+
+	// allocate static my_book_thing_id for my_book_thing
+
+	// allocate static nod_type record for my_book_thing
+
+	{
+		nod_type my_book_thing_type = 
+		{
+			sizeof( my_book_thing ),	// size
+			0,							// base types
+			"thing",					// type name
+			"my_book"					// book name
+			nullptr,					// end method
+			nullptr,					// adapter methods
+			&my_book_thing_id			// alpha typeid
+		};
+	}
+
+	nod_type* get_my_book_thing_type ()
+	{
+		// return type record for my_book_thing
+	}
+
+	struct my_book_thing_ref
+	{
+		my_book_thing*	p_known;
+		nod_object*		p_actual;
+
+		my_book_thing_ref ()  // void ref
+		{
+			this->p_known = nullptr;
+			this->p_actual = nullptr;
+		}
+
+		my_book_thing_ref ( my_book_thing* pk )  // pk addresses actual object
+		{
+			this->p_known = pk;
+			this->p_actual = nullptr;
+		}
+
+		my_book_thing_ref ( my_book_thing* pk, nod_object* pa )  // pk addresses sub-object
+		{
+			this->p_known = pk;
+			this->p_actual = pa;
+		}
+	}
+
+
+	struct my_book_thing_proxy : public nod_proxy
+	{
+		my_book_thing_ref	ref;
+
+		my_book_thing_proxy ()
+		{
+		}
+
+		my_book_thing_proxy ( my_book_thing* pk )
+		: this->ref ( pk )
+		{
+		}
+
+		my_book_thing_proxy ( my_book_thing* pk, nod_object* pa )
+		: this->ref ( pk, pa )
+		{
+		}
+	}
+
+
+	struct my_book_thing : public nod_object
+	{
+		alpha_int	x;
+		alpha_int	y;
+
+		my_book_thing() 
+		{
+			this->nod_object::prepare( get_my_book_thing_type() );
+		}
+
+		static void begin ( my_book_thing_ref* imo )
+		{
+			//  generated app code 
+		}
+
+		static void set_x ( my_book_thing_ref* imo, alpha_int_ref* x )
+		{
+			// generated app code
+		}
+	}
+
+

@@ -11,6 +11,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{92E78F3C-1703-419E-A041-E108791588F4}"
 	ProjectSection(SolutionItems) = preProject
 		misc\compile_spec.txt = misc\compile_spec.txt
+		codegen.txt = codegen.txt
 		misc\crude_type.nod = misc\crude_type.nod
 		misc\ddl_spec.txt = misc\ddl_spec.txt
 		misc\enum_type.nod = misc\enum_type.nod

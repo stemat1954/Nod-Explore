@@ -499,8 +499,7 @@ for_each_collection_obj	: FID
 						| routine_call
 						;
 
-for_each_index_obj		: FID	
-						| new_obj	
+for_each_index_obj		: new_obj	
 						;
 
 for_each_item_spec		: proxy_header? proxy_attribution?

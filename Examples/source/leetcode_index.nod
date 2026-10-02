@@ -68,7 +68,7 @@ page leetcode_index in ExamplesByNod
 
 		reset [upd]
 		{
-			for each ( ~entry in imo.map ) ~entry:reset;
+			for each ( [upd] ~entry in imo.map ) ~entry:reset;
 			imo.matched := zero;
 		}
 

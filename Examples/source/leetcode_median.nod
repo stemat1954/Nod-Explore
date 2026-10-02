@@ -32,7 +32,7 @@ routine find_median ( array<int> a, array<int> b )( fp2 m )
 	m:begin( n );
 	if ( qab:mod( two ):equal?( zero )( =bool ) )  -- if even, "mod( qab, two ) |=| zero" 
 	{
-		merge ( a, b, imax, jmax, kmax:inc, *i, *j, *k:inc )( n:recycle );
+		merge ( a, b, imax, jmax, kmax:inc, *i, *j, *k:inc )( n:renew );
 		m:add( n ):div( two );
 	}
 }
@@ -42,7 +42,7 @@ routine find_median ( array<int> a, array<int> b )( fp2 m )
 {
 	loop ( "k |<=| kmax" ) 
 	{
-		n:recycle;
+		n:renew;
 		if ( "i |>| imax" )
 		{
 			n:begin( b:use( j ) );
