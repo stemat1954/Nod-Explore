@@ -1,6 +1,6 @@
 page stack&queue
 {
-	routine demo  @11760|stack&queue(3,16) --internal
+	routine demo  @52640|stack&queue(3,16) --internal
 	 viable = yes
 	{
 
@@ -11,75 +11,75 @@ page stack&queue
 		BLOCK --domain
 		{
 			MAKE
-			 object: (direct)-> object my_queue  @53120|stack&queue(5,2)
-			 type: (direct)-> type $30<2>( <int>queue )  @08544|$appendix(,)
+			 object: (direct)-> object my_queue  @41088|stack&queue(5,2)
+			 type: (direct)-> type $30<2>( <int>queue )  @29920|$appendix(,)
 			CALL --initial
-			 lead: (direct)-> object my_queue  @53120|stack&queue(5,2)
-			 method: ("begin")-> method begin  @49232|$appendix(,)
+			 lead: (direct)-> object my_queue  @41088|stack&queue(5,2)
+			 method: ("begin")-> method begin  @47008|$appendix(,)
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @19840|stack&queue(7,10)
-			 type: ("int")-> type int  @07728|int(6,6)
+			 proxy: (direct)-> proxy (anon)  @34080|stack&queue(7,10)
+			 type: ("int")-> type int  @18256|int(6,6)
 			 permission: [init]
 			CALL
-			 lead: ("my_queue")-> object my_queue  @53120|stack&queue(5,2)
-			 method: ("push")-> method push  @43472|$appendix(,)
-			 result: (direct)-> proxy (anon)  @19840|stack&queue(7,10)
+			 lead: ("my_queue")-> object my_queue  @41088|stack&queue(5,2)
+			 method: ("push")-> method push  @45088|$appendix(,)
+			 result: (direct)-> proxy (anon)  @34080|stack&queue(7,10)
 			CALL --initial, fundamental
-			 lead: (direct)-> proxy (anon)  @19840|stack&queue(7,10)
-			 method: ("begin")-> method begin  @51904|int(54,3)
-			 input: ("zero")-> object zero  @51856|dialect(31,2)
+			 lead: (direct)-> proxy (anon)  @34080|stack&queue(7,10)
+			 method: ("begin")-> method begin  @01056|int(54,3)
+			 input: ("zero")-> object zero  @11264|dialect(31,2)
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @26080|stack&queue(8,10)
-			 type: ("int")-> type int  @07728|int(6,6)
+			 proxy: (direct)-> proxy (anon)  @26400|stack&queue(8,10)
+			 type: ("int")-> type int  @18256|int(6,6)
 			 permission: [init]
 			CALL
-			 lead: ("my_queue")-> object my_queue  @53120|stack&queue(5,2)
-			 method: ("push")-> method push  @43472|$appendix(,)
-			 result: (direct)-> proxy (anon)  @26080|stack&queue(8,10)
+			 lead: ("my_queue")-> object my_queue  @41088|stack&queue(5,2)
+			 method: ("push")-> method push  @45088|$appendix(,)
+			 result: (direct)-> proxy (anon)  @26400|stack&queue(8,10)
 			CALL --initial, fundamental
-			 lead: (direct)-> proxy (anon)  @26080|stack&queue(8,10)
-			 method: ("begin")-> method begin  @51904|int(54,3)
-			 input: ("one")-> object one  @26704|dialect(32,2)
+			 lead: (direct)-> proxy (anon)  @26400|stack&queue(8,10)
+			 method: ("begin")-> method begin  @01056|int(54,3)
+			 input: ("one")-> object one  @28336|dialect(32,2)
 			MAKE
-			 object: (direct)-> object n  @59264|stack&queue(9,19)
-			 type: ("int")-> type int  @07728|int(6,6)
+			 object: (direct)-> object n  @41344|stack&queue(9,19)
+			 type: ("int")-> type int  @18256|int(6,6)
 			CALL
-			 lead: ("my_queue")-> object my_queue  @53120|stack&queue(5,2)
-			 method: ("pull")-> method pull  @36432|$appendix(,)
-			 output: (direct)-> object n  @59264|stack&queue(9,19)
+			 lead: ("my_queue")-> object my_queue  @41088|stack&queue(5,2)
+			 method: ("pull")-> method pull  @34528|$appendix(,)
+			 output: (direct)-> object n  @41344|stack&queue(9,19)
 			MAKE
-			 object: (direct)-> object my_stack  @58496|stack&queue(11,2)
-			 type: (direct)-> type $31<2>( <int>stack )  @08816|$appendix(,)
+			 object: (direct)-> object my_stack  @42112|stack&queue(11,2)
+			 type: (direct)-> type $31<2>( <int>stack )  @31824|$appendix(,)
 			CALL --initial
-			 lead: (direct)-> object my_stack  @58496|stack&queue(11,2)
-			 method: ("begin")-> method begin  @37712|$appendix(,)
+			 lead: (direct)-> object my_stack  @42112|stack&queue(11,2)
+			 method: ("begin")-> method begin  @46048|$appendix(,)
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @30160|stack&queue(12,10)
-			 type: ("int")-> type int  @07728|int(6,6)
+			 proxy: (direct)-> proxy (anon)  @27840|stack&queue(12,10)
+			 type: ("int")-> type int  @18256|int(6,6)
 			 permission: [init]
 			CALL
-			 lead: ("my_stack")-> object my_stack  @58496|stack&queue(11,2)
-			 method: ("push")-> method push  @42192|$appendix(,)
-			 result: (direct)-> proxy (anon)  @30160|stack&queue(12,10)
+			 lead: ("my_stack")-> object my_stack  @42112|stack&queue(11,2)
+			 method: ("push")-> method push  @49888|$appendix(,)
+			 result: (direct)-> proxy (anon)  @27840|stack&queue(12,10)
 			CALL --initial, fundamental
-			 lead: (direct)-> proxy (anon)  @30160|stack&queue(12,10)
-			 method: ("begin")-> method begin  @51904|int(54,3)
-			 input: ("zero")-> object zero  @51856|dialect(31,2)
+			 lead: (direct)-> proxy (anon)  @27840|stack&queue(12,10)
+			 method: ("begin")-> method begin  @01056|int(54,3)
+			 input: ("zero")-> object zero  @11264|dialect(31,2)
 			MAKE
-			 proxy: (direct)-> proxy (anon)  @29200|stack&queue(13,17)
-			 type: ("int")-> type int  @07728|int(6,6)
+			 proxy: (direct)-> proxy (anon)  @22080|stack&queue(13,17)
+			 type: ("int")-> type int  @18256|int(6,6)
 			 permission: [init]
 			CALL
-			 lead: ("my_stack")-> object my_stack  @58496|stack&queue(11,2)
-			 method: ("use_top")-> method use_top  @37072|$appendix(,)
-			 result: (direct)-> proxy (anon)  @29200|stack&queue(13,17)
+			 lead: ("my_stack")-> object my_stack  @42112|stack&queue(11,2)
+			 method: ("use_top")-> method use_top  @41248|$appendix(,)
+			 result: (direct)-> proxy (anon)  @22080|stack&queue(13,17)
 			CALL --fundamental
-			 lead: ("n")-> object n  @59264|stack&queue(9,19)
-			 method: ("add")-> method add  @48256|int(76,3)
-			 input: (direct)-> proxy (anon)  @29200|stack&queue(13,17)
+			 lead: ("n")-> object n  @41344|stack&queue(9,19)
+			 method: ("add")-> method add  @64592|int(76,3)
+			 input: (direct)-> proxy (anon)  @22080|stack&queue(13,17)
 			CALL
-			 lead: ("my_stack")-> object my_stack  @58496|stack&queue(11,2)
-			 method: ("pop")-> method pop  @33232|$appendix(,)
+			 lead: ("my_stack")-> object my_stack  @42112|stack&queue(11,2)
+			 method: ("pop")-> method pop  @39008|$appendix(,)
 		}
 	}
 }
