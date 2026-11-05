@@ -4,15 +4,15 @@ enum type foo ( 'a', 'b', 'c' );
 
 type foo from enumerated  -- fabricated from enum type def
 {{	
-	The generated type definition for every enum
-	type is source-identical except for the type name
-	("foo" in this example).  However, each enum type 
-	has it's own internal enumerator initialized for the
-	enum type token set, so runtime results are unique 
-	to the specific type.
+	The fabricated type definition for every enum type is 
+	identical except for the type name ("foo" in this 
+	example).
+	
+	:begin( vex ) is an opaque initiator that incorporates
+	the enum type's token set.
 
-	Note: An enum type name can't be generic, so the
-	type name can be used in lieu of an object name.
+	An enum type name can't be generic, so the type name 
+	can be used in lieu of an object name.
 
 	An enum type's code value can be used to compare 
 	relative order and other arithmetic relationships. 
@@ -31,15 +31,11 @@ type foo from enumerated  -- fabricated from enum type def
 {
 	general
 	{
-		begin ( expr ) -- vex
-		{
-			imo:as_base<enumerated>:begin( near\$index:enumerate( given\expr )( =int ) );
-			imo.expr:begin( given\expr );
-		}
+		begin ( expr vex ); 
 
-		begin ( foo ) -- copy
+		begin ( foo other ) -- copy
 		{
-			imo:as_base<enumerated>:begin( given\foo:as_int );
+			imo:as_base<enumerated>:begin( given\foo:use_code );
 			imo.expr:begin( given\foo.expr );
 		}
 
@@ -53,18 +49,16 @@ type foo from enumerated  -- fabricated from enum type def
 			given\expr:begin( imo.expr );
 		}
 
-		before? ( foo )( bool )
+		before? ( foo other )( bool )
 		{
 			imo:use_code:before?( given\foo:use_code )( given\bool );
 		}
 
-		equal? ( foo )( bool )
+		equal? ( foo other )( bool )
 		{
 			imo:use_code:equal?( given\foo:use_code )( given\bool );
 		}
 	}
-
-	common <expr>enumerator $index;  -- initialized internally
 
 	instance
 	{

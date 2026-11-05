@@ -13,6 +13,7 @@ grammar Nod;
 ABSTRACT			:	'abstract'		;
 AFTER				:	'after'			;
 ALIGN				:	'align'			;
+APP					:	'app'			;		// application, alpha only
 AS					:	'as'			;
 BASE				:	'base'			;
 COMMON				:	'common'		;	
@@ -616,7 +617,7 @@ proxy_attribute			: EVAL
 						| INIT
 						| EVAL COMMA UPD
 						| EVAL COMMA INIT
-						| EVAL COMMA UPD COMMA INIT  // reserved 
+						| EVAL COMMA UPD COMMA INIT  // alpha only 
 						;
 
 proxy_attribution		: LEFT_SQUARE proxy_attribute RIGHT_SQUARE
@@ -710,7 +711,11 @@ proxy_spec				: EQUAL proxy_header proxy_attribution? proxy_spec_name?
 routine_name			: FID
 						;
 
-routine_attribution		: LEFT_SQUARE NAF RIGHT_SQUARE
+routine_attribute		: NAF ( COMMA APP )?	
+						| APP 	
+						;
+
+routine_attribution		: LEFT_SQUARE routine_attribute RIGHT_SQUARE
 						;
 
 routine_interface		: routine_attribution? aux_obj_spec_list? reg_obj_spec_list? with_spec? proxy_spec?
@@ -727,8 +732,9 @@ routine_group			: ROUTINE LEFT_CURLY routine_def* RIGHT_CURLY
 
 
 
-method_attribute		: ( EVAL | UPD | INIT | TERM ) ( COMMA NAF )?
-						| NAF
+method_attribute		: ( EVAL | UPD | INIT | TERM ) ( COMMA NAF )? ( COMMA APP )?
+						| NAF ( COMMA APP )?
+						| APP  
 						;
 
 method_attribution		: LEFT_SQUARE method_attribute RIGHT_SQUARE
